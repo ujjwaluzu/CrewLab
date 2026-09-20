@@ -1,11 +1,12 @@
+@import url("https://api.fontshare.com/v2/css?f[]=zodiak@300,400,500,600,700,800,900&display=swap");
   :root{
     --paper:#F1EDE4; --paper-2:#E6E0D2; --card:#F8F5EE;
     --ink:#171512; --ink-2:#4A463F; --mute:#7A7466; --line:rgba(23,21,18,.16);
     --red:#D42A1E; --mint:#BFDCC8; --moss:#26301F; --panel:#0F0E0C; --on-panel:#F1EDE4; --on-red:#FBF6EC;
     --shadow:0 30px 60px -28px rgba(23,21,18,.4);
-    --display:'Anton','Bebas Neue',Impact,'Arial Narrow',sans-serif;
-    --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
-    --sans:'Instrument Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+    --display:'Zodiak',Georgia,'Times New Roman',serif;
+    --serif:'Zodiak',Georgia,'Times New Roman',serif;
+    --sans:'DM Sans',Inter,system-ui,-apple-system,'Segoe UI',sans-serif;
     --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
     box-sizing:border-box;
     padding-top:env(safe-area-inset-top,0px);
@@ -142,12 +143,14 @@
   /* Workspace */
   .ws{background:var(--paper-2)}
   .ws-grid{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:clamp(32px,5vw,80px);align-items:center}
+  .ws-copy{min-width:0;position:relative;z-index:1}
+  .ws-title{font-size:clamp(40px,4.2vw,66px)}
   .ws .kicker{margin-bottom:20px}
   .ws-copy p{max-width:36ch;color:var(--ink-2);margin:26px 0 30px;font-size:18px}
   .feats{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
   .feats li{display:flex;align-items:center;gap:14px;padding:15px 0;border-bottom:1px solid var(--line);font-weight:500}
   .feats .ic{font-size:20px;color:var(--red)}
-  .stage{position:relative;padding:5% 3%}
+  .stage{position:relative;padding:5% 3%;transform:translateY(clamp(56px,8vw,116px))}
   .stage::before,.stage::after{content:"";position:absolute;inset:2% 1%;background:var(--card);border:1px solid var(--line);z-index:0}
   .stage::before{transform:rotate(-2.6deg)}
   .stage::after{transform:rotate(1.8deg)}
@@ -353,3 +356,7 @@ body{font-size:16px;line-height:1.55}
   .hero h1 .d1{display:inline-block}
   .hero h1 .d1+.d1{margin-left:.16em}
 }
+/* Product typography */
+.logo,.d1,h2.h,.way h2,.step h3,.cta h2,.wordmark{font-weight:600}
+h2.h em,.way h2 em,.cta h2 i{font-family:var(--display);font-style:normal;font-weight:400;letter-spacing:-.035em}
+.wordmark{width:100%;box-sizing:border-box;overflow:hidden;font-size:clamp(54px,14vw,220px);letter-spacing:-.04em;text-align:center}

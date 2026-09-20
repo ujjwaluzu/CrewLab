@@ -17,7 +17,7 @@ export default function Workspace() {
       <div className="wrap ws-grid">
         <div className="ws-copy">
           <p className="kicker mono" style={{ margin: "0 0 20px" }}>The CrewLab workspace</p>
-          <h2 className="h" style={{ fontSize: "clamp(40px,4.8vw,76px)" }}>A workspace <em>for real builders</em></h2>
+          <h2 className="h ws-title">A workspace <em>for real builders</em></h2>
           <p>Everything your team needs to go from an idea to a real project — all in one place.</p>
           <ul className="feats">
             {features.map(([icon, label]) => <li key={label}><Icon name={icon} />{label}</li>)}
@@ -25,7 +25,6 @@ export default function Workspace() {
         </div>
         <div className="stage">
           <svg className="brush" viewBox="0 0 600 140" aria-hidden="true"><use href="#brush-s" /></svg>
-          <span className="tag">Sample data</span>
           <div className="frame"><DashboardMock /></div>
         </div>
       </div>

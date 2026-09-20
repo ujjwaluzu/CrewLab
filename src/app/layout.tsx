@@ -1,30 +1,15 @@
 import type { Metadata } from "next";
-import { Anton, Cormorant_Garamond, Instrument_Sans, JetBrains_Mono } from "next/font/google";
+import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import SvgDefs from "@/components/SvgDefs";
 
-const display = Anton({
-  variable: "--display",
+const sans = DM_Sans({
+  variable: "--sans",
   subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-});
-
-const serif = Cormorant_Garamond({
-  variable: "--serif",
-  subsets: ["latin"],
-  weight: ["300", "400", "500"],
+  weight: ["300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
 });
-
-const sans = Instrument_Sans({
-  variable: "--sans",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  display: "swap",
-});
-
 const mono = JetBrains_Mono({
   variable: "--mono",
   subsets: ["latin"],
@@ -50,7 +35,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${display.variable} ${serif.variable} ${sans.variable} ${mono.variable}`}>
+    <html lang="en" className={`${sans.variable} ${mono.variable}`}>
       <body>
         <SvgDefs />
         {children}
