@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Icon from "@/components/Icon";
-import HeroCollage from "@/components/HeroCollage";
 
 export default function Hero() {
   return (
@@ -30,7 +29,6 @@ export default function Hero() {
             <span>Be among the first builders on CrewLab</span>
           </div>
         </div>
-        <HeroCollage />
       </div>
     </section>
   );
