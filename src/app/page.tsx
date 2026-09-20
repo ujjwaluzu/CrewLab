@@ -1,23 +1,27 @@
-import Navbar from "@/components/Navbar";
+import Cta from "@/components/Cta";
 import Hero from "@/components/Hero";
-import IdeaBuilderSection from "@/components/IdeaBuilderSection";
-import HowCrewLabWorks from "@/components/HowCrewLabWorks";
-import WorkspacePreview from "@/components/WorkspacePreview";
-import FinalCTA from "@/components/FinalCTA";
-import Footer from "@/components/Footer";
+import HowItWorks from "@/components/HowItWorks";
+import ProjectsRail from "@/components/ProjectsRail";
+import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
+import Tickers from "@/components/Tickers";
+import WaysIn from "@/components/WaysIn";
+import Workspace from "@/components/Workspace";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <main>
+      <SiteHeader />
+      <main id="top">
         <Hero />
-        <IdeaBuilderSection />
-        <HowCrewLabWorks />
-        <WorkspacePreview />
-        <FinalCTA />
+        <Tickers />
+        <WaysIn />
+        <HowItWorks />
+        <Workspace />
+        <ProjectsRail />
+        <Cta />
       </main>
-      <Footer />
+      <SiteFooter />
     </>
   );
 }
