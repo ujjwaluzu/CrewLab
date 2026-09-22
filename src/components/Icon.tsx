@@ -11,7 +11,10 @@ type IconName =
   | "grid"
   | "arrow"
   | "left"
-  | "up-right";
+  | "up-right"
+  | "twitter"
+  | "instagram"
+  | "discord";
 
 type IconProps = {
   name: IconName;

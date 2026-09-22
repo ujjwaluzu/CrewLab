@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BrandMark from "@/components/BrandMark";
+import Icon from "@/components/Icon";
 
 import WaitlistForm from "@/components/WaitlistForm";
 
@@ -25,11 +26,12 @@ export default function SiteFooter() {
             <p>Get early access and updates.</p>
             <WaitlistForm footer />
             <div className="socials">
-              <Link href="#top" aria-label="GitHub">GH</Link><Link href="#top" aria-label="X">X</Link><Link href="#top" aria-label="LinkedIn">IN</Link><Link href="#top" aria-label="Discord">DC</Link>
+              <Link href="https://discord.gg/m97vTraKq" target="_blank" rel="noopener noreferrer" aria-label="Discord"><Icon name="discord" /></Link>
+              <Link href="https://instagram.com/crewlab.in" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Icon name="instagram" /></Link>
+              <Link href="#top" aria-label="X (Twitter)"><Icon name="twitter" /></Link>
             </div>
           </div>
         </div>
-        <div className="wordmark" aria-hidden="true">CrewLab</div>
         <div className="foot-base"><span>Ideas to impact</span><span>© 2026 CrewLab. All rights reserved.</span><span>Made for builders, by builders.</span></div>
       </div>
     </footer>

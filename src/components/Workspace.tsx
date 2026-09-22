@@ -16,9 +16,8 @@ export default function Workspace() {
       <TornEdge seedIndex={0} color="var(--paper)" />
       <div className="wrap ws-grid">
         <div className="ws-copy">
-          <p className="kicker mono" style={{ margin: "0 0 20px" }}>The CrewLab workspace</p>
           <h2 className="h ws-title">A workspace <em>for real builders</em></h2>
-          <p>Everything your team needs to go from an idea to a real project — all in one place.</p>
+          <p>Everything your team needs to go from an idea to a real project, all in one place.</p>
           <ul className="feats">
             {features.map(([icon, label]) => <li key={label}><Icon name={icon} />{label}</li>)}
           </ul>

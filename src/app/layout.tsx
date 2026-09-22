@@ -18,7 +18,7 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CrewLab — Find your crew. Build what matters.",
+  title: "CrewLab. Find your crew. Build what matters.",
   description: "Find your crew. Build what matters.",
   manifest: "/favicon_io/site.webmanifest",
   icons: {

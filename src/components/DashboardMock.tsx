@@ -1,7 +1,6 @@
 export default function DashboardMock() {
   return (
     <div className="win" role="img" aria-label="Preview of the CrewLab workspace dashboard showing ideas, active projects, team members, tasks, recent projects and recent activity">
-      <div className="w-bar"><i /><i /><i /></div>
       <div className="w-body">
         <aside className="w-side">
           <div className="w-logo">CrewLab</div>
