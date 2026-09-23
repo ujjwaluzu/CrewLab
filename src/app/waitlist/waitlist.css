@@ -1,0 +1,15 @@
+.wl{position:relative;background:var(--panel);color:var(--on-panel);overflow:hidden;min-height:calc(100svh - 60px);display:flex;align-items:center;padding:clamp(72px,11vh,140px) 0}
+.wl .halftone{right:-3%;top:-6%;width:64%;height:56%;background-image:radial-gradient(rgba(241,237,228,.5) 1.4px,transparent 1.8px);opacity:1}
+.wl-in{max-width:920px;margin-inline:auto;display:flex;flex-direction:column;align-items:center;text-align:center}
+.wl h1{margin:0;font:400 clamp(48px,7vw,104px)/.95 var(--display);text-transform:uppercase;font-weight:600;letter-spacing:0}
+.wl h1 .hl{display:inline-block;position:relative;color:var(--on-red);padding:0 .1em;margin:.06em 0 0 -.06em}
+.wl h1 .hl span{position:relative;z-index:1}
+.wl h1 .hl .brush{position:absolute;left:-5%;top:-10%;width:110%;height:124%;color:var(--red);animation:swipe .8s .25s cubic-bezier(.7,0,.2,1) both}
+.wl h1 i{display:block;font-family:var(--display);font-style:normal;font-weight:400;font-size:.8em;line-height:1.1;letter-spacing:-.035em;text-transform:none}
+.wl p{max-width:44ch;margin:22px auto 26px;color:color-mix(in srgb,var(--on-panel) 72%,transparent);font-size:clamp(16px,1.35vw,18px);line-height:1.58}
+.wl .signup{max-width:none;margin-inline:auto}
+.wl-in .fine{margin:14px auto 0}
+
+@media (prefers-reduced-motion:reduce){
+  .wl h1 .hl .brush{animation:none}
+}

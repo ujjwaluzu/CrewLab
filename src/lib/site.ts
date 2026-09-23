@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 export const SITE_URL = "https://crewlab.ujjwaluzu.in";
 
 export const SITE_NAME = "CrewLab";
@@ -37,3 +39,33 @@ export const GEO = {
   placename: "India",
   position: "20.5937, 78.9629",
 };
+
+export const GEO_TAGS = {
+  "geo.region": GEO.region,
+  "geo.placename": GEO.placename,
+  "geo.position": GEO.position,
+  ICBM: GEO.position,
+  distribution: "global",
+  rating: "general",
+} as const;
+
+export function pageMetadata(options: { title: string; description: string; canonical: string }): Metadata {
+  return {
+    title: options.title,
+    description: options.description,
+    alternates: {
+      canonical: options.canonical,
+    },
+    openGraph: {
+      title: options.title,
+      description: options.description,
+      url: options.canonical,
+      type: "website",
+    },
+    twitter: {
+      title: options.title,
+      description: options.description,
+    },
+    other: { ...GEO_TAGS },
+  };
+}

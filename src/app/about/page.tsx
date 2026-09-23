@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 
+import { pageMetadata } from "@/lib/site";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Tickers from "@/components/Tickers";
@@ -9,14 +9,12 @@ import Icon from "@/components/Icon";
 
 import "./about.css";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "About",
   description:
     "The people putting ideas out there, and the people looking for something to build — CrewLab is where they meet, form crews, and actually build.",
-  alternates: {
-    canonical: "/about",
-  },
-};
+  canonical: "/about",
+});
 
 export default function AboutPage() {
   return (

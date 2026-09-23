@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 
+import { pageMetadata } from "@/lib/site";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Tickers from "@/components/Tickers";
@@ -9,14 +9,12 @@ import Icon from "@/components/Icon";
 
 import "./how-it-works.css";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "How it works",
   description:
     "From “I have an idea” to “we’re building it.” See how CrewLab moves ideas to the right people, then gives the crew a place to actually make it happen.",
-  alternates: {
-    canonical: "/how-it-works",
-  },
-};
+  canonical: "/how-it-works",
+});
 
 const steps = [
   {

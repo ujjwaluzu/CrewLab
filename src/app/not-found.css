@@ -1,0 +1,4 @@
+.nf{position:relative;overflow:hidden;min-height:calc(100svh - 60px);display:flex;align-items:center;padding:clamp(64px,10vh,120px) 0}
+.nf .halftone{right:-3%;top:-4%}
+.nf h1{margin:0;font:400 clamp(56px,8.5vw,120px)/.94 var(--display);text-transform:uppercase;font-weight:600;letter-spacing:0}
+.nf h1 em{display:block;font-family:var(--display);font-style:normal;font-weight:400;font-size:.86em;line-height:1.05;letter-spacing:-.035em;text-transform:none}

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import SvgDefs from "@/components/SvgDefs";
-import SectionSpy from "@/components/SectionSpy";
 import SchemaOrg from "@/components/SchemaOrg";
 import { SITE_URL, SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, KEYWORDS, GEO } from "@/lib/site";
 
@@ -100,7 +99,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en-IN" className={`${sans.variable} ${mono.variable}`}>
       <body>
         <SvgDefs />
-        <SectionSpy />
         <SchemaOrg />
         {children}
       </body>

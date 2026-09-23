@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 
+import { pageMetadata } from "@/lib/site";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Tickers from "@/components/Tickers";
@@ -9,14 +9,12 @@ import Icon from "@/components/Icon";
 
 import "./features.css";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Features",
   description:
     "What your crew can actually do on CrewLab: a shared project workspace, tasks and milestones, a team roster, discussions, progress tracking, and integrations designed to connect — a demo showcase with static sample content.",
-  alternates: {
-    canonical: "/features",
-  },
-};
+  canonical: "/features",
+});
 
 const milestoneTasks = [
   {

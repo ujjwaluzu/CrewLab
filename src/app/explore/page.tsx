@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 
+import { pageMetadata } from "@/lib/site";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Tickers from "@/components/Tickers";
@@ -10,14 +10,12 @@ import ExploreProjects from "@/components/ExploreProjects";
 
 import "./explore.css";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Explore",
   description:
     "Preview the CrewLab project discovery experience. Discover ideas, meet potential teammates, and find something worth building.",
-  alternates: {
-    canonical: "/explore",
-  },
-};
+  canonical: "/explore",
+});
 
 export default function ExplorePage() {
   return (
