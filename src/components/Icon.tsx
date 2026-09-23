@@ -12,6 +12,7 @@ type IconName =
   | "arrow"
   | "left"
   | "up-right"
+  | "search"
   | "twitter"
   | "instagram"
   | "discord";

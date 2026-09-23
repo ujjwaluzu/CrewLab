@@ -11,11 +11,11 @@ export default function SiteHeader() {
           CrewLab
         </Link>
         <nav className="nav-links" aria-label="Primary">
-          <Link href="#explore">Explore</Link>
-          <Link href="#how">How it works</Link>
-          <Link href="#workspace">About</Link>
+          <Link href="/explore">Explore</Link>
+          <Link href="/how-it-works">How it works</Link>
+          <Link href="/about">About</Link>
         </nav>
-        <Link className="btn btn-primary btn-sm" href="#join">
+        <Link className="btn btn-primary btn-sm" href="/waitlist">
           Join waitlist <Icon name="up-right" />
         </Link>
       </div>
