@@ -8,16 +8,16 @@ export default function SiteFooter() {
       <div className="wrap">
         <div className="foot-grid">
           <div>
-            <Link className="logo" href="#top"><BrandMark dark />CrewLab</Link>
+            <Link className="logo" href="/"><BrandMark dark />CrewLab</Link>
             <p>Build together. Go further.</p>
           </div>
           <div>
             <h4>Product</h4>
-            <ul><li><Link href="#explore">Explore</Link></li><li><Link href="#how">How it works</Link></li><li><Link href="#workspace">Features</Link></li><li><Link href="#join">Pricing</Link></li></ul>
+            <ul><li><Link href="/explore">Explore</Link></li><li><Link href="/how-it-works">How it works</Link></li><li><Link href="/features">Features</Link></li><li><Link href="/waitlist">Pricing</Link></li></ul>
           </div>
           <div>
             <h4>Company</h4>
-            <ul><li><Link href="#top">About</Link></li><li><Link href="https://blog.ujjwaluzu.in" target="_blank" rel="noopener noreferrer">Blog</Link></li><li><Link href="#join">Contact</Link></li></ul>
+            <ul><li><Link href="/about">About</Link></li><li><Link href="https://blog.ujjwaluzu.in" target="_blank" rel="noopener noreferrer">Blog</Link></li><li><Link href="/waitlist">Contact</Link></li></ul>
           </div>
           <div>
             <div className="socials">

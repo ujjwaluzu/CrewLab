@@ -18,7 +18,7 @@ export default function Hero() {
           <p className="lede">CrewLab connects curious minds, whether you have an idea or just the skills to build. Find teammates, collaborate on real projects, and turn ideas into impact.</p>
           <div className="cta-row">
             <Link className="btn btn-primary" href="/waitlist">Join the waitlist <Icon name="arrow" /></Link>
-            <Link className="btn btn-ghost" href="#how">See how it works</Link>
+            <Link className="btn btn-ghost" href="/how-it-works">See how it works</Link>
           </div>
           <div className="proof">
             <span className="avs" aria-hidden="true">

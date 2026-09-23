@@ -6,7 +6,7 @@ export default function SiteHeader() {
   return (
     <header className="site-head">
       <div className="wrap head-in">
-        <Link className="logo" href="#top" aria-label="CrewLab home">
+        <Link className="logo" href="/" aria-label="CrewLab home">
           <BrandMark />
           CrewLab
         </Link>
