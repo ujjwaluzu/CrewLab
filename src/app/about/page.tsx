@@ -10,9 +10,9 @@ import Icon from "@/components/Icon";
 import "./about.css";
 
 export const metadata = pageMetadata({
-  title: "About",
+  title: "About CrewLab, the Builder Community",
   description:
-    "The people putting ideas out there, and the people looking for something to build — CrewLab is where they meet, form crews, and actually build.",
+    "CrewLab is where people with ideas meet people with skills. Find cofounders, join projects, form crews, and actually build real products with real people.",
   canonical: "/about",
 });
 

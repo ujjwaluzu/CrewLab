@@ -9,6 +9,8 @@
 .wl p{max-width:44ch;margin:22px auto 26px;color:color-mix(in srgb,var(--on-panel) 72%,transparent);font-size:clamp(16px,1.35vw,18px);line-height:1.58}
 .wl .signup{max-width:none;margin-inline:auto}
 .wl-in .fine{margin:14px auto 0}
+.wl h1{font-size:clamp(42px,5.6vw,76px);line-height:1}
+.wl p{font-size:16px;line-height:1.65}
 
 @media (prefers-reduced-motion:reduce){
   .wl h1 .hl .brush{animation:none}

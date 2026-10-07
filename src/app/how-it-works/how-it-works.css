@@ -650,3 +650,5 @@ body:has(.hiw) {
     transform: rotate(90deg);
   }
 }
+.h-title .d1{font-size:clamp(42px,5.3vw,72px);line-height:1}
+.h-title .d2{font-size:clamp(28px,3.4vw,48px);line-height:1.08}

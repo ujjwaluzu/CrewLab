@@ -1,5 +1,7 @@
 import Cta from "@/components/Cta";
+import Faq from "@/components/Faq";
 import Hero from "@/components/Hero";
+import HomeLinks from "@/components/HomeLinks";
 import HowItWorks from "@/components/HowItWorks";
 import ProjectsRail from "@/components/ProjectsRail";
 import SiteFooter from "@/components/SiteFooter";
@@ -19,6 +21,8 @@ export default function Home() {
         <HowItWorks />
         <Workspace />
         <ProjectsRail />
+        <HomeLinks />
+        <Faq />
         <Cta />
       </main>
       <SiteFooter />

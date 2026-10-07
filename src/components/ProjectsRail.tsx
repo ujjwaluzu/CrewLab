@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import Icon from "@/components/Icon";
 import TornEdge from "@/components/TornEdge";
 
@@ -42,8 +43,8 @@ export default function ProjectsRail() {
       <div className="wrap">
         <div className="sec-head projects-head">
           <div>
-            <h2 className="h">Projects looking <em>for a crew</em></h2>
-            <p className="note">Sample projects. This is what you&apos;ll browse once CrewLab opens.</p>
+            <h2 className="h">Startup projects <em>looking for builders</em></h2>
+            <p className="note">Sample projects. This is what you&apos;ll browse when you join projects on CrewLab — side projects, student projects and startup teams.</p>
           </div>
           <div className="rail-ctl">
             <button className="arrow" type="button" aria-label="Previous projects" disabled={atStart} onClick={() => move(-362)}><Icon name="left" /></button>
@@ -61,6 +62,9 @@ export default function ProjectsRail() {
               </div>
             </article>
           ))}
+        </div>
+        <div className="rail-more">
+          <Link href="/explore">Browse more projects to join <Icon name="arrow" /></Link>
         </div>
       </div>
     </section>

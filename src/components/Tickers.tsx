@@ -1,5 +1,19 @@
-const paperItems = ["Find your crew", "Build what matters", "Ideas to impact", "Good builders build together"];
-const redItems = ["Waitlist open", "GitHub integration", "Task & milestone tracking", "Project discussions", "Activity feed", "Team collaboration"];
+const paperItems = [
+  "Find your crew",
+  "Find a cofounder",
+  "Find developers",
+  "Join side projects",
+  "Build together",
+  "Ideas to impact",
+];
+const redItems = [
+  "Startup team building",
+  "Builder community",
+  "Project collaboration",
+  "GitHub integration",
+  "Task & milestone tracking",
+  "Team collaboration",
+];
 
 function Track({ items }: { items: string[] }) {
   return (

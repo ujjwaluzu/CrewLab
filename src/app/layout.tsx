@@ -3,7 +3,14 @@ import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import SvgDefs from "@/components/SvgDefs";
 import SchemaOrg from "@/components/SchemaOrg";
-import { SITE_URL, SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, KEYWORDS, GEO } from "@/lib/site";
+import {
+  SITE_URL,
+  SITE_NAME,
+  HOMEPAGE_TITLE,
+  HOMEPAGE_DESCRIPTION,
+  KEYWORDS,
+  GEO,
+} from "@/lib/site";
 
 const sans = DM_Sans({
   variable: "--sans",
@@ -22,17 +29,17 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME}. ${SITE_TAGLINE}`,
+    default: HOMEPAGE_TITLE,
     template: `%s · ${SITE_NAME}`,
   },
-  description: SITE_DESCRIPTION,
+  description: HOMEPAGE_DESCRIPTION,
   keywords: KEYWORDS,
   applicationName: SITE_NAME,
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
   category: "Technology",
-  classification: "Startup Community and Collaboration Platform",
+  classification: "Startup Community, Cofounder Matching and Collaboration Platform",
   referrer: "origin-when-cross-origin",
   manifest: "/favicon_io/site.webmanifest",
   icons: {
@@ -64,15 +71,15 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "/",
     siteName: SITE_NAME,
-    title: `${SITE_NAME}. ${SITE_TAGLINE}`,
-    description: SITE_DESCRIPTION,
+    title: HOMEPAGE_TITLE,
+    description: HOMEPAGE_DESCRIPTION,
   },
   twitter: {
     card: "summary_large_image",
     site: "@crewlabin",
     creator: "@crewlabin",
-    title: `${SITE_NAME}. ${SITE_TAGLINE}`,
-    description: SITE_DESCRIPTION,
+    title: HOMEPAGE_TITLE,
+    description: HOMEPAGE_DESCRIPTION,
   },
   formatDetection: {
     email: false,

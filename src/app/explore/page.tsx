@@ -11,9 +11,9 @@ import ExploreProjects from "@/components/ExploreProjects";
 import "./explore.css";
 
 export const metadata = pageMetadata({
-  title: "Explore",
+  title: "Explore Startup Projects & Side Projects",
   description:
-    "Preview the CrewLab project discovery experience. Discover ideas, meet potential teammates, and find something worth building.",
+    "Browse startup projects, side projects and student projects looking for builders. Explore ideas, meet potential teammates, and find something worth building on CrewLab.",
   canonical: "/explore",
 });
 

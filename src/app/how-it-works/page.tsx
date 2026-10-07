@@ -10,9 +10,9 @@ import Icon from "@/components/Icon";
 import "./how-it-works.css";
 
 export const metadata = pageMetadata({
-  title: "How it works",
+  title: "How to Find Teammates & Build Together",
   description:
-    "From “I have an idea” to “we’re building it.” See how CrewLab moves ideas to the right people, then gives the crew a place to actually make it happen.",
+    "From “I have an idea” to “we’re building it.” Learn how CrewLab helps you find cofounders, teammates and builders — then gives the crew a place to make it happen.",
   canonical: "/how-it-works",
 });
 

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import BrandMark from "@/components/BrandMark";
 import Icon from "@/components/Icon";
+import { LANDING_PAGES } from "@/lib/site";
 
 export default function SiteFooter() {
   return (
@@ -9,11 +10,19 @@ export default function SiteFooter() {
         <div className="foot-grid">
           <div>
             <Link className="logo" href="/"><BrandMark dark />CrewLab</Link>
-            <p>Build together. Go further.</p>
+            <p>The startup team building and project collaboration platform. Find cofounders, join projects, and build together.</p>
+          </div>
+          <div>
+            <h4>Find your crew</h4>
+            <ul>
+              {LANDING_PAGES.map((page) => (
+                <li key={page.path}><Link href={page.path}>{page.label}</Link></li>
+              ))}
+            </ul>
           </div>
           <div>
             <h4>Product</h4>
-            <ul><li><Link href="/explore">Explore</Link></li><li><Link href="/how-it-works">How it works</Link></li><li><Link href="/features">Features</Link></li><li><Link href="/waitlist">Pricing</Link></li></ul>
+            <ul><li><Link href="/explore">Explore projects</Link></li><li><Link href="/how-it-works">How it works</Link></li><li><Link href="/features">Features</Link></li><li><Link href="/waitlist">Pricing</Link></li></ul>
           </div>
           <div>
             <h4>Company</h4>

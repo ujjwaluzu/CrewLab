@@ -7,18 +7,18 @@ export default function Hero() {
       <div className="wrap hero-grid">
         <div>
           <h1>
-            <span className="d1">Find your</span>
-            <span className="d1">
-              <span className="crew">
+            <span className="d1 hero-statement">Build real products with real people.</span>
+            <span className="d2">
+              Find your <span className="crew">
                 <svg className="brush" viewBox="0 0 600 140" preserveAspectRatio="none" aria-hidden="true"><use href="#brush-f" /></svg>
                 <span>crew.</span>
               </span>
             </span>
           </h1>
-          <p className="lede">CrewLab connects curious minds, whether you have an idea or just the skills to build. Find teammates, collaborate on real projects, and turn ideas into impact.</p>
+          <p className="lede">CrewLab is the builder community where founders, developers, designers, marketers, students and creators connect. Have an idea but no team? Find a cofounder, developers and project teammates. Have skills but no idea? Join startup projects and side projects that need you.</p>
           <div className="cta-row">
             <Link className="btn btn-primary" href="/waitlist">Join the waitlist <Icon name="arrow" /></Link>
-            <Link className="btn btn-ghost" href="/how-it-works">See how it works</Link>
+            <Link className="btn btn-ghost" href="/explore">Find project teammates <Icon name="arrow" /></Link>
           </div>
           <div className="proof">
             <span className="avs" aria-hidden="true">

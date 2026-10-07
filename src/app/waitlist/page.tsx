@@ -6,9 +6,9 @@ import WaitlistForm from "@/components/WaitlistForm";
 import "./waitlist.css";
 
 export const metadata = pageMetadata({
-  title: "Join the waitlist",
+  title: "Join the CrewLab Waitlist",
   description:
-    "Join a global community of builders, creators, and problem-solvers. Be the first to access CrewLab when we launch.",
+    "Join the CrewLab waitlist to be among the first to find cofounders, teammates and builders for your startup or side project when we launch.",
   canonical: "/waitlist",
 });
 

@@ -10,9 +10,9 @@ import Icon from "@/components/Icon";
 import "./features.css";
 
 export const metadata = pageMetadata({
-  title: "Features",
+  title: "Startup Team Collaboration Features",
   description:
-    "What your crew can actually do on CrewLab: a shared project workspace, tasks and milestones, a team roster, discussions, progress tracking, and integrations designed to connect — a demo showcase with static sample content.",
+    "What your startup team can do on CrewLab: a shared project workspace, tasks and milestones, a team roster, discussions, progress tracking and integrations designed to help you build together.",
   canonical: "/features",
 });
 

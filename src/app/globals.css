@@ -229,7 +229,7 @@
 
   /* Footer */
   footer{background:#0A0908;color:var(--on-panel);padding:clamp(44px,5.5vw,72px) 0 28px;border-top:1px solid rgba(241,237,228,.12)}
-  .foot-grid{display:grid;grid-template-columns:1.2fr .6fr .6fr 1.3fr;gap:clamp(24px,4vw,56px);padding-bottom:clamp(40px,6vw,80px)}
+  .foot-grid{display:grid;grid-template-columns:1.2fr .7fr .7fr .7fr 1.2fr;gap:clamp(24px,4vw,56px);padding-bottom:clamp(40px,6vw,80px)}
   footer .logo{margin-bottom:16px}
   footer p{margin:0;color:rgba(241,237,228,.62);max-width:30ch}
   footer h4{margin:0 0 16px;font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:rgba(241,237,228,.5)}
@@ -340,6 +340,126 @@ body{font-size:16px;line-height:1.55}
 .wordmark{overflow:visible;line-height:.96;padding-top:.1em}
 .projects-head{margin-bottom:clamp(40px,5vw,64px)}
 .projects-head .note{margin-top:clamp(34px,3.5vw,48px)}
+
+/* Projects rail — more link */
+.rail-more{display:flex;justify-content:center;margin-top:clamp(20px,2.6vw,32px)}
+.rail-more a{display:inline-flex;align-items:center;gap:10px;font:500 12px/1.6 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);padding:10px 18px;border:1.5px solid var(--line);border-radius:999px;transition:border-color .15s ease,color .15s ease,background .15s ease}
+.rail-more a:hover{color:var(--on-red);background:var(--red);border-color:var(--red)}
+.rail-more .ic{font-size:15px}
+
+/* Internal links hub */
+.home-links{background:var(--paper-2)}
+.links-head{margin-bottom:clamp(28px,4vw,48px)}
+.links-head .kicker{margin-bottom:16px}
+.links-head .note{margin-top:clamp(22px,3vw,32px)}
+.links-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2.2vw,26px)}
+.link-card{position:relative;display:flex;flex-direction:column;gap:14px;background:var(--card);border:1px solid var(--line);padding:clamp(22px,2.6vw,32px);border-radius:14px;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.link-card:nth-child(3n+1){transform:rotate(-0.45deg)}
+.link-card:nth-child(3n+2){transform:rotate(0.4deg)}
+.link-card:nth-child(3n+3){transform:rotate(-0.3deg)}
+.link-card:hover{transform:rotate(0deg) translateY(-4px);border-color:var(--red);box-shadow:var(--shadow)}
+.link-num{font:400 clamp(34px,3.4vw,48px)/1 var(--display);color:transparent;-webkit-text-stroke:1.5px var(--red);letter-spacing:.01em}
+.link-label{font:400 clamp(22px,2.2vw,30px)/1.05 var(--display);text-transform:uppercase;letter-spacing:.01em}
+.link-card p{margin:0;color:var(--ink-2);font-size:14.5px;line-height:1.55}
+.link-go{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);display:inline-flex;align-items:center;gap:8px;font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.link-go .ic{font-size:15px}
+
+/* FAQ */
+.faq{background:var(--paper)}
+.faq-head{margin-bottom:clamp(24px,3.2vw,40px)}
+.faq-head .note{margin-top:clamp(20px,2.6vw,30px)}
+.faq-list{max-width:900px}
+.faq-item{border-top:1.5px solid var(--ink)}
+.faq-item:last-child{border-bottom:1.5px solid var(--ink)}
+.faq-item summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:48px 1fr 24px;gap:clamp(10px,1.4vw,18px);align-items:center;padding:clamp(18px,2.4vw,26px) 0}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-num{font:500 12px/1 var(--mono);letter-spacing:.12em;color:var(--red)}
+.faq-q{font:400 clamp(18px,2vw,24px)/1.25 var(--display);letter-spacing:.005em}
+.faq-toggle{position:relative;width:22px;height:22px}
+.faq-toggle::before,.faq-toggle::after{content:"";position:absolute;background:var(--ink);transition:transform .18s ease}
+.faq-toggle::before{left:4px;right:4px;top:10px;height:2px}
+.faq-toggle::after{top:4px;bottom:4px;left:10px;width:2px}
+.faq-item[open] .faq-toggle::after{transform:scaleY(0)}
+.faq-a{padding:0 0 clamp(20px,2.6vw,28px) calc(48px + clamp(10px,1.4vw,18px))}
+.faq-a p{margin:0;max-width:68ch;color:var(--ink-2);font-size:16px;line-height:1.6}
+.faq-item[open] summary .faq-q{color:var(--red)}
+.faq-item summary:focus-visible{outline-offset:4px}
+
+@media (max-width:1000px){
+  .links-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:680px){
+  .links-grid{grid-template-columns:1fr}
+  .link-card{transform:rotate(0deg)!important}
+  .faq-item summary{grid-template-columns:32px 1fr 22px}
+  .faq-num{font-size:10px}
+  .faq-a{padding-left:0}
+}
+
+/* Cohesive, calmer type scale and component rhythm */
+:root{--shadow:0 18px 44px -30px rgba(0,0,0,.48)}
+body{font-size:15px;line-height:1.65}
+.wrap{max-width:1200px;padding-inline:clamp(20px,4.2vw,56px)}
+.head-in{height:64px}
+.logo{font-size:21px;letter-spacing:.015em}
+.nav-links{gap:clamp(18px,2.4vw,32px)}
+.nav-links a{font-size:11px;letter-spacing:.08em}
+.btn{font-size:14px;padding:11px 19px}
+.btn-sm{font-size:13px;padding:9px 15px}
+.mono{font-size:10px}
+.hero{padding:clamp(36px,5vw,68px) 0 clamp(42px,5.5vw,74px)}
+.d1{font-size:clamp(54px,8.4vw,118px);line-height:.94}
+.d2{font-size:clamp(34px,4.8vw,64px);line-height:1.08}
+.hero .hero-statement{font-size:clamp(38px,5vw,64px);line-height:1.06;letter-spacing:-.035em}
+.lede,.ws-copy p,.cta-copy p{font-size:16px;line-height:1.65}
+.proof{font-size:13px}
+.tick-a{font-size:clamp(23px,2.8vw,34px)}
+.way{min-height:340px;padding:clamp(24px,3vw,40px)}
+.way h2{font-size:clamp(34px,3.4vw,48px)}
+.way p,.sec-head p,.step p,.pbody p{font-size:15px;line-height:1.65}
+.pad{padding:clamp(52px,6vw,84px) 0}
+h2.h{font-size:clamp(40px,5.4vw,72px);line-height:.99}
+.sec-head{margin-bottom:clamp(26px,3.4vw,40px)}
+.step .n{font-size:clamp(52px,5.5vw,76px)}
+.step h3{font-size:21px;line-height:1.15}
+.step{padding-top:22px}
+.ws-copy p{margin:14px 0 18px}
+.ws-title{font-size:clamp(36px,4vw,54px)}
+.feats li{font-size:14px;padding:12px 0}
+.pcard{border-radius:14px}
+.phead{padding:16px 18px 13px}
+.pbody{padding:18px;gap:9px}
+.pbody h3{font-size:25px}
+.cta h2{font-size:clamp(42px,5.1vw,68px)}
+.cta-copy{padding:clamp(28px,4vw,48px)}
+.cta-copy p{margin:16px 0 20px}
+.signup input{font-size:14px;padding:12px 17px}
+.foot-grid{gap:clamp(20px,3vw,40px)}
+.wordmark{font-size:clamp(48px,11vw,168px);letter-spacing:-.035em}
+.link-card,.l-card,.l-rel-card{transform:none}
+.link-card:hover,.l-card:hover,.l-rel-card:hover{transform:translateY(-3px)}
+.link-label,.l-card h3,.l-rel-lab{font-size:clamp(20px,2vw,27px)}
+.link-card p,.l-card p,.l-rel-card p{font-size:14px;line-height:1.6}
+.faq-q{font-size:clamp(17px,1.7vw,21px)}
+.faq-a p{font-size:15px}
+
+@media (max-width:1000px){
+  .hero-grid{gap:28px}
+  .way{min-height:300px}
+}
+@media (max-width:640px){
+  .head-in{height:58px}
+  .logo{font-size:19px}
+  .d1{font-size:clamp(43px,12vw,62px)}
+  .d2{font-size:clamp(29px,8vw,42px)}
+  .hero .hero-statement{font-size:clamp(34px,9vw,46px)}
+  .hero{padding:32px 0 42px}
+  .lede{font-size:15px}
+  .way{min-height:280px}
+  .w3{min-height:320px}
+  .cta-art{min-height:240px}
+  .wordmark{font-size:clamp(42px,13vw,86px)}
+}
 
 .hero-grid{grid-template-columns:1fr;justify-items:center;text-align:center}
 .hero-grid>div:first-child{width:100%;max-width:920px}
