@@ -46,3 +46,13 @@ yarn-error.log*
 next-env.d.ts
 AGENTS.md 
 CLAUDE.md
+
+# local screenshots & qa tooling
+/.tmp/
+/shot-*.png
+/cdp-*.mjs
+/cdp-out.json
+
+# windows
+Thumbs.db
+desktop.ini
