@@ -4,7 +4,7 @@ import WaitlistForm from "@/components/WaitlistForm";
 import BrandMark from "@/components/BrandMark";
 
 export default function SiteFooter() {
-  return <footer className="site-footer">
+  return <footer className="site-footer" id="footer">
     <div className="wrap">
       <div className="foot-grid">
         <div className="footer-brand"><Link className="logo" href="/" aria-label="CrewLab home"><BrandMark />CrewLab</Link><p>Ideas to impact. Made for builders, by builders.</p></div>
