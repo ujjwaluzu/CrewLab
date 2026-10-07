@@ -11,17 +11,11 @@ export default function SiteHeader({ home = false }: { home?: boolean }) {
           <BrandMark />
           CrewLab
         </Link>
-        <nav className="nav-links" aria-label="Primary">
-          {home ? <>
-            <Link href="#how">How it works</Link>
-            <Link href="#projects">Projects</Link>
-            <Link href="#faq">FAQ</Link>
-          </> : <>
-            <Link href="/explore">Explore</Link>
-            <Link href="/how-it-works">How it works</Link>
-            <Link href="/about">About</Link>
-          </>}
-        </nav>
+        {!home && <nav className="nav-links" aria-label="Primary">
+          <Link href="/explore">Explore</Link>
+          <Link href="/how-it-works">How it works</Link>
+          <Link href="/about">About</Link>
+        </nav>}
         <Button href="/waitlist" className="btn-sm">Join the waitlist <Icon name="up-right" /></Button>
       </div>
     </header>
