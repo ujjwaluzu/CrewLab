@@ -417,7 +417,7 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{background:var(--cream);color:var(--ink);font:400 16px/1.55 var(--font-body);-webkit-font-smoothing:antialiased}
 body::after{display:none}
 .wrap{max-width:1200px;padding-inline:clamp(20px,3vw,40px)}
-.site-head{position:relative;background:var(--cream);border-bottom:2px solid var(--ink);backdrop-filter:none}
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--cream);border-bottom:2px solid var(--ink)}
 .head-in{height:80px;gap:24px}
 .logo{font:800 24px/1 var(--font-display);letter-spacing:.02em}
 .logo svg{width:26px;height:26px}
