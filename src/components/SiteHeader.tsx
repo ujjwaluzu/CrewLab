@@ -5,7 +5,7 @@ import Button from "@/components/Button";
 
 export default function SiteHeader({ home = false }: { home?: boolean }) {
   return (
-    <header className="site-head">
+    <header className={`site-head${home ? " site-head-home" : ""}`}>
       <div className="wrap head-in">
         <Link className="logo" href="/" aria-label="CrewLab home">
           <BrandMark />

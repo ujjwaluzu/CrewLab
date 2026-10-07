@@ -9,7 +9,6 @@ const EMPTY_CUTOUT = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=
 export default function Hero() {
   return <section className="home-hero" aria-labelledby="home-title">
     <div className="hero-intro">
-      <Sticker className="waitlist-sticker">Waitlist open</Sticker>
       <h1 id="home-title">build real<br />products with<br /><span className="headline-pill ink-pill">real</span> <span className="headline-pill red-pill">people.</span></h1>
       <p className="lede">CrewLab is the builder community where founders, developers, designers, marketers, students and creators connect. Have an idea but no team? Find a cofounder. Have skills but no idea? Join a startup or side project.</p>
       <div className="cta-row">

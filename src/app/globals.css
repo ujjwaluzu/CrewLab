@@ -510,6 +510,22 @@ footer ul{gap:0}footer ul a{color:var(--cream)}footer .socials{display:none}
 .foot-base{max-width:none;margin:0;padding:16px 0 20px;font:400 10px/1.5 var(--font-mono);color:var(--cream);letter-spacing:.06em;border-top:1px solid rgba(241,234,219,.24)}
 .foot-base span{max-width:33%}
 @media(max-width:1000px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.rail{grid-template-columns:repeat(2,minmax(0,1fr))}.home-hero h1{font-size:clamp(56px,10vw,100px)}.ws-grid{grid-template-columns:1fr}.stage{margin:24px 0}.foot-grid{gap:32px}}
+
+@media(max-width:640px){
+  .hero-intro{padding-top:20px}
+  .home-hero .lede{margin-top:18px}
+  .home-hero .cta-row{margin-top:18px}
+  .home-hero .proof{margin-top:14px}
+  .hero-collage{min-height:470px;margin-top:26px;margin-bottom:18px}
+  main>.home-how,main>.home-projects,main>.home-links,main>.faq{padding-block:40px}
+  main>.home-join{padding-block:44px}
+  .home-how .sec-head,.home-projects .sec-head,.home-links .sec-head{margin-bottom:22px}
+  .home-steps .step-card{padding:20px}
+  .home-join .signup{margin-top:18px}
+  .faq-head{margin-bottom:20px}
+  .home-links .link-card{padding-block:14px}
+}
+
 @media(max-width:640px){
   .head-in{height:64px;gap:8px;padding-inline:12px}.head-in .logo{font-size:17px;gap:6px}.head-in .logo svg{width:20px;height:20px}.head-in>.btn{font-size:9px;padding:8px 10px;letter-spacing:0}
   .nav-links{display:none}.home-hero h1{width:100%;font-size:clamp(38px,10vw,46px)}
@@ -663,4 +679,45 @@ button,input{font-family:var(--font-body)}
   .landing,.explore,.features,.about,.hiw,.wl,.nf{width:100%;max-width:100%;overflow-x:clip}
   .landing h1,.explore h1,.features h1,.about h1,.hiw h1,.wl h1,.nf h1{max-width:100%;overflow-wrap:anywhere}
   .landing .l-title .d1,.explore .x-title .d1,.features .f-title .d1,.about .a-t1,.hiw .h-title .d1{font-size:clamp(36px,10vw,52px)}
+}
+
+@media(min-width:641px){
+  .site-head-home .head-in{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}
+  .site-head-home .nav-links{justify-self:center;gap:clamp(18px,3vw,40px)}
+  .site-head-home .head-in>.btn{justify-self:end}
+}
+
+/* Tighter homepage rhythm */
+.hero-intro{padding-top:24px}
+.home-hero h1{margin-top:12px}
+.home-hero .lede{margin-top:24px}
+.home-hero .cta-row{margin-top:24px}
+.home-hero .proof{margin-top:18px}
+.hero-collage{height:410px;margin-top:32px}
+main>.home-how,main>.home-projects,main>.home-links,main>.faq{padding-block:clamp(44px,6vw,80px)}
+main>.home-join{padding-block:clamp(48px,6vw,82px)}
+.home-how .sec-head,.home-projects .sec-head,.home-links .sec-head{margin-bottom:28px}
+.home-how .sec-head>p,.home-links .sec-head>p{margin-top:16px}
+.home-steps{gap:16px}
+.home-steps .step-card{padding:22px}
+.home-join .cta-copy h2{margin-bottom:0}
+.home-join .signup{margin-top:24px}
+.home-join .fine{margin-top:12px}
+.faq-head{margin-bottom:28px}
+.faq-head .note{margin-top:14px}
+.home-links .section-header{margin-bottom:28px}
+.home-links .link-card{padding-block:16px}
+@media(max-width:640px){
+  .hero-intro{padding-top:20px}
+  .home-hero .lede{margin-top:18px}
+  .home-hero .cta-row{margin-top:18px}
+  .home-hero .proof{margin-top:14px}
+  .hero-collage{min-height:470px;margin-top:26px;margin-bottom:18px}
+  main>.home-how,main>.home-projects,main>.home-links,main>.faq{padding-block:40px}
+  main>.home-join{padding-block:44px}
+  .home-how .sec-head,.home-projects .sec-head,.home-links .sec-head{margin-bottom:22px}
+  .home-steps .step-card{padding:20px}
+  .home-join .signup{margin-top:18px}
+  .faq-head{margin-bottom:20px}
+  .home-links .link-card{padding-block:14px}
 }
