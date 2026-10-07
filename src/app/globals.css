@@ -681,11 +681,7 @@ button,input{font-family:var(--font-body)}
   .landing .l-title .d1,.explore .x-title .d1,.features .f-title .d1,.about .a-t1,.hiw .h-title .d1{font-size:clamp(36px,10vw,52px)}
 }
 
-@media(min-width:641px){
-  .site-head-home .head-in{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}
-  .site-head-home .nav-links{justify-self:center;gap:clamp(18px,3vw,40px)}
-  .site-head-home .head-in>.btn{justify-self:end}
-}
+.site-head-home .head-in{display:flex;justify-content:space-between}
 
 /* Tighter homepage rhythm */
 .hero-intro{padding-top:24px}
