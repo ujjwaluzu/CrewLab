@@ -1,29 +1,25 @@
-import Cta from "@/components/Cta";
 import Faq from "@/components/Faq";
 import Hero from "@/components/Hero";
 import HomeLinks from "@/components/HomeLinks";
 import HowItWorks from "@/components/HowItWorks";
 import ProjectsRail from "@/components/ProjectsRail";
+import Cta from "@/components/Cta";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import Tickers from "@/components/Tickers";
-import WaysIn from "@/components/WaysIn";
-import Workspace from "@/components/Workspace";
 
 export default function Home() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeader home />
       <main id="top">
         <Hero />
         <Tickers />
-        <WaysIn />
+        <Cta />
         <HowItWorks />
-        <Workspace />
         <ProjectsRail />
         <HomeLinks />
         <Faq />
-        <Cta />
       </main>
       <SiteFooter />
     </>

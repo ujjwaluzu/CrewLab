@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, JetBrains_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Fraunces, Space_Mono } from "next/font/google";
 import "./globals.css";
 import SvgDefs from "@/components/SvgDefs";
 import SchemaOrg from "@/components/SchemaOrg";
@@ -12,17 +12,23 @@ import {
   GEO,
 } from "@/lib/site";
 
-const sans = DM_Sans({
-  variable: "--sans",
+const bodyFont = Bricolage_Grotesque({
+  variable: "--font-body",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "600"],
+  display: "swap",
+});
+const displayFont = Fraunces({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["500", "800"],
   style: ["normal", "italic"],
   display: "swap",
 });
-const mono = JetBrains_Mono({
-  variable: "--mono",
+const monoFont = Space_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
@@ -103,7 +109,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-IN" className={`${sans.variable} ${mono.variable}`}>
+    <html lang="en-IN" className={`${bodyFont.variable} ${displayFont.variable} ${monoFont.variable}`}>
       <body>
         <SvgDefs />
         <SchemaOrg />

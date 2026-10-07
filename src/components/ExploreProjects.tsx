@@ -9,7 +9,7 @@ type Project = {
   builders: string[];
 };
 
-const PALETTE = ["#BFDCC8", "#E9B44C", "#F08A7A", "#9CB8E8", "#D9A21E", "#C9C3B5"];
+const PALETTE = ["var(--red)", "var(--tan)", "var(--paper)"];
 
 const projects: Project[] = [
   {

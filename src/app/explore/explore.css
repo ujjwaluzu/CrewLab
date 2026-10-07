@@ -1,21 +1,15 @@
 .explore {
-  --paper: #13120F;
-  --paper-2: #1B1A16;
-  --card: #1E1D19;
-  --ink: #F1EDE4;
-  --ink-2: #C9C3B5;
-  --mute: #8E887B;
-  --line: rgba(241, 237, 228, 0.18);
-  --red: #E5382B;
-  --on-red: #FBF6EC;
-  --shadow: 0 30px 60px -28px rgba(0, 0, 0, 0.8);
+  --paper: var(--color-cream); --paper-2: var(--color-tan); --card: var(--color-paper);
+  --ink: var(--color-ink); --ink-2: var(--color-ink); --mute: var(--color-ink);
+  --line: rgba(18,17,16,.28); --red: var(--color-red); --on-red: var(--color-ink);
+  --shadow: 6px 6px 0 var(--color-ink);
   background: var(--paper);
   color: var(--ink);
-  color-scheme: dark;
+  color-scheme: light;
   min-height: 100vh;
 }
 body:has(.explore) {
-  background: #13120F;
+  background: var(--color-cream);
 }
 
 /* Hero */

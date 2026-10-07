@@ -1,35 +1,37 @@
-import Link from "next/link";
-import Icon from "@/components/Icon";
+import DashboardMock from "@/components/DashboardMock";
+import Sticker from "@/components/Sticker";
+import Button from "@/components/Button";
+import Image from "next/image";
+
+const EMPTY_CUTOUT = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
 
 export default function Hero() {
-  return (
-    <section className="hero">
-      <div className="wrap hero-grid">
-        <div>
-          <h1>
-            <span className="d1 hero-statement">Build real products with real people.</span>
-            <span className="d2">
-              Find your <span className="crew">
-                <svg className="brush" viewBox="0 0 600 140" preserveAspectRatio="none" aria-hidden="true"><use href="#brush-f" /></svg>
-                <span>crew.</span>
-              </span>
-            </span>
-          </h1>
-          <p className="lede">CrewLab is the builder community where founders, developers, designers, marketers, students and creators connect. Have an idea but no team? Find a cofounder, developers and project teammates. Have skills but no idea? Join startup projects and side projects that need you.</p>
-          <div className="cta-row">
-            <Link className="btn btn-primary" href="/waitlist">Join the waitlist <Icon name="arrow" /></Link>
-            <Link className="btn btn-ghost" href="/explore">Find project teammates <Icon name="arrow" /></Link>
-          </div>
-          <div className="proof">
-            <span className="avs" aria-hidden="true">
-              <i style={{ background: "var(--mint)" }}>AK</i>
-              <i style={{ background: "#E9B44C" }}>RS</i>
-              <i style={{ background: "#F08A7A" }}>PN</i>
-            </span>
-            <span>Be among the first builders on CrewLab</span>
-          </div>
-        </div>
+  return <section className="home-hero" aria-labelledby="home-title">
+    <div className="hero-intro">
+      <Sticker className="waitlist-sticker">Waitlist open</Sticker>
+      <h1 id="home-title">build real<br />products with<br /><span className="headline-pill ink-pill">real</span> <span className="headline-pill red-pill">people.</span></h1>
+      <p className="lede">CrewLab is the builder community where founders, developers, designers, marketers, students and creators connect. Have an idea but no team? Find a cofounder. Have skills but no idea? Join a startup or side project.</p>
+      <div className="cta-row">
+        <Button href="/waitlist">Join the waitlist</Button>
+        <Button href="/explore" variant="secondary">Find project teammates</Button>
       </div>
-    </section>
-  );
+      <div className="proof">
+        <span className="avs" aria-hidden="true"><i>AK</i><i>RJ</i><i>PS</i></span>
+        <span>Be among the first builders on CrewLab</span>
+      </div>
+    </div>
+    <div className="hero-collage" aria-label="A preview of the CrewLab workspace and sample projects">
+      <article className="collage-project">
+        <span className="collage-meta">Sample project</span><strong>StudySync</strong>
+        <span>Looking for: frontend, UI design</span><b className="collage-status">In progress</b>
+      </article>
+      <Sticker className="collage-note">Have an idea,<br />but no team?</Sticker>
+      <div className="dashboard-ticket"><DashboardMock /></div>
+      {/* Swap the transparent source for a cutout PNG when the art is ready. */}
+      <div className="collage-cutout-slot" aria-hidden="true"><Image src={EMPTY_CUTOUT} alt="" fill unoptimized sizes="120px" /></div>
+      <svg className="collage-pointer" viewBox="0 0 120 70" aria-hidden="true"><path d="M4 4l6 34 9-10 12 18 8-5-12-17 14-2z" fill="var(--ink)" stroke="var(--cream)" strokeWidth="2"/><rect x="34" y="40" width="70" height="24" rx="12" fill="var(--red)"/><text x="48" y="57" fontFamily="var(--font-mono)" fontSize="12" fontWeight="700" fill="var(--ink)">ujwal</text></svg>
+      <Sticker className="collage-sticker">good builders<br />build together.</Sticker>
+      <div className="collage-toast"><span className="toast-avatar">AK</span><span>Aman joined the team</span></div>
+    </div>
+  </section>;
 }

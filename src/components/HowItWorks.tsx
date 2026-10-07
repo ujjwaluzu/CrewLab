@@ -1,4 +1,5 @@
-import Icon from "@/components/Icon";
+import StepCard from "@/components/StepCard";
+import SectionHeader from "@/components/SectionHeader";
 
 const steps = [
   ["01", "doc", "Share or explore", "Post your startup idea and list the roles you need — a technical cofounder, a designer, a marketer — or browse open projects to join."],
@@ -9,20 +10,12 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="pad" id="how">
+    <section className="pad home-how" id="how">
       <div className="wrap">
-        <div className="sec-head">
-          <h2 className="h">Startup team building, <em>made simple</em></h2>
-          <p>A simple way to go from a solo idea to a working project with the right cofounders and teammates.</p>
-        </div>
-        <ol className="steps" style={{ listStyle: "none", margin: 0, padding: 0 }}>
-          {steps.map(([number, icon, title, description]) => (
-            <li className="step" key={number}>
-              <div className="n" aria-hidden="true">{number}</div>
-              <Icon name={icon} className="ic" />
-              <h3>{title}</h3>
-              <p>{description}</p>
-            </li>
+        <SectionHeader kicker="how it works" accent="made simple." description="A simple way to go from a solo idea to a working project with the right cofounders and teammates.">startup team building,</SectionHeader>
+        <ol className="steps home-steps" style={{ listStyle: "none", margin: 0, padding: 0 }}>
+          {steps.map(([number, , title, description]) => (
+            <StepCard key={number} number={number} title={title} tone={number === "04" ? "ink" : number === "02" ? "tan" : "paper"}>{description}</StepCard>
           ))}
         </ol>
       </div>

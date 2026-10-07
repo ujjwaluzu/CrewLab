@@ -1,10 +1,12 @@
 import { faqs } from "@/lib/faqs";
 import TornEdge from "@/components/TornEdge";
 
+const homeFaqs = [faqs[0], faqs[1], faqs[2], faqs[3], faqs[5], faqs[9]];
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
+  mainEntity: homeFaqs.map((faq) => ({
     "@type": "Question",
     name: faq.question,
     acceptedAnswer: {
@@ -30,7 +32,7 @@ export default function Faq() {
           </div>
         </div>
         <div className="faq-list">
-          {faqs.map((faq, index) => (
+          {homeFaqs.map((faq, index) => (
             <details className="faq-item" key={faq.question}>
               <summary>
                 <span className="faq-num" aria-hidden="true">0{index + 1}</span>

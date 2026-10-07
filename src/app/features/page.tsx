@@ -44,46 +44,46 @@ const crew = [
     name: "Alex",
     role: "Frontend",
     now: "Rebuilding the onboarding flow",
-    color: "#F08A7A",
+    color: "var(--red)",
   },
   {
     name: "Maya",
     role: "UI/UX",
     now: "Polishing the beta screens",
-    color: "#BFDCC8",
+    color: "var(--tan)",
   },
   {
     name: "Jordan",
     role: "Backend",
     now: "Wiring up the study API",
-    color: "#9CB8E8",
+    color: "var(--paper)",
   },
   {
     name: "Sam",
     role: "Product",
     now: "Writing the beta launch plan",
-    color: "#E9B44C",
+    color: "var(--tan)",
   },
 ] as const;
 
 const messages = [
   {
     initial: "M",
-    color: "#BFDCC8",
+    color: "var(--tan)",
     name: "Maya",
     time: "10:24",
     text: "I think we should simplify the onboarding flow before the beta.",
   },
   {
     initial: "A",
-    color: "#F08A7A",
+    color: "var(--red)",
     name: "Alex",
     time: "10:31",
     text: "Agreed. I\u2019ll update the prototype and post the new flow.",
   },
   {
     initial: "J",
-    color: "#9CB8E8",
+    color: "var(--paper)",
     name: "Jordan",
     time: "10:38",
     text: "I\u2019ll handle the API changes once that\u2019s settled.",
@@ -200,7 +200,7 @@ export default function FeaturesPage() {
               </div>
               <div className="f-hcard c">
                 <div className="f-hc-msg">
-                  <span className="pip" style={{ background: "#BFDCC8" }}>M</span>
+                  <span className="pip" style={{ background: "var(--tan)" }}>M</span>
                   <span className="f-hc-msg-meta"><b>Maya</b><i>10:24</i></span>
                 </div>
                 <p>Let&apos;s simplify the onboarding flow before the beta.</p>
@@ -232,7 +232,7 @@ export default function FeaturesPage() {
                     <aside className="w-side">
                       <div className="w-logo">CrewLab</div>
                       <a className="on">Overview</a><a>Tasks</a><a>Milestones</a><a>Discussions</a><a>Activity</a>
-                      <div className="w-me"><span className="pip" style={{ background: "#E9B44C" }}>Y</span>You</div>
+                      <div className="w-me"><span className="pip" style={{ background: "var(--tan)" }}>Y</span>You</div>
                     </aside>
                     <div className="w-main">
                       <div className="w-top">
@@ -259,9 +259,9 @@ export default function FeaturesPage() {
                         </div>
                         <div className="w-panel act">
                           <h5>Recent activity</h5>
-                          <div className="w-row"><span className="pip" style={{ background: "#F08A7A" }}>A</span><div className="t"><b>Alex updated the prototype</b><span>Onboarding flow · 2 hours ago</span></div></div>
-                          <div className="w-row"><span className="pip" style={{ background: "#BFDCC8" }}>M</span><div className="t"><b>Maya posted an idea</b><span>Simplify onboarding · 4 hours ago</span></div></div>
-                          <div className="w-row"><span className="pip" style={{ background: "#9CB8E8" }}>J</span><div className="t"><b>Jordan pushed 3 commits</b><span>Study API · 1 day ago</span></div></div>
+                          <div className="w-row"><span className="pip" style={{ background: "var(--red)" }}>A</span><div className="t"><b>Alex updated the prototype</b><span>Onboarding flow · 2 hours ago</span></div></div>
+                          <div className="w-row"><span className="pip" style={{ background: "var(--tan)" }}>M</span><div className="t"><b>Maya posted an idea</b><span>Simplify onboarding · 4 hours ago</span></div></div>
+                          <div className="w-row"><span className="pip" style={{ background: "var(--paper)" }}>J</span><div className="t"><b>Jordan pushed 3 commits</b><span>Study API · 1 day ago</span></div></div>
                         </div>
                       </div>
                     </div>
