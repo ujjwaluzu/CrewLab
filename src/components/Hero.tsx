@@ -3,6 +3,7 @@ import Sticker from "@/components/Sticker";
 import Button from "@/components/Button";
 import Image from "next/image";
 
+// Swap to "/collage/your-cutout.png" for an image placed in public/collage/.
 const EMPTY_CUTOUT = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
 
 export default function Hero() {
@@ -27,7 +28,6 @@ export default function Hero() {
       </article>
       <Sticker className="collage-note">Have an idea,<br />but no team?</Sticker>
       <div className="dashboard-ticket"><DashboardMock /></div>
-      {/* Swap the transparent source for a cutout PNG when the art is ready. */}
       <div className="collage-cutout-slot" aria-hidden="true"><Image src={EMPTY_CUTOUT} alt="" fill unoptimized sizes="120px" /></div>
       <svg className="collage-pointer" viewBox="0 0 120 70" aria-hidden="true"><path d="M4 4l6 34 9-10 12 18 8-5-12-17 14-2z" fill="var(--ink)" stroke="var(--cream)" strokeWidth="2"/><rect x="34" y="40" width="70" height="24" rx="12" fill="var(--red)"/><text x="48" y="57" fontFamily="var(--font-mono)" fontSize="12" fontWeight="700" fill="var(--ink)">ujwal</text></svg>
       <Sticker className="collage-sticker">good builders<br />build together.</Sticker>

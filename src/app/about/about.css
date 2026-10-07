@@ -1,15 +1,15 @@
 .about {
-  --paper: var(--color-cream); --paper-2: var(--color-tan); --card: var(--color-paper);
-  --ink: var(--color-ink); --ink-2: var(--color-ink); --mute: var(--color-ink);
-  --line: rgba(18,17,16,.28); --red: var(--color-red); --on-red: var(--color-ink);
-  --shadow: 6px 6px 0 var(--color-ink);
+  --paper: var(--cream); --paper-2: var(--tan); --card: var(--paper);
+  --ink-2: var(--ink); --mute: var(--ink);
+  --line: rgba(18,17,16,.28); --on-red: var(--ink);
+  --shadow: 6px 6px 0 var(--ink);
   background: var(--paper);
   color: var(--ink);
   color-scheme: light;
   min-height: 100vh;
 }
 body:has(.about) {
-  background: var(--color-cream);
+  background: var(--cream);
 }
 
 /* Shared section heads */
@@ -298,7 +298,7 @@ body:has(.about) {
 }
 .a-problem-pull {
   font: italic 300 clamp(26px, 3vw, 40px)/1.2 var(--serif);
-  color: var(--ink) !important;
+  color: var(--ink);
 }
 
 /* What we're building */
@@ -745,7 +745,7 @@ body:has(.about) {
     align-items: stretch;
   }
   .a-chain .a-link {
-    transform: rotate(0deg) !important;
+    transform: rotate(0deg);
   }
   .a-chain > .a-link-arrow {
     align-self: center;
