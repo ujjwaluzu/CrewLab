@@ -293,7 +293,7 @@ body{font-size:16px;line-height:1.55}
 .projects-head{margin-bottom:clamp(40px,5vw,64px)}
 .projects-head .note{margin-top:clamp(34px,3.5vw,48px)}
 
-/* Projects rail — more link */
+/* Projects rail - more link */
 .rail-more{display:flex;justify-content:center;margin-top:clamp(20px,2.6vw,32px)}
 .rail-more a{display:inline-flex;align-items:center;gap:10px;font:500 12px/1.6 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);padding:10px 18px;border:1.5px solid var(--line);border-radius:999px;transition:border-color .15s ease,color .15s ease,background .15s ease}
 .rail-more a:hover{color:var(--on-red);background:var(--red);border-color:var(--red)}
@@ -749,7 +749,7 @@ main>.home-join{padding-block:clamp(36px,4vw,56px)}
   main>.home-how .section-description,main>.home-links .section-description,main>.faq .faq-head .note{font-size:16px}
 }
 
-/* Pixel-art Earth background — scoped to the hero section only */
+/* Pixel-art Earth background - scoped to the hero section only */
 .site-head-home + main{margin-top:calc(-1 * var(--head-h))}
 .home-hero{
   position:relative;

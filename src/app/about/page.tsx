@@ -35,7 +35,7 @@ export default function AboutPage() {
                   </span>
                 </span>
               </h1>
-              <p className="a-lede">CrewLab exists for the people who have something they want to build — and the people who want to build something, but haven’t found the right idea or crew yet.</p>
+              <p className="a-lede">CrewLab exists for the people who have something they want to build - and the people who want to build something, but haven’t found the right idea or crew yet.</p>
             </div>
             <div className="a-hero-art" aria-hidden="true">
               <div className="halftone" />
@@ -109,7 +109,7 @@ export default function AboutPage() {
                 <span className="a-link-word">crews actually build</span>
               </div>
             </div>
-            <p className="a-what-note">A place where — the rest is up to the crew.</p>
+            <p className="a-what-note">A place where - the rest is up to the crew.</p>
           </div>
         </section>
 
@@ -177,7 +177,7 @@ export default function AboutPage() {
             </h2>
             <p className="a-go-statement">It’s to help people spend their time <em>making things.</em></p>
             <p className="a-go-body">
-              Real projects need real ownership — crews that form around an idea, take responsibility for it, and ship it together.
+              Real projects need real ownership - crews that form around an idea, take responsibility for it, and ship it together.
               Screen-time for its own sake isn’t the point. Building is.
             </p>
           </div>

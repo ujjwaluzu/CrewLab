@@ -36,7 +36,7 @@ const config: LandingConfig = {
       label: "side projects to join",
       heading: "Side projects",
       emphasis: "looking for you",
-      intro: "Browse side projects by skill, stack and stage — from idea-stage experiments to projects with working prototypes.",
+      intro: "Browse side projects by skill, stack and stage - from idea-stage experiments to projects with working prototypes.",
       cards: [
         {
           icon: "code",
@@ -62,10 +62,10 @@ const config: LandingConfig = {
       emphasis: "community builds",
       intro: "Side projects are how builders sharpen skills, test ideas and meet collaborators without the pressure of a full-time commitment.",
       bullets: [
-        "<b>Learn by shipping</b> — real products are the fastest way to grow.",
-        "<b>Build a portfolio</b> — show what you've made, not just what you know.",
-        "<b>Meet collaborators</b> — side project partners often become cofounders.",
-        "<b>Test startup ideas</b> — validate cheaply before going all in.",
+        "<b>Learn by shipping</b> - real products are the fastest way to grow.",
+        "<b>Build a portfolio</b> - show what you've made, not just what you know.",
+        "<b>Meet collaborators</b> - side project partners often become cofounders.",
+        "<b>Test startup ideas</b> - validate cheaply before going all in.",
       ],
     },
     {
@@ -75,9 +75,9 @@ const config: LandingConfig = {
       emphasis: "in three steps",
       intro: "From 'just browsing' to 'shipped together.'",
       bullets: [
-        "<b>Explore side projects</b> — filter by skill, stack and stage.",
-        "<b>Request to join</b> — tell the team what you can build.",
-        "<b>Start building</b> — plan, collaborate and track progress together.",
+        "<b>Explore side projects</b> - filter by skill, stack and stage.",
+        "<b>Request to join</b> - tell the team what you can build.",
+        "<b>Start building</b> - plan, collaborate and track progress together.",
       ],
       fine: "Side project collaboration is free during early access.",
     },

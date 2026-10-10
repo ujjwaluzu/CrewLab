@@ -8,7 +8,7 @@ const jsonLd = {
       "@id": `${SITE_URL}/#website`,
       url: SITE_URL,
       name: SITE_NAME,
-      alternateName: `${SITE_NAME} — startup team builder and project collaboration platform`,
+      alternateName: `${SITE_NAME} - startup team builder and project collaboration platform`,
       description: SITE_DESCRIPTION,
       inLanguage: "en-IN",
       publisher: { "@id": `${SITE_URL}/#organization` },

@@ -2,7 +2,7 @@ import StepCard from "@/components/StepCard";
 import SectionHeader from "@/components/SectionHeader";
 
 const steps = [
-  ["01", "doc", "Share or explore", "Post your startup idea and list the roles you need — a technical cofounder, a designer, a marketer — or browse open projects to join."],
+  ["01", "doc", "Share or explore", "Post your startup idea and list the roles you need - a technical cofounder, a designer, a marketer - or browse open projects to join."],
   ["02", "users", "Find your crew", "Get matched with developers, designers and creators who want to join your startup team or side project."],
   ["03", "code", "Build together", "Collaborate on the project, divide the work, and ship real products with real people."],
   ["04", "bars", "Track progress", "Follow milestones, tasks and commits with GitHub integration so the team stays in sync."],

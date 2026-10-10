@@ -153,7 +153,7 @@ export default function Landing({ config }: { config: LandingConfig }) {
               <div className="wrap">
                 <div className="sec-head l-sec-head">
                   <div>
-                    <p className="l-label"><span>0{index + 1}</span> — {section.label}</p>
+                    <p className="l-label"><span>0{index + 1}</span> - {section.label}</p>
                     <h2 className="h">{section.heading} <em>{section.emphasis}</em></h2>
                   </div>
                   {section.intro && <p>{section.intro}</p>}

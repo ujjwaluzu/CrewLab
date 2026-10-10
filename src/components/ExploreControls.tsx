@@ -38,7 +38,7 @@ export default function ExploreControls() {
         ))}
       </div>
       <p id="x-tool-note" className="x-tool-note">
-        Search and filters are a preview — real discovery ships with the CrewLab app.
+        Search and filters are a preview - real discovery ships with the CrewLab app.
       </p>
     </div>
   );

@@ -4,7 +4,7 @@ import Landing, { type LandingConfig } from "@/components/Landing";
 export const metadata = pageMetadata({
   title: "Build a Startup Team & Collaborate",
   description:
-    "Assemble a startup team — founders, developers, designers and marketers — and collaborate on your startup idea with builders who want to make it real. Startup team building on CrewLab.",
+    "Assemble a startup team - founders, developers, designers and marketers - and collaborate on your startup idea with builders who want to make it real. Startup team building on CrewLab.",
   canonical: "/startup-teams",
   keywords: [
     "startup teams",
@@ -24,7 +24,7 @@ const config: LandingConfig = {
   kicker: "Startup team building",
   titleLines: ["Build a startup", "team that"],
   highlight: "really builds",
-  lede: "Startup team building is about finding people who commit to the build. CrewLab helps founders assemble a startup team — developers, designers, marketers and product people — and gives the team a workspace to collaborate from the first idea to launch.",
+  lede: "Startup team building is about finding people who commit to the build. CrewLab helps founders assemble a startup team - developers, designers, marketers and product people - and gives the team a workspace to collaborate from the first idea to launch.",
   note: "Teams that collaborate from idea to ship",
   primaryLabel: "Build your startup team",
   primaryHref: "/waitlist",
@@ -62,10 +62,10 @@ const config: LandingConfig = {
       emphasis: "that ships",
       intro: "Once the team forms, CrewLab becomes the shared workspace: plan the startup, split the work and track real progress.",
       bullets: [
-        "<b>Tasks & milestones</b> — turn the roadmap into shippable steps.",
-        "<b>Project discussions</b> — keep decisions close to the work.",
-        "<b>GitHub integration</b> — see commits and progress in one place.",
-        "<b>Activity feed</b> — everyone knows what's moving.",
+        "<b>Tasks & milestones</b> - turn the roadmap into shippable steps.",
+        "<b>Project discussions</b> - keep decisions close to the work.",
+        "<b>GitHub integration</b> - see commits and progress in one place.",
+        "<b>Activity feed</b> - everyone knows what's moving.",
       ],
     },
     {
@@ -75,12 +75,12 @@ const config: LandingConfig = {
       emphasis: "form on CrewLab",
       intro: "Four steps from solo founder to a building startup team.",
       bullets: [
-        "<b>Post your startup</b> — the idea, the stage and the roles you need.",
-        "<b>Meet the crew</b> — talk to founders, developers and builders who want in.",
-        "<b>Form the team</b> — agree on roles, ownership and the first milestone.",
-        "<b>Build together</b> — collaborate in the CrewLab workspace.",
+        "<b>Post your startup</b> - the idea, the stage and the roles you need.",
+        "<b>Meet the crew</b> - talk to founders, developers and builders who want in.",
+        "<b>Form the team</b> - agree on roles, ownership and the first milestone.",
+        "<b>Build together</b> - collaborate in the CrewLab workspace.",
       ],
-      fine: "CrewLab is purpose-built for startup collaboration — not another social feed.",
+      fine: "CrewLab is purpose-built for startup collaboration - not another social feed.",
     },
   ],
   relatedLabel: "More ways to find your crew",

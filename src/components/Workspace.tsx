@@ -17,7 +17,7 @@ export default function Workspace() {
       <div className="wrap ws-grid">
         <div className="ws-copy">
           <h2 className="h ws-title">A collaboration <em>workspace for builders</em></h2>
-          <p>Everything your startup team needs to collaborate on a project — tasks, milestones, discussions and progress — in one shared workspace, not a chat feed.</p>
+          <p>Everything your startup team needs to collaborate on a project - tasks, milestones, discussions and progress - in one shared workspace, not a chat feed.</p>
           <ul className="feats">
             {features.map(([icon, label]) => <li key={label}><Icon name={icon} />{label}</li>)}
           </ul>

@@ -8,7 +8,7 @@ export default function WaysIn() {
         <span className="num">01</span>
         <span className="ico"><Icon name="bulb" /></span>
         <h2>Have an idea, <em>but no team?</em></h2>
-        <p>Find a cofounder and startup teammates who can help you build it — developers, designers, marketers and more.</p>
+        <p>Find a cofounder and startup teammates who can help you build it - developers, designers, marketers and more.</p>
         <Link className="go" href="/find-cofounder" aria-label="Find a cofounder"><Icon name="arrow" /></Link>
       </article>
       <article className="way w2">

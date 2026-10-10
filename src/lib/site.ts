@@ -13,7 +13,7 @@ export const HOMEPAGE_TITLE =
   "Find a Cofounder, Teammates & Startup Projects | CrewLab";
 
 export const HOMEPAGE_DESCRIPTION =
-  "Find cofounders, developers and teammates for your startup or side project on CrewLab — join a builder community, collaborate online, and turn ideas into impact.";
+  "Find cofounders, developers and teammates for your startup or side project on CrewLab - join a builder community, collaborate online, and turn ideas into impact.";
 
 export const KEYWORDS = [
   "find a cofounder",
@@ -40,7 +40,7 @@ export const LANDING_PAGES = [
     label: "Find a cofounder",
     title: "Find a Cofounder & Technical Partner",
     description:
-      "Have an idea but no team? Find a cofounder — technical or not — and startup builders ready to build a real product with you.",
+      "Have an idea but no team? Find a cofounder - technical or not - and startup builders ready to build a real product with you.",
   },
   {
     path: "/find-developers",
@@ -54,7 +54,7 @@ export const LANDING_PAGES = [
     label: "Startup teams",
     title: "Build a Startup Team & Collaborate",
     description:
-      "Assemble a startup team — founders, developers, designers, marketers — and collaborate with startup builders on real projects.",
+      "Assemble a startup team - founders, developers, designers, marketers - and collaborate with startup builders on real projects.",
   },
   {
     path: "/side-projects",

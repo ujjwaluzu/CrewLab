@@ -12,7 +12,7 @@ import "./how-it-works.css";
 export const metadata = pageMetadata({
   title: "How to Find Teammates & Build Together",
   description:
-    "From “I have an idea” to “we’re building it.” Learn how CrewLab helps you find cofounders, teammates and builders — then gives the crew a place to make it happen.",
+    "From “I have an idea” to “we’re building it.” Learn how CrewLab helps you find cofounders, teammates and builders - then gives the crew a place to make it happen.",
   canonical: "/how-it-works",
 });
 
@@ -63,7 +63,7 @@ export default function HowItWorksPage() {
                   </span>&nbsp;it.”
                 </span>
               </h1>
-              <p className="lede">CrewLab helps people with ideas find the right people to build with — then gives the crew a place to actually make it happen.</p>
+              <p className="lede">CrewLab helps people with ideas find the right people to build with - then gives the crew a place to actually make it happen.</p>
               <p className="h-note">No downloads · No dashboards to learn · A process, end to end</p>
             </div>
             <div className="h-route" aria-hidden="true">
@@ -131,7 +131,7 @@ export default function HowItWorksPage() {
                 </li>
               ))}
             </ol>
-            <p className="h-steps-note">Four moves. One direction — forward.</p>
+            <p className="h-steps-note">Four moves. One direction - forward.</p>
           </div>
         </section>
 
@@ -153,7 +153,7 @@ export default function HowItWorksPage() {
                 </li>
               ))}
             </ol>
-            <p className="h-flow-note">The loop keeps going — one ship leads to the next idea.</p>
+            <p className="h-flow-note">The loop keeps going - one ship leads to the next idea.</p>
           </div>
         </section>
 

@@ -4,7 +4,7 @@ import Landing, { type LandingConfig } from "@/components/Landing";
 export const metadata = pageMetadata({
   title: "Find a Cofounder & Technical Partner",
   description:
-    "Have an idea but no team? Find a cofounder — including a technical cofounder — and startup builders ready to turn your startup idea into a real product. Cofounder matching on CrewLab.",
+    "Have an idea but no team? Find a cofounder - including a technical cofounder - and startup builders ready to turn your startup idea into a real product. Cofounder matching on CrewLab.",
   canonical: "/find-cofounder",
   keywords: [
     "find a cofounder",
@@ -51,7 +51,7 @@ const config: LandingConfig = {
         {
           icon: "chat",
           title: "Founders with the same gap",
-          text: "Connect with founders building startups who need the skills you bring — a true two-way cofounder match.",
+          text: "Connect with founders building startups who need the skills you bring - a true two-way cofounder match.",
         },
       ],
     },
@@ -86,12 +86,12 @@ const config: LandingConfig = {
       emphasis: "your cofounder",
       intro: "Four steps from a solo idea to a founding team.",
       bullets: [
-        "<b>Post your idea</b> — explain the problem you're solving and the help you need.",
-        "<b>List the roles</b> — technical cofounder, developer, designer, marketer…",
-        "<b>Meet your matches</b> — talk to builders who want to join your team.",
-        "<b>Form the crew</b> — pick your cofounder and start building together.",
+        "<b>Post your idea</b> - explain the problem you're solving and the help you need.",
+        "<b>List the roles</b> - technical cofounder, developer, designer, marketer…",
+        "<b>Meet your matches</b> - talk to builders who want to join your team.",
+        "<b>Form the crew</b> - pick your cofounder and start building together.",
       ],
-      fine: "CrewLab is in early access — join the waitlist to be first in line for cofounder matching.",
+      fine: "CrewLab is in early access - join the waitlist to be first in line for cofounder matching.",
     },
   ],
   relatedLabel: "More ways to find your crew",

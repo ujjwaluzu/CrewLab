@@ -219,7 +219,7 @@ export default function FeaturesPage() {
           <div className="wrap">
             <div className="sec-head">
               <div>
-                <p className="f-label"><span>01</span> — Project workspace</p>
+                <p className="f-label"><span>01</span> - Project workspace</p>
                 <h2 className="h">One place for <em>the project.</em></h2>
               </div>
               <p>Keep the important parts of your project together. See what you&apos;re building, who&apos;s involved, what needs attention, and where things stand.</p>
@@ -277,7 +277,7 @@ export default function FeaturesPage() {
           <div className="wrap">
             <div className="sec-head">
               <div>
-                <p className="f-label"><span>02</span> — Tasks &amp; milestones</p>
+                <p className="f-label"><span>02</span> - Tasks &amp; milestones</p>
                 <h2 className="h">Turn an idea into <em>something you can actually build.</em></h2>
               </div>
               <p>Break ambitious ideas into smaller pieces. Give your crew clear milestones and tasks so everyone knows what needs to happen next.</p>
@@ -358,7 +358,7 @@ export default function FeaturesPage() {
           <div className="wrap">
             <div className="sec-head">
               <div>
-                <p className="f-label"><span>03</span> — Your crew</p>
+                <p className="f-label"><span>03</span> - Your crew</p>
                 <h2 className="h">Know who&apos;s <em>building beside you.</em></h2>
               </div>
               <p>See the people behind the project, what they bring to the crew, and what they&apos;re currently working on.</p>
@@ -376,7 +376,7 @@ export default function FeaturesPage() {
                 </article>
               ))}
             </div>
-            <p className="note">Fictional crew shown for demonstration — these are not real CrewLab users.</p>
+            <p className="note">Fictional crew shown for demonstration - these are not real CrewLab users.</p>
           </div>
         </section>
 
@@ -384,7 +384,7 @@ export default function FeaturesPage() {
           <div className="wrap">
             <div className="sec-head">
               <div>
-                <p className="f-label"><span>04</span> — Discussions</p>
+                <p className="f-label"><span>04</span> - Discussions</p>
                 <h2 className="h">Keep the conversations <em>close to the work.</em></h2>
               </div>
               <p>Discuss decisions, share ideas, ask questions, and keep project conversations connected to the work itself.</p>
@@ -425,7 +425,7 @@ export default function FeaturesPage() {
           <div className="wrap">
             <div className="sec-head">
               <div>
-                <p className="f-label"><span>05</span> — Progress</p>
+                <p className="f-label"><span>05</span> - Progress</p>
                 <h2 className="h">See the project <em>move.</em></h2>
               </div>
               <p>From the first idea to something people can actually use, keep an eye on how far the project has come.</p>
@@ -456,7 +456,7 @@ export default function FeaturesPage() {
                 </ol>
               </div>
             </div>
-            <p className="f-prog-fine">Illustrative example only — 72% does not represent a real project metric.</p>
+            <p className="f-prog-fine">Illustrative example only - 72% does not represent a real project metric.</p>
           </div>
         </section>
 
@@ -479,7 +479,7 @@ export default function FeaturesPage() {
                 </li>
               ))}
             </ul>
-            <p className="f-tools-fine">Planned product direction — these integrations are not yet available in CrewLab.</p>
+            <p className="f-tools-fine">Planned product direction - these integrations are not yet available in CrewLab.</p>
           </div>
         </section>
 

@@ -46,7 +46,7 @@ const projects: Project[] = [
     name: "EcoTrack",
     initial: "E",
     category: "AI",
-    description: "Track. Reduce. Make an impact — one footprint at a time.",
+    description: "Track. Reduce. Make an impact - one footprint at a time.",
     skills: ["Mobile", "Data", "Design"],
     filled: 2,
     need: 5,

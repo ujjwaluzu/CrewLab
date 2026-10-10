@@ -24,7 +24,7 @@ const config: LandingConfig = {
   kicker: "Student collaboration",
   titleLines: ["Find student", "project teams"],
   highlight: "& college startups",
-  lede: "Your best project is the one you build with others. CrewLab helps students find project teams, join college startups and collaborate with developers, designers and creators — building portfolios and real products before you graduate.",
+  lede: "Your best project is the one you build with others. CrewLab helps students find project teams, join college startups and collaborate with developers, designers and creators - building portfolios and real products before you graduate.",
   note: "For students, hackers, and college startup founders",
   primaryLabel: "Find a student team",
   primaryHref: "/waitlist",
@@ -62,10 +62,10 @@ const config: LandingConfig = {
       emphasis: "of every major",
       intro: "You don't need to be a CS major to build. Student collaboration on CrewLab spans developers, designers, marketers, founders and creators.",
       bullets: [
-        "<b>Engineering students</b> — build real products beyond the syllabus.",
-        "<b>Design students</b> — shape products and ship with developers.",
-        "<b>Business students</b> — cofound, market and grow college startups.",
-        "<b>Hackathon teams</b> — find teammates for your next build sprint.",
+        "<b>Engineering students</b> - build real products beyond the syllabus.",
+        "<b>Design students</b> - shape products and ship with developers.",
+        "<b>Business students</b> - cofound, market and grow college startups.",
+        "<b>Hackathon teams</b> - find teammates for your next build sprint.",
       ],
     },
     {
@@ -73,11 +73,11 @@ const config: LandingConfig = {
       label: "how to start",
       heading: "Start collaborating",
       emphasis: "in three steps",
-      intro: "Bigger than a class project — a real crew.",
+      intro: "Bigger than a class project - a real crew.",
       bullets: [
-        "<b>Explore student projects</b> — find teams looking for your skills.",
-        "<b>Request to join</b> — or post your own student project idea.",
-        "<b>Build a portfolio</b> — collaborate, ship and track real progress.",
+        "<b>Explore student projects</b> - find teams looking for your skills.",
+        "<b>Request to join</b> - or post your own student project idea.",
+        "<b>Build a portfolio</b> - collaborate, ship and track real progress.",
       ],
       fine: "Student project collaboration is free during early access.",
     },
@@ -90,7 +90,7 @@ const config: LandingConfig = {
   closeBrush: "the group project.",
   closeEmphasis: "Find your student crew and build now.",
   closeLead:
-    "The projects you ship in college become the portfolio that gets you hired — and the ideas that become startups. Find your student team on CrewLab.",
+    "The projects you ship in college become the portfolio that gets you hired - and the ideas that become startups. Find your student team on CrewLab.",
 };
 
 export default function StudentProjectsPage() {

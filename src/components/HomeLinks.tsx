@@ -5,7 +5,7 @@ import { LANDING_PAGES } from "@/lib/site";
 export default function HomeLinks() {
   return <section className="pad home-links" id="paths">
     <div className="wrap">
-      <SectionHeader accent="and project teams." description="Startup teams, side projects and student projects — find the people to build with, whatever you’re making.">find cofounders, developers</SectionHeader>
+      <SectionHeader accent="and project teams." description="Startup teams, side projects and student projects - find the people to build with, whatever you’re making.">find cofounders, developers</SectionHeader>
       <div className="links-grid">
         {LANDING_PAGES.map((page) => <Link className="link-card" href={page.path} key={page.path}>
           <span className="link-label">{page.label}</span>

@@ -37,7 +37,7 @@ export default function ExplorePage() {
                 <span className="d2">who want to build them.</span>
               </h1>
               <p className="lede">Discover ideas, meet potential teammates, and find something worth building.</p>
-              <p className="x-preview">A preview of CrewLab discovery — sample projects, no app yet</p>
+              <p className="x-preview">A preview of CrewLab discovery - sample projects, no app yet</p>
             </div>
             <div className="x-collage" aria-hidden="true">
               <div className="halftone" />
@@ -110,7 +110,7 @@ export default function ExplorePage() {
               <em>Start with your own idea.</em>
             </h2>
             <p className="x-close-lead">
-              Bring an idea to the crew. When CrewLab opens, posting a project takes minutes — the right people are already here.
+              Bring an idea to the crew. When CrewLab opens, posting a project takes minutes - the right people are already here.
             </p>
             <Link className="btn btn-light" href="/waitlist">
               Join the waitlist <Icon name="arrow" />

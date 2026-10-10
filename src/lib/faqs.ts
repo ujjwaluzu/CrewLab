@@ -7,12 +7,12 @@ export const faqs: Faq[] = [
   {
     question: "Where can I find a technical cofounder for my startup?",
     answer:
-      "Use a cofounder matching platform like CrewLab. Create a project, explain your startup idea, and list the technical skills you need. Builders with those skills — developers, engineers and technical founders — discover your project and request to join your team, so you can build together.",
+      "Use a cofounder matching platform like CrewLab. Create a project, explain your startup idea, and list the technical skills you need. Builders with those skills - developers, engineers and technical founders - discover your project and request to join your team, so you can build together.",
   },
   {
     question: "How do I find people to build my startup idea?",
     answer:
-      "Post your idea as a project and describe the roles you need to fill, from developers and designers to marketers. CrewLab then connects you with founders, builders and creators who want to join startup projects. The right teammates find you — you don't have to cold-message strangers.",
+      "Post your idea as a project and describe the roles you need to fill, from developers and designers to marketers. CrewLab then connects you with founders, builders and creators who want to join startup projects. The right teammates find you - you don't have to cold-message strangers.",
   },
   {
     question: "I have skills but no idea. Can I join projects on CrewLab?",
@@ -27,12 +27,12 @@ export const faqs: Faq[] = [
   {
     question: "Can developers find side projects to collaborate on?",
     answer:
-      "Yes. The side project community on CrewLab is built for developers looking to collaborate on projects outside their day job. Explore open projects, join a team that needs your stack, and ship something real — while building your portfolio and meeting other builders.",
+      "Yes. The side project community on CrewLab is built for developers looking to collaborate on projects outside their day job. Explore open projects, join a team that needs your stack, and ship something real - while building your portfolio and meeting other builders.",
   },
   {
     question: "Is CrewLab a good place for students to find project teams?",
     answer:
-      "Yes. CrewLab is designed for student project collaboration. Students can join college startup teams, find teammates for hackathons and coursework, build portfolio projects, and work with developers, designers and marketers — no professional network required.",
+      "Yes. CrewLab is designed for student project collaboration. Students can join college startup teams, find teammates for hackathons and coursework, build portfolio projects, and work with developers, designers and marketers - no professional network required.",
   },
   {
     question: "What kinds of people join the CrewLab builder community?",
@@ -42,7 +42,7 @@ export const faqs: Faq[] = [
   {
     question: "What tools does CrewLab give startup teams once they match?",
     answer:
-      "Once a crew forms, CrewLab provides a shared project workspace with team collaboration, task and milestone tracking, project discussions, an activity feed and GitHub integration — so a matched team can go from an idea to a working product in one place.",
+      "Once a crew forms, CrewLab provides a shared project workspace with team collaboration, task and milestone tracking, project discussions, an activity feed and GitHub integration - so a matched team can go from an idea to a working product in one place.",
   },
   {
     question: "How long does it take to find project teammates on CrewLab?",
