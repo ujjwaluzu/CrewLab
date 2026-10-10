@@ -492,7 +492,7 @@ h2.h{font:800 clamp(42px,6.7vw,96px)/.95 var(--font-display);letter-spacing:-.03
 .faq-toggle{width:24px;height:24px}.faq-a{padding:0 40px 22px 0}.faq-a p{font:400 16px/1.6 var(--font-body)}
 .cta{background:var(--paper);color:var(--ink);border-bottom:2px solid var(--ink);text-align:center;padding:clamp(44px,5vw,80px) 24px;background-image:none}
 .cta-grid{display:block}.cta-art{display:none}.cta-copy{padding:0;align-items:center}
-.cta h2{font:italic 800 clamp(64px,10vw,140px)/1 var(--font-display);letter-spacing:-.03em}
+.cta h2{font:italic 800 clamp(52px,8vw,116px)/1 var(--font-display);letter-spacing:-.03em}
 .cta h2 .hl{color:var(--red);background:none;padding:0;margin:0}.cta h2 .hl .brush{display:none}.cta h2 i{display:inline;font:inherit}
 .cta-copy p{font:400 16px/1.5 var(--font-body);max-width:520px;margin:22px auto}
 .signup{justify-content:center;max-width:none}.signup input{flex:0 1 250px;min-height:54px;border:2px solid var(--ink);background:var(--paper);color:var(--ink);font:400 12px var(--font-mono);letter-spacing:.06em;text-transform:uppercase}
@@ -519,6 +519,7 @@ footer ul{gap:0}footer ul a{color:var(--cream)}footer .socials{display:none}
   .home-hero .proof{margin-top:14px}
   main>.home-how,main>.home-projects,main>.home-links,main>.faq{padding-block:40px}
   main>.home-how{padding-block:24px}
+  main>.home-links{padding-block:32px}
   main>.home-join{padding-block:32px}
   .home-how .sec-head,.home-projects .sec-head,.home-links .sec-head{margin-bottom:22px}
   .home-how .sec-head{padding:18px 16px;border-radius:8px;box-shadow:var(--shadow)}
@@ -527,6 +528,8 @@ footer ul{gap:0}footer ul a{color:var(--cream)}footer .socials{display:none}
   .home-join .signup{margin-top:18px}
   .faq-head{margin-bottom:20px}
   .home-links .link-card{padding-block:14px}
+  main>.home-how .h,main>.home-links .h,main>.faq .h{font-size:clamp(22px,6.5vw,32px)}
+  main>.home-how .section-description,main>.home-links .section-description,main>.faq .faq-head .note{font-size:16px}
 }
 
 @media(max-width:640px){
@@ -539,7 +542,7 @@ footer ul{gap:0}footer ul a{color:var(--cream)}footer .socials{display:none}
   .rail{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:20px;padding:0 20px 18px;margin-inline:-20px;scrollbar-width:none}
   .rail::-webkit-scrollbar{display:none}.pcard{flex:0 0 min(82vw,340px);scroll-snap-align:start}
   .link-card{grid-template-columns:1fr;gap:8px}.link-card p{grid-column:1;grid-row:auto}.faq-q{font-size:17px}
-  .cta h2{font-size:clamp(54px,15vw,88px)}.signup{flex-direction:column;width:100%}.signup input,.signup button{width:100%;min-height:52px}
+  .cta h2{font-size:clamp(27px,7.5vw,36px)}.signup{flex-direction:column;width:100%}.signup input,.signup button{width:100%;min-height:52px}
   .foot-grid{grid-template-columns:1fr}.footer-signup{grid-column:1;grid-row:auto}.foot-base{padding:24px 20px;flex-direction:column}.foot-base span{max-width:none}
 }
 
@@ -655,7 +658,7 @@ button,input{font-family:var(--font-body)}
   .head-in>.btn{position:absolute;top:50%;right:12px;transform:translateY(-50%);width:150px;justify-content:center;font-size:9px;padding:8px;letter-spacing:0;max-width:calc(100vw - 170px);min-width:0;white-space:nowrap}
   .home-hero{width:100%;max-width:100%;overflow-x:clip}
   .home-hero h1{width:100%;font-size:clamp(31px,9vw,38px);overflow-wrap:anywhere}
-  .home-hero .lede{width:calc(100vw - 64px);max-width:326px;margin-inline:auto;font-size:14px;overflow-wrap:anywhere;white-space:normal}
+  .home-hero .lede{width:calc(100vw - 64px);max-width:326px;margin-inline:auto;font-size:17px;overflow-wrap:anywhere;white-space:normal}
   .home-hero .cta-row{width:100%;align-items:stretch}.home-hero .cta-row .btn{box-sizing:border-box;width:100%;max-width:350px;align-self:auto}
   .home-hero .proof{max-width:calc(100vw - 40px);margin-inline:auto;flex-wrap:wrap;justify-content:center}
   .hero-intro{width:100%;max-width:100%;padding:32px 20px 0}
@@ -676,6 +679,7 @@ button,input{font-family:var(--font-body)}
 .home-hero .proof{margin-top:18px}
 main>.home-how,main>.home-projects,main>.home-links,main>.faq{padding-block:clamp(44px,6vw,80px)}
 main>.home-how{padding-block:clamp(28px,3.5vw,48px)}
+main>.home-links{padding-block:clamp(32px,4vw,56px)}
 main>.home-join{padding-block:clamp(36px,4vw,56px)}
 .home-projects .sec-head,.home-links .sec-head{margin-bottom:28px}
 .home-how .sec-head{
@@ -732,6 +736,7 @@ main>.home-join{padding-block:clamp(36px,4vw,56px)}
   .home-hero .proof{margin-top:14px}
   main>.home-how,main>.home-projects,main>.home-links,main>.faq{padding-block:40px}
   main>.home-how{padding-block:24px}
+  main>.home-links{padding-block:32px}
   main>.home-join{padding-block:32px}
   .home-how .sec-head,.home-projects .sec-head,.home-links .sec-head{margin-bottom:22px}
   .home-how .sec-head{padding:18px 16px;border-radius:8px;box-shadow:var(--shadow)}
@@ -740,6 +745,8 @@ main>.home-join{padding-block:clamp(36px,4vw,56px)}
   .home-join .signup{margin-top:18px}
   .faq-head{margin-bottom:20px}
   .home-links .link-card{padding-block:14px}
+  main>.home-how .h,main>.home-links .h,main>.faq .h{font-size:clamp(22px,6.5vw,32px)}
+  main>.home-how .section-description,main>.home-links .section-description,main>.faq .faq-head .note{font-size:16px}
 }
 
 /* Pixel-art Earth background — scoped to the hero section only */
