@@ -518,8 +518,11 @@ footer ul{gap:0}footer ul a{color:var(--cream)}footer .socials{display:none}
   .home-hero .cta-row{margin-top:18px}
   .home-hero .proof{margin-top:14px}
   main>.home-how,main>.home-projects,main>.home-links,main>.faq{padding-block:40px}
+  main>.home-how{padding-block:24px}
   main>.home-join{padding-block:32px}
   .home-how .sec-head,.home-projects .sec-head,.home-links .sec-head{margin-bottom:22px}
+  .home-how .sec-head{padding:18px 16px;border-radius:8px;box-shadow:var(--shadow)}
+  .home-steps{gap:14px}
   .home-steps .step-card{padding:20px}
   .home-join .signup{margin-top:18px}
   .faq-head{margin-bottom:20px}
@@ -554,7 +557,8 @@ footer ul{gap:0}footer ul a{color:var(--cream)}footer .socials{display:none}
 .dashboard-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;text-align:left}.dashboard-stats>div{min-width:0;border:1px solid rgba(241,234,219,.34);border-radius:10px;padding:12px}
 .dashboard-stats strong{display:block;font:800 30px/1 var(--font-display)}.dashboard-stats span{display:block;margin-top:4px;font:400 10px/1.3 var(--font-mono);text-transform:uppercase}
 .section-header .kicker{margin:0 0 12px}.section-header h2{margin:0}.section-description{font-size:18px;line-height:1.5}
-.home-how{max-width:1200px;margin:auto}.home-steps{gap:20px}
+.home-how{position:relative;isolation:isolate;width:100%;background:url("/Pixel%20Galaxy%20Fleet%20Above%20Earth.png") center/cover no-repeat}.home-steps{gap:20px}
+.home-how::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(247,242,231,.85),rgba(247,242,231,.55) 38%,rgba(247,242,231,.18) 65%,rgba(247,242,231,0) 100%)}
 .step-card{list-style:none;border:2px solid var(--ink);background:var(--paper);padding:26px;border-radius:6px;transform:rotate(-1deg)}
 .step-card.tan{background:var(--tan);transform:rotate(1deg);margin-top:24px}.step-card.ink{background:var(--ink);color:var(--cream);transform:rotate(1deg);margin-top:24px}
 .step-number{display:block;color:var(--red);font:800 76px/1 var(--font-display)}
@@ -671,11 +675,49 @@ button,input{font-family:var(--font-body)}
 .home-hero .cta-row{margin-top:24px}
 .home-hero .proof{margin-top:18px}
 main>.home-how,main>.home-projects,main>.home-links,main>.faq{padding-block:clamp(44px,6vw,80px)}
+main>.home-how{padding-block:clamp(28px,3.5vw,48px)}
 main>.home-join{padding-block:clamp(36px,4vw,56px)}
-.home-how .sec-head,.home-projects .sec-head,.home-links .sec-head{margin-bottom:28px}
-.home-how .sec-head>p,.home-links .sec-head>p{margin-top:16px}
-.home-steps{gap:16px}
-.home-steps .step-card{padding:22px}
+.home-projects .sec-head,.home-links .sec-head{margin-bottom:28px}
+.home-how .sec-head{
+  width:fit-content;
+  max-width:min(680px,100%);
+  margin:0 auto 28px;
+  text-align:center;
+  background:rgba(247,242,231,.94);
+  border:2px solid var(--ink);
+  border-radius:10px;
+  padding:clamp(20px,3vw,32px) clamp(22px,4vw,40px);
+  box-shadow:var(--shadow);
+}
+.home-how .sec-head h2{margin-top:0}
+.home-how .sec-head>p{max-width:none;margin:12px auto 0}
+.home-steps{gap:18px;align-items:stretch}
+.home-steps .step-card{
+  height:100%;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:16px;
+  border-radius:10px;
+  padding:clamp(18px,2vw,26px);
+  box-shadow:var(--shadow);
+  background:color-mix(in srgb,var(--paper) 82%,transparent);
+  backdrop-filter:blur(3px);
+  -webkit-backdrop-filter:blur(3px);
+  transition:transform .18s ease;
+}
+.home-steps .step-card:hover{transform:translateY(-3px)}
+.home-steps .step-card-copy{min-width:0}
+.home-steps .step-number{
+  display:block;
+  flex:none;
+  color:var(--red);
+  font:700 13px/1.35 var(--font-mono);
+  letter-spacing:.02em;
+}
+.home-steps .step-card h3{margin:14px 0 8px;font:700 13px/1.35 var(--font-mono);letter-spacing:.02em;text-transform:uppercase}
+.home-steps .step-card p{margin:0;font-size:15px;line-height:1.55}
 .home-join .cta-copy h2{margin-bottom:0}
 .home-join .signup{margin-top:24px}
 .home-join .fine{margin-top:12px}
@@ -689,8 +731,11 @@ main>.home-join{padding-block:clamp(36px,4vw,56px)}
   .home-hero .cta-row{margin-top:18px}
   .home-hero .proof{margin-top:14px}
   main>.home-how,main>.home-projects,main>.home-links,main>.faq{padding-block:40px}
+  main>.home-how{padding-block:24px}
   main>.home-join{padding-block:32px}
   .home-how .sec-head,.home-projects .sec-head,.home-links .sec-head{margin-bottom:22px}
+  .home-how .sec-head{padding:18px 16px;border-radius:8px;box-shadow:var(--shadow)}
+  .home-steps{gap:14px}
   .home-steps .step-card{padding:20px}
   .home-join .signup{margin-top:18px}
   .faq-head{margin-bottom:20px}

@@ -12,10 +12,10 @@ export default function HowItWorks() {
   return (
     <section className="pad home-how" id="how">
       <div className="wrap">
-        <SectionHeader kicker="how it works" accent="made simple." description="A simple way to go from a solo idea to a working project with the right cofounders and teammates.">startup team building,</SectionHeader>
+        <SectionHeader accent="made simple." description="A simple way to go from a solo idea to a working project with the right cofounders and teammates.">startup team building,</SectionHeader>
         <ol className="steps home-steps" style={{ listStyle: "none", margin: 0, padding: 0 }}>
           {steps.map(([number, , title, description]) => (
-            <StepCard key={number} number={number} title={title} tone={number === "04" ? "ink" : number === "02" ? "tan" : "paper"}>{description}</StepCard>
+            <StepCard key={number} number={number} title={title} tone="paper">{description}</StepCard>
           ))}
         </ol>
       </div>
