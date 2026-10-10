@@ -2,7 +2,7 @@ import Button from "@/components/Button";
 
 export default function Hero() {
   return <>
-    <link rel="preload" as="image" href="/Pixel%20Earth%20at%20Dawn.png" />
+    <link rel="preload" as="image" href="/Pixel%20Earth%20at%20Dawn.webp" />
     <section className="home-hero" aria-labelledby="home-title">
     <div className="hero-intro">
       <h1 id="home-title">build real<br />products with<br /><span className="headline-pill ink-pill">real</span> <span className="headline-pill red-pill">people.</span></h1>

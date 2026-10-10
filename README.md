@@ -38,7 +38,7 @@ Single-page marketing site (App Router, statically prerendered) with these secti
 ### Brand assets & design
 
 - Custom favicon set under `public/favicon_io`
-- WebP-optimized artwork (`below-hero.webp`, `goat.webp`)
+- WebP-optimized artwork (`below-hero.webp`, `Pixel Earth at Dawn.webp`, `Pixel Galaxy Fleet Above Earth.webp`)
 - Hand-rolled CSS design system (fonts via Fontshare + Google Fonts), inline SVG icon set (`SvgDefs`), torn-edge + wobble SVG filters, dark/paper theme
 - Active section highlighting: URL hash updates to the section currently in view (`SectionSpy`)
 

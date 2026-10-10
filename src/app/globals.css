@@ -560,7 +560,7 @@ footer ul{gap:0}footer ul a{color:var(--cream)}footer .socials{display:none}
 .dashboard-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;text-align:left}.dashboard-stats>div{min-width:0;border:1px solid rgba(241,234,219,.34);border-radius:10px;padding:12px}
 .dashboard-stats strong{display:block;font:800 30px/1 var(--font-display)}.dashboard-stats span{display:block;margin-top:4px;font:400 10px/1.3 var(--font-mono);text-transform:uppercase}
 .section-header .kicker{margin:0 0 12px}.section-header h2{margin:0}.section-description{font-size:18px;line-height:1.5}
-.home-how{position:relative;isolation:isolate;width:100%;background:url("/Pixel%20Galaxy%20Fleet%20Above%20Earth.png") center/cover no-repeat}.home-steps{gap:20px}
+.home-how{position:relative;isolation:isolate;width:100%;background:url("/Pixel%20Galaxy%20Fleet%20Above%20Earth.webp") center/cover no-repeat}.home-steps{gap:20px}
 .home-how::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(247,242,231,.85),rgba(247,242,231,.55) 38%,rgba(247,242,231,.18) 65%,rgba(247,242,231,0) 100%)}
 .step-card{list-style:none;border:2px solid var(--ink);background:var(--paper);padding:26px;border-radius:6px;transform:rotate(-1deg)}
 .step-card.tan{background:var(--tan);transform:rotate(1deg);margin-top:24px}.step-card.ink{background:var(--ink);color:var(--cream);transform:rotate(1deg);margin-top:24px}
@@ -757,7 +757,7 @@ main>.home-join{padding-block:clamp(36px,4vw,56px)}
   min-height:100svh;
   padding-top:var(--head-h);
   padding-bottom:0;
-  background:url("/Pixel%20Earth%20at%20Dawn.png") center/cover no-repeat;
+  background:url("/Pixel%20Earth%20at%20Dawn.webp") center/cover no-repeat;
 }
 .home-hero::before{
   content:"";
