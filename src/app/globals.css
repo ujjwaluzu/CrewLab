@@ -328,10 +328,10 @@ body{font-size:16px;line-height:1.55}
 .faq-num{font:500 12px/1 var(--mono);letter-spacing:.12em;color:var(--red)}
 .faq-q{font:400 clamp(18px,2vw,24px)/1.25 var(--display);letter-spacing:.005em}
 .faq-toggle{position:relative;width:22px;height:22px}
-.faq-toggle::before,.faq-toggle::after{content:"";position:absolute;background:var(--ink);transition:transform .18s ease}
-.faq-toggle::before{left:4px;right:4px;top:10px;height:2px}
-.faq-toggle::after{top:4px;bottom:4px;left:10px;width:2px}
-.faq-item[open] .faq-toggle::after{transform:scaleY(0)}
+.faq-toggle::before,.faq-toggle::after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--ink);transition:transform .18s ease}
+.faq-toggle::before{width:14px;height:2px}
+.faq-toggle::after{width:2px;height:14px}
+.faq-item[open] .faq-toggle::after{transform:translate(-50%,-50%) scaleY(0)}
 .faq-a{padding:0 0 clamp(20px,2.6vw,28px) calc(48px + clamp(10px,1.4vw,18px))}
 .faq-a p{margin:0;max-width:68ch;color:var(--ink-2);font-size:16px;line-height:1.6}
 .faq-item[open] summary .faq-q{color:var(--red)}
@@ -485,7 +485,7 @@ h2.h{font:800 clamp(42px,6.7vw,96px)/.95 var(--font-display);letter-spacing:-.03
 .link-num,.link-go{display:none}.link-label{font:800 clamp(30px,3.8vw,54px)/1.1 var(--font-display);text-transform:none}
 .link-card p{grid-column:2;grid-row:1;margin:0;font:400 12px/1.6 var(--font-mono);letter-spacing:.02em;text-transform:uppercase}
 .faq{background:var(--paper);border-top:2px solid var(--ink)}
-.faq-head{text-align:center}.faq-head .note{margin:22px auto 0}.faq-list{max-width:920px;margin:auto;border-top:2px solid var(--ink)}
+.faq-head{text-align:center}.faq .faq-head .note{margin:22px auto 0}.faq-list{max-width:920px;margin:auto;border-top:2px solid var(--ink)}
 .faq-item,.faq-item:last-child{border:0;border-bottom:1px solid var(--ink)}
 .faq-item summary{grid-template-columns:1fr 28px;gap:16px;padding:22px 0;min-height:72px}
 .faq-num{display:none}.faq-q{font:600 20px/1.35 var(--font-body);letter-spacing:0}
