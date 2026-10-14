@@ -170,7 +170,7 @@ export default function Landing({ config }: { config: LandingConfig }) {
           </div>
         </section>
 
-        <section className="l-close" id="join">
+        <section className={`l-close${config.path === "/find-cofounder" ? " l-close-no-halftone" : ""}`} id="join">
           <TornEdge seedIndex={11} color="var(--paper)" />
           <i className="l-close-halftone" aria-hidden="true" />
           <svg className="l-close-brush" viewBox="0 0 600 140" preserveAspectRatio="none" aria-hidden="true"><use href="#brush-s" /></svg>
