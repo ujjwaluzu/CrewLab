@@ -61,6 +61,7 @@
 
   .collage{position:relative;width:100%;max-width:560px;aspect-ratio:1/1.04;justify-self:end}
   .halftone{position:absolute;right:-3%;top:-4%;width:58%;height:50%;background-image:radial-gradient(var(--ink) 1.4px,transparent 1.8px);background-size:9px 9px;opacity:.5;-webkit-mask-image:linear-gradient(205deg,#000 20%,transparent 78%);mask-image:linear-gradient(205deg,#000 20%,transparent 78%)}
+  .halftone,.a-close-halftone,.f-cta-halftone,.h-close-halftone,.l-close-halftone,.x-close-halftone{display:none!important}
   .sheet-wrap{position:absolute;inset:5% 5% 9% 3%;transform:rotate(-2.2deg);filter:drop-shadow(0 22px 22px rgba(23,21,18,.28))}
   .sheet{width:100%;height:100%;background:var(--card);padding:9% 7% 6%;
     clip-path:polygon(0 3%,5% 0,13% 2%,24% 0,37% 2.4%,51% 0,65% 2%,79% 0,92% 2%,100% 0,100% 96.5%,93% 100%,81% 98%,67% 100%,51% 98%,36% 100%,21% 98%,9% 100%,0 97%)}
