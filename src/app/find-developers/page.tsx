@@ -21,7 +21,6 @@ export const metadata = pageMetadata({
 const config: LandingConfig = {
   path: "/find-developers",
   crumb: "Find Developers",
-  kicker: "Find developers",
   titleLines: ["Find developers", "for your"],
   highlight: "startup or side project",
   lede: "Stop recruiting in the dark. CrewLab helps you find developers for your startup or side project by connecting your project to engineers and builders who are actively looking to build. Post the role, see who wants to build it, and team up.",
@@ -62,10 +61,10 @@ const config: LandingConfig = {
       emphasis: "startup builders",
       intro: "The people on CrewLab aren't just looking for a job - they're looking for a project to build.",
       bullets: [
-        "<b>Full-time startup developers</b> who want to build early-stage products.",
-        "<b>Side project developers</b> who code after hours and want real projects to join.",
-        "<b>Student developers</b> growing their portfolio with real builds.",
-        "<b>Technical cofounder candidates</b> ready to commit to the right idea.",
+        { title: "Full-time startup developers", text: "who want to build early-stage products." },
+        { title: "Side project developers", text: "who code after hours and want real projects to join." },
+        { title: "Student developers", text: "growing their portfolio with real builds." },
+        { title: "Technical cofounder candidates", text: "ready to commit to the right idea." },
       ],
     },
     {
@@ -75,9 +74,9 @@ const config: LandingConfig = {
       emphasis: "in three steps",
       intro: "Get from 'we need devs' to a full build team.",
       bullets: [
-        "<b>Post your project</b> - share the idea and the tech stack you're building on.",
-        "<b>Describe the role</b> - frontend, backend, mobile, AI or full-stack.",
-        "<b>Pick your builders</b> - chat, agree on scope, and start building together.",
+        { title: "Post your project", text: "- share the idea and the tech stack you're building on." },
+        { title: "Describe the role", text: "- frontend, backend, mobile, AI or full-stack." },
+        { title: "Pick your builders", text: "- chat, agree on scope, and start building together." },
       ],
       fine: "Early access is open - join the waitlist to find developers for your project first.",
     },

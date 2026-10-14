@@ -21,7 +21,6 @@ export const metadata = pageMetadata({
 const config: LandingConfig = {
   path: "/startup-teams",
   crumb: "Startup Teams",
-  kicker: "Startup team building",
   titleLines: ["Build a startup", "team that"],
   highlight: "really builds",
   lede: "Startup team building is about finding people who commit to the build. CrewLab helps founders assemble a startup team - developers, designers, marketers and product people - and gives the team a workspace to collaborate from the first idea to launch.",
@@ -62,10 +61,10 @@ const config: LandingConfig = {
       emphasis: "that ships",
       intro: "Once the team forms, CrewLab becomes the shared workspace: plan the startup, split the work and track real progress.",
       bullets: [
-        "<b>Tasks & milestones</b> - turn the roadmap into shippable steps.",
-        "<b>Project discussions</b> - keep decisions close to the work.",
-        "<b>GitHub integration</b> - see commits and progress in one place.",
-        "<b>Activity feed</b> - everyone knows what's moving.",
+        { title: "Tasks & milestones", text: "- turn the roadmap into shippable steps." },
+        { title: "Project discussions", text: "- keep decisions close to the work." },
+        { title: "GitHub integration", text: "- see commits and progress in one place." },
+        { title: "Activity feed", text: "- everyone knows what's moving." },
       ],
     },
     {
@@ -75,10 +74,10 @@ const config: LandingConfig = {
       emphasis: "form on CrewLab",
       intro: "Four steps from solo founder to a building startup team.",
       bullets: [
-        "<b>Post your startup</b> - the idea, the stage and the roles you need.",
-        "<b>Meet the crew</b> - talk to founders, developers and builders who want in.",
-        "<b>Form the team</b> - agree on roles, ownership and the first milestone.",
-        "<b>Build together</b> - collaborate in the CrewLab workspace.",
+        { title: "Post your startup", text: "- the idea, the stage and the roles you need." },
+        { title: "Meet the crew", text: "- talk to founders, developers and builders who want in." },
+        { title: "Form the team", text: "- agree on roles, ownership and the first milestone." },
+        { title: "Build together", text: "- collaborate in the CrewLab workspace." },
       ],
       fine: "CrewLab is purpose-built for startup collaboration - not another social feed.",
     },

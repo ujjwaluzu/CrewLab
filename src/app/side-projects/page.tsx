@@ -21,7 +21,6 @@ export const metadata = pageMetadata({
 const config: LandingConfig = {
   path: "/side-projects",
   crumb: "Side Projects",
-  kicker: "Side project community",
   titleLines: ["Join side", "projects and"],
   highlight: "build together",
   lede: "The best way to grow as a builder is to ship. CrewLab is a side project community where you can find people to work on side projects with, explore developer projects, and turn spare time into something real.",
@@ -62,10 +61,10 @@ const config: LandingConfig = {
       emphasis: "community builds",
       intro: "Side projects are how builders sharpen skills, test ideas and meet collaborators without the pressure of a full-time commitment.",
       bullets: [
-        "<b>Learn by shipping</b> - real products are the fastest way to grow.",
-        "<b>Build a portfolio</b> - show what you've made, not just what you know.",
-        "<b>Meet collaborators</b> - side project partners often become cofounders.",
-        "<b>Test startup ideas</b> - validate cheaply before going all in.",
+        { title: "Learn by shipping", text: "- real products are the fastest way to grow." },
+        { title: "Build a portfolio", text: "- show what you've made, not just what you know." },
+        { title: "Meet collaborators", text: "- side project partners often become cofounders." },
+        { title: "Test startup ideas", text: "- validate cheaply before going all in." },
       ],
     },
     {
@@ -75,9 +74,9 @@ const config: LandingConfig = {
       emphasis: "in three steps",
       intro: "From 'just browsing' to 'shipped together.'",
       bullets: [
-        "<b>Explore side projects</b> - filter by skill, stack and stage.",
-        "<b>Request to join</b> - tell the team what you can build.",
-        "<b>Start building</b> - plan, collaborate and track progress together.",
+        { title: "Explore side projects", text: "- filter by skill, stack and stage." },
+        { title: "Request to join", text: "- tell the team what you can build." },
+        { title: "Start building", text: "- plan, collaborate and track progress together." },
       ],
       fine: "Side project collaboration is free during early access.",
     },

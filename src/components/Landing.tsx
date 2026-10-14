@@ -14,6 +14,11 @@ export type LandingCard = {
   text: string;
 };
 
+export type LandingBullet = {
+  title: string;
+  text: string;
+};
+
 export type LandingSection = {
   id: string;
   label: string;
@@ -21,14 +26,13 @@ export type LandingSection = {
   emphasis: string;
   intro?: string;
   cards?: LandingCard[];
-  bullets?: string[];
+  bullets?: LandingBullet[];
   fine?: string;
 };
 
 export type LandingConfig = {
   path: string;
   crumb: string;
-  kicker: string;
   titleLines: string[];
   highlight: string;
   lede: string;
@@ -83,7 +87,6 @@ export default function Landing({ config }: { config: LandingConfig }) {
         <section className="l-hero">
           <div className="wrap l-hero-grid">
             <div>
-              <p className="kicker">{config.kicker}</p>
               <h1 className="l-title">
                 {config.titleLines.map((line) => (
                   <span className="d1" key={line}>{line}</span>
@@ -102,43 +105,6 @@ export default function Landing({ config }: { config: LandingConfig }) {
               </div>
               {config.note && <p className="l-note">{config.note}</p>}
             </div>
-            <div className="l-hero-art" aria-hidden="true">
-              <div className="halftone" />
-              <div className="l-board">
-                <div className="l-board-top">
-                  <span className="l-live">The crew</span>
-                  <span className="l-board-count">forming now</span>
-                </div>
-                <ul className="l-board-list">
-                  <li>
-                    <span className="l-board-ico"><Icon name="bulb" /></span>
-                    <span className="l-board-meta"><b>Founder</b><span>has the idea</span></span>
-                    <span className="l-board-open">01</span>
-                  </li>
-                  <li>
-                    <span className="l-board-ico"><Icon name="code" /></span>
-                    <span className="l-board-meta"><b>Developer</b><span>can build it</span></span>
-                    <span className="l-board-open">02</span>
-                  </li>
-                  <li>
-                    <span className="l-board-ico"><Icon name="chat" /></span>
-                    <span className="l-board-meta"><b>Designer</b><span>shaping it</span></span>
-                    <span className="l-board-open">03</span>
-                  </li>
-                  <li>
-                    <span className="l-board-ico"><Icon name="pulse" /></span>
-                    <span className="l-board-meta"><b>Marketer</b><span>growing it</span></span>
-                    <span className="l-board-open">04</span>
-                  </li>
-                </ul>
-                <div className="l-board-foot">
-                  <span>← you could be here</span>
-                  <span>build together</span>
-                </div>
-              </div>
-              <span className="l-tape" />
-              <span className="l-tag">real people · real projects</span>
-            </div>
           </div>
         </section>
 
@@ -148,12 +114,11 @@ export default function Landing({ config }: { config: LandingConfig }) {
           const hasCards = Boolean(section.cards);
           const bgClass = index % 2 === 0 ? "l-sec-copy" : "l-sec-cards";
           return (
-            <section className={`pad l-sec ${bgClass}`} id={section.id} key={section.id}>
+            <section className={`pad l-sec ${bgClass}`} id={section.id} key={section.id} aria-label={section.label}>
               <TornEdge seedIndex={5 + index} color={index % 2 === 0 ? "var(--paper-2)" : "var(--paper)"} />
               <div className="wrap">
                 <div className="sec-head l-sec-head">
                   <div>
-                    <p className="l-label"><span>0{index + 1}</span> - {section.label}</p>
                     <h2 className="h">{section.heading} <em>{section.emphasis}</em></h2>
                   </div>
                   {section.intro && <p>{section.intro}</p>}
@@ -172,7 +137,10 @@ export default function Landing({ config }: { config: LandingConfig }) {
                 {!hasCards && section.bullets && (
                   <ul className="l-checks">
                     {section.bullets.map((item) => (
-                      <li key={item}><Icon name="check" />{item}</li>
+                      <li key={item.title}>
+                        <Icon name="check" />
+                        <span><strong>{item.title}</strong> {item.text}</span>
+                      </li>
                     ))}
                   </ul>
                 )}

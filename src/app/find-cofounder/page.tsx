@@ -21,7 +21,6 @@ export const metadata = pageMetadata({
 const config: LandingConfig = {
   path: "/find-cofounder",
   crumb: "Find a Cofounder",
-  kicker: "Cofounder matching",
   titleLines: ["Find a", "cofounder to"],
   highlight: "build your startup",
   lede: "CrewLab is the founder matching platform for people who want to build a startup but don't have a team. Post your idea, list the roles you need, and get matched with technical cofounders, developers, designers and marketers who want to build it with you.",
@@ -86,10 +85,10 @@ const config: LandingConfig = {
       emphasis: "your cofounder",
       intro: "Four steps from a solo idea to a founding team.",
       bullets: [
-        "<b>Post your idea</b> - explain the problem you're solving and the help you need.",
-        "<b>List the roles</b> - technical cofounder, developer, designer, marketer…",
-        "<b>Meet your matches</b> - talk to builders who want to join your team.",
-        "<b>Form the crew</b> - pick your cofounder and start building together.",
+        { title: "Post your idea", text: "- explain the problem you're solving and the help you need." },
+        { title: "List the roles", text: "- technical cofounder, developer, designer, marketer…" },
+        { title: "Meet your matches", text: "- talk to builders who want to join your team." },
+        { title: "Form the crew", text: "- pick your cofounder and start building together." },
       ],
       fine: "CrewLab is in early access - join the waitlist to be first in line for cofounder matching.",
     },

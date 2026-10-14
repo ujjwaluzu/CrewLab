@@ -21,7 +21,6 @@ export const metadata = pageMetadata({
 const config: LandingConfig = {
   path: "/student-projects",
   crumb: "Student Projects",
-  kicker: "Student collaboration",
   titleLines: ["Find student", "project teams"],
   highlight: "& college startups",
   lede: "Your best project is the one you build with others. CrewLab helps students find project teams, join college startups and collaborate with developers, designers and creators - building portfolios and real products before you graduate.",
@@ -62,10 +61,10 @@ const config: LandingConfig = {
       emphasis: "of every major",
       intro: "You don't need to be a CS major to build. Student collaboration on CrewLab spans developers, designers, marketers, founders and creators.",
       bullets: [
-        "<b>Engineering students</b> - build real products beyond the syllabus.",
-        "<b>Design students</b> - shape products and ship with developers.",
-        "<b>Business students</b> - cofound, market and grow college startups.",
-        "<b>Hackathon teams</b> - find teammates for your next build sprint.",
+        { title: "Engineering students", text: "- build real products beyond the syllabus." },
+        { title: "Design students", text: "- shape products and ship with developers." },
+        { title: "Business students", text: "- cofound, market and grow college startups." },
+        { title: "Hackathon teams", text: "- find teammates for your next build sprint." },
       ],
     },
     {
@@ -75,9 +74,9 @@ const config: LandingConfig = {
       emphasis: "in three steps",
       intro: "Bigger than a class project - a real crew.",
       bullets: [
-        "<b>Explore student projects</b> - find teams looking for your skills.",
-        "<b>Request to join</b> - or post your own student project idea.",
-        "<b>Build a portfolio</b> - collaborate, ship and track real progress.",
+        { title: "Explore student projects", text: "- find teams looking for your skills." },
+        { title: "Request to join", text: "- or post your own student project idea." },
+        { title: "Build a portfolio", text: "- collaborate, ship and track real progress." },
       ],
       fine: "Student project collaboration is free during early access.",
     },
