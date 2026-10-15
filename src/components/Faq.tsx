@@ -27,7 +27,7 @@ export default function Faq() {
       <div className="wrap faq-wrap">
         <div className="sec-head faq-head">
           <div>
-            <h2 className="h">Frequently asked <em>questions</em></h2>
+            <h2 className="h">Frequently asked<br />questions</h2>
             <p className="note">Everything founders and builders ask about finding cofounders, joining projects and collaborating on CrewLab.</p>
           </div>
         </div>

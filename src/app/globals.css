@@ -695,34 +695,54 @@ main>.home-join{padding-block:clamp(36px,4vw,56px)}
   box-shadow:var(--shadow);
 }
 .home-how .sec-head h2{margin-top:0}
+.home-how .sec-head h2 i{display:block}
 .home-how .sec-head>p{max-width:none;margin:12px auto 0}
+.home-how{isolation:isolate;overflow:hidden}
+.home-how-crystal{position:absolute;inset:0;z-index:0;opacity:.42;mix-blend-mode:multiply;pointer-events:none}
+.home-how-crystal-ball{position:absolute;inset:0}
+.home-how-crystal .crystalized-ball{width:100%;height:100%}
+.home-how-crystal-wash{position:absolute;inset:0;background:radial-gradient(ellipse 56% 60% at 50% 48%,rgba(241,234,219,.34),rgba(241,234,219,0) 100%)}
+.home-how>.wrap{position:relative;z-index:1}
+.home-how .sec-head{background:transparent;border:0;border-radius:0;padding:0;box-shadow:none}
 .home-steps{gap:18px;align-items:stretch}
 .home-steps .step-card{
+  position:relative;
+  overflow:hidden;
   height:100%;
+  min-height:288px;
   display:flex;
-  flex-direction:row;
-  justify-content:space-between;
-  align-items:flex-start;
-  gap:16px;
-  border-radius:10px;
-  padding:clamp(18px,2vw,26px);
-  box-shadow:var(--shadow);
-  background:color-mix(in srgb,var(--paper) 82%,transparent);
-  backdrop-filter:blur(3px);
-  -webkit-backdrop-filter:blur(3px);
-  transition:transform .18s ease;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:stretch;
+  gap:24px;
+  transform:none;
+  margin-top:0;
+  border:2px solid var(--ink);
+  border-radius:8px;
+  padding:clamp(22px,2.4vw,30px);
+  box-shadow:6px 6px 0 var(--ink);
+  background:rgba(247,242,231,.94);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  transition:transform .2s ease,box-shadow .2s ease;
 }
-.home-steps .step-card:hover{transform:translateY(-3px)}
+.home-steps .step-card:hover{transform:translate(-2px,-3px);box-shadow:9px 10px 0 var(--ink)}
+.home-steps .step-card.blush{background:color-mix(in srgb,var(--red) 10%,var(--paper))}
+.home-steps .step-card.tan{background:var(--tan)}
+.home-steps .step-card.ink{background:rgba(18,17,16,.96);color:var(--cream)}
+.home-steps .step-card-top{display:flex;align-items:center;justify-content:space-between;min-height:48px;padding-bottom:16px;border-bottom:1px solid currentColor}
+.home-steps .step-icon{display:grid;place-items:center;width:42px;height:42px;border:1px solid currentColor;border-radius:50%;color:var(--red)}
+.home-steps .step-icon .ic{width:20px;height:20px}
 .home-steps .step-card-copy{min-width:0}
 .home-steps .step-number{
   display:block;
-  flex:none;
   color:var(--red);
-  font:700 13px/1.35 var(--font-mono);
-  letter-spacing:.02em;
+  font:800 clamp(34px,3vw,44px)/.9 var(--display);
+  letter-spacing:-.04em;
 }
-.home-steps .step-card h3{margin:14px 0 8px;font:700 13px/1.35 var(--font-mono);letter-spacing:.02em;text-transform:uppercase}
-.home-steps .step-card p{margin:0;font-size:15px;line-height:1.55}
+.home-steps .step-card h3{max-width:16ch;margin:0 0 12px;font:800 clamp(22px,2vw,28px)/1.02 var(--display);letter-spacing:-.035em;text-transform:lowercase}
+.home-steps .step-card p{margin:0;color:rgba(18,17,16,.78);font-size:14px;line-height:1.65}
+.home-steps .step-card.ink p{color:rgba(241,234,219,.78)}
 .home-join .cta-copy h2{margin-bottom:0}
 .home-join .signup{margin-top:24px}
 .home-join .fine{margin-top:12px}
@@ -731,6 +751,7 @@ main>.home-join{padding-block:clamp(36px,4vw,56px)}
 .home-links .section-header{margin-bottom:28px}
 .home-links .link-card{padding-block:16px}
 @media(max-width:640px){
+  .home-how-crystal{opacity:.3}
   .hero-intro{padding-top:20px}
   .home-hero .lede{margin-top:18px}
   .home-hero .cta-row{margin-top:18px}
@@ -740,7 +761,7 @@ main>.home-join{padding-block:clamp(36px,4vw,56px)}
   main>.home-links{padding-block:32px}
   main>.home-join{padding-block:32px}
   .home-how .sec-head,.home-projects .sec-head,.home-links .sec-head{margin-bottom:22px}
-  .home-how .sec-head{padding:18px 16px;border-radius:8px;box-shadow:var(--shadow)}
+  .home-how .sec-head{padding:0;border:0;border-radius:0;box-shadow:none;background:transparent}
   .home-steps{gap:14px}
   .home-steps .step-card{padding:20px}
   .home-join .signup{margin-top:18px}

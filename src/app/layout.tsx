@@ -3,6 +3,7 @@ import { Newsreader, Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
 import "./globals.css";
 import SvgDefs from "@/components/SvgDefs";
 import SchemaOrg from "@/components/SchemaOrg";
+import SiteAnimations from "@/components/SiteAnimations";
 import {
   SITE_URL,
   SITE_NAME,
@@ -113,6 +114,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <SvgDefs />
         <SchemaOrg />
+        <SiteAnimations />
         {children}
       </body>
     </html>

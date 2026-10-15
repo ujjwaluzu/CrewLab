@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>CrewLab — Ideas to Impact</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-surface-variant":"#59413c","error-container":"#ffdad6","surface-container":"#f1eee4","error":"#ba1a1a","border-subtle":"rgba(25, 25, 25, 0.08)","secondary":"#5f5e5e","primary-container":"#cd462a","primary":"#ab2e14","on-secondary-fixed":"#1c1b1b","secondary-fixed-dim":"#c8c6c5","on-primary-fixed":"#3d0500","surface-card":"#FFFFFF","inverse-surface":"#31312a","ink-primary":"#191919","tertiary-container":"#3c79ab","surface-container-highest":"#e6e2d8","surface-container-lowest":"#ffffff","ink-secondary":"#575B61","border-strong":"rgba(25, 25, 25, 0.2)","inverse-primary":"#ffb4a4","primary-fixed-dim":"#ffb4a4","tertiary":"#1c6090","inverse-on-surface":"#f4f0e6","accent-orange-hover":"#CB4428","background":"#fdf9ef","outline":"#8d716a","surface-container-high":"#ece8de","secondary-fixed":"#e5e2e1","surface-warm":"#FBF7EE","tertiary-fixed":"#cee5ff","on-tertiary-fixed-variant":"#004a75","on-surface":"#1c1c16","ink-muted":"#8B929A","on-secondary":"#ffffff","accent-orange-subtle":"#FBEAE5","primary-fixed":"#ffdad3","outline-variant":"#e1bfb8","on-tertiary":"#ffffff","on-primary-container":"#fffbff","surface-muted":"#EFE9DC","on-tertiary-fixed":"#001d32","on-secondary-fixed-variant":"#474746","surface-variant":"#e6e2d8","on-tertiary-container":"#fdfcff","on-primary":"#ffffff","surface-bright":"#fdf9ef","secondary-container":"#e2dfde","surface":"#fdf9ef","tertiary-fixed-dim":"#96ccff","on-error-container":"#93000a","surface-container-low":"#f7f3e9","on-primary-fixed-variant":"#8c1800","on-secondary-container":"#636262","on-error":"#ffffff","surface-dim":"#dddad0","surface-tint":"#ae3016","on-background":"#1c1c16"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"2.25rem","margin":"3rem","space-2xs":"0.25rem","gutter-sm":"1rem","space-lg":"1.5rem","space-xs":"0.5rem","space-2xl":"3.5rem","margin-mobile":"1.25rem","space-sm":"0.75rem","space-3xl":"5rem","space-md":"1rem","gutter":"1.5rem"},fontFamily:{"label-mono-bold":["Space Mono"],"headline-md":["Newsreader"],"display-hero-mobile":["Newsreader"],"headline-lg-mobile":["Newsreader"],"label-ui":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"display-hero":["Newsreader"],"body-sm":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-mono":["Space Mono"],"headline-lg":["Newsreader"]},fontSize:{"label-mono-bold":["11px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"700"}],"headline-md":["28px",{"lineHeight":"34px","letterSpacing":"-0.02em","fontWeight":"500"}],"display-hero-mobile":["40px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"400"}],"headline-lg-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"500"}],"label-ui":["13px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}],"body-lg":["17px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"display-hero":["64px",{"lineHeight":"68px","letterSpacing":"-0.03em","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-mono":["12px",{"lineHeight":"16px","letterSpacing":"0.06em","fontWeight":"400"}],"headline-lg":["44px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"500"}]}}}}</script></head><body class="min-h-full bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl border-b border-border-subtle shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between gap-4"><div class="flex items-center gap-10"><a class="group flex items-center gap-3.5 focus:outline-none" data-path="explore-projects" href="#"><div class="w-10 h-10 rounded-xl bg-accent-orange-subtle border border-primary/20 flex items-center justify-center transition-transform group-hover:scale-95"><span class="material-symbols-outlined text-primary text-[22px]">hub</span></div><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-ink-primary">CrewLab</span><span class="w-1.5 h-1.5 rounded-full bg-primary"></span></div><span class="font-label-mono text-label-mono text-ink-muted uppercase tracking-wider">Ideas to impact</span></div></a><nav class="hidden xl:flex items-center gap-8 pl-4" data-active-classes="text-primary font-semibold"><a aria-current="page" class="transition-colors text-primary font-semibold" data-path="find-a-cofounder" href="#">Find a Cofounder</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors" data-path="explore-projects" href="#">Explore Projects</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors" data-path="how-it-works" href="#">How it Works</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors" data-path="community" href="#">Community</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors" data-path="faq" href="#">FAQ</a></nav></div><div class="flex items-center gap-4 sm:gap-6"><a class="hidden sm:inline-flex font-label-ui text-label-ui text-ink-primary hover:text-primary transition-colors px-2 py-1.5" data-path="sign-in" href="#">Sign in</a><a class="inline-flex items-center justify-center font-label-ui text-label-ui text-on-primary bg-primary hover:bg-accent-orange-hover px-5 py-2.5 rounded-full shadow-sm hover:shadow transition-all duration-150 transform hover:-translate-y-0.5" data-path="waitlist" href="#">Join the waitlist</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Technical Marquee Ribbon -->
+<div class="w-full bg-surface-container-high py-2.5 overflow-hidden">
+<div class="flex items-center gap-8 whitespace-nowrap animate-[marquee_24s_linear_infinite] font-label-mono text-label-mono text-ink-secondary">
+<span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>FIND YOUR CREW</span></span>
+<span class="text-primary font-bold">✦</span>
+<span>FIND A COFOUNDER</span>
+<span class="text-primary font-bold">✦</span>
+<span>FIND DEVELOPERS</span>
+<span class="text-primary font-bold">✦</span>
+<span>JOIN SIDE PROJECTS</span>
+<span class="text-primary font-bold">✦</span>
+<span>SHIP TOGETHER</span>
+<span class="text-primary font-bold">✦</span>
+<span>BUILD PORTFOLIOS</span>
+<span class="text-primary font-bold">✦</span>
+<span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>FIND YOUR CREW</span></span>
+<span class="text-primary font-bold">✦</span>
+<span>FIND A COFOUNDER</span>
+<span class="text-primary font-bold">✦</span>
+<span>FIND DEVELOPERS</span>
+<span class="text-primary font-bold">✦</span>
+<span>JOIN SIDE PROJECTS</span>
+<span class="text-primary font-bold">✦</span>
+<span>SHIP TOGETHER</span>
+<span class="text-primary font-bold">✦</span>
+<span>BUILD PORTFOLIOS</span>
+</div>
+</div>
+<!-- Hero Section with Celestial Earth Background Visual Canvas -->
+<section class="relative w-full overflow-hidden bg-surface py-16 lg:py-24">
+<!-- Atmospheric subtle ambient orbs -->
+<div class="absolute top-12 left-1/2 -translate-x-1/2 w-[720px] h-[340px] bg-gradient-to-b from-primary/10 via-surface-warm to-transparent blur-3xl pointer-events-none rounded-full"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 flex flex-col items-center text-center">
+<!-- Eyebrow Pill -->
+<div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-surface-card shadow-sm mb-8">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-mono-bold text-label-mono-bold text-ink-primary uppercase tracking-wider">EARLY ACCESS PLATFORM</span>
+<span class="text-ink-muted">/</span>
+<span class="font-label-mono text-label-mono text-primary font-bold">BUILD V1.0</span>
+</div>
+<!-- Main Headline with bespoke typography emphasis -->
+<h1 class="font-headline-lg text-headline-lg lg:text-[76px] lg:leading-[80px] tracking-tight text-ink-primary max-w-4xl mx-auto mb-6">
+        build real
+        <span class="inline-block px-4 py-1 mx-1.5 rounded-2xl bg-ink-primary text-surface font-headline-lg italic shadow-md">products</span>
+        with
+        <br class="hidden sm:inline"/>
+<span class="inline-block px-5 py-0.5 mx-1 rounded-2xl bg-primary text-on-primary font-headline-lg italic font-normal shadow-md transform -rotate-1">real</span>
+<span class="font-headline-lg italic text-primary">people.</span>
+</h1>
+<!-- Body Paragraph -->
+<p class="font-body-lg text-body-lg text-ink-secondary max-w-2xl mx-auto mb-10 leading-relaxed">
+        CrewLab is the builder community where founders, developers, designers, marketers, students and creators connect. Have an idea but no team? Find a cofounder. Have skills but no idea? Join a startup or side project.
+      </p>
+<!-- CTA Action Stack -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-12">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-primary hover:bg-accent-orange-hover text-on-primary font-label-ui text-label-ui shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5" href="#quick-join">
+<span>Join the waitlist</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-surface-card hover:bg-surface-container text-ink-primary font-label-ui text-label-ui shadow-sm transition-all duration-200" href="#categories">
+<span class="material-symbols-outlined text-[18px] text-ink-secondary">explore</span>
+<span>Find project teammates</span>
+</a>
+</div>
+<!-- Social Proof Builders Stack -->
+<div class="inline-flex items-center gap-4 px-5 py-2.5 rounded-full bg-surface-card shadow-sm">
+<div class="flex items-center -space-x-2">
+<span class="w-8 h-8 rounded-full bg-ink-primary text-surface flex items-center justify-center font-label-mono-bold text-label-mono-bold shadow-sm">AK</span>
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-mono-bold text-label-mono-bold shadow-sm">RJ</span>
+<span class="w-8 h-8 rounded-full bg-surface-container-highest text-ink-primary flex items-center justify-center font-label-mono-bold text-label-mono-bold shadow-sm">PS</span>
+<span class="w-8 h-8 rounded-full bg-accent-orange-subtle text-primary flex items-center justify-center font-label-mono-bold text-label-mono-bold shadow-sm">+</span>
+</div>
+<p class="font-label-mono text-label-mono text-ink-primary">
+<span class="font-bold">Be among the first builders</span> on CrewLab
+        </p>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</div>
+<!-- Visual Earth Orbit Graphic Card -->
+<div class="w-full mt-14 rounded-2xl overflow-hidden relative shadow-xl bg-ink-primary max-w-5xl h-[320px] sm:h-[420px] flex items-end justify-center p-8">
+<div class="absolute inset-0 bg-cover bg-center opacity-85" data-alt="Stylized dramatic retro-digital view of planet Earth in deep space with glowing city lights, deep blue and orange orbital aurora rays, cosmic starry night, fine pointillism pixel art and cinematic editorial aesthetic" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDevdsy63AbWvbSC9gw0Fu-PDcHndff8PGGQLRDYv0WCsU6CwFTqg5Nt4mFYer3hGG7U5BBdHVNLAXGpCi1AmIFIvY_b68UoT1QwhvsyGzmJun6cecEy0u_rBdHzf997rUnJ9774_xm3WjMpl4j52jvlox0yX7u5R83euGp4Y30geAcDAOfGBoInWXA4tFCQHEK6pqJY0gQrdCrxRes4NBVTxLpUw7yzTKUTEnWPqqzjMU1O4NswQvN9g')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-ink-primary via-ink-primary/30 to-transparent"></div>
+<!-- Telemetry HUD Overlay in Earth orbit visual -->
+<div class="relative z-10 w-full flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-xl bg-ink-primary/80 backdrop-blur-md shadow-lg text-left">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[28px]">rocket_launch</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-surface leading-tight">Venture Genesis</div>
+<div class="font-label-mono text-label-mono text-secondary-fixed-dim">COFOUNDER NETWORK // NODE 01</div>
+</div>
+</div>
+<div class="flex items-center gap-6 font-label-mono text-label-mono">
+<div class="flex flex-col">
+<span class="text-ink-muted">OPEN ROLES</span>
+<span class="text-surface font-bold">148 POSITIONS</span>
+</div>
+<div class="flex flex-col">
+<span class="text-ink-muted">MATCH RATE</span>
+<span class="text-primary font-bold">94.2%</span>
+</div>
+<div class="flex flex-col">
+<span class="text-ink-muted">STATUS</span>
+<span class="text-surface flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>EARLY COHORT</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Marquee Continuous Divider -->
+<div class="w-full bg-primary py-3 overflow-hidden text-on-primary">
+<div class="flex items-center gap-10 whitespace-nowrap animate-[marquee_20s_linear_infinite] font-label-mono-bold text-label-mono-bold tracking-wider uppercase">
+<span>Find your crew</span>
+<span>✦</span>
+<span>Find a cofounder</span>
+<span>✦</span>
+<span>Find developers</span>
+<span>✦</span>
+<span>Join side projects</span>
+<span>✦</span>
+<span>Find your crew</span>
+<span>✦</span>
+<span>Find a cofounder</span>
+<span>✦</span>
+<span>Find developers</span>
+<span>✦</span>
+<span>Join side projects</span>
+<span>✦</span>
+<span>Find your crew</span>
+<span>✦</span>
+<span>Find a cofounder</span>
+<span>✦</span>
+<span>Find developers</span>
+<span>✦</span>
+<span>Join side projects</span>
+</div>
+</div>
+<!-- Quick Waitlist & Lead Capture Strip -->
+<section class="w-full bg-surface-warm py-20 px-6 lg:px-12" id="quick-join">
+<div class="max-w-4xl mx-auto flex flex-col items-center text-center">
+<div class="inline-flex items-center gap-2 font-label-mono-bold text-label-mono-bold text-primary uppercase tracking-widest mb-3">
+<span>00 // INVITATION</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg lg:text-[54px] text-ink-primary mb-4">
+        join the <span class="italic font-headline-lg text-primary">crew</span>
+</h2>
+<p class="font-body-md text-body-md text-ink-secondary mb-8 max-w-md">
+        Secure your spot on the early access protocol before public registrations open.
+      </p>
+<!-- Inline Signup Box -->
+<form class="w-full max-w-lg flex flex-col sm:flex-row items-center gap-3 bg-surface-card p-2 rounded-2xl sm:rounded-full shadow-md" id="waitlist-form" onsubmit="event.preventDefault(); document.getElementById('waitlist-msg').classList.remove('hidden');">
+<div class="flex items-center gap-3 px-4 w-full">
+<span class="material-symbols-outlined text-ink-muted text-[20px]">alternate_email</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-ink-primary placeholder:text-ink-muted focus:outline-none py-2" placeholder="Enter your email" required="" type="email"/>
+</div>
+<button class="w-full sm:w-auto flex-shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary hover:bg-accent-orange-hover text-on-primary font-label-ui text-label-ui transition-all shadow-sm" type="submit">
+<span>Join the waitlist</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</form>
+<div class="hidden mt-4 px-4 py-2 rounded-full bg-accent-orange-subtle text-primary font-label-mono text-label-mono" id="waitlist-msg">
+        ✓ You're in! Check your inbox for your early access invitation.
+      </div>
+<p class="font-label-mono text-label-mono text-ink-muted mt-4">
+        No spam. Just updates that matter.
+      </p>
+</div>
+</section>
+<!-- How It Works Section: startup team building, made simple. -->
+<section class="w-full bg-surface py-24 px-6 lg:px-12">
+<div class="max-w-7xl mx-auto flex flex-col gap-16">
+<!-- Section Header with Editorial Framing -->
+<div class="max-w-3xl mx-auto text-center flex flex-col items-center">
+<div class="p-8 sm:p-12 rounded-3xl bg-surface-card shadow-sm w-full">
+<div class="font-label-mono-bold text-label-mono-bold text-primary uppercase tracking-widest mb-3">
+            COLLABORATIVE WORKBENCH
+          </div>
+<h2 class="font-headline-lg text-headline-lg lg:text-[50px] text-ink-primary leading-tight mb-4">
+            startup team building, <span class="italic font-headline-lg text-primary">made simple.</span>
+</h2>
+<p class="font-body-lg text-body-lg text-ink-secondary max-w-xl mx-auto">
+            A simple way to go from a solo idea to a working project with the right cofounders and teammates.
+          </p>
+</div>
+</div>
+<!-- 4-Card Process Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Step 01 -->
+<div class="group relative rounded-2xl bg-surface-card p-7 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">lightbulb</span>
+</div>
+<span class="font-label-mono-bold text-label-mono-bold text-ink-muted group-hover:text-primary transition-colors">01</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-ink-primary mb-3">Share or explore</h3>
+<p class="font-body-md text-body-md text-ink-secondary leading-relaxed">
+              Post your startup idea and list the roles you need - a technical cofounder, a designer, a marketer - or browse open projects to join.
+            </p>
+</div>
+<div class="mt-8 pt-4 flex items-center gap-2 font-label-mono text-label-mono text-ink-muted">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Idea staging</span>
+</div>
+</div>
+<!-- Step 02 -->
+<div class="group relative rounded-2xl bg-surface-card p-7 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">groups</span>
+</div>
+<span class="font-label-mono-bold text-label-mono-bold text-ink-muted group-hover:text-primary transition-colors">02</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-ink-primary mb-3">Find your crew</h3>
+<p class="font-body-md text-body-md text-ink-secondary leading-relaxed">
+              Get matched with developers, designers and creators who want to join your startup team or side project.
+            </p>
+</div>
+<div class="mt-8 pt-4 flex items-center gap-2 font-label-mono text-label-mono text-ink-muted">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Talent matching</span>
+</div>
+</div>
+<!-- Step 03 -->
+<div class="group relative rounded-2xl bg-surface-card p-7 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">handshake</span>
+</div>
+<span class="font-label-mono-bold text-label-mono-bold text-ink-muted group-hover:text-primary transition-colors">03</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-ink-primary mb-3">Build together</h3>
+<p class="font-body-md text-body-md text-ink-secondary leading-relaxed">
+              Collaborate on the project, divide the work, and ship real products with real people.
+            </p>
+</div>
+<div class="mt-8 pt-4 flex items-center gap-2 font-label-mono text-label-mono text-ink-muted">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Sprint sync</span>
+</div>
+</div>
+<!-- Step 04 -->
+<div class="group relative rounded-2xl bg-surface-card p-7 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">code</span>
+</div>
+<span class="font-label-mono-bold text-label-mono-bold text-ink-muted group-hover:text-primary transition-colors">04</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-ink-primary mb-3">Track progress</h3>
+<p class="font-body-md text-body-md text-ink-secondary leading-relaxed">
+              Follow milestones, tasks and commits with GitHub integration so the team stays in sync.
+            </p>
+</div>
+<div class="mt-8 pt-4 flex items-center gap-2 font-label-mono text-label-mono text-ink-muted">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Automated milestones</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Explorer: find cofounders, developers and project teams. -->
+<section class="w-full bg-surface-container-low py-24 px-6 lg:px-12" id="categories">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<!-- Section Title -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6">
+<div>
+<div class="inline-flex items-center gap-2 font-label-mono-bold text-label-mono-bold text-primary uppercase tracking-widest mb-2">
+            DIRECTORY &amp; STREAMS
+          </div>
+<h2 class="font-headline-lg text-headline-lg lg:text-[48px] text-ink-primary">
+            find cofounders, developers <br class="hidden md:inline"/><span class="italic font-headline-lg text-primary">and project teams.</span>
+</h2>
+</div>
+<p class="font-body-md text-body-md text-ink-secondary max-w-md">
+          Startup teams, side projects and student projects - find the people to build with, whatever you’re making.
+        </p>
+</div>
+<!-- High-Craft Category Cards Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- 01 Find a cofounder (Large Bento Box) -->
+<a class="lg:col-span-7 group rounded-2xl bg-surface-card p-8 sm:p-10 shadow-sm hover:shadow-md transition-all flex flex-col justify-between" href="#quick-join">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-mono-bold text-label-mono-bold text-primary uppercase tracking-widest">OPPORTUNITY 01</span>
+<span class="material-symbols-outlined text-ink-muted group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-ink-primary mb-3 group-hover:text-primary transition-colors">
+              Find a cofounder
+            </h3>
+<p class="font-body-lg text-body-lg text-ink-secondary leading-relaxed max-w-xl">
+              Have an idea but no team? Find a cofounder - technical or not - and startup builders ready to build a real product with you.
+            </p>
+</div>
+<div class="mt-8 pt-6 flex flex-wrap items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container font-label-mono text-label-mono text-ink-primary">TECHNICAL COFOUNDER</span>
+<span class="px-3 py-1 rounded-full bg-surface-container font-label-mono text-label-mono text-ink-primary">EQUITY SPLIT</span>
+<span class="px-3 py-1 rounded-full bg-accent-orange-subtle font-label-mono text-label-mono text-primary font-bold">Explore →</span>
+</div>
+</a>
+<!-- 02 Find developers -->
+<a class="lg:col-span-5 group rounded-2xl bg-surface-card p-8 sm:p-10 shadow-sm hover:shadow-md transition-all flex flex-col justify-between" href="#quick-join">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-mono-bold text-label-mono-bold text-primary uppercase tracking-widest">OPPORTUNITY 02</span>
+<span class="material-symbols-outlined text-ink-muted group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-ink-primary mb-3 group-hover:text-primary transition-colors">
+              Find developers
+            </h3>
+<p class="font-body-md text-body-md text-ink-secondary leading-relaxed">
+              Find developers for your startup or side project. Connect with engineers, designers and creators looking for projects to build.
+            </p>
+</div>
+<div class="mt-8 pt-6 flex flex-wrap items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container font-label-mono text-label-mono text-ink-primary">FULLSTACK</span>
+<span class="px-3 py-1 rounded-full bg-surface-container font-label-mono text-label-mono text-ink-primary">REACT</span>
+<span class="px-3 py-1 rounded-full bg-accent-orange-subtle font-label-mono text-label-mono text-primary font-bold">Explore →</span>
+</div>
+</a>
+<!-- 03 Startup teams -->
+<a class="lg:col-span-4 group rounded-2xl bg-surface-card p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between" href="#quick-join">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-mono-bold text-label-mono-bold text-primary uppercase tracking-widest">OPPORTUNITY 03</span>
+<span class="material-symbols-outlined text-ink-muted group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-ink-primary mb-3 group-hover:text-primary transition-colors">
+              Startup teams
+            </h3>
+<p class="font-body-md text-body-md text-ink-secondary leading-relaxed">
+              Assemble a startup team - founders, developers, designers, marketers - and collaborate with startup builders on real projects.
+            </p>
+</div>
+<div class="mt-8 pt-6 flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-ink-muted">SEED TO PRE-SERIES</span>
+<span class="font-label-mono text-label-mono text-primary font-bold">Explore →</span>
+</div>
+</a>
+<!-- 04 Side projects -->
+<a class="lg:col-span-4 group rounded-2xl bg-surface-card p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between" href="#quick-join">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-mono-bold text-label-mono-bold text-primary uppercase tracking-widest">OPPORTUNITY 04</span>
+<span class="material-symbols-outlined text-ink-muted group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-ink-primary mb-3 group-hover:text-primary transition-colors">
+              Side projects
+            </h3>
+<p class="font-body-md text-body-md text-ink-secondary leading-relaxed">
+              Join an online builder community for side projects. Find people to work on side projects with and ship something real.
+            </p>
+</div>
+<div class="mt-8 pt-6 flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-ink-muted">WEEKEND HACKS</span>
+<span class="font-label-mono text-label-mono text-primary font-bold">Explore →</span>
+</div>
+</a>
+<!-- 05 Student projects -->
+<a class="lg:col-span-4 group rounded-2xl bg-surface-card p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between" href="#quick-join">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-mono-bold text-label-mono-bold text-primary uppercase tracking-widest">OPPORTUNITY 05</span>
+<span class="material-symbols-outlined text-ink-muted group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-ink-primary mb-3 group-hover:text-primary transition-colors">
+              Student projects
+            </h3>
+<p class="font-body-md text-body-md text-ink-secondary leading-relaxed">
+              Find student project teams and college startup collaborators. Join student projects, build portfolios, and team up with fellow students.
+            </p>
+</div>
+<div class="mt-8 pt-6 flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-ink-muted">CAMPUS LABS</span>
+<span class="font-label-mono text-label-mono text-primary font-bold">Explore →</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- Interactive Community Showcase Graphic Section -->
+<section class="w-full bg-surface py-20 px-6 lg:px-12">
+<div class="max-w-7xl mx-auto rounded-3xl bg-surface-card p-8 lg:p-14 shadow-md flex flex-col lg:flex-row items-center justify-between gap-12">
+<div class="lg:max-w-lg flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 font-label-mono-bold text-label-mono-bold text-primary uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+          REAL-TIME TELEMETRY
+        </div>
+<h3 class="font-headline-lg text-headline-lg text-ink-primary leading-tight">
+          Builders shipping together right now.
+        </h3>
+<p class="font-body-md text-body-md text-ink-secondary leading-relaxed">
+          From AI tooling and developer infrastructure to hyper-focused micro-SaaS, our early members are actively teaming up across 32 timezones.
+        </p>
+<div class="grid grid-cols-2 gap-4 pt-2">
+<div class="p-4 rounded-xl bg-surface-container">
+<span class="font-label-mono-bold text-label-mono-bold text-primary block mb-1">AVERAGE MATCH</span>
+<span class="font-headline-md text-headline-md text-ink-primary">48 Hours</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container">
+<span class="font-label-mono-bold text-label-mono-bold text-primary block mb-1">PROJECT COMPLETION</span>
+<span class="font-headline-md text-headline-md text-ink-primary">87%</span>
+</div>
+</div>
+</div>
+<!-- Visual Graphic Preview Card -->
+<div class="w-full lg:max-w-md rounded-2xl bg-surface-container p-6 flex flex-col gap-4">
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-2 font-label-mono-bold text-label-mono-bold text-ink-primary">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span>ACTIVE COLLAB SPRINT</span>
+</div>
+<span class="font-label-mono text-label-mono text-ink-muted">#SPRINT-08</span>
+</div>
+<!-- Progress Bar SVG Visualization -->
+<div class="rounded-xl bg-surface-card p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between text-body-sm font-label-ui text-ink-primary">
+<span>Distributed Vector DB Project</span>
+<span class="font-label-mono text-primary font-bold">78% SHIPPED</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-2 rounded-full w-[78%]"></div>
+</div>
+<div class="flex items-center justify-between pt-1 font-label-mono text-label-mono text-ink-muted">
+<span>2 Founders • 3 Devs</span>
+<span>42 GitHub Commits</span>
+</div>
+</div>
+<div class="rounded-xl bg-surface-card p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between text-body-sm font-label-ui text-ink-primary">
+<span>Local AI Audio Transcriber</span>
+<span class="font-label-mono text-primary font-bold">TEAM FULL</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-ink-primary h-2 rounded-full w-[100%]"></div>
+</div>
+<div class="flex items-center justify-between pt-1 font-label-mono text-label-mono text-ink-muted">
+<span>1 Founder • 2 Rust Devs</span>
+<span>Staging Release</span>
+</div>
+</div>
+<div class="p-3 text-center">
+<a class="font-label-mono-bold text-label-mono-bold text-primary hover:underline uppercase" href="#quick-join">Browse all live sprints →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section: Frequently asked questions -->
+<section class="w-full bg-surface-warm py-24 px-6 lg:px-12">
+<div class="max-w-4xl mx-auto flex flex-col gap-12">
+<!-- Section Title -->
+<div class="text-center flex flex-col items-center">
+<div class="inline-flex items-center gap-2 font-label-mono-bold text-label-mono-bold text-primary uppercase tracking-widest mb-3">
+          CLEAR ANSWERS
+        </div>
+<h2 class="font-headline-lg text-headline-lg lg:text-[50px] text-ink-primary mb-4">
+          Frequently asked <span class="italic font-headline-lg text-primary">questions</span>
+</h2>
+<p class="font-body-lg text-body-lg text-ink-secondary max-w-xl">
+          Everything founders and builders ask about finding cofounders, joining projects and collaborating on CrewLab.
+        </p>
+</div>
+<!-- Accordion Stack -->
+<div class="flex flex-col gap-4">
+<!-- Item 01 (Open by default) -->
+<div class="rounded-2xl bg-surface-card p-6 shadow-sm">
+<button class="faq-btn w-full flex items-center justify-between text-left group" onclick="toggleFaq(this)" type="button">
+<div class="flex items-center gap-4">
+<span class="font-label-mono-bold text-label-mono-bold text-primary">01</span>
+<h3 class="font-headline-sm text-headline-sm text-ink-primary group-hover:text-primary transition-colors">
+                Where can I find a technical cofounder for my startup?
+              </h3>
+</div>
+<span class="faq-icon material-symbols-outlined text-primary text-[24px] transform rotate-180 transition-transform">expand_more</span>
+</button>
+<div class="faq-content mt-4 pt-4 pl-10 pr-4">
+<p class="font-body-md text-body-md text-ink-secondary leading-relaxed">
+              Use a cofounder matching platform like CrewLab. Create a project, explain your startup idea, and list the technical skills you need. Builders with those skills - developers, engineers and technical founders - discover your project and request to join your team, so you can build together.
+            </p>
+</div>
+</div>
+<!-- Item 02 -->
+<div class="rounded-2xl bg-surface-card p-6 shadow-sm">
+<button class="faq-btn w-full flex items-center justify-between text-left group" onclick="toggleFaq(this)" type="button">
+<div class="flex items-center gap-4">
+<span class="font-label-mono-bold text-label-mono-bold text-primary">02</span>
+<h3 class="font-headline-sm text-headline-sm text-ink-primary group-hover:text-primary transition-colors">
+                How do I find people to build my startup idea?
+              </h3>
+</div>
+<span class="faq-icon material-symbols-outlined text-ink-muted group-hover:text-primary text-[24px] transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden mt-4 pt-4 pl-10 pr-4">
+<p class="font-body-md text-body-md text-ink-secondary leading-relaxed">
+              Post your idea as a project and describe the roles you need to fill, from developers and designers to marketers. CrewLab then connects you with founders, builders and creators who want to join startup projects. The right teammates find you - you don't have to cold-message strangers.
+            </p>
+</div>
+</div>
+<!-- Item 03 -->
+<div class="rounded-2xl bg-surface-card p-6 shadow-sm">
+<button class="faq-btn w-full flex items-center justify-between text-left group" onclick="toggleFaq(this)" type="button">
+<div class="flex items-center gap-4">
+<span class="font-label-mono-bold text-label-mono-bold text-primary">03</span>
+<h3 class="font-headline-sm text-headline-sm text-ink-primary group-hover:text-primary transition-colors">
+                I have skills but no idea. Can I join projects on CrewLab?
+              </h3>
+</div>
+<span class="faq-icon material-symbols-outlined text-ink-muted group-hover:text-primary text-[24px] transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden mt-4 pt-4 pl-10 pr-4">
+<p class="font-body-md text-body-md text-ink-secondary leading-relaxed">
+              Yes. Builders who have skills but no idea can browse startups, side projects and student projects that are looking for contributors. Request to join a project that matches your skills, meet the crew behind it, and start building real products with real people.
+            </p>
+</div>
+</div>
+<!-- Item 04 -->
+<div class="rounded-2xl bg-surface-card p-6 shadow-sm">
+<button class="faq-btn w-full flex items-center justify-between text-left group" onclick="toggleFaq(this)" type="button">
+<div class="flex items-center gap-4">
+<span class="font-label-mono-bold text-label-mono-bold text-primary">04</span>
+<h3 class="font-headline-sm text-headline-sm text-ink-primary group-hover:text-primary transition-colors">
+                How does CrewLab match founders and cofounders?
+              </h3>
+</div>
+<span class="faq-icon material-symbols-outlined text-ink-muted group-hover:text-primary text-[24px] transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden mt-4 pt-4 pl-10 pr-4">
+<p class="font-body-md text-body-md text-ink-secondary leading-relaxed">
+              CrewLab matches people around projects, not just profiles. Founders list the cofounder and teammate roles they need, and builders state the skills and projects they want to work on. CrewLab surfaces compatible matches, so a founder with an idea finds a technical cofounder who actually wants to build it.
+            </p>
+</div>
+</div>
+<!-- Item 05 -->
+<div class="rounded-2xl bg-surface-card p-6 shadow-sm">
+<button class="faq-btn w-full flex items-center justify-between text-left group" onclick="toggleFaq(this)" type="button">
+<div class="flex items-center gap-4">
+<span class="font-label-mono-bold text-label-mono-bold text-primary">05</span>
+<h3 class="font-headline-sm text-headline-sm text-ink-primary group-hover:text-primary transition-colors">
+                Is CrewLab a good place for students to find project teams?
+              </h3>
+</div>
+<span class="faq-icon material-symbols-outlined text-ink-muted group-hover:text-primary text-[24px] transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden mt-4 pt-4 pl-10 pr-4">
+<p class="font-body-md text-body-md text-ink-secondary leading-relaxed">
+              Yes. CrewLab is designed for student project collaboration. Students can join college startup teams, find teammates for hackathons and coursework, build portfolio projects, and work with developers, designers and marketers - no professional network required.
+            </p>
+</div>
+</div>
+<!-- Item 06 -->
+<div class="rounded-2xl bg-surface-card p-6 shadow-sm">
+<button class="faq-btn w-full flex items-center justify-between text-left group" onclick="toggleFaq(this)" type="button">
+<div class="flex items-center gap-4">
+<span class="font-label-mono-bold text-label-mono-bold text-primary">06</span>
+<h3 class="font-headline-sm text-headline-sm text-ink-primary group-hover:text-primary transition-colors">
+                Is CrewLab free for side project collaboration and startup teams?
+              </h3>
+</div>
+<span class="faq-icon material-symbols-outlined text-ink-muted group-hover:text-primary text-[24px] transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden mt-4 pt-4 pl-10 pr-4">
+<p class="font-body-md text-body-md text-ink-secondary leading-relaxed">
+              CrewLab is free to join during early access. You can post a startup idea, join a side project, build a startup team and collaborate without paying a fee. Join the waitlist to be among the first builders to access the platform when it launches.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final High-Impact Conversion Banner -->
+<section class="w-full bg-surface py-20 px-6 lg:px-12">
+<div class="max-w-7xl mx-auto rounded-3xl bg-ink-primary text-surface p-10 sm:p-16 lg:p-20 relative overflow-hidden shadow-2xl flex flex-col items-center text-center">
+<!-- Decorative ambient corner accents -->
+<div class="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-primary/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-primary/30 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col items-center max-w-3xl">
+<div class="w-12 h-12 rounded-2xl bg-primary text-on-primary flex items-center justify-center mb-6 shadow-lg">
+<span class="material-symbols-outlined text-[26px]">hub</span>
+</div>
+<div class="font-label-mono-bold text-label-mono-bold text-primary uppercase tracking-widest mb-3">
+          IDEAS TO IMPACT
+        </div>
+<h2 class="font-headline-lg text-headline-lg lg:text-[54px] text-surface leading-tight mb-6">
+          Ready to build your next startup with real people?
+        </h2>
+<p class="font-body-lg text-body-lg text-secondary-fixed-dim mb-10 max-w-xl">
+          Made for builders, by builders. Stop waiting for the perfect moment - assemble your cofounders today.
+        </p>
+<!-- CTA Form -->
+<div class="w-full max-w-md flex flex-col sm:flex-row items-center gap-3 bg-surface-card/10 backdrop-blur-md p-2 rounded-2xl sm:rounded-full shadow-lg">
+<input class="w-full bg-transparent px-4 py-2 font-body-md text-body-md text-surface placeholder:text-ink-muted focus:outline-none" placeholder="Your builder email" type="email"/>
+<a class="w-full sm:w-auto flex-shrink-0 inline-flex items-center justify-center px-6 py-3 rounded-full bg-primary hover:bg-accent-orange-hover text-on-primary font-label-ui text-label-ui transition-all shadow-md" href="#quick-join">
+<span>Get early access</span>
+</a>
+</div>
+</div>
+<!-- Giant Monolithic Brand Wordmark Typography Element -->
+<div class="mt-16 pt-8 w-full select-none opacity-20 hover:opacity-30 transition-opacity">
+<span class="font-headline-lg text-[72px] sm:text-[120px] lg:text-[180px] leading-none tracking-tighter font-black text-surface">
+          crewlab.
+        </span>
+</div>
+</div>
+</section>
+<!-- Interactive Client Behavior Scripts -->
+<script>
+    function toggleFaq(btn) {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      const isOpen = !content.classList.contains('hidden');
+
+      if (isOpen) {
+        content.classList.add('hidden');
+        icon.classList.remove('rotate-180', 'text-primary');
+        icon.classList.add('text-ink-muted');
+      } else {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180', 'text-primary');
+        icon.classList.remove('text-ink-muted');
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low border-t border-border-subtle mt-24"><div class="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-20"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 pb-16 border-b border-border-subtle"><div class="lg:col-span-4 flex flex-col gap-5"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-lg bg-accent-orange-subtle border border-primary/20 flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">hub</span></div><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-ink-primary">CrewLab</span></div><p class="font-body-md text-body-md text-ink-secondary max-w-sm">The collaborative workbench where ambitious founders, software engineers, and product designers converge to build ventures.</p><div class="inline-flex items-center gap-2 font-label-mono text-label-mono text-ink-muted uppercase"><span class="w-2 h-2 rounded-full bg-primary"></span><span>Made for builders, by builders.</span></div></div><div class="lg:col-span-2 lg:col-start-6 flex flex-col gap-4"><span class="font-label-mono-bold text-label-mono-bold uppercase text-ink-primary tracking-wider">Find Your Crew</span><div class="flex flex-col gap-3"><a class="font-body-sm text-body-sm text-ink-secondary hover:text-primary transition-colors" data-path="find-a-cofounder" href="#">Technical Founders</a><a class="font-body-sm text-body-sm text-ink-secondary hover:text-primary transition-colors" data-path="find-a-cofounder" href="#">Design Leads</a><a class="font-body-sm text-body-sm text-ink-secondary hover:text-primary transition-colors" data-path="find-a-cofounder" href="#">Growth &amp; Ops</a><a class="font-body-sm text-body-sm text-ink-secondary hover:text-primary transition-colors" data-path="find-a-cofounder" href="#">Early Engineers</a></div></div><div class="lg:col-span-2 flex flex-col gap-4"><span class="font-label-mono-bold text-label-mono-bold uppercase text-ink-primary tracking-wider">Product</span><div class="flex flex-col gap-3"><a class="font-body-sm text-body-sm text-ink-secondary hover:text-primary transition-colors" data-path="explore-projects" href="#">Explore Projects</a><a class="font-body-sm text-body-sm text-ink-secondary hover:text-primary transition-colors" data-path="how-it-works" href="#">How it Works</a><a class="font-body-sm text-body-sm text-ink-secondary hover:text-primary transition-colors" data-path="waitlist" href="#">Waitlist Access</a><a class="font-body-sm text-body-sm text-ink-secondary hover:text-primary transition-colors" data-path="faq" href="#">Help &amp; FAQ</a></div></div><div class="lg:col-span-2 flex flex-col gap-4"><span class="font-label-mono-bold text-label-mono-bold uppercase text-ink-primary tracking-wider">Company</span><div class="flex flex-col gap-3"><a class="font-body-sm text-body-sm text-ink-secondary hover:text-primary transition-colors" data-path="community" href="#">Manifesto</a><a class="font-body-sm text-body-sm text-ink-secondary hover:text-primary transition-colors" data-path="community" href="#">Code of Conduct</a><a class="font-body-sm text-body-sm text-ink-secondary hover:text-primary transition-colors" data-path="privacy-terms" href="#">Privacy Policy</a><a class="font-body-sm text-body-sm text-ink-secondary hover:text-primary transition-colors" data-path="privacy-terms" href="#">Terms of Service</a></div></div><div class="lg:col-span-2 flex flex-col gap-4"><span class="font-label-mono-bold text-label-mono-bold uppercase text-ink-primary tracking-wider">Network</span><div class="flex flex-col gap-3"><a class="font-body-sm text-body-sm text-ink-secondary hover:text-primary transition-colors" data-path="community" href="#">Discord Guild</a><a class="font-body-sm text-body-sm text-ink-secondary hover:text-primary transition-colors" data-path="community" href="#">X / Twitter</a><a class="font-body-sm text-body-sm text-ink-secondary hover:text-primary transition-colors" data-path="community" href="#">GitHub Org</a><a class="font-body-sm text-body-sm text-ink-secondary hover:text-primary transition-colors" data-path="community" href="#">Instagram</a></div></div></div><div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-label-mono text-label-mono text-ink-muted"><div class="flex items-center gap-3"><span>© 2026 CrewLab. All rights reserved.</span><span>•</span><span class="text-primary">crewlab.ujjwaluzu.in</span></div><div class="flex items-center gap-6"><a class="hover:text-ink-primary transition-colors" data-path="privacy-terms" href="#">Privacy</a><a class="hover:text-ink-primary transition-colors" data-path="privacy-terms" href="#">Terms</a><a class="hover:text-ink-primary transition-colors" data-path="faq" href="#">Security</a></div></div></div></footer></body></html>
