@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Fraunces, Space_Mono } from "next/font/google";
+import { Newsreader, Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
 import "./globals.css";
 import SvgDefs from "@/components/SvgDefs";
 import SchemaOrg from "@/components/SchemaOrg";
@@ -12,16 +12,16 @@ import {
   GEO,
 } from "@/lib/site";
 
-const bodyFont = Bricolage_Grotesque({
+const bodyFont = Plus_Jakarta_Sans({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["400", "600"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
-const displayFont = Fraunces({
+const displayFont = Newsreader({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["500", "800"],
+  weight: ["400", "500", "600", "700", "800"],
   style: ["normal", "italic"],
   display: "swap",
 });
