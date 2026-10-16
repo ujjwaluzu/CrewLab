@@ -718,15 +718,15 @@ main>.home-join{padding-block:clamp(36px,4vw,56px)}
   border-radius:8px;
   padding:clamp(22px,2.4vw,30px);
   box-shadow:6px 6px 0 var(--ink);
-  background:rgba(247,242,231,.94);
+  background:rgba(247,242,231,.8);
   backdrop-filter:blur(6px);
   -webkit-backdrop-filter:blur(6px);
   transition:transform .2s ease,box-shadow .2s ease;
 }
 .home-steps .step-card:hover{transform:translate(-2px,-3px);box-shadow:9px 10px 0 var(--ink)}
-.home-steps .step-card.blush{background:color-mix(in srgb,var(--red) 10%,var(--paper))}
-.home-steps .step-card.tan{background:var(--tan)}
-.home-steps .step-card.ink{background:rgba(18,17,16,.96);color:var(--cream)}
+.home-steps .step-card.blush{background:rgba(239,214,197,.8)}
+.home-steps .step-card.tan{background:rgba(220,207,174,.8)}
+.home-steps .step-card.ink{background:rgba(48,38,38,.86);color:var(--cream)}
 .home-steps .step-card-top{display:flex;align-items:center;justify-content:space-between;min-height:48px;padding-bottom:16px;border-bottom:1px solid currentColor}
 .home-steps .step-icon{display:grid;place-items:center;width:42px;height:42px;border:1px solid currentColor;border-radius:50%;color:var(--red)}
 .home-steps .step-icon .ic{width:20px;height:20px}
