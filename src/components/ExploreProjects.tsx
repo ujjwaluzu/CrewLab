@@ -1,6 +1,5 @@
 type Project = {
   name: string;
-  initial: string;
   category: string;
   description: string;
   skills: string[];
@@ -14,7 +13,6 @@ const PALETTE = ["var(--red)", "var(--tan)", "var(--paper)"];
 const projects: Project[] = [
   {
     name: "StudySync",
-    initial: "S",
     category: "Education",
     description: "A collaborative study platform designed to help students learn together.",
     skills: ["Frontend", "Backend", "UI/UX"],
@@ -24,7 +22,6 @@ const projects: Project[] = [
   },
   {
     name: "HabitHub",
-    initial: "H",
     category: "Design",
     description: "A social approach to building better habits with friends.",
     skills: ["Mobile", "Design", "Marketing"],
@@ -34,7 +31,6 @@ const projects: Project[] = [
   },
   {
     name: "DevConnect",
-    initial: "D",
     category: "Development",
     description: "A place for developers to find projects and build together.",
     skills: ["React", "Node", "Community"],
@@ -44,7 +40,6 @@ const projects: Project[] = [
   },
   {
     name: "EcoTrack",
-    initial: "E",
     category: "AI",
     description: "Track. Reduce. Make an impact - one footprint at a time.",
     skills: ["Mobile", "Data", "Design"],
@@ -54,7 +49,6 @@ const projects: Project[] = [
   },
   {
     name: "CampusHub",
-    initial: "C",
     category: "Design",
     description: "Your campus, connected.",
     skills: ["Product", "Design", "Community"],
@@ -64,7 +58,6 @@ const projects: Project[] = [
   },
   {
     name: "NightOwl",
-    initial: "N",
     category: "AI",
     description: "Tools and focus streaks for night-owl learners who build together.",
     skills: ["Web", "AI", "Community"],
@@ -83,12 +76,8 @@ export default function ExploreProjects() {
             <span className="x-samp">Sample</span>
             <span className="x-num">0{index + 1}</span>
           </div>
-          <div className="x-card-cover" aria-hidden="true">
-            <span className="x-card-initial">{project.initial}</span>
-            <i className="x-slash" />
-            <span className="x-field">{project.category}</span>
-          </div>
           <div className="x-card-body">
+            <span className="x-card-category">{project.category}</span>
             <h3>{project.name}</h3>
             <p>{project.description}</p>
             <div className="x-skills">

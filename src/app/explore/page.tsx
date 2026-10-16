@@ -8,6 +8,7 @@ import Icon from "@/components/Icon";
 import ExploreControls from "@/components/ExploreControls";
 import ExploreProjects from "@/components/ExploreProjects";
 
+import "@/components/Landing.css";
 import "./explore.css";
 
 export const metadata = pageMetadata({
@@ -19,75 +20,68 @@ export const metadata = pageMetadata({
 
 export default function ExplorePage() {
   return (
-    <div className="explore">
+    <div className="landing explore">
       <SiteHeader />
       <main id="top">
-        <section className="x-hero">
-          <div className="wrap x-hero-grid">
+        <section className="l-hero">
+          <div className="wrap l-hero-grid">
             <div>
-              <p className="kicker">Explore the crew</p>
-              <h1 className="x-title">
+              <h1 className="l-title">
                 <span className="d1">Projects looking</span>
+                <span className="d1">for people who</span>
                 <span className="d1">
-                  <span className="x-hl">
+                  <span className="l-hl">
                     <svg className="brush" viewBox="0 0 600 140" preserveAspectRatio="none" aria-hidden="true"><use href="#brush-f" /></svg>
-                    <span>for people</span>
+                    <span>want to build</span>
                   </span>
                 </span>
-                <span className="d2">who want to build them.</span>
               </h1>
-              <p className="lede">Discover ideas, meet potential teammates, and find something worth building.</p>
-              <p className="x-preview">A preview of CrewLab discovery - sample projects, no app yet</p>
-            </div>
-            <div className="x-collage" aria-hidden="true">
-              <div className="halftone" />
-              <svg className="x-brush" viewBox="0 0 600 140" preserveAspectRatio="none"><use href="#brush-f" /></svg>
-              <div className="x-board">
-                <div className="x-board-top">
-                  <span className="x-live">Discover</span>
-                  <span className="x-board-count">06 · sample</span>
-                </div>
-                <ul className="x-board-list">
-                  <li>
-                    <span className="x-board-init">S</span>
-                    <span className="x-board-meta"><b>StudySync</b><span>Frontend · Backend · UI/UX</span></span>
-                    <span className="x-board-open">3/5</span>
-                  </li>
-                  <li>
-                    <span className="x-board-init">D</span>
-                    <span className="x-board-meta"><b>DevConnect</b><span>React · Node · Community</span></span>
-                    <span className="x-board-open">4/6</span>
-                  </li>
-                  <li>
-                    <span className="x-board-init">H</span>
-                    <span className="x-board-meta"><b>HabitHub</b><span>Mobile · Design · Marketing</span></span>
-                    <span className="x-board-open">2/4</span>
-                  </li>
-                  <li>
-                    <span className="x-board-init">N</span>
-                    <span className="x-board-meta"><b>NightOwl</b><span>Web · AI · Community</span></span>
-                    <span className="x-board-open">2/5</span>
-                  </li>
-                </ul>
-                <div className="x-board-foot">
-                  <span>← more inside</span>
-                  <span>slots filling</span>
-                </div>
+              <p className="l-lede">Discover ideas, meet potential teammates, and find something worth building.</p>
+              <div className="cta-row">
+                <Link className="btn btn-primary" href="#browse">Explore projects <Icon name="arrow" /></Link>
+                <Link className="btn btn-ghost" href="/waitlist">Join the waitlist <Icon name="arrow" /></Link>
               </div>
-              <span className="x-tape" />
-              <span className="x-tag t1">Browsing ideas</span>
-              <span className="x-tag t2">You could build here</span>
+              <p className="l-note">A preview of CrewLab discovery - sample projects, no app yet</p>
             </div>
           </div>
         </section>
 
         <Tickers />
 
-        <section className="pad x-browse" id="browse">
+        <section className="pad l-sec l-sec-copy x-flow" aria-label="How CrewLab brings projects and builders together">
           <div className="wrap">
-            <div className="sec-head">
+            <div className="sec-head l-sec-head">
               <div>
-                <h2 className="h">Find something <em>worth building</em></h2>
+                <h2 className="h">From a project idea to a working crew</h2>
+              </div>
+              <p>CrewLab connects project discovery, joining, and team coordination around the work itself.</p>
+            </div>
+            <div className="l-cards">
+              <article className="l-card">
+                <span className="l-card-ico"><Icon name="grid" /></span>
+                <h3>Make the project clear</h3>
+                <p>Owners describe what they are building, where the project stands, and which skills would help move it forward.</p>
+              </article>
+              <article className="l-card">
+                <span className="l-card-ico"><Icon name="search" /></span>
+                <h3>Find a good fit</h3>
+                <p>Builders explore projects, filter by skills, review the people behind an idea, and apply to join work that interests them.</p>
+              </article>
+              <article className="l-card">
+                <span className="l-card-ico"><Icon name="chat" /></span>
+                <h3>Build with your crew</h3>
+                <p>Project owners review join requests. Accepted members get a shared discussion, with optional read-only GitHub context for a linked repository.</p>
+              </article>
+            </div>
+            <p className="x-flow-note">Project owners decide who joins; repository access is read-only and shared with that project&apos;s crew.</p>
+          </div>
+        </section>
+
+        <section className="pad l-sec l-sec-cards x-browse" id="browse" aria-label="Explore projects">
+          <div className="wrap">
+            <div className="sec-head l-sec-head">
+              <div>
+                <h2 className="h">Find something worth building</h2>
               </div>
               <p>Fictional sample projects. This previews how discovering ideas and joining a crew will feel once CrewLab opens.</p>
             </div>
@@ -96,26 +90,26 @@ export default function ExplorePage() {
           </div>
         </section>
 
-        <section className="x-close" id="join">
-          <div className="x-close-halftone" aria-hidden="true" />
-          <svg className="x-close-brush" viewBox="0 0 600 140" preserveAspectRatio="none" aria-hidden="true"><use href="#brush-s" /></svg>
-          <div className="wrap x-close-in">
-            <p className="kicker">Bigger than the board?</p>
+        <section className="l-close" id="join">
+          <i className="l-close-halftone" aria-hidden="true" />
+          <svg className="l-close-brush" viewBox="0 0 600 140" preserveAspectRatio="none" aria-hidden="true"><use href="#brush-s" /></svg>
+          <div className="wrap l-close-in">
+            <p className="l-close-kicker">Bigger than the board?</p>
             <h2>
-              Don&apos;t see something
-              <span className="hl">
+              Don&apos;t see something{" "}
+              <span className="l-close-hl">
                 <svg className="brush" viewBox="0 0 600 140" preserveAspectRatio="none" aria-hidden="true"><use href="#brush-f" /></svg>
                 <span>you want to build?</span>
               </span>
-              <em>Start with your own idea.</em>
+              <span className="x-close-last-line">Start with your own idea.</span>
             </h2>
-            <p className="x-close-lead">
+            <p className="l-close-lead">
               Bring an idea to the crew. When CrewLab opens, posting a project takes minutes - the right people are already here.
             </p>
             <Link className="btn btn-light" href="/waitlist">
               Join the waitlist <Icon name="arrow" />
             </Link>
-            <p className="x-close-fine">Early access is limited · the crew is forming now</p>
+            <p className="l-close-fine">Early access is limited &middot; the crew is forming now</p>
           </div>
         </section>
       </main>

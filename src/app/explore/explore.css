@@ -365,41 +365,9 @@ body:has(.explore) {
   font: 500 11px/1 var(--mono);
   letter-spacing: 0.1em;
 }
-.x-card-cover {
-  position: relative;
-  height: clamp(104px, 10vw, 128px);
-  display: flex;
-  align-items: flex-end;
-  padding: clamp(14px, 1.8vw, 20px);
-  overflow: hidden;
-  border-bottom: 1px solid var(--line);
-  background: var(--paper);
-}
-.x-card-initial {
-  font: 400 clamp(52px, 5vw, 74px)/0.9 var(--display);
-  color: transparent;
-  -webkit-text-stroke: 1.5px var(--ink);
-  letter-spacing: 0.01em;
-  position: relative;
-  z-index: 1;
-}
-.x-slash {
-  position: absolute;
-  right: -9%;
-  bottom: -42%;
-  width: 52%;
-  height: 150%;
-  transform: rotate(-26deg);
-  background: var(--red);
-  opacity: 0.9;
-}
-.x-field {
-  position: absolute;
-  right: clamp(14px, 1.8vw, 20px);
-  bottom: clamp(14px, 1.8vw, 20px);
-  z-index: 1;
+.x-card-category {
+  align-self: flex-start;
   border: 1px solid var(--line);
-  background: var(--card);
   padding: 5px 8px;
   font: 500 10px/1 var(--mono);
   letter-spacing: 0.08em;
@@ -469,6 +437,20 @@ body:has(.explore) {
 .x-seek b {
   font-weight: 600;
   color: var(--ink);
+}
+
+.x-flow-note {
+  margin: 24px 0 0;
+  color: var(--mute);
+  text-align: center;
+  font-size: 13px;
+}
+.x-close-last-line {
+  display: block;
+  margin-top: 0.14em;
+  font: 400 0.56em/1.15 var(--serif);
+  text-transform: none;
+  letter-spacing: -0.01em;
 }
 
 /* Closing CTA */
