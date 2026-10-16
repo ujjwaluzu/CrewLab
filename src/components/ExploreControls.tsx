@@ -38,7 +38,7 @@ export default function ExploreControls() {
         ))}
       </div>
       <p id="x-tool-note" className="x-tool-note">
-        Search and filters are a preview - real discovery ships with the CrewLab app.
+        Sample cards and controls are a visual preview. Explore CrewLab for live project listings.
       </p>
     </div>
   );
