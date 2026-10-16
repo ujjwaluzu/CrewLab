@@ -32,21 +32,28 @@ const groups = [
 
 export default function NavDropdowns() {
   const [openGroup, setOpenGroup] = useState<string | null>(null);
-  const navRef = useRef<HTMLElement>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!openGroup) return;
+    if (!openGroup && !mobileOpen) return;
 
     function closeOnOutsideClick(event: PointerEvent) {
       if (event.target instanceof Node && !navRef.current?.contains(event.target)) {
         setOpenGroup(null);
+        setMobileOpen(false);
       }
     }
 
     function closeOnEscape(event: KeyboardEvent) {
       if (event.key === "Escape") {
-        navRef.current?.querySelector<HTMLButtonElement>(".nav-dropdown.is-open .nav-trigger")?.focus();
-        setOpenGroup(null);
+        if (openGroup) {
+          navRef.current?.querySelector<HTMLButtonElement>(".nav-dropdown.is-open .nav-trigger")?.focus();
+          setOpenGroup(null);
+        } else {
+          setMobileOpen(false);
+          navRef.current?.querySelector<HTMLButtonElement>(".nav-mobile-toggle")?.focus();
+        }
       }
     }
 
@@ -56,42 +63,60 @@ export default function NavDropdowns() {
       document.removeEventListener("pointerdown", closeOnOutsideClick);
       document.removeEventListener("keydown", closeOnEscape);
     };
-  }, [openGroup]);
+  }, [mobileOpen, openGroup]);
 
   return (
-    <nav className="nav-links" aria-label="Primary" ref={navRef}>
-      {groups.map((group) => {
-        const isOpen = openGroup === group.id;
-        const menuId = `nav-menu-${group.id}`;
+    <div className={`nav-shell${mobileOpen ? " is-mobile-open" : ""}`} ref={navRef}>
+      <button
+        className="nav-mobile-toggle"
+        type="button"
+        aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
+        aria-expanded={mobileOpen}
+        aria-controls="primary-nav"
+        onClick={() => {
+          setMobileOpen((open) => !open);
+          setOpenGroup(null);
+        }}
+      >
+        <span /><span /><span />
+      </button>
+      <nav className="nav-links" id="primary-nav" aria-label="Primary">
+        {groups.map((group) => {
+          const isOpen = openGroup === group.id;
+          const menuId = `nav-menu-${group.id}`;
 
-        return (
-          <div className={`nav-dropdown${isOpen ? " is-open" : ""}`} key={group.id}>
-            <button
-              className="nav-trigger"
-              type="button"
-              aria-expanded={isOpen}
-              onClick={() => setOpenGroup(isOpen ? null : group.id)}
-            >
-              {group.label}
-            </button>
-            {isOpen && (
-              <div className="nav-menu" id={menuId}>
-                {group.links.map((item) => (
-                  <Link
-                    href={item.href}
-                    key={item.href}
-                    target={"external" in item ? "_blank" : undefined}
-                    rel={"external" in item ? "noopener noreferrer" : undefined}
-                    onClick={() => setOpenGroup(null)}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-        );
-      })}
-    </nav>
+          return (
+            <div className={`nav-dropdown${isOpen ? " is-open" : ""}`} key={group.id}>
+              <button
+                className="nav-trigger"
+                type="button"
+                aria-expanded={isOpen}
+                onClick={() => setOpenGroup(isOpen ? null : group.id)}
+              >
+                {group.label}
+              </button>
+              {isOpen && (
+                <div className="nav-menu" id={menuId}>
+                  {group.links.map((item) => (
+                    <Link
+                      href={item.href}
+                      key={item.href}
+                      target={"external" in item ? "_blank" : undefined}
+                      rel={"external" in item ? "noopener noreferrer" : undefined}
+                      onClick={() => {
+                        setOpenGroup(null);
+                        setMobileOpen(false);
+                      }}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </nav>
+    </div>
   );
 }

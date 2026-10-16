@@ -13,7 +13,7 @@ export default function SiteHeader({ home = false }: { home?: boolean }) {
           CrewLab
         </Link>
         <NavDropdowns />
-        <Button href="/waitlist" className="btn-sm">Join the waitlist <Icon name="up-right" /></Button>
+        <Button href="/waitlist" className="btn-sm"><span className="head-cta-full">Join the waitlist</span><span className="head-cta-short">Waitlist</span><Icon name="up-right" /></Button>
       </div>
     </header>
   );
