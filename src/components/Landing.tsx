@@ -23,7 +23,7 @@ export type LandingSection = {
   id: string;
   label: string;
   heading: string;
-  emphasis: string;
+  emphasis?: string;
   intro?: string;
   cards?: LandingCard[];
   bullets?: LandingBullet[];
@@ -43,12 +43,12 @@ export type LandingConfig = {
   secondaryHref: string;
   sections: LandingSection[];
   relatedLabel: string;
-  relatedEmphasis: string;
+  relatedEmphasis?: string;
   relatedIntro: string;
   closeKicker: string;
   closeTitle: string;
   closeBrush: string;
-  closeEmphasis: string;
+  closeEmphasis?: string;
   closeLead: string;
 };
 
@@ -119,7 +119,10 @@ export default function Landing({ config }: { config: LandingConfig }) {
               <div className="wrap">
                 <div className="sec-head l-sec-head">
                   <div>
-                    <h2 className="h">{section.heading} <em>{section.emphasis}</em></h2>
+                    <h2 className="h">
+                      {section.heading}
+                      {section.emphasis && <> <em>{section.emphasis}</em></>}
+                    </h2>
                   </div>
                   {section.intro && <p>{section.intro}</p>}
                 </div>
@@ -154,7 +157,10 @@ export default function Landing({ config }: { config: LandingConfig }) {
           <div className="wrap">
             <div className="sec-head l-related-head">
               <div>
-                <h2 className="h">{config.relatedLabel} <em>{config.relatedEmphasis}</em></h2>
+                <h2 className="h">
+                  {config.relatedLabel}
+                  {config.relatedEmphasis && <> <em>{config.relatedEmphasis}</em></>}
+                </h2>
               </div>
               <p>{config.relatedIntro}</p>
             </div>
@@ -177,12 +183,12 @@ export default function Landing({ config }: { config: LandingConfig }) {
           <div className="wrap l-close-in">
             <p className="l-close-kicker">{config.closeKicker}</p>
             <h2>
-              {config.closeTitle}
+              {config.closeTitle}{" "}
               <span className="l-close-hl">
                 <svg className="brush" viewBox="0 0 600 140" preserveAspectRatio="none" aria-hidden="true"><use href="#brush-s" /></svg>
                 <span>{config.closeBrush}</span>
               </span>
-              <em>{config.closeEmphasis}</em>
+              {config.closeEmphasis && <em>{config.closeEmphasis}</em>}
             </h2>
             <p className="l-close-lead">{config.closeLead}</p>
             <Link className="btn btn-light" href="/waitlist">
