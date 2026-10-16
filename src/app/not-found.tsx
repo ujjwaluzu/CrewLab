@@ -14,7 +14,7 @@ export default function NotFound() {
         <span className="halftone" aria-hidden="true" />
         <div className="wrap nf-in">
           <p className="kicker">Error 404</p>
-          <h1>Page <em>not found.</em></h1>
+          <h1>Page not found.</h1>
           <p className="lede">The page you&apos;re looking for doesn&apos;t exist or has moved. Let&apos;s get you back to building.</p>
           <div className="cta-row">
             <Link className="btn btn-primary" href="/">Back to home <Icon name="arrow" /></Link>

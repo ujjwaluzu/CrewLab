@@ -541,13 +541,6 @@ body:has(.hiw) {
   height: 128%;
   color: var(--red);
 }
-.h-close h2 em {
-  display: block;
-  font: italic 300 0.56em/1.15 var(--serif);
-  text-transform: none;
-  letter-spacing: -0.01em;
-  margin-top: 0.2em;
-}
 .h-close-fine {
   margin: 18px 0 0;
   color: color-mix(in srgb, var(--on-panel) 58%, transparent);

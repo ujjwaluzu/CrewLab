@@ -69,7 +69,7 @@ export default function AboutPage() {
           <div className="wrap">
             <div className="a-sec-head">
               <p className="a-label"><span>01</span> · the problem</p>
-              <h2 className="h a-problem-h">Too many good ideas never <em>become projects.</em></h2>
+              <h2 className="h a-problem-h">Too many good ideas never become projects.</h2>
             </div>
             <div className="a-problem-grid">
               <div className="a-problem-side" aria-hidden="true">
@@ -90,7 +90,7 @@ export default function AboutPage() {
           <div className="wrap">
             <div className="a-sec-head">
               <p className="a-label"><span>02</span> · what we’re building</p>
-              <h2 className="h">A place for builders to <em>find each other.</em></h2>
+              <h2 className="h">A place for builders to find each other.</h2>
             </div>
             <p className="a-what-lede">Not another social feed. Not another job board. Not another place to collect ideas.</p>
             <div className="a-chain" aria-label="A place where ideas meet people, people form crews, and crews actually build">
@@ -117,7 +117,7 @@ export default function AboutPage() {
           <div className="wrap">
             <div className="a-sec-head">
               <p className="a-label"><span>03</span> · the crewlab philosophy</p>
-              <h2 className="h a-phil-h">How we <em>think about it.</em></h2>
+              <h2 className="h a-phil-h">How we think about it.</h2>
             </div>
             <div className="a-manifesto">
               <div className="a-m-statement a-m1">Build with <em>people.</em></div>
@@ -136,7 +136,7 @@ export default function AboutPage() {
           <div className="wrap">
             <div className="a-sec-head">
               <p className="a-label a-label-plain">who crewlab is for</p>
-              <h2 className="h a-aud-h">Two kinds of <em>people, both building.</em></h2>
+              <h2 className="h a-aud-h">Two kinds of people, both building.</h2>
             </div>
             <div className="a-aud-grid">
               <article className="a-panel idea">

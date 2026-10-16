@@ -337,9 +337,9 @@ body:has(.landing) {
   height: 128%;
   color: var(--red);
 }
-.l-close h2 em {
+.l-close-emphasis {
   display: block;
-  font: italic 300 0.56em/1.15 var(--serif);
+  font: 400 0.56em/1.15 var(--serif);
   text-transform: none;
   letter-spacing: -0.01em;
   margin-top: 0.2em;

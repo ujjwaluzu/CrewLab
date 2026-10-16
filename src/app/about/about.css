@@ -251,9 +251,6 @@ body:has(.about) {
   padding: clamp(56px, 7vw, 100px) 0;
   scroll-margin-top: 84px;
 }
-.a-problem-h em {
-  font-size: 1.06em;
-}
 .a-problem-grid {
   display: grid;
   grid-template-columns: 0.7fr 1.3fr;

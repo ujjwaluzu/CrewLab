@@ -93,7 +93,6 @@
   .ways{display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--panel);color:var(--on-panel)}
   .way{position:relative;padding:clamp(28px,3.4vw,46px);min-height:460px;display:flex;flex-direction:column;overflow:hidden}
   .way h2{margin:auto 0 0;font:400 clamp(38px,4.2vw,62px)/.98 var(--display);text-transform:uppercase}
-  .way h2 em{display:block;font:italic 300 1.02em/1 var(--serif);text-transform:none;margin-top:.1em}
   .way p{max-width:34ch;margin:18px 0 26px;color:color-mix(in srgb,currentColor 72%,transparent)}
   .way .num{font:500 12px/1 var(--mono);letter-spacing:.14em;color:var(--red)}
   .way .ico{width:46px;height:46px;border:1px solid currentColor;display:grid;place-items:center;font-size:22px;margin:22px 0 0;opacity:.9}
@@ -110,7 +109,6 @@
   .tear{position:absolute;left:0;right:0;top:0;height:26px;z-index:5;pointer-events:none}
   .tear svg{display:block;width:100%;height:100%}
   h2.h{margin:0;font:400 clamp(48px,7vw,104px)/.94 var(--display);text-transform:uppercase}
-  h2.h em{display:block;font:italic 300 .86em/1.05 var(--serif);text-transform:none;letter-spacing:-.01em;margin-top:.06em}
   .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:clamp(28px,4vw,48px)}
   .sec-head p{max-width:34ch;margin:0;color:var(--ink-2)}
 
@@ -460,7 +458,6 @@ h2.h{font:800 clamp(42px,6.7vw,96px)/.95 var(--font-display);letter-spacing:-.03
 .sec-head{display:block;margin-bottom:40px}
 .sec-head>p,.sec-head div>p:last-child{max-width:640px;margin:24px 0 0;font-size:18px;line-height:1.5}
 .sec-head h2{margin-top:12px}
-.sec-head h2 em,.h em{font-weight:500}
 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;border:0}
 .step,.step:nth-child(3){border:2px solid var(--ink);background:var(--paper);border-radius:6px;padding:26px;box-shadow:none;transform:rotate(-1deg)}
 .step:nth-child(2){background:var(--tan);transform:rotate(1deg);margin-top:24px}

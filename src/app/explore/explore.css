@@ -518,13 +518,6 @@ body:has(.explore) {
   height: 128%;
   color: var(--red);
 }
-.x-close h2 em {
-  display: block;
-  font: italic 300 0.82em/1.1 var(--serif);
-  text-transform: none;
-  letter-spacing: -0.01em;
-  margin-top: 0.14em;
-}
 .x-close-lead {
   max-width: 44ch;
   margin: 26px 0 30px;

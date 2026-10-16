@@ -121,7 +121,7 @@ export default function Landing({ config }: { config: LandingConfig }) {
                   <div>
                     <h2 className="h">
                       {section.heading}
-                      {section.emphasis && <> <em>{section.emphasis}</em></>}
+                      {section.emphasis && ` ${section.emphasis}`}
                     </h2>
                   </div>
                   {section.intro && <p>{section.intro}</p>}
@@ -159,7 +159,7 @@ export default function Landing({ config }: { config: LandingConfig }) {
               <div>
                 <h2 className="h">
                   {config.relatedLabel}
-                  {config.relatedEmphasis && <> <em>{config.relatedEmphasis}</em></>}
+                  {config.relatedEmphasis && ` ${config.relatedEmphasis}`}
                 </h2>
               </div>
               <p>{config.relatedIntro}</p>
@@ -188,7 +188,7 @@ export default function Landing({ config }: { config: LandingConfig }) {
                 <svg className="brush" viewBox="0 0 600 140" preserveAspectRatio="none" aria-hidden="true"><use href="#brush-s" /></svg>
                 <span>{config.closeBrush}</span>
               </span>
-              {config.closeEmphasis && <em>{config.closeEmphasis}</em>}
+              {config.closeEmphasis && <span className="l-close-emphasis">{config.closeEmphasis}</span>}
             </h2>
             <p className="l-close-lead">{config.closeLead}</p>
             <Link className="btn btn-light" href="/waitlist">
