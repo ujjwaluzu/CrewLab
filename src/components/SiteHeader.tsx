@@ -2,6 +2,7 @@ import Link from "next/link";
 import BrandMark from "@/components/BrandMark";
 import Icon from "@/components/Icon";
 import Button from "@/components/Button";
+import NavDropdowns from "@/components/NavDropdowns";
 
 export default function SiteHeader({ home = false }: { home?: boolean }) {
   return (
@@ -11,11 +12,7 @@ export default function SiteHeader({ home = false }: { home?: boolean }) {
           <BrandMark />
           CrewLab
         </Link>
-        {!home && <nav className="nav-links" aria-label="Primary">
-          <Link href="/explore">Explore</Link>
-          <Link href="/how-it-works">How it works</Link>
-          <Link href="/about">About</Link>
-        </nav>}
+        <NavDropdowns />
         <Button href="/waitlist" className="btn-sm">Join the waitlist <Icon name="up-right" /></Button>
       </div>
     </header>
