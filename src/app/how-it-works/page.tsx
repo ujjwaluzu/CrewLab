@@ -70,6 +70,30 @@ const config: LandingConfig = {
       ],
       fine: "GitHub access is optional and read-only for crew members. Repository details are visible to members of that project.",
     },
+    {
+      id: "stay-organized",
+      label: "Keep your work in view",
+      heading: "Follow your projects and requests",
+      intro:
+        "CrewLab gives each member a personal overview of the projects they own or have joined, along with the requests moving between builders and project owners.",
+      cards: [
+        {
+          icon: "grid",
+          title: "See your project list",
+          text: "Keep track of projects you own and projects where you have joined the crew from your dashboard.",
+        },
+        {
+          icon: "users",
+          title: "Track applications",
+          text: "Review requests you have received as an owner and applications you have sent as a builder.",
+        },
+        {
+          icon: "check",
+          title: "Add project events",
+          text: "Use the calendar to add events and link them to a project, keeping plans connected to the work they concern.",
+        },
+      ],
+    },
   ],
   relatedLabel: "Keep exploring CrewLab",
   relatedIntro:
