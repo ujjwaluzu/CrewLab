@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import BrandMark from "@/components/BrandMark";
 import NavDropdowns from "@/components/NavDropdowns";
-import LocaleSwitcher from "@/components/LocaleSwitcher";
 
 export default function SiteHeader({ home = false }: { home?: boolean }) {
   const pathname = usePathname() ?? "";
@@ -20,7 +19,6 @@ export default function SiteHeader({ home = false }: { home?: boolean }) {
       <div className="cl-cell cl-nav-links"><NavDropdowns /></div>
       <div className="cl-cell cl-nav-cta">
         <div className="cl-nav-actions">
-          <LocaleSwitcher />
           <Link className="cl-button" href={waitlistHref} aria-current={pathname === waitlistHref ? "page" : undefined}>
             <span className="cl-nav-waitlist-full">{isHindi ? "प्रतीक्षा सूची" : "Join the waitlist"}</span>
             <span className="cl-nav-waitlist-short">{isHindi ? "सूची" : "Waitlist"}</span>

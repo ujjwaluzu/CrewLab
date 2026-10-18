@@ -18,7 +18,7 @@
 .cl-logo{display:inline-flex;align-items:center;gap:10px;color:var(--cl-text)!important;font:700 22px/1 var(--cl-display);letter-spacing:-.02em}
 .cl-logo svg{width:20px;height:20px;flex:none}
 .cl-nav-links{display:flex;justify-content:center;color:var(--cl-text)}
-.crewlab-page .nav-shell{display:flex;width:100%;align-items:center;justify-content:center}
+.crewlab-page .nav-shell{display:flex;width:100%;align-items:center;justify-content:center;gap:16px}
 .crewlab-page .nav-links{position:static;display:flex;width:auto;align-items:center;justify-content:center;gap:32px;padding:0;border:0;background:transparent;box-shadow:none}
 .crewlab-page .nav-dropdown{position:relative;width:auto;border:0}
 .crewlab-page .nav-trigger{min-height:44px;gap:9px;padding:8px 0;border:0;border-radius:0;background:transparent;color:var(--cl-text);font:400 12px/1.2 var(--cl-mono);letter-spacing:.04em;text-transform:uppercase;transition:color 150ms ease}
@@ -187,7 +187,7 @@ body:has(.crewlab-page){margin:0;background:var(--cl-bg)}
 @media(max-width:820px){
   .cl-nav-actions{gap:7px}
   .cl-row:not(.cl-wordmark){grid-template-columns:minmax(0,1fr)!important}
-  .cl-row.cl-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;grid-template-columns:minmax(0,1fr) 56px auto!important;align-items:center}.cl-nav-brand{grid-column:1;grid-row:1}.cl-nav-links{grid-column:2;grid-row:1;display:flex;min-width:0;overflow:visible}.cl-nav-cta{grid-column:3;grid-row:1;text-align:right}
+  .cl-row.cl-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;grid-template-columns:minmax(0,1fr) 112px auto!important;align-items:center}.cl-nav-brand{grid-column:1;grid-row:1}.cl-nav-links{grid-column:2;grid-row:1;display:flex;min-width:0;overflow:visible}.cl-nav-cta{grid-column:3;grid-row:1;text-align:right}
   .cl-nav .cl-cell{padding:14px 20px;border:0}.cl-cell{border-right:0;border-bottom:1px solid var(--cl-line);padding:26px 22px}.cl-cell:last-child{border-bottom:0}
   .crewlab-page .nav-shell{position:static;justify-content:flex-end}
   .crewlab-page .nav-mobile-toggle{display:flex;width:40px;height:40px;min-height:40px;flex:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;border:1px solid var(--cl-line);border-radius:0;background:var(--cl-panel-2);cursor:pointer}

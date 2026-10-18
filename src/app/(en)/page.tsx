@@ -3,7 +3,6 @@ import BrandMark from "@/components/BrandMark";
 import NavDropdowns from "@/components/NavDropdowns";
 import { FeatureDroid } from "@/components/visuals/FeatureDroid";
 import WaitlistForm from "@/components/WaitlistForm";
-import LocaleSwitcher from "@/components/LocaleSwitcher";
 import { LANDING_PAGES } from "@/lib/site";
 import { faqs } from "@/lib/faqs";
 import "./homepage.css";
@@ -34,7 +33,7 @@ export default function Home() {
     <header className="cl-row cl-nav">
       <div className="cl-cell cl-nav-brand"><Logo /></div>
       <div className="cl-cell cl-nav-links"><NavDropdowns /></div>
-      <div className="cl-cell cl-nav-cta"><div className="cl-nav-actions"><LocaleSwitcher /><a className="cl-button" href="/waitlist"><span className="cl-nav-waitlist-full">Join the waitlist</span><span className="cl-nav-waitlist-short">Waitlist</span><span aria-hidden="true">&#8594;</span></a></div></div>
+      <div className="cl-cell cl-nav-cta"><div className="cl-nav-actions"><a className="cl-button" href="/waitlist"><span className="cl-nav-waitlist-full">Join the waitlist</span><span className="cl-nav-waitlist-short">Waitlist</span><span aria-hidden="true">&#8594;</span></a></div></div>
     </header>
 
     <main id="top">
