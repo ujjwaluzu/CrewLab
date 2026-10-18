@@ -225,3 +225,12 @@ body:has(.wl) .wl-link-card .wl-card-link { color: var(--st-accent); font: 400 1
 body:has(.wl) :focus-visible { outline: 2px solid var(--st-accent); outline-offset: 3px; }
 @media (max-width: 820px) { body:has(.wl) .wl-in { grid-template-columns: 1fr; } body:has(.wl) .wl-copy { max-width: none; } body:has(.wl) .wl-card { max-width: none; } }
 @media (max-width: 560px) { body:has(.wl) .wl-in { padding-inline: 16px; gap: 24px; } body:has(.wl) .wl h1 { font-size: clamp(36px, 10vw, 54px); overflow-wrap: anywhere; } body:has(.wl) .wl .cta-row .btn { width: 100%; justify-content: center; } body:has(.wl) .wl-next .l-sec-head>div, body:has(.wl) .wl-next .l-sec-head>p { padding-inline: 18px; } }
+
+/* Custom 404 route */
+body:has(.nf) .nf { box-sizing: border-box; padding-block: clamp(48px, 9vw, 112px); border-top: 0; }
+body:has(.nf) .nf-in { max-width: 920px; }
+body:has(.nf) .nf .cta-row { justify-content: flex-start; }
+body:has(.nf) .nf .btn-primary:hover { background: var(--st-accent-hover); border-color: var(--st-accent-hover); }
+body:has(.nf) .nf .btn-ghost:hover { border-color: var(--st-accent); color: var(--st-accent); }
+body:has(.nf) :focus-visible { outline: 2px solid var(--st-accent); outline-offset: 3px; }
+@media (max-width: 560px) { body:has(.nf) .nf { padding-block: 48px; } body:has(.nf) .nf .cta-row { align-items: stretch; flex-direction: column; } body:has(.nf) .nf .cta-row .btn { width: 100%; justify-content: center; } }
