@@ -189,3 +189,39 @@ body:has(.nf) .nf .btn { border-radius: 0; font: 400 13px/1 var(--font-cl-mono);
   body:has(.landing) .foot-base, body:has(.wl) .foot-base, body:has(.nf) .foot-base { flex-direction: column; padding-inline: 18px; }
 }
 @media (prefers-reduced-motion: reduce) { body:has(.landing), body:has(.wl), body:has(.nf) { scroll-behavior: auto; } }
+
+/* Waitlist route keeps the live signup form and its existing status messages. */
+body:has(.wl) .wl { min-height: auto; padding: clamp(32px, 5vw, 64px) 0; overflow: visible; background: var(--st-bg); color: var(--st-ink); border-bottom: 1px solid var(--st-line); }
+body:has(.wl) .wl .halftone { display: none; }
+body:has(.wl) .wl-in { width: 100%; max-width: none; margin: 0; padding-inline: clamp(16px, 3vw, 36px); display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr); gap: clamp(24px, 5vw, 64px); align-items: center; text-align: left; }
+body:has(.wl) .wl-copy { max-width: 650px; }
+body:has(.wl) .wl-kicker, body:has(.wl) .wl-card-kicker { margin: 0 0 18px!important; color: var(--st-accent)!important; font: 400 13px/1.4 var(--font-cl-mono)!important; letter-spacing: .04em; text-transform: uppercase; }
+body:has(.wl) .wl h1 { max-width: 700px; margin: 0; color: var(--st-ink); font: 700 clamp(44px, 6.4vw, 84px)/1 var(--font-cl-display); letter-spacing: -.02em; text-transform: uppercase; }
+body:has(.wl) .wl h1 .hl { padding: 0; margin: 0; color: var(--st-accent); }
+body:has(.wl) .wl h1 .hl .brush { display: none; }
+body:has(.wl) .wl h1 .wl-title-last { display: block; font: inherit; text-transform: uppercase; letter-spacing: inherit; }
+body:has(.wl) .wl .wl-lede { max-width: 48ch; margin: 22px 0 0; color: var(--st-muted); font: 400 15px/1.55 var(--font-cl-body); }
+body:has(.wl) .wl-points { gap: 0; margin: 22px 0 0; border-top: 1px solid var(--st-line); }
+body:has(.wl) .wl-points li { min-height: 48px; padding-block: 10px; border-bottom: 1px solid var(--st-line); color: var(--st-muted); font: 400 14px/1.5 var(--font-cl-body); }
+body:has(.wl) .wl-points .ic { color: var(--st-accent); }
+body:has(.wl) .wl-card { min-width: 0; padding: clamp(22px, 3vw, 32px); border: 1px solid var(--st-line); border-radius: 0; background: var(--st-panel-deep); color: var(--st-ink); box-shadow: none; }
+body:has(.wl) .wl-card h2 { margin: 0; color: var(--st-ink); font: 700 clamp(26px, 3.2vw, 38px)/1.05 var(--font-cl-display); letter-spacing: -.02em; text-transform: uppercase; }
+body:has(.wl) .wl-card>p:not(.wl-card-kicker) { color: var(--st-muted); font: 400 15px/1.55 var(--font-cl-body); }
+body:has(.wl) .wl-card .signup { display: grid; gap: 16px; }
+body:has(.wl) .wl-card .signup input { min-height: 48px; padding: 8px 0; border: 0; border-bottom: 1px solid #4a4a45; border-radius: 0; outline: 0; background: transparent; color: var(--st-ink); font: 400 15px/1.5 var(--font-cl-body); }
+body:has(.wl) .wl-card .signup input:focus { border-bottom-color: var(--st-accent); box-shadow: 0 1px 0 var(--st-accent); }
+body:has(.wl) .wl-card .signup input::placeholder { color: var(--st-muted); }
+body:has(.wl) .wl-card .signup button { width: 100%; min-height: 48px; border: 1px solid var(--st-accent); border-radius: 0; background: var(--st-accent); color: var(--st-bg); font: 400 13px/1 var(--font-cl-mono); letter-spacing: .04em; text-transform: uppercase; transition: color .15s, background-color .15s, border-color .15s; }
+body:has(.wl) .wl-card .signup button:hover { border-color: var(--st-accent-hover); background: var(--st-accent-hover); }
+body:has(.wl) .wl-card .fine { color: var(--st-muted); font: 400 12px/1.5 var(--font-cl-body); }
+body:has(.wl) .wl-card .fine.ok { color: #a8d9b4; }
+body:has(.wl) .wl-next { padding-block: 0; background: var(--st-panel); border-bottom: 1px solid var(--st-line); }
+body:has(.wl) .wl-next>.wrap { max-width: none; padding-inline: 0; }
+body:has(.wl) .wl-next .l-sec-head { margin: 0; }
+body:has(.wl) .wl-next .l-cards { border-inline: 0; border-bottom: 0; }
+body:has(.wl) .wl-next .l-card { background: var(--st-bg); }
+body:has(.wl) .wl-link-card { text-decoration: none; }
+body:has(.wl) .wl-link-card .wl-card-link { color: var(--st-accent); font: 400 12px/1.4 var(--font-cl-mono); }
+body:has(.wl) :focus-visible { outline: 2px solid var(--st-accent); outline-offset: 3px; }
+@media (max-width: 820px) { body:has(.wl) .wl-in { grid-template-columns: 1fr; } body:has(.wl) .wl-copy { max-width: none; } body:has(.wl) .wl-card { max-width: none; } }
+@media (max-width: 560px) { body:has(.wl) .wl-in { padding-inline: 16px; gap: 24px; } body:has(.wl) .wl h1 { font-size: clamp(36px, 10vw, 54px); overflow-wrap: anywhere; } body:has(.wl) .wl .cta-row .btn { width: 100%; justify-content: center; } body:has(.wl) .wl-next .l-sec-head>div, body:has(.wl) .wl-next .l-sec-head>p { padding-inline: 18px; } }
