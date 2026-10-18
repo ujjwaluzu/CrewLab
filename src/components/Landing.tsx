@@ -1,12 +1,9 @@
 import Link from "next/link";
 import { SITE_URL, LANDING_PAGES } from "@/lib/site";
 import Icon from "@/components/Icon";
-import Tickers from "@/components/Tickers";
-import TornEdge from "@/components/TornEdge";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
-
-import "./Landing.css";
+import { FeatureDroid } from "@/components/visuals/FeatureDroid";
 
 export type LandingCard = {
   icon: "doc" | "users" | "code" | "bars" | "bulb" | "branch" | "check" | "chat" | "pulse" | "grid" | "search";
@@ -14,10 +11,7 @@ export type LandingCard = {
   text: string;
 };
 
-export type LandingBullet = {
-  title: string;
-  text: string;
-};
+export type LandingBullet = { title: string; text: string };
 
 export type LandingSection = {
   id: string;
@@ -57,148 +51,52 @@ function breadcrumbJsonLd(config: LandingConfig) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: SITE_URL,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: config.crumb,
-        item: `${SITE_URL}${config.path}`,
-      },
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: config.crumb, item: `${SITE_URL}${config.path}` },
     ],
   };
 }
 
+function SectionHead({ label, title, intro, count }: { label: string; title: string; intro?: string; count: number }) {
+  return <div className="cl-row cl-section-head">
+    <div className="cl-cell cl-head-title"><span className="cl-mono cl-page-label">{label}</span><h2>{title}</h2></div>
+    <div className="cl-cell cl-head-copy">{intro && <p>{intro}</p>}</div>
+    <div className="cl-cell cl-head-count"><span className="cl-mono">SECTION</span><strong>{String(count).padStart(2, "0")}</strong></div>
+  </div>;
+}
+
 export default function Landing({ config }: { config: LandingConfig }) {
   const related = LANDING_PAGES.filter((page) => page.path !== config.path);
+  const title = [...config.titleLines, config.highlight];
 
-  return (
-    <div className="landing">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(config)) }}
-      />
-      <SiteHeader />
-      <main id="top">
-        <section className="l-hero">
-          <div className="wrap l-hero-grid">
-            <div>
-              <h1 className="l-title">
-                {config.titleLines.map((line) => (
-                  <span className="d1" key={line}>{line}</span>
-                ))}
-                <span className="d1">
-                  <span className="l-hl">
-                    <svg className="brush" viewBox="0 0 600 140" preserveAspectRatio="none" aria-hidden="true"><use href="#brush-f" /></svg>
-                    <span>{config.highlight}</span>
-                  </span>
-                </span>
-              </h1>
-              <p className="l-lede">{config.lede}</p>
-              <div className="cta-row">
-                <Link className="btn btn-primary" href={config.primaryHref}>{config.primaryLabel} <Icon name="arrow" /></Link>
-                <Link className="btn btn-ghost" href={config.secondaryHref}>{config.secondaryLabel} <Icon name="arrow" /></Link>
-              </div>
-              {config.note && <p className="l-note">{config.note}</p>}
-            </div>
-          </div>
-        </section>
+  return <div className="crewlab-page"><div className="cl-wrap">
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(config)) }} />
+    <SiteHeader />
+    <main id="top">
+      <section className="cl-row cl-hero cl-page-hero" aria-labelledby="page-title">
+        <div className="cl-cell cl-hero-copy">
+          {config.note && <p className="cl-mono cl-kicker"><i />{config.note}</p>}
+          <h1 id="page-title">{title.map((line, index) => <span key={`${line}-${index}`} className={index === title.length - 1 ? "cl-page-highlight" : undefined}>{line}</span>)}</h1>
+          <p className="cl-page-lede">{config.lede}</p>
+          <div className="cl-actions"><Link className="cl-button" href={config.primaryHref}>{config.primaryLabel}<span aria-hidden="true">→</span></Link><Link className="cl-button cl-ghost" href={config.secondaryHref}>{config.secondaryLabel}</Link></div>
+        </div>
+        <div className="cl-cell cl-droid-cell aiptx-droid-stage"><FeatureDroid className="cl-droid-art" /></div>
+      </section>
 
-        <Tickers />
+      {config.sections.map((section, index) => <section className="cl-section" id={section.id} key={section.id} aria-label={section.label}>
+        <SectionHead label={section.label} title={`${section.heading}${section.emphasis ? ` ${section.emphasis}` : ""}`} intro={section.intro} count={index + 1} />
+        {section.cards && <div className="cl-row cl-page-card-grid">{section.cards.map((card) => <article className="cl-cell cl-page-card" key={card.title}><span className="cl-mono cl-page-card-icon"><Icon name={card.icon} /></span><h3>{card.title}</h3><p>{card.text}</p></article>)}</div>}
+        {section.bullets && <div className="cl-page-bullet-list">{section.bullets.map((item, bulletIndex) => <article className="cl-row cl-page-bullet" key={item.title}><span className="cl-cell cl-mono cl-page-bullet-num">{String(bulletIndex + 1).padStart(2, "0")}</span><div className="cl-cell cl-page-bullet-copy"><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div>}
+        {section.fine && <p className="cl-page-fine">{section.fine}</p>}
+      </section>)}
 
-        {config.sections.map((section, index) => {
-          const hasCards = Boolean(section.cards);
-          const bgClass = index % 2 === 0 ? "l-sec-copy" : "l-sec-cards";
-          return (
-            <section className={`pad l-sec ${bgClass}`} id={section.id} key={section.id} aria-label={section.label}>
-              <TornEdge seedIndex={5 + index} color={index % 2 === 0 ? "var(--paper-2)" : "var(--paper)"} />
-              <div className="wrap">
-                <div className="sec-head l-sec-head">
-                  <div>
-                    <h2 className="h">
-                      {section.heading}
-                      {section.emphasis && ` ${section.emphasis}`}
-                    </h2>
-                  </div>
-                  {section.intro && <p>{section.intro}</p>}
-                </div>
-                {hasCards && section.cards && (
-                  <div className="l-cards">
-                    {section.cards.map((card) => (
-                      <article className="l-card" key={card.title}>
-                        <span className="l-card-ico"><Icon name={card.icon} /></span>
-                        <h3>{card.title}</h3>
-                        <p>{card.text}</p>
-                      </article>
-                    ))}
-                  </div>
-                )}
-                {!hasCards && section.bullets && (
-                  <ul className="l-checks">
-                    {section.bullets.map((item) => (
-                      <li key={item.title}>
-                        <Icon name="check" />
-                        <span><strong>{item.title}</strong> {item.text}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-                {section.fine && <p className="l-fine">{section.fine}</p>}
-              </div>
-            </section>
-          );
-        })}
+      <section className="cl-section cl-page-related">
+        <SectionHead label={config.relatedLabel} title={config.relatedEmphasis ?? "Explore CrewLab"} intro={config.relatedIntro} count={config.sections.length + 1} />
+        <div className="cl-row cl-page-related-grid">{related.map((page) => <Link className="cl-cell cl-page-related-card" href={page.path} key={page.path}><span className="cl-mono">{page.label}</span><p>{page.description}</p><strong>Explore <Icon name="arrow" /></strong></Link>)}</div>
+      </section>
 
-        <section className="pad l-related" id="related">
-          <div className="wrap">
-            <div className="sec-head l-related-head">
-              <div>
-                <h2 className="h">
-                  {config.relatedLabel}
-                  {config.relatedEmphasis && ` ${config.relatedEmphasis}`}
-                </h2>
-              </div>
-              <p>{config.relatedIntro}</p>
-            </div>
-            <div className="l-rel-grid">
-              {related.map((page) => (
-                <Link className="l-rel-card" href={page.path} key={page.path}>
-                  <span className="l-rel-lab">{page.label}</span>
-                  <p>{page.description}</p>
-                  <span className="l-rel-go">Explore <Icon name="arrow" /></span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="l-close" id="join">
-          <TornEdge seedIndex={11} color="var(--paper)" />
-          <i className="l-close-halftone" aria-hidden="true" />
-          <svg className="l-close-brush" viewBox="0 0 600 140" preserveAspectRatio="none" aria-hidden="true"><use href="#brush-s" /></svg>
-          <div className="wrap l-close-in">
-            <p className="l-close-kicker">{config.closeKicker}</p>
-            <h2>
-              {config.closeTitle}{" "}
-              <span className="l-close-hl">
-                <svg className="brush" viewBox="0 0 600 140" preserveAspectRatio="none" aria-hidden="true"><use href="#brush-s" /></svg>
-                <span>{config.closeBrush}</span>
-              </span>
-              {config.closeEmphasis && <span className="l-close-emphasis">{config.closeEmphasis}</span>}
-            </h2>
-            <p className="l-close-lead">{config.closeLead}</p>
-            <Link className="btn btn-light" href="/waitlist">
-              Join the waitlist <Icon name="arrow" />
-            </Link>
-            <p className="l-close-fine">Early access is limited · the crew is forming now</p>
-          </div>
-        </section>
-      </main>
-      <SiteFooter />
-    </div>
-  );
+      <section className="cl-row cl-join cl-page-join" id="join"><div className="cl-cell cl-join-title"><p className="cl-mono">{config.closeKicker}</p><h2>{config.closeTitle} <span>{config.closeBrush}</span>{config.closeEmphasis && <small>{config.closeEmphasis}</small>}</h2></div><div className="cl-cell cl-join-form"><p>{config.closeLead}</p><Link className="cl-button" href="/waitlist">Join the waitlist <span aria-hidden="true">→</span></Link><span className="cl-mono">Early access is limited · the crew is forming now</span></div></section>
+    </main>
+    <SiteFooter />
+  </div></div>;
 }

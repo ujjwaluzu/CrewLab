@@ -1,20 +1,15 @@
 import Link from "next/link";
 import BrandMark from "@/components/BrandMark";
-import Icon from "@/components/Icon";
-import Button from "@/components/Button";
 import NavDropdowns from "@/components/NavDropdowns";
 
 export default function SiteHeader({ home = false }: { home?: boolean }) {
   return (
-    <header className={`site-head${home ? " site-head-home" : ""}`}>
-      <div className="wrap head-in">
-        <Link className="logo" href="/" aria-label="CrewLab home">
-          <BrandMark />
-          CrewLab
-        </Link>
-        <NavDropdowns />
-        <Button href="/waitlist" className="btn-sm"><span className="head-cta-full">Join the waitlist</span><span className="head-cta-short">Waitlist</span><Icon name="up-right" /></Button>
+    <header className={`cl-row cl-nav${home ? " site-head-home" : ""}`}>
+      <div className="cl-cell cl-nav-brand">
+        <Link className="cl-logo" href="/" aria-label="CrewLab home"><BrandMark /><span>CREWLAB</span></Link>
       </div>
+      <div className="cl-cell cl-nav-links"><NavDropdowns /></div>
+      <div className="cl-cell cl-nav-cta"><Link className="cl-button" href="/waitlist"><span className="cl-nav-waitlist-full">Join the waitlist</span><span className="cl-nav-waitlist-short">Waitlist</span><span aria-hidden="true">→</span></Link></div>
     </header>
   );
 }

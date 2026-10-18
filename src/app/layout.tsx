@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, JetBrains_Mono, Newsreader, Plus_Jakarta_Sans, Space_Grotesk, Space_Mono } from "next/font/google";
 import "./globals.css";
-import "./secondary-theme.css";
+import "./homepage.css";
 import SvgDefs from "@/components/SvgDefs";
 import SchemaOrg from "@/components/SchemaOrg";
 import SiteAnimations from "@/components/SiteAnimations";
