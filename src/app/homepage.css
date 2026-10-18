@@ -40,11 +40,11 @@
 .cl-hero-copy{padding:48px 32px 64px}
 .cl-kicker{margin:0 0 30px;color:var(--cl-text)}
 .cl-kicker i{display:inline-block;width:8px;height:8px;margin-right:6px;background:var(--cl-red)}
+.cl-hero-copy .cl-actions{margin-top:28px}
 .cl-hero h1,.cl-join h2{margin:0;font:700 clamp(44px,6.4vw,84px)/1 var(--cl-display);letter-spacing:-.02em;text-transform:uppercase}
 .cl-hero h1 span,.cl-join h2 span{color:var(--cl-red)}
-.cl-rings{display:flex;flex-direction:column;justify-content:space-between;align-items:center;background:var(--cl-panel-2)}
-.cl-rings svg{display:block;width:min(100%,340px);margin:auto;overflow:visible}
-.cl-rings .cl-mono{align-self:flex-start}
+.cl-droid-cell{display:grid;place-items:center;overflow:hidden;background:var(--cl-panel-2);padding:24px}
+.cl-droid-art{display:block;width:min(100%,320px);height:auto;overflow:visible}
 .cl-intro{grid-template-columns:1.6fr 1fr 1fr 1fr}
 .cl-intro-main p{max-width:510px;margin:0 0 24px;color:var(--cl-muted)}
 .cl-actions{display:flex;flex-wrap:wrap;gap:8px}
@@ -111,6 +111,52 @@
 .cl-wordmark span{text-align:center;padding:24px 0;border-right:1px solid var(--cl-line);font:700 clamp(48px,11vw,150px)/.95 var(--cl-display);letter-spacing:-.04em}
 .cl-wordmark span:last-child{border-right:0}
 .cl-wordmark span:nth-child(n+5){color:var(--cl-red)}
+.crewlab-page .aiptx-droid-boot{animation:aiptx-droid-boot 900ms cubic-bezier(0,0,.2,1) both}
+.crewlab-page .aiptx-droid-boot-field{animation:aiptx-droid-boot-field 1.2s ease-out 600ms both}
+.crewlab-page .aiptx-droid-float{animation:aiptx-droid-float 4.3s ease-in-out infinite}
+.crewlab-page .aiptx-droid-lean{transform-origin:160px 410px;animation:aiptx-droid-lean 6.7s ease-in-out infinite}
+.crewlab-page .aiptx-droid-level{transform-origin:160px 146px;animation:aiptx-droid-level 6.7s ease-in-out infinite}
+.crewlab-page .aiptx-droid-shadow{transform-origin:160px 440px;animation:aiptx-droid-shadow 4.3s ease-in-out infinite}
+.crewlab-page .aiptx-droid-scan{transform-origin:160px 110px;animation:aiptx-droid-scan 8.7s cubic-bezier(.62,0,.2,1) infinite}
+.crewlab-page .aiptx-droid-tilt{transform-origin:160px 146px;animation:aiptx-droid-tilt 11.3s cubic-bezier(.5,0,.25,1) infinite}
+.crewlab-page .aiptx-droid-iris{transform-origin:160px 106px;animation:aiptx-droid-iris 5.3s ease-in-out infinite}
+.crewlab-page .aiptx-droid-eye-blink{animation:aiptx-droid-eye-blink 7.1s linear infinite}
+.crewlab-page .aiptx-droid-lens{animation:aiptx-droid-lens 2.9s ease-in-out infinite}
+.crewlab-page .aiptx-droid-blink{animation:aiptx-droid-blink 1.7s steps(1,end) infinite}
+.crewlab-page .aiptx-droid-cursor{animation:aiptx-droid-cursor 2.4s steps(1,end) infinite}
+.crewlab-page .aiptx-droid-progress{transform-origin:122px 210px;transform:scaleX(.47);animation:aiptx-droid-progress 6.2s steps(14,end) infinite}
+.crewlab-page .aiptx-droid-beam-l,.crewlab-page .aiptx-droid-beam-r{opacity:0;animation:aiptx-droid-beam-l 8.7s ease-in-out infinite}
+.crewlab-page .aiptx-droid-beam-r{animation-name:aiptx-droid-beam-r}
+.crewlab-page .aiptx-droid-ping{opacity:0;transform-origin:160px 250px;animation:aiptx-droid-ping 10.2s cubic-bezier(0,.5,.4,1) infinite}
+.crewlab-page .aiptx-droid-deploy{transform-origin:160px 414px;animation:aiptx-droid-deploy 14.3s ease-in-out infinite}
+.crewlab-page .aiptx-droid-piston{transform-origin:160px 376px;animation:aiptx-droid-piston 14.3s ease-in-out infinite}
+.crewlab-page .aiptx-droid-wheel{transform-origin:160px 414px;animation:aiptx-droid-wheel 3.1s linear infinite}
+.crewlab-page .aiptx-droid-ring{transform-origin:160px 250px;animation:aiptx-droid-ring 46s linear infinite}
+.crewlab-page .aiptx-droid-ring-alt{animation-duration:64s;animation-direction:reverse}
+.crewlab-page .aiptx-droid-alert{opacity:0;transition:opacity 200ms ease}
+.crewlab-page .aiptx-droid-stage:hover .aiptx-droid-alert{opacity:1}
+@keyframes aiptx-droid-boot{from{opacity:0;transform:translateY(12px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes aiptx-droid-boot-field{from{opacity:0}to{opacity:.55}}
+@keyframes aiptx-droid-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes aiptx-droid-lean{0%,100%{transform:rotate(-1deg)}50%{transform:rotate(1.4deg)}}
+@keyframes aiptx-droid-level{0%,100%{transform:rotate(1deg)}50%{transform:rotate(-1.4deg)}}
+@keyframes aiptx-droid-shadow{0%,100%{transform:scaleX(1);opacity:.85}50%{transform:scaleX(.82);opacity:.55}}
+@keyframes aiptx-droid-scan{0%,12%{transform:rotate(0deg)}24%,38%{transform:rotate(-8deg)}50%,64%{transform:rotate(7deg)}76%,100%{transform:rotate(0deg)}}
+@keyframes aiptx-droid-tilt{0%,30%,100%{transform:rotate(0deg)}42%,58%{transform:rotate(-3deg)}72%,88%{transform:rotate(2deg)}}
+@keyframes aiptx-droid-iris{0%,100%{transform:translateX(0)}28%{transform:translateX(-3px)}68%{transform:translateX(3px)}}
+@keyframes aiptx-droid-eye-blink{0%,92%,100%{transform:scaleY(1)}94%,96%{transform:scaleY(.12)}}
+@keyframes aiptx-droid-lens{0%,100%{opacity:.72}50%{opacity:1}}
+@keyframes aiptx-droid-blink{0%,45%,100%{opacity:1}48%,53%{opacity:.25}}
+@keyframes aiptx-droid-cursor{0%,12%,100%{opacity:.25}6%{opacity:1}}
+@keyframes aiptx-droid-progress{0%{transform:scaleX(.12)}50%{transform:scaleX(.82)}100%{transform:scaleX(.3)}}
+@keyframes aiptx-droid-beam-l{0%,16%,100%{opacity:0}6%,12%{opacity:.8}}
+@keyframes aiptx-droid-beam-r{0%,46%,72%,100%{opacity:0}54%,66%{opacity:.8}}
+@keyframes aiptx-droid-ping{0%{opacity:0;transform:scale(.45)}12%{opacity:.45}45%,100%{opacity:0;transform:scale(1.2)}}
+@keyframes aiptx-droid-ring{to{transform:rotate(360deg)}}
+@keyframes aiptx-droid-deploy{0%,34%,86%,100%{transform:translateY(0)}48%,70%{transform:translateY(6px)}}
+@keyframes aiptx-droid-piston{0%,34%,86%,100%{transform:scaleY(1)}48%,70%{transform:scaleY(1.25)}}
+@keyframes aiptx-droid-wheel{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.crewlab-page .aiptx-droid-boot,.crewlab-page .aiptx-droid-boot-field,.crewlab-page .aiptx-droid-float,.crewlab-page .aiptx-droid-lean,.crewlab-page .aiptx-droid-level,.crewlab-page .aiptx-droid-shadow,.crewlab-page .aiptx-droid-scan,.crewlab-page .aiptx-droid-tilt,.crewlab-page .aiptx-droid-iris,.crewlab-page .aiptx-droid-eye-blink,.crewlab-page .aiptx-droid-lens,.crewlab-page .aiptx-droid-blink,.crewlab-page .aiptx-droid-cursor,.crewlab-page .aiptx-droid-progress,.crewlab-page .aiptx-droid-beam-l,.crewlab-page .aiptx-droid-beam-r,.crewlab-page .aiptx-droid-ping,.crewlab-page .aiptx-droid-deploy,.crewlab-page .aiptx-droid-piston,.crewlab-page .aiptx-droid-wheel,.crewlab-page .aiptx-droid-ring{animation:none!important;transition:none!important}}
 .crewlab-page :focus-visible{outline:2px solid var(--cl-red);outline-offset:3px}
 .cl-nav a:focus-visible,.cl-button:focus-visible,.cl-crew-item:focus-visible{outline-offset:4px}
 html:has(.crewlab-page){scroll-behavior:smooth;background:var(--cl-bg)}
@@ -145,7 +191,7 @@ body:has(.crewlab-page){margin:0;background:var(--cl-bg)}
   .crewlab-page .nav-trigger{width:100%;min-height:46px;justify-content:space-between;font-size:12px}
   .crewlab-page .nav-shell .nav-menu,.crewlab-page .nav-shell .nav-dropdown:last-child .nav-menu{position:static;width:100%;min-width:0;max-width:none;gap:0;padding:0 0 8px 12px;border:0;border-radius:0;background:transparent;box-shadow:none}
   .crewlab-page .nav-shell .nav-menu a{min-height:38px;padding:8px 10px}
-  .cl-hero-copy{padding:44px 24px 48px}.cl-rings{min-height:240px;align-items:flex-start}.cl-rings svg{width:min(100%,300px)}
+  .cl-hero-copy{padding:44px 24px 48px}.cl-droid-art{width:min(100%,300px)}
   .cl-intro-main{grid-row:1}.cl-audience{min-height:130px;gap:24px}.cl-section-head .cl-head-title{min-height:100px}.cl-head-copy{min-height:94px}.cl-head-count{min-height:80px;align-items:flex-start;text-align:left}
   .cl-steps{grid-template-columns:1fr!important}.cl-step{min-height:225px;border-right:0}.cl-step h3{margin-top:38px}
   .cl-row.cl-crew-item{grid-template-columns:minmax(0,1fr) 54px!important;align-items:center}.cl-crew-title{grid-column:1;grid-row:1;border:0!important;padding-bottom:8px!important}.cl-crew-description{grid-column:1;grid-row:2;border:0!important;padding-top:0!important}.cl-crew-item .cl-plus{grid-column:2;grid-row:1/3}
@@ -155,7 +201,7 @@ body:has(.crewlab-page){margin:0;background:var(--cl-bg)}
 }
 @media(max-width:500px){
   .cl-wrap{border-inline:1px solid var(--cl-line)}.cl-nav .cl-cell{padding-inline:8px}.cl-nav-cta .cl-button{padding:11px 8px;font-size:10px;min-height:40px}
-  .cl-cell{padding:23px 18px}.cl-hero-copy{padding:38px 18px 42px}.cl-kicker{font-size:10px;margin-bottom:24px}.cl-hero h1{font-size:clamp(44px,10.2vw,54px)}
+  .cl-cell{padding:23px 18px}.cl-hero-copy{padding:38px 18px 42px}.cl-droid-cell{padding:22px}.cl-droid-art{width:min(76vw,270px)}.cl-kicker{font-size:10px;margin-bottom:24px}.cl-hero h1{font-size:clamp(44px,10.2vw,54px)}
   .cl-actions{display:grid;grid-template-columns:1fr}.cl-actions .cl-button{width:100%}.cl-head-title h2{font-size:34px}.cl-steps{grid-template-columns:1fr!important}.cl-step{min-height:220px;border-right:0!important}.cl-step h3{margin-top:38px}
   .cl-crew-item .cl-cell{padding:18px}.cl-crew-title{font-size:clamp(25px,8vw,34px)}.cl-faq-summary{grid-template-columns:42px minmax(0,1fr) 46px}.cl-faq-summary .cl-cell{padding:16px 10px}.cl-faq-question{font-size:15px}.cl-faq-answer{padding:0 56px 20px 52px;font-size:14px}
   .cl-join-title{min-height:180px;padding-inline:18px}.cl-join h2{font-size:clamp(42px,12vw,64px)}.cl-join-form{padding:28px 18px}.cl-join-form .signup{grid-template-columns:minmax(0,1fr)}.cl-join-form .signup button{grid-column:1;justify-self:stretch;width:100%}

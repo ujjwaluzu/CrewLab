@@ -1,6 +1,7 @@
 import Link from "next/link";
 import BrandMark from "@/components/BrandMark";
 import NavDropdowns from "@/components/NavDropdowns";
+import { FeatureDroid } from "@/components/visuals/FeatureDroid";
 import WaitlistForm from "@/components/WaitlistForm";
 import { LANDING_PAGES } from "@/lib/site";
 import { faqs } from "@/lib/faqs";
@@ -37,12 +38,12 @@ export default function Home() {
 
     <main id="top">
       <section className="cl-row cl-hero" aria-labelledby="hero-title">
-        <div className="cl-cell cl-hero-copy"><p className="cl-mono cl-kicker"><i /> Builder community&nbsp; · &nbsp;Cofounders&nbsp; · &nbsp;Side projects</p><h1 id="hero-title">BUILD REAL<br />PRODUCTS WITH<br /><span>REAL PEOPLE.</span></h1></div>
-        <div className="cl-cell cl-rings"><svg viewBox="0 0 300 200" role="img" aria-label="Two linked rings"><circle cx="110" cy="100" r="62" fill="none" stroke="var(--cl-text)" strokeWidth="22"/><circle cx="190" cy="100" r="62" fill="none" stroke="var(--cl-red)" strokeWidth="22"/><path d="M136.2 43.8A62 62 0 0 1 160.8 64.4" fill="none" stroke="var(--cl-text)" strokeWidth="22"/><path d="M163.8 156.2A62 62 0 0 1 139.2 135.6" fill="none" stroke="var(--cl-red)" strokeWidth="22"/></svg><span className="cl-mono">[ Builders, linked ]</span></div>
+        <div className="cl-cell cl-hero-copy"><p className="cl-mono cl-kicker"><i /> Builder community&nbsp; · &nbsp;Cofounders&nbsp; · &nbsp;Side projects</p><h1 id="hero-title">BUILD REAL<br />PRODUCTS WITH<br /><span>REAL PEOPLE.</span></h1><div className="cl-actions"><a className="cl-button" href="/waitlist">Join the waitlist <span aria-hidden="true">→</span></a><a className="cl-button cl-ghost" href="#crew">Find project teammates</a></div></div>
+        <div className="cl-cell cl-droid-cell aiptx-droid-stage"><FeatureDroid className="cl-droid-art" /></div>
       </section>
 
       <section className="cl-row cl-intro" aria-label="About CrewLab">
-        <div className="cl-cell cl-intro-main"><p>CrewLab is the builder community where founders, developers, designers, marketers, students and creators connect. Have an idea but no team? Find a cofounder. Have skills but no idea? Join a startup or side project.</p><div className="cl-actions"><a className="cl-button" href="/waitlist">Join the waitlist <span aria-hidden="true">→</span></a><a className="cl-button cl-ghost" href="#crew">Find project teammates</a></div></div>
+        <div className="cl-cell cl-intro-main"><p>CrewLab is the builder community where founders, developers, designers, marketers, students and creators connect. Have an idea but no team? Find a cofounder. Have skills but no idea? Join a startup or side project.</p></div>
         <div className="cl-cell cl-audience"><span className="cl-mono">01 / START WITH AN IDEA</span><strong>Founders</strong></div>
         <div className="cl-cell cl-audience"><span className="cl-mono">02 / BRING YOUR SKILLS</span><strong>Builders</strong></div>
         <div className="cl-cell cl-audience"><span className="cl-mono">03 / MAKE IT REAL</span><strong>Creators</strong></div>
