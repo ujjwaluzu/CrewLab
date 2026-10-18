@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { RESOURCES } from "@/lib/resources";
+import { pageFaqs } from "@/lib/faqs";
 import {
   HOMEPAGE_DESCRIPTION,
   HOMEPAGE_TITLE,
@@ -75,6 +76,13 @@ function renderPage(path: string): string | null {
     `- [Guides and resources](${SITE_URL}/resources)`,
     `- [Join the waitlist](${SITE_URL}/waitlist)`,
   ];
+  const faqContent = pageFaqs[path];
+  const faqMarkdown = faqContent
+    ? [
+        `## ${faqContent.title}`,
+        ...faqContent.items.flatMap((item) => [`### ${item.question}`, item.answer]),
+      ]
+    : [];
 
   const body = path === "/"
     ? [
@@ -93,7 +101,7 @@ function renderPage(path: string): string | null {
         ]
       : [page.description];
 
-  return [`# ${page.title}`, ...body, "## Explore CrewLab", ...links].join("\n\n");
+  return [`# ${page.title}`, ...body, ...faqMarkdown, "## Explore CrewLab", ...links].join("\n\n");
 }
 
 export function GET(request: NextRequest) {

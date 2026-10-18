@@ -4,6 +4,8 @@ import SiteFooter from "@/components/SiteFooter";
 import WaitlistForm from "@/components/WaitlistForm";
 import Link from "next/link";
 import Icon from "@/components/Icon";
+import { pageFaqs } from "@/lib/faqs";
+import PageFaqSection from "@/components/PageFaqSection";
 
 export const metadata = pageMetadata({
   title: "Join the Waitlist",
@@ -46,6 +48,7 @@ export default function WaitlistPage() {
         <div className="cl-row cl-section-head"><div className="cl-cell cl-head-title"><h2>Start with an idea or a skill</h2></div><div className="cl-cell cl-head-copy"><p>Whether you are forming a team or looking for one, CrewLab connects project discovery, join requests, and crew coordination.</p></div><div className="cl-cell cl-head-count"><span className="cl-mono">NEXT</span><strong>03</strong></div></div>
         <div className="cl-row cl-page-related-grid">{nextSteps.map((step) => <Link className="cl-cell cl-page-related-card" href={step.href} key={step.href}><span className="cl-page-card-icon"><Icon name={step.icon} /></span><h3>{step.title}</h3><p>{step.text}</p><strong>{step.action} <Icon name="arrow" /></strong></Link>)}</div>
       </section>
+      <PageFaqSection id="waitlist-faq" {...pageFaqs["/waitlist"]} />
     </main>
     <SiteFooter />
   </div></div>;

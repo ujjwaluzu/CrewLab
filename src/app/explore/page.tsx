@@ -6,6 +6,8 @@ import Icon from "@/components/Icon";
 import ExploreControls from "@/components/ExploreControls";
 import ExploreProjects from "@/components/ExploreProjects";
 import { FeatureDroid } from "@/components/visuals/FeatureDroid";
+import { pageFaqs } from "@/lib/faqs";
+import PageFaqSection from "@/components/PageFaqSection";
 
 export const metadata = pageMetadata({
   title: "Startup Projects to Join",
@@ -50,6 +52,8 @@ export default function ExplorePage() {
           ["check", "Apply with a clear offer", "Tell the owner why you are interested, what you can contribute, and how much time you can commit."],
         ].map(([icon, title, text]) => <article className="cl-cell cl-page-card" key={title}><span className="cl-page-card-icon"><Icon name={icon as "grid" | "code" | "check"} /></span><h3>{title}</h3><p>{text}</p></article>)}</div>
       </section>
+
+      <PageFaqSection id="explore-faq" {...pageFaqs["/explore"]} />
 
       <section className="cl-row cl-join cl-page-join" id="join"><div className="cl-cell cl-join-title"><p className="cl-mono">Have a project idea?</p><h2>Don&apos;t see something <span>you want to build?</span><small>Share it with the crew.</small></h2></div><div className="cl-cell cl-join-form"><p>Describe your idea, the skills it needs, and where it stands. Project owners can review join requests and build a crew around the work.</p><Link className="cl-button" href="/waitlist">Join the waitlist <Icon name="arrow" /></Link><span className="cl-mono">Projects | skills | applications | collaboration</span></div></section>
     </main>

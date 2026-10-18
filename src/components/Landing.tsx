@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { SITE_URL, LANDING_PAGES } from "@/lib/site";
+import { pageFaqs } from "@/lib/faqs";
 import Icon from "@/components/Icon";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import PageFaqSection from "@/components/PageFaqSection";
 import { FeatureDroid } from "@/components/visuals/FeatureDroid";
 
 export type LandingCard = {
@@ -90,6 +92,8 @@ export default function Landing({ config }: { config: LandingConfig }) {
         {section.bullets && <div className="cl-page-bullet-list">{section.bullets.map((item, bulletIndex) => <article className="cl-row cl-page-bullet" key={item.title}><span className="cl-cell cl-mono cl-page-bullet-num">{String(bulletIndex + 1).padStart(2, "0")}</span><div className="cl-cell cl-page-bullet-copy"><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div>}
         {section.fine && <p className="cl-page-fine">{section.fine}</p>}
       </section>)}
+
+      {pageFaqs[config.path] && <PageFaqSection id="page-faq" {...pageFaqs[config.path]} />}
 
       <section className="cl-section cl-page-related">
         <SectionHead label={config.relatedLabel} title={config.relatedEmphasis ?? "Explore CrewLab"} intro={config.relatedIntro} count={config.sections.length + 1} />
