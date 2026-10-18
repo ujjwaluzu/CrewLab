@@ -10,8 +10,6 @@ import {
   SITE_NAME,
   HOMEPAGE_TITLE,
   HOMEPAGE_DESCRIPTION,
-  KEYWORDS,
-  GEO,
 } from "@/lib/site";
 
 const bodyFont = Plus_Jakarta_Sans({
@@ -59,13 +57,12 @@ export const metadata: Metadata = {
     template: `%s · ${SITE_NAME}`,
   },
   description: HOMEPAGE_DESCRIPTION,
-  keywords: KEYWORDS,
   applicationName: SITE_NAME,
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
   category: "Technology",
-  classification: "Startup Community, Cofounder Matching and Collaboration Platform",
+  classification: "Startup Project Collaboration Community",
   referrer: "origin-when-cross-origin",
   manifest: "/favicon_io/site.webmanifest",
   icons: {
@@ -116,14 +113,6 @@ export const metadata: Metadata = {
     capable: true,
     statusBarStyle: "default",
     title: SITE_NAME,
-  },
-  other: {
-    "geo.region": GEO.region,
-    "geo.placename": GEO.placename,
-    "geo.position": GEO.position,
-    ICBM: GEO.position,
-    "distribution": "global",
-    "rating": "general",
   },
 };
 

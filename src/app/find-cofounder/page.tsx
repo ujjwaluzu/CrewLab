@@ -2,20 +2,10 @@ import { pageMetadata } from "@/lib/site";
 import Landing, { type LandingConfig } from "@/components/Landing";
 
 export const metadata = pageMetadata({
-  title: "Find a Cofounder & Technical Partner",
+  title: "Find a Cofounder in India & Technical Partners",
   description:
-    "Have an idea but no team? Find a cofounder - including a technical cofounder - and startup builders ready to turn your startup idea into a real product. Cofounder matching on CrewLab.",
+    "Looking for a cofounder in India? Share your startup idea, the skills you need, and the contribution you can offer to find builders ready to work on it with you.",
   canonical: "/find-cofounder",
-  keywords: [
-    "find a cofounder",
-    "technical cofounder",
-    "startup cofounder",
-    "find a technical cofounder",
-    "where to find a technical cofounder",
-    "find people to build my startup",
-    "founder matching platform",
-    "cofounder matching",
-  ],
 });
 
 const config: LandingConfig = {
@@ -23,8 +13,8 @@ const config: LandingConfig = {
   crumb: "Find a Cofounder",
   titleLines: ["Find a", "cofounder to"],
   highlight: "build your startup",
-  lede: "CrewLab is for people who want to build a startup but don't have a team. Share your idea and the skills you need, then explore builders and projects to find people who want to work on the same thing.",
-  note: "No cold DMs · match around projects, not profiles",
+  lede: "Building a startup in India without a team? Share your idea and the skills you need, then explore builders and projects to find people who want to work on the same thing.",
+  note: "India-first founder community | projects before profiles",
   primaryLabel: "Find a cofounder",
   primaryHref: "/waitlist",
   secondaryLabel: "Explore projects",

@@ -6,16 +6,6 @@ export const metadata = pageMetadata({
   description:
     "Explore student projects on CrewLab, find ideas by skill, and request to join a team with a clear note about your contribution and availability.",
   canonical: "/student-projects",
-  keywords: [
-    "student projects",
-    "student project collaboration",
-    "college startups",
-    "join student projects",
-    "student collaboration",
-    "find student project teams",
-    "college startup teams",
-    "student startup projects",
-  ],
 });
 
 const config: LandingConfig = {

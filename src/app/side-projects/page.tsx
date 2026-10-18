@@ -6,16 +6,6 @@ export const metadata = pageMetadata({
   description:
     "Find side projects on CrewLab, explore by skill, and request to join projects where your time and experience can contribute.",
   canonical: "/side-projects",
-  keywords: [
-    "side projects",
-    "join side projects",
-    "find people to work on side projects",
-    "side project community",
-    "developer side projects",
-    "side project platform",
-    "build projects together",
-    "collaborate on side projects",
-  ],
 });
 
 const config: LandingConfig = {

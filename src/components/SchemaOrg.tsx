@@ -1,4 +1,4 @@
-import { SITE_URL, SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, SOCIAL, GEO } from "@/lib/site";
+import { SITE_URL, SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, SOCIAL } from "@/lib/site";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -8,7 +8,7 @@ const jsonLd = {
       "@id": `${SITE_URL}/#website`,
       url: SITE_URL,
       name: SITE_NAME,
-      alternateName: `${SITE_NAME} - startup team builder and project collaboration platform`,
+      alternateName: `${SITE_NAME} - startup project collaboration community`,
       description: SITE_DESCRIPTION,
       inLanguage: "en-IN",
       publisher: { "@id": `${SITE_URL}/#organization` },
@@ -22,16 +22,7 @@ const jsonLd = {
       slogan: SITE_TAGLINE,
       description: SITE_DESCRIPTION,
       areaServed: "IN",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "IN",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: GEO.position.split(", ")[0],
-        longitude: GEO.position.split(", ")[1],
-      },
-      sameAs: [SOCIAL.discord, SOCIAL.instagram, SOCIAL.x, SOCIAL.blog],
+      sameAs: [SOCIAL.discord, SOCIAL.instagram, SOCIAL.x],
       knowsAbout: [
         "finding a cofounder",
         "technical cofounder",
@@ -47,7 +38,7 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${SITE_URL}/#webpage`,
       url: SITE_URL,
-      name: "Find a Cofounder, Teammates & Startup Projects | CrewLab",
+      name: "CrewLab | Find Cofounders & Build Startup Projects",
       description: SITE_DESCRIPTION,
       inLanguage: "en-IN",
       mainEntityOfPage: `${SITE_URL}/`,

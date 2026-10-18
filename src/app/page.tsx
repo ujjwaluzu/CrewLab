@@ -10,7 +10,7 @@ import "./homepage.css";
 const homeFaqs = [faqs[0], faqs[1], faqs[2], faqs[3], faqs[5], faqs[9]];
 const steps = [
   ["01", "Share or explore", "Post your startup idea and list the roles you need - a technical cofounder, a designer, a marketer - or browse open projects to join."],
-  ["02", "Find your crew", "Get matched with developers, designers and creators who want to join your startup team or side project."],
+  ["02", "Find your crew", "Explore developers, designers and creators who want to join your startup team or side project."],
   ["03", "Build together", "Collaborate on the project, divide the work, and ship real products with real people."],
   ["04", "Track progress", "Follow milestones, tasks and commits with GitHub integration so the team stays in sync."],
 ];
@@ -38,12 +38,12 @@ export default function Home() {
 
     <main id="top">
       <section className="cl-row cl-hero" aria-labelledby="hero-title">
-        <div className="cl-cell cl-hero-copy"><p className="cl-mono cl-kicker"><i /> Builder community&nbsp; · &nbsp;Cofounders&nbsp; · &nbsp;Side projects</p><h1 id="hero-title">BUILD REAL<br />PRODUCTS WITH<br /><span>REAL PEOPLE.</span></h1><div className="cl-actions"><a className="cl-button" href="/waitlist">Join the waitlist <span aria-hidden="true">→</span></a><a className="cl-button cl-ghost" href="#crew">Find project teammates</a></div></div>
+        <div className="cl-cell cl-hero-copy"><p className="cl-mono cl-kicker"><i /> CrewLab&nbsp; · &nbsp;India-first builder community&nbsp; · &nbsp;Cofounders&nbsp; · &nbsp;Side projects</p><h1 id="hero-title">BUILD REAL<br />PRODUCTS WITH<br /><span>REAL PEOPLE.</span></h1><div className="cl-actions"><a className="cl-button" href="/waitlist">Join the waitlist <span aria-hidden="true">→</span></a><a className="cl-button cl-ghost" href="#crew">Find project teammates</a></div></div>
         <div className="cl-cell cl-droid-cell aiptx-droid-stage"><FeatureDroid className="cl-droid-art" /></div>
       </section>
 
       <section className="cl-row cl-intro" aria-label="About CrewLab">
-        <div className="cl-cell cl-intro-main"><p>CrewLab is the builder community where founders, developers, designers, marketers, students and creators connect. Have an idea but no team? Find a cofounder. Have skills but no idea? Join a startup or side project.</p></div>
+        <div className="cl-cell cl-intro-main"><p>CrewLab is an India-first startup collaboration community where founders, developers, designers, marketers, students and creators connect. Have an idea but no team? Find a cofounder. Have skills but no idea? Discover a startup or side project to join.</p></div>
         <div className="cl-cell cl-audience"><span className="cl-mono">01 / START WITH AN IDEA</span><strong>Founders</strong></div>
         <div className="cl-cell cl-audience"><span className="cl-mono">02 / BRING YOUR SKILLS</span><strong>Builders</strong></div>
         <div className="cl-cell cl-audience"><span className="cl-mono">03 / MAKE IT REAL</span><strong>Creators</strong></div>
@@ -71,8 +71,8 @@ export default function Home() {
       <div className="cl-row cl-foot-grid">
         <div className="cl-cell cl-foot-brand"><Logo /><p>Ideas to impact. Made for builders, by builders.</p></div>
         <div className="cl-cell cl-foot-links"><h3>Find your crew</h3>{crewItems.map((item) => <Link href={item.href} key={item.title}>{item.title}</Link>)}</div>
-        <div className="cl-cell cl-foot-links"><h3>Product</h3><Link href="/explore">Explore projects</Link><Link href="/how-it-works">How it works</Link><Link href="/features">Features</Link></div>
-        <div className="cl-cell cl-foot-links"><h3>Company</h3><Link href="/about">About</Link><Link href="https://blog.ujjwaluzu.in" target="_blank" rel="noopener noreferrer">Blog</Link><Link href="/waitlist">Contact</Link><Link href="https://discord.gg/m97vTraKq" target="_blank" rel="noopener noreferrer">Discord</Link><Link href="https://instagram.com/crewlab.in" target="_blank" rel="noopener noreferrer">Instagram</Link><Link href="https://x.com/crewlabin" target="_blank" rel="noopener noreferrer">X</Link></div>
+        <div className="cl-cell cl-foot-links"><h3>Product</h3><Link href="/explore">Explore projects</Link><Link href="/how-it-works">How it works</Link><Link href="/features">Features</Link><Link href="/resources">Guides & resources</Link></div>
+        <div className="cl-cell cl-foot-links"><h3>Company</h3><Link href="/about">About</Link><Link href="/waitlist">Contact</Link><Link href="https://discord.gg/m97vTraKq" target="_blank" rel="noopener noreferrer">Discord</Link><Link href="https://instagram.com/crewlab.in" target="_blank" rel="noopener noreferrer">Instagram</Link><Link href="https://x.com/crewlabin" target="_blank" rel="noopener noreferrer">X</Link></div>
       </div>
       <div className="cl-row cl-copyright"><span className="cl-cell cl-mono">© 2026 CrewLab. All rights reserved.</span><span className="cl-cell cl-mono">Made for builders, by builders</span></div>
       <div className="cl-row cl-wordmark" aria-label="CrewLab"><span>C</span><span>R</span><span>E</span><span>W</span><span>L</span><span>A</span><span>B</span></div>

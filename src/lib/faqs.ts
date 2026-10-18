@@ -7,51 +7,51 @@ export const faqs: Faq[] = [
   {
     question: "Where can I find a technical cofounder for my startup?",
     answer:
-      "Use a cofounder matching platform like CrewLab. Create a project, explain your startup idea, and list the technical skills you need. Builders with those skills - developers, engineers and technical founders - discover your project and request to join your team, so you can build together.",
+      "CrewLab is being built to help founders find a technical cofounder through shared project context. Prepare a clear description of your startup idea, the technical skills you need, and the work you can contribute. When CrewLab opens, interested builders will be able to review projects and request to join.",
   },
   {
     question: "How do I find people to build my startup idea?",
     answer:
-      "Post your idea as a project and describe the roles you need to fill, from developers and designers to marketers. CrewLab then connects you with founders, builders and creators who want to join startup projects. The right teammates find you - you don't have to cold-message strangers.",
+      "CrewLab is designed to let founders describe a project and the skills they need, while builders explore ideas and request to join. Project owners review requests and decide who joins the team. Join the waitlist for early access updates.",
   },
   {
     question: "I have skills but no idea. Can I join projects on CrewLab?",
     answer:
-      "Yes. Builders who have skills but no idea can browse startups, side projects and student projects that are looking for contributors. Request to join a project that matches your skills, meet the crew behind it, and start building real products with real people.",
+      "CrewLab is being built for people who have skills but want to find a project. When the product opens, builders will be able to explore project details and requested skills, then ask the owner to join.",
   },
   {
-    question: "How does CrewLab match founders and cofounders?",
+    question: "How does CrewLab help founders find cofounders?",
     answer:
-      "CrewLab matches people around projects, not just profiles. Founders list the cofounder and teammate roles they need, and builders state the skills and projects they want to work on. CrewLab surfaces compatible matches, so a founder with an idea finds a technical cofounder who actually wants to build it.",
+      "CrewLab puts the project at the center of discovery. Founders describe the idea and needed skills; builders can review the context and request to join. The project owner reviews requests and chooses the crew. CrewLab does not automatically decide who is a compatible cofounder.",
   },
   {
     question: "Can developers find side projects to collaborate on?",
     answer:
-      "Yes. The side project community on CrewLab is built for developers looking to collaborate on projects outside their day job. Explore open projects, join a team that needs your stack, and ship something real - while building your portfolio and meeting other builders.",
+      "CrewLab is designed for developers looking for a project to contribute to. Builders will be able to review project descriptions, stages, and requested skills before asking an owner to join.",
   },
   {
     question: "Is CrewLab a good place for students to find project teams?",
     answer:
-      "Yes. CrewLab is designed for student project collaboration. Students can join college startup teams, find teammates for hackathons and coursework, build portfolio projects, and work with developers, designers and marketers - no professional network required.",
+      "CrewLab is intended to help students discover startup and side projects and explain what they can contribute. Each project owner reviews requests. Check the project details and expectations before applying.",
   },
   {
     question: "What kinds of people join the CrewLab builder community?",
     answer:
-      "The CrewLab community brings together founders with ideas, technical cofounders, developers, designers, product managers, marketers, students, creators and side-project enthusiasts. If you want to build real products with real people, you'll find a crew that shares the goal.",
+      "CrewLab is for founders with project ideas and builders who bring skills in development, design, product, marketing, research, and other areas. The community is intended for people who want to build with a team.",
   },
   {
     question: "What tools does CrewLab give startup teams once they match?",
     answer:
-      "Once a crew forms, CrewLab provides a shared project workspace with team collaboration, task and milestone tracking, project discussions, an activity feed and GitHub integration - so a matched team can go from an idea to a working product in one place.",
+      "CrewLab's planned workspace includes project discussions, a dashboard for projects and join requests, calendar events, and optional read-only GitHub context. These features are being developed; check the product pages for current availability.",
   },
   {
     question: "How long does it take to find project teammates on CrewLab?",
     answer:
-      "There's no fixed timeline, but because matching is project-based, most founders and builders connect within the first weeks of posting or joining. Clearly describing your idea, the roles you need, and the skills you bring helps you match with the right people faster.",
+      "There is no fixed timeline or guarantee. The project owner reviews each request, and timing depends on the people involved. A clear project description and a specific explanation of your skills and availability help both sides assess fit.",
   },
   {
     question: "Is CrewLab free for side project collaboration and startup teams?",
     answer:
-      "CrewLab is free to join during early access. You can post a startup idea, join a side project, build a startup team and collaborate without paying a fee. Join the waitlist to be among the first builders to access the platform when it launches.",
+      "CrewLab is currently collecting waitlist signups for early access. Public launch pricing and availability have not been announced. Join the waitlist to receive product updates.",
   },
 ];

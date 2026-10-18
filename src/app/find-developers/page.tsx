@@ -2,20 +2,10 @@ import { pageMetadata } from "@/lib/site";
 import Landing, { type LandingConfig } from "@/components/Landing";
 
 export const metadata = pageMetadata({
-  title: "Find Developers for Your Startup or Side Project",
+  title: "Find Developers for Startup Projects",
   description:
-    "Find developers for your startup or side project on CrewLab. Connect with engineers, technical cofounders and builders who want to join your team and build with you.",
+    "Find developers who want to contribute to a startup or side project. Share the work, skills, and team context so builders can decide whether to request to join.",
   canonical: "/find-developers",
-  keywords: [
-    "find developers for startup",
-    "find developers for my project",
-    "startup developers",
-    "find developers for side project",
-    "technical cofounder",
-    "developer networking platform",
-    "project collaborators",
-    "hire startup developers",
-  ],
 });
 
 const config: LandingConfig = {
@@ -23,7 +13,7 @@ const config: LandingConfig = {
   crumb: "Find Developers",
   titleLines: ["Find developers", "for your"],
   highlight: "startup or side project",
-  lede: "Describe the skills your startup or side project needs, then make the project discoverable to developers and builders looking for work to join.",
+  lede: "Describe the skills your startup or side project needs, then make the project discoverable to developers looking for a team and project to contribute to.",
   note: "Builders looking for projects | not just browsing",
   primaryLabel: "Find developers",
   primaryHref: "/waitlist",

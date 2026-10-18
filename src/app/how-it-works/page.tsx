@@ -2,7 +2,7 @@ import { pageMetadata } from "@/lib/site";
 import Landing, { type LandingConfig } from "@/components/Landing";
 
 export const metadata = pageMetadata({
-  title: "How CrewLab Works",
+  title: "How Startup Collaboration Works",
   description:
     "See how CrewLab helps builders create profiles, discover projects, apply to join a team, and coordinate with their crew.",
   canonical: "/how-it-works",

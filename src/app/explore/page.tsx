@@ -8,8 +8,8 @@ import ExploreProjects from "@/components/ExploreProjects";
 import { FeatureDroid } from "@/components/visuals/FeatureDroid";
 
 export const metadata = pageMetadata({
-  title: "Explore Startup Projects & Side Projects",
-  description: "Explore CrewLab projects by their description, stage, and requested skills. Learn how builders apply to join and how project owners form a crew.",
+  title: "Startup Projects to Join",
+  description: "Explore sample startup and side project listings, compare stages and requested skills, and learn how to request to join a CrewLab project.",
   canonical: "/explore",
 });
 
@@ -22,7 +22,7 @@ export default function ExplorePage() {
     <SiteHeader />
     <main id="top">
       <section className="cl-row cl-hero cl-page-hero" aria-labelledby="page-title">
-        <div className="cl-cell cl-hero-copy"><p className="cl-mono cl-kicker"><i />Project ideas | requested skills | owner-reviewed join requests</p><h1 id="page-title"><span>Projects looking</span><span>for people who</span><span className="cl-page-highlight">want to build</span></h1><p className="cl-page-lede">Explore project ideas, see what skills each one needs, and learn how to request a place on a crew building together.</p><div className="cl-actions"><Link className="cl-button" href="#browse">Explore projects <Icon name="arrow" /></Link><Link className="cl-button cl-ghost" href="/waitlist">Join the waitlist <Icon name="arrow" /></Link></div></div>
+        <div className="cl-cell cl-hero-copy"><p className="cl-mono cl-kicker"><i />Sample project examples | requested skills | join requests</p><h1 id="page-title"><span>Projects looking</span><span>for people who</span><span className="cl-page-highlight">want to build</span></h1><p className="cl-page-lede">Explore sample project listings, see what skills each one needs, and learn how builders can request to join when CrewLab opens.</p><div className="cl-actions"><Link className="cl-button" href="#browse">Explore project examples <Icon name="arrow" /></Link><Link className="cl-button cl-ghost" href="/waitlist">Join the waitlist <Icon name="arrow" /></Link></div></div>
         <div className="cl-cell cl-droid-cell aiptx-droid-stage"><FeatureDroid className="cl-droid-art" variant="product" /></div>
       </section>
 

@@ -6,11 +6,13 @@ import Link from "next/link";
 import Icon from "@/components/Icon";
 
 export const metadata = pageMetadata({
-  title: "Join the CrewLab Waitlist",
+  title: "Join the Waitlist",
   description:
     "Join the CrewLab waitlist for updates and early access. Find projects that need your skills, invite collaborators, and coordinate with your crew.",
   canonical: "/waitlist",
 });
+
+metadata.robots = { index: false, follow: true };
 
 const nextSteps = [
   { href: "/explore", icon: "grid" as const, title: "Explore project ideas", text: "See how project details and requested skills help builders find work that interests them.", action: "Browse projects" },

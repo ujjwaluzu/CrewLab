@@ -2,7 +2,7 @@ import { pageMetadata } from "@/lib/site";
 import Landing, { type LandingConfig } from "@/components/Landing";
 
 export const metadata = pageMetadata({
-  title: "About CrewLab, the Builder Community",
+  title: "About the Builder Community",
   description:
     "Learn about CrewLab, a project-centered space where builders share skills, discover ideas, form crews through owner-reviewed requests, and coordinate together.",
   canonical: "/about",

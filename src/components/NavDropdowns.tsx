@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import { LANDING_PAGES, SOCIAL } from "@/lib/site";
+import { LANDING_PAGES } from "@/lib/site";
 
 const groups = [
   {
@@ -18,6 +18,7 @@ const groups = [
       { href: "/explore", label: "Explore projects" },
       { href: "/how-it-works", label: "How it works" },
       { href: "/features", label: "Features" },
+      { href: "/resources", label: "Guides & resources" },
     ],
   },
   {
@@ -25,7 +26,6 @@ const groups = [
     label: "Company",
     links: [
       { href: "/about", label: "About" },
-      { href: SOCIAL.blog, label: "Blog", external: true },
       { href: "/waitlist", label: "Contact" },
     ],
   },

@@ -6,16 +6,6 @@ export const metadata = pageMetadata({
   description:
     "Build a startup team on CrewLab with project listings, skill-based discovery, owner-reviewed join requests, project discussions, and optional read-only GitHub context.",
   canonical: "/startup-teams",
-  keywords: [
-    "startup teams",
-    "startup team building",
-    "build a startup team",
-    "startup collaboration",
-    "startup collaboration platform",
-    "startup builders",
-    "find startup team members",
-    "collaborate on startup ideas",
-  ],
 });
 
 const config: LandingConfig = {

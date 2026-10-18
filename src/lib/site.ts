@@ -7,32 +7,13 @@ export const SITE_NAME = "CrewLab";
 export const SITE_TAGLINE = "Find your crew. Build what matters.";
 
 export const SITE_DESCRIPTION =
-  "CrewLab is a startup team building and project collaboration platform where founders, developers, designers, marketers, students and creators find cofounders, join projects, and build side projects together.";
+  "CrewLab is an India-first startup collaboration community where founders find cofounders and teammates, while developers, students, and other builders discover projects to join.";
 
 export const HOMEPAGE_TITLE =
-  "Find a Cofounder, Teammates & Startup Projects | CrewLab";
+  "CrewLab | Find Cofounders & Build Startup Projects";
 
 export const HOMEPAGE_DESCRIPTION =
-  "Find cofounders, developers and teammates for your startup or side project on CrewLab - join a builder community, collaborate online, and turn ideas into impact.";
-
-export const KEYWORDS = [
-  "find a cofounder",
-  "technical cofounder",
-  "find developers for startup",
-  "find project teammates",
-  "startup team building",
-  "startup collaboration platform",
-  "join startup projects",
-  "side project community",
-  "build projects together",
-  "project collaboration platform",
-  "builder community",
-  "student project collaboration",
-  "startup community",
-  "side project platform",
-  "find project partners",
-  "CrewLab",
-];
+  "CrewLab helps founders in India find cofounders and startup teammates, while developers and other builders discover projects to join.";
 
 export const LANDING_PAGES = [
   {
@@ -76,39 +57,21 @@ export const SOCIAL = {
   discord: "https://discord.gg/m97vTraKq",
   instagram: "https://instagram.com/crewlab.in",
   x: "https://x.com/crewlabin",
-  blog: "https://blog.ujjwaluzu.in",
 };
-
-export const GEO = {
-  region: "IN",
-  placename: "India",
-  position: "20.5937, 78.9629",
-};
-
-export const GEO_TAGS = {
-  "geo.region": GEO.region,
-  "geo.placename": GEO.placename,
-  "geo.position": GEO.position,
-  ICBM: GEO.position,
-  distribution: "global",
-  rating: "general",
-} as const;
 
 export function pageMetadata(options: {
   title: string;
   description: string;
   canonical: string;
-  keywords?: string[];
 }): Metadata {
   return {
     title: options.title,
     description: options.description,
-    ...(options.keywords ? { keywords: options.keywords } : {}),
     alternates: {
       canonical: options.canonical,
     },
     openGraph: {
-      title: options.title,
+      title: `${options.title} | ${SITE_NAME}`,
       description: options.description,
       url: options.canonical,
       type: "website",
@@ -117,9 +80,8 @@ export function pageMetadata(options: {
     },
     twitter: {
       card: "summary_large_image",
-      title: options.title,
+      title: `${options.title} | ${SITE_NAME}`,
       description: options.description,
     },
-    other: { ...GEO_TAGS },
   };
 }
