@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Content-Signal: ai-train=no, search=yes, ai-input=no
+
+Sitemap: https://crewlab.ujjwaluzu.in/sitemap.xml
