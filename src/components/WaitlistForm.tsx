@@ -80,7 +80,7 @@ export default function WaitlistForm({ footer = false }: WaitlistFormProps) {
     <>
       <form className="signup" onSubmit={submit} noValidate>
         <label className="visually-hidden" htmlFor="email">Enter your email</label>
-        <input id="email" name="email" type="email" placeholder="Enter your email" autoComplete="email" required value={value} aria-invalid={isInvalid} aria-describedby="waitlist-status" onChange={(event) => { setValue(event.target.value); setState("idle"); }} />
+        <input id="email" name="email" type="email" placeholder="you@email.com" autoComplete="email" required value={value} aria-invalid={isInvalid} aria-describedby="waitlist-status" onChange={(event) => { setValue(event.target.value); setState("idle"); }} />
         <button className="btn btn-light" type="submit" disabled={isLoading} aria-busy={isLoading}>{isLoading ? "Joining..." : "Join the waitlist"} <Icon name="arrow" /></button>
       </form>
       <p id="waitlist-status" className={"fine" + (state === "success" ? " ok" : "")} role="status" aria-live="polite">{message || "No spam. Just updates that matter."}</p>
