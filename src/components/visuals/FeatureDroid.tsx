@@ -231,27 +231,6 @@ export function FeatureDroid({ className, variant = "home" }: { className?: stri
         />
       </g>
 
-      {variant === "crew" && <g className="aiptx-droid-crew-system" aria-hidden="true">
-        <path d="M28 248 C42 207 60 181 91 169 M292 248 C278 207 260 181 229 169 M28 248 C40 289 57 312 88 325 M292 248 C280 289 263 312 232 325" fill="none" stroke="#a9a69b" strokeWidth="1" strokeDasharray="2 5" opacity=".8" />
-        <circle cx="28" cy="248" r="10" fill="#111110" stroke="#f04a2e" strokeWidth="1.5" />
-        <circle cx="28" cy="248" r="3" fill="#ece9e0" />
-        <circle cx="292" cy="248" r="10" fill="#111110" stroke="#f04a2e" strokeWidth="1.5" />
-        <circle cx="292" cy="248" r="3" fill="#ece9e0" />
-        <circle cx="91" cy="169" r="3" fill="#f04a2e" />
-        <circle cx="229" cy="169" r="3" fill="#f04a2e" />
-        <circle cx="88" cy="325" r="3" fill="#ece9e0" />
-        <circle cx="232" cy="325" r="3" fill="#ece9e0" />
-      </g>}
-
-      {variant === "product" && <g className="aiptx-droid-product-system" aria-hidden="true">
-        <path d="M58 145 V124 H80 M262 145 V124 H240 M58 345 V366 H80 M262 345 V366 H240" fill="none" stroke="#f04a2e" strokeWidth="1.5" strokeLinecap="square" />
-        <path d="M237 111 H272 M246 117 H272 M253 123 H272" fill="none" stroke="#a9a69b" strokeWidth="1" />
-        <circle cx="231" cy="111" r="2.5" fill="#f04a2e" />
-        <path d="M48 226 H68 M48 232 H62 M252 276 H272 M258 282 H272" fill="none" stroke="#a9a69b" strokeWidth="1" opacity=".8" />
-        <circle cx="68" cy="226" r="2" fill="#f04a2e" />
-        <circle cx="252" cy="276" r="2" fill="#f04a2e" />
-      </g>}
-
       {/* ------------------------------------------------------- gaze beams */}
       {/* Two fixed wedges rather than one rotating one. This is a flat front
           view, so a cone thrown toward the viewer cannot be drawn; what reads
@@ -315,6 +294,11 @@ export function FeatureDroid({ className, variant = "home" }: { className?: stri
                 rx="3"
                 fill="url(#droid-ember)"
               />
+              {variant === "crew" && <g fill="#f04a2e" opacity=".9" aria-hidden="true">
+                <rect x="50" y="197" width="28" height="3" />
+                <rect x="50" y="204" width="20" height="2" />
+                <rect x="50" y="209" width="12" height="2" />
+              </g>}
               {/* Recessed seam + edge wear. */}
               <rect
                 x="50"
@@ -444,40 +428,30 @@ export function FeatureDroid({ className, variant = "home" }: { className?: stri
           <rect x="96" y="162" width="128" height="17" rx="4" fill="url(#droid-accent)" />
           <rect x="98" y="163" width="124" height="2" rx="1" fill="url(#droid-ember)" opacity="0.9" />
 
-          {/* Logic display: the recessed panel where the agent thinks out loud. */}
-          <rect x="112" y="188" width="96" height="34" rx="5" fill="#141313" />
-          <rect
-            x="112"
-            y="188"
-            width="96"
-            height="34"
-            rx="5"
-            fill="none"
-            stroke="#3f3a37"
-            strokeWidth="1"
-          />
-          {LOGIC_CELLS.map(([x, delay]) => (
-            <g
-              key={x}
-              className="aiptx-droid-cursor"
-              style={{ animationDelay: delay }}
-            >
-              <ellipse cx={x + 6} cy="198.5" rx="13" ry="10" fill="url(#droid-bloom)" />
-              <rect x={x} y="195" width="12" height="7" rx="2" fill="#d42a1e" />
-            </g>
-          ))}
-          {/* Progress track, and the bar that fills it in discrete jumps. */}
-          <rect x="122" y="208" width="72" height="4" rx="2" fill="#3f3a37" />
-          <rect
-            x="122"
-            y="208"
-            width="72"
-            height="4"
-            rx="2"
-            fill="#ef6b60"
-            opacity="0.85"
-            className="aiptx-droid-progress"
-          />
+          {/* The home and crew units use a compact logic display. The product
+              unit carries a wider, integrated project console instead. */}
+          {variant === "product" ? <g className="aiptx-droid-product-console" aria-hidden="true">
+            <rect x="108" y="186" width="104" height="40" rx="4" fill="#141313" stroke="#3f3a37" strokeWidth="1" />
+            <path d="M116 193 H204" stroke="#57534e" strokeWidth="1" />
+            <rect x="116" y="190" width="23" height="3" fill="#f04a2e" />
+            <rect x="116" y="199" width="52" height="3" fill="#a9a69b" opacity=".75" />
+            <rect x="116" y="207" width="77" height="3" fill="#3f3a37" />
+            <rect x="116" y="207" width="58" height="3" fill="#f04a2e" />
+            <rect x="116" y="215" width="22" height="5" fill="#3f3a37" />
+            <rect x="143" y="215" width="22" height="5" fill="#3f3a37" />
+            <rect x="170" y="215" width="34" height="5" fill="#f04a2e" opacity=".85" />
+          </g> : <g>
+            <rect x="112" y="188" width="96" height="34" rx="5" fill="#141313" />
+            <rect x="112" y="188" width="96" height="34" rx="5" fill="none" stroke="#3f3a37" strokeWidth="1" />
+            {LOGIC_CELLS.map(([x, delay]) => (
+              <g key={x} className="aiptx-droid-cursor" style={{ animationDelay: delay }}>
+                <ellipse cx={x + 6} cy="198.5" rx="13" ry="10" fill="url(#droid-bloom)" />
+                <rect x={x} y="195" width="12" height="7" rx="2" fill="#d42a1e" />
+              </g>
+            ))}
+            <rect x="122" y="208" width="72" height="4" rx="2" fill="#3f3a37" />
+            <rect x="122" y="208" width="72" height="4" rx="2" fill="#ef6b60" opacity="0.85" className="aiptx-droid-progress" />
+          </g>}
 
           {/* Vents and grills. */}
           {[100, 166].map((x) => (
