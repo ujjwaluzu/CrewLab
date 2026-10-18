@@ -40,6 +40,7 @@ yarn-error.log*
 
 # local design reference
 /reference/
+crewlab-landing.html
 
 # typescript
 *.tsbuildinfo

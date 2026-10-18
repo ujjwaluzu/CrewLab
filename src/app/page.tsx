@@ -32,7 +32,7 @@ export default function Home() {
     <header className="cl-row cl-nav">
       <div className="cl-cell cl-nav-brand"><Logo /></div>
       <div className="cl-cell cl-nav-links"><NavDropdowns /></div>
-      <div className="cl-cell cl-nav-cta"><a className="cl-button" href="#join">Join the waitlist <span aria-hidden="true">→</span></a></div>
+      <div className="cl-cell cl-nav-cta"><a className="cl-button" href="/waitlist"><span className="cl-nav-waitlist-full">Join the waitlist</span><span className="cl-nav-waitlist-short">Waitlist</span><span aria-hidden="true">→</span></a></div>
     </header>
 
     <main id="top">
@@ -42,7 +42,7 @@ export default function Home() {
       </section>
 
       <section className="cl-row cl-intro" aria-label="About CrewLab">
-        <div className="cl-cell cl-intro-main"><p>CrewLab is the builder community where founders, developers, designers, marketers, students and creators connect. Have an idea but no team? Find a cofounder. Have skills but no idea? Join a startup or side project.</p><div className="cl-actions"><a className="cl-button" href="#join">Join the waitlist <span aria-hidden="true">→</span></a><a className="cl-button cl-ghost" href="#crew">Find project teammates</a></div></div>
+        <div className="cl-cell cl-intro-main"><p>CrewLab is the builder community where founders, developers, designers, marketers, students and creators connect. Have an idea but no team? Find a cofounder. Have skills but no idea? Join a startup or side project.</p><div className="cl-actions"><a className="cl-button" href="/waitlist">Join the waitlist <span aria-hidden="true">→</span></a><a className="cl-button cl-ghost" href="#crew">Find project teammates</a></div></div>
         <div className="cl-cell cl-audience"><span className="cl-mono">01 / START WITH AN IDEA</span><strong>Founders</strong></div>
         <div className="cl-cell cl-audience"><span className="cl-mono">02 / BRING YOUR SKILLS</span><strong>Builders</strong></div>
         <div className="cl-cell cl-audience"><span className="cl-mono">03 / MAKE IT REAL</span><strong>Creators</strong></div>
