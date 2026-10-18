@@ -18,8 +18,9 @@
 .cl-logo{display:inline-flex;align-items:center;gap:10px;color:var(--cl-text)!important;font:700 22px/1 var(--cl-display);letter-spacing:-.02em}
 .cl-logo svg{width:20px;height:20px;flex:none}
 .cl-nav-links{display:flex;justify-content:center;color:var(--cl-text)}
-.crewlab-page .nav-shell{display:flex;width:100%;align-items:center;justify-content:center;gap:16px}
+.crewlab-page .nav-shell{display:flex;width:100%;align-items:center;justify-content:flex-end;gap:16px}
 .crewlab-page .nav-links{position:static;display:flex;width:auto;align-items:center;justify-content:center;gap:32px;padding:0;border:0;background:transparent;box-shadow:none}
+.crewlab-page .nav-links{margin-right:auto}
 .crewlab-page .nav-dropdown{position:relative;width:auto;border:0}
 .crewlab-page .nav-trigger{min-height:44px;gap:9px;padding:8px 0;border:0;border-radius:0;background:transparent;color:var(--cl-text);font:400 12px/1.2 var(--cl-mono);letter-spacing:.04em;text-transform:uppercase;transition:color 150ms ease}
 .crewlab-page .nav-trigger:hover,.crewlab-page .nav-trigger:focus-visible{color:var(--cl-red-hover)}
@@ -36,8 +37,9 @@
 .crewlab-page .nav-mobile-toggle{display:none}
 .cl-nav-cta{text-align:right}
 .cl-nav-actions{display:flex;align-items:center;justify-content:flex-end;gap:14px}
-.cl-language-link{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:6px;color:var(--cl-text);font:500 12px/1 var(--cl-mono);white-space:nowrap}
-.cl-language-link:hover{color:var(--cl-red-hover)}
+.cl-language-control{display:inline-flex;flex:none;align-items:center}
+.cl-language-select{min-width:54px;min-height:38px;padding:0 18px 0 9px;border:1px solid var(--cl-line);border-radius:0;background:var(--cl-bg);color:var(--cl-text);font:500 11px/1 var(--cl-mono);letter-spacing:.04em;cursor:pointer}
+.cl-language-select:hover,.cl-language-select:focus-visible{border-color:var(--cl-red);color:var(--cl-red-hover)}
 .cl-nav-waitlist-short{display:none}
 .cl-button{display:inline-flex;min-height:46px;align-items:center;justify-content:center;gap:8px;padding:13px 22px;background:var(--cl-red);color:var(--cl-ink)!important;border:1px solid var(--cl-red);font:700 13px/1.2 var(--cl-mono);letter-spacing:.04em;text-transform:uppercase;transition:color 150ms ease,background-color 150ms ease,border-color 150ms ease}
 .cl-button:hover{background:var(--cl-red-hover);border-color:var(--cl-red-hover)}
@@ -211,7 +213,7 @@ body:has(.crewlab-page){margin:0;background:var(--cl-bg)}
   .cl-foot-brand{grid-column:auto}.cl-wordmark{grid-template-columns:repeat(7,minmax(0,1fr))!important}.cl-wordmark span{font-size:clamp(38px,11vw,90px)}
 }
 @media(max-width:500px){
-  .cl-language-link{padding-inline:3px;font-size:10px}
+  .cl-language-select{min-width:48px;min-height:36px;padding-left:6px;padding-right:15px;font-size:10px}
   .crewlab-hi .cl-page-hero h1{font-size:clamp(34px,9vw,48px)!important}
   .cl-wrap{border-inline:1px solid var(--cl-line)}.cl-nav .cl-cell{padding-inline:8px}.cl-nav-cta .cl-button{padding:11px 8px;font-size:10px;min-height:40px}
   .cl-cell{padding:23px 18px}.cl-hero-copy{padding:38px 18px 42px}.cl-droid-cell{padding:22px}.cl-droid-art{width:min(76vw,270px)}.cl-kicker{font-size:10px;margin-bottom:24px}.cl-hero h1{font-size:clamp(44px,10.2vw,54px)}

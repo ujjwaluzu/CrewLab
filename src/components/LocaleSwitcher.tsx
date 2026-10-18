@@ -1,23 +1,25 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function LocaleSwitcher() {
   const pathname = usePathname() ?? "/";
+  const router = useRouter();
   const isHindi = pathname === "/hi" || pathname.startsWith("/hi/");
   const englishPath = isHindi ? pathname.slice(3) || "/" : pathname;
   const hindiPath = pathname === "/" ? "/hi" : "/hi" + pathname;
 
   return (
-    <Link
-      className="cl-language-link"
-      href={isHindi ? englishPath : hindiPath}
-      hrefLang={isHindi ? "en-IN" : "hi-IN"}
-      lang={isHindi ? "en-IN" : "hi-IN"}
-      aria-label={isHindi ? "View this page in English" : "इस पेज को हिन्दी में देखें"}
-    >
-      {isHindi ? "English" : "हिन्दी"}
-    </Link>
+    <label className="cl-language-control">
+      <select
+        className="cl-language-select"
+        aria-label={isHindi ? "भाषा" : "Language"}
+        value={isHindi ? "hi" : "en"}
+        onChange={(event) => router.push(event.target.value === "hi" ? hindiPath : englishPath)}
+      >
+        <option value="en">EN</option>
+        <option value="hi">HI</option>
+      </select>
+    </label>
   );
 }
