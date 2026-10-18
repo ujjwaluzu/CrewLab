@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BrandMark from "@/components/BrandMark";
+import NavDropdowns from "@/components/NavDropdowns";
 import WaitlistForm from "@/components/WaitlistForm";
 import { LANDING_PAGES } from "@/lib/site";
 import { faqs } from "@/lib/faqs";
@@ -30,7 +31,7 @@ export default function Home() {
   return <div className="crewlab-page"><div className="cl-wrap">
     <header className="cl-row cl-nav">
       <div className="cl-cell cl-nav-brand"><Logo /></div>
-      <nav className="cl-cell cl-nav-links cl-mono" aria-label="Main navigation"><a href="#how">How it works</a><a href="#crew">Find your crew</a><a href="#faq">FAQ</a></nav>
+      <div className="cl-cell cl-nav-links"><NavDropdowns /></div>
       <div className="cl-cell cl-nav-cta"><a className="cl-button" href="#join">Join the waitlist <span aria-hidden="true">→</span></a></div>
     </header>
 
