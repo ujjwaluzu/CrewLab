@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-/** Adds a soft, scroll-triggered reveal to each major block across the site. */
+/** Adds a soft, opacity-only scroll-triggered reveal to each major block across the site. */
 export default function SiteAnimations() {
   const pathname = usePathname();
 
@@ -29,13 +29,11 @@ export default function SiteAnimations() {
 
         const tween = gsap.fromTo(
           block,
-          { autoAlpha: 0, filter: "blur(8px)" },
+          { autoAlpha: 0 },
           {
             autoAlpha: 1,
-            filter: "blur(0px)",
             duration: 1.1,
             ease: "power2.out",
-            clearProps: "filter",
             scrollTrigger: {
               trigger: block,
               start: "top 90%",
@@ -56,7 +54,6 @@ export default function SiteAnimations() {
         triggers.forEach((trigger) => trigger.kill());
         gsap.set(document.querySelectorAll(".site-head, main > section, main > div > section, .site-footer"), {
           autoAlpha: 1,
-          filter: "none",
         });
       }
     };
