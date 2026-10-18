@@ -68,6 +68,7 @@ function SectionHead({ label, title, intro, count }: { label: string; title: str
 export default function Landing({ config }: { config: LandingConfig }) {
   const related = LANDING_PAGES.filter((page) => page.path !== config.path);
   const title = [...config.titleLines, config.highlight];
+  const droidVariant = config.path === "/features" || config.path === "/how-it-works" ? "product" : "crew";
 
   return <div className="crewlab-page"><div className="cl-wrap">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(config)) }} />
@@ -80,7 +81,7 @@ export default function Landing({ config }: { config: LandingConfig }) {
           <p className="cl-page-lede">{config.lede}</p>
           <div className="cl-actions"><Link className="cl-button" href={config.primaryHref}>{config.primaryLabel}<span aria-hidden="true">→</span></Link><Link className="cl-button cl-ghost" href={config.secondaryHref}>{config.secondaryLabel}</Link></div>
         </div>
-        <div className="cl-cell cl-droid-cell aiptx-droid-stage"><FeatureDroid className="cl-droid-art" /></div>
+        <div className="cl-cell cl-droid-cell aiptx-droid-stage"><FeatureDroid className="cl-droid-art" variant={droidVariant} /></div>
       </section>
 
       {config.sections.map((section, index) => <section className="cl-section" id={section.id} key={section.id} aria-label={section.label}>

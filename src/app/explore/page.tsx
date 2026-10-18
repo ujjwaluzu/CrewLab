@@ -23,7 +23,7 @@ export default function ExplorePage() {
     <main id="top">
       <section className="cl-row cl-hero cl-page-hero" aria-labelledby="page-title">
         <div className="cl-cell cl-hero-copy"><p className="cl-mono cl-kicker"><i />Project ideas | requested skills | owner-reviewed join requests</p><h1 id="page-title"><span>Projects looking</span><span>for people who</span><span className="cl-page-highlight">want to build</span></h1><p className="cl-page-lede">Explore project ideas, see what skills each one needs, and learn how to request a place on a crew building together.</p><div className="cl-actions"><Link className="cl-button" href="#browse">Explore projects <Icon name="arrow" /></Link><Link className="cl-button cl-ghost" href="/waitlist">Join the waitlist <Icon name="arrow" /></Link></div></div>
-        <div className="cl-cell cl-droid-cell aiptx-droid-stage"><FeatureDroid className="cl-droid-art" /></div>
+        <div className="cl-cell cl-droid-cell aiptx-droid-stage"><FeatureDroid className="cl-droid-art" variant="product" /></div>
       </section>
 
       <section className="cl-section" aria-label="How CrewLab brings projects and builders together">

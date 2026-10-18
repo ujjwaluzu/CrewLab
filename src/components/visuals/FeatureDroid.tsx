@@ -83,13 +83,18 @@ const LOGIC_CELLS: Array<[number, string]> = [
 /** Radar pings. Negative delays start them mid-flight, so none is ever absent. */
 const PING_DELAYS = ["0s", "-3.4s", "-6.8s"];
 
-export function FeatureDroid({ className }: { className?: string }) {
+type DroidVariant = "home" | "crew" | "product";
+
+export function FeatureDroid({ className, variant = "home" }: { className?: string; variant?: DroidVariant }) {
+  const variantLabel = variant === "crew" ? "Crew-connected" : variant === "product" ? "Product-system" : "CrewLab build assistant";
+  const variantClass = variant === "home" ? "" : ` aiptx-droid-variant-${variant}`;
+
   return (
     <svg
       viewBox="0 0 320 470"
       role="img"
-      aria-label="Illustration of the CrewLab build assistant droid"
-      className={`aiptx-droid-boot h-auto w-full ${className ?? ""}`}
+      aria-label={`Illustration of the ${variantLabel} droid`}
+      className={`aiptx-droid-boot h-auto w-full ${className ?? ""}${variantClass}`}
     >
       <defs>
         {/* Painted aluminium: the white body panels. Lit from the upper left,
@@ -225,6 +230,27 @@ export function FeatureDroid({ className }: { className?: string }) {
           className="aiptx-droid-alert aiptx-droid-ring aiptx-droid-ring-alt"
         />
       </g>
+
+      {variant === "crew" && <g className="aiptx-droid-crew-system" aria-hidden="true">
+        <path d="M28 248 C42 207 60 181 91 169 M292 248 C278 207 260 181 229 169 M28 248 C40 289 57 312 88 325 M292 248 C280 289 263 312 232 325" fill="none" stroke="#a9a69b" strokeWidth="1" strokeDasharray="2 5" opacity=".8" />
+        <circle cx="28" cy="248" r="10" fill="#111110" stroke="#f04a2e" strokeWidth="1.5" />
+        <circle cx="28" cy="248" r="3" fill="#ece9e0" />
+        <circle cx="292" cy="248" r="10" fill="#111110" stroke="#f04a2e" strokeWidth="1.5" />
+        <circle cx="292" cy="248" r="3" fill="#ece9e0" />
+        <circle cx="91" cy="169" r="3" fill="#f04a2e" />
+        <circle cx="229" cy="169" r="3" fill="#f04a2e" />
+        <circle cx="88" cy="325" r="3" fill="#ece9e0" />
+        <circle cx="232" cy="325" r="3" fill="#ece9e0" />
+      </g>}
+
+      {variant === "product" && <g className="aiptx-droid-product-system" aria-hidden="true">
+        <path d="M58 145 V124 H80 M262 145 V124 H240 M58 345 V366 H80 M262 345 V366 H240" fill="none" stroke="#f04a2e" strokeWidth="1.5" strokeLinecap="square" />
+        <path d="M237 111 H272 M246 117 H272 M253 123 H272" fill="none" stroke="#a9a69b" strokeWidth="1" />
+        <circle cx="231" cy="111" r="2.5" fill="#f04a2e" />
+        <path d="M48 226 H68 M48 232 H62 M252 276 H272 M258 282 H272" fill="none" stroke="#a9a69b" strokeWidth="1" opacity=".8" />
+        <circle cx="68" cy="226" r="2" fill="#f04a2e" />
+        <circle cx="252" cy="276" r="2" fill="#f04a2e" />
+      </g>}
 
       {/* ------------------------------------------------------- gaze beams */}
       {/* Two fixed wedges rather than one rotating one. This is a flat front
