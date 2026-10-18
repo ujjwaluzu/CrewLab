@@ -3,11 +3,13 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import PageFaqSection from "@/components/PageFaqSection";
 import WaitlistForm from "@/components/WaitlistForm";
+import { FeatureDroid } from "@/components/visuals/FeatureDroid";
 import type { HindiPageContent } from "@/lib/hindi-site";
 import { HINDI_LINK_LABELS, hindiPath } from "@/lib/hindi-site";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 
 export default function HindiPage({ page }: { page: HindiPageContent }) {
+  const droidVariant = page.path === "/" ? "home" : ["/features", "/how-it-works", "/explore"].includes(page.path) || page.path.startsWith("/resources") ? "product" : "crew";
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -35,6 +37,7 @@ export default function HindiPage({ page }: { page: HindiPageContent }) {
                 <Link className="cl-button cl-ghost" href={hindiPath(page.secondaryHref)}>{page.secondaryLabel}</Link>
               </div>
             </div>
+            <div className="cl-cell cl-droid-cell aiptx-droid-stage"><FeatureDroid className="cl-droid-art" variant={droidVariant} /></div>
           </section>
 
           {page.sections.map((section, index) => (
