@@ -10,7 +10,7 @@ export const SITE_DESCRIPTION =
   "CrewLab is an India-first startup collaboration community where founders find cofounders and teammates, while developers, students, and other builders discover projects to join.";
 
 export const HOMEPAGE_TITLE =
-  "CrewLab | Find Cofounders & Build Startup Projects";
+  "CrewLab | Cofounders, Startup Teams & Projects in India";
 
 export const HOMEPAGE_DESCRIPTION =
   "CrewLab helps founders in India find cofounders and startup teammates, while developers and other builders discover projects to join.";

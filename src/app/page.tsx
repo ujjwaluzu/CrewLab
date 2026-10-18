@@ -38,7 +38,7 @@ export default function Home() {
 
     <main id="top">
       <section className="cl-row cl-hero" aria-labelledby="hero-title">
-        <div className="cl-cell cl-hero-copy"><p className="cl-mono cl-kicker"><i /> CrewLab&nbsp; · &nbsp;India-first builder community&nbsp; · &nbsp;Cofounders&nbsp; · &nbsp;Side projects</p><h1 id="hero-title">BUILD REAL<br />PRODUCTS WITH<br /><span>REAL PEOPLE.</span></h1><div className="cl-actions"><a className="cl-button" href="/waitlist">Join the waitlist <span aria-hidden="true">→</span></a><a className="cl-button cl-ghost" href="#crew">Find project teammates</a></div></div>
+        <div className="cl-cell cl-hero-copy"><p className="cl-mono cl-kicker"><i /> CrewLab&nbsp; · &nbsp;India-first builder community&nbsp; · &nbsp;Cofounders&nbsp; · &nbsp;Side projects</p><h1 id="hero-title">CREWLAB:<br />BUILD PRODUCTS<br /><span>WITH REAL PEOPLE.</span></h1><div className="cl-actions"><a className="cl-button" href="/waitlist">Join the waitlist <span aria-hidden="true">→</span></a><a className="cl-button cl-ghost" href="#crew">Find project teammates</a></div></div>
         <div className="cl-cell cl-droid-cell aiptx-droid-stage"><FeatureDroid className="cl-droid-art" /></div>
       </section>
 

@@ -1,4 +1,4 @@
-import { SITE_URL, SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, SOCIAL } from "@/lib/site";
+import { SITE_URL, SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, HOMEPAGE_TITLE, SOCIAL } from "@/lib/site";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -8,7 +8,7 @@ const jsonLd = {
       "@id": `${SITE_URL}/#website`,
       url: SITE_URL,
       name: SITE_NAME,
-      alternateName: `${SITE_NAME} - startup project collaboration community`,
+      alternateName: "CrewLab India startup collaboration community",
       description: SITE_DESCRIPTION,
       inLanguage: "en-IN",
       publisher: { "@id": `${SITE_URL}/#organization` },
@@ -38,7 +38,7 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${SITE_URL}/#webpage`,
       url: SITE_URL,
-      name: "CrewLab | Find Cofounders & Build Startup Projects",
+      name: HOMEPAGE_TITLE,
       description: SITE_DESCRIPTION,
       inLanguage: "en-IN",
       mainEntityOfPage: `${SITE_URL}/`,
