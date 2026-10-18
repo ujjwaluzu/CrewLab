@@ -223,7 +223,7 @@ body:has(.crewlab-page){margin:0;background:var(--cl-bg)}
 
 /* Shared inner-page structures use the same CrewLab grid as the home page. */
 .cl-page-hero .cl-hero-copy{display:flex;flex-direction:column;justify-content:center;min-height:430px}
-.cl-page-hero .cl-hero h1{display:flex;flex-direction:column;max-width:790px}
+.cl-page-hero h1{display:flex;flex-direction:column;max-width:790px}
 .cl-page-hero .cl-hero-copy h1>span{color:var(--cl-text)}
 .cl-page-hero h1 .cl-page-highlight{color:var(--cl-red)}
 .cl-page-lede{max-width:58ch;margin:22px 0 0;color:var(--cl-muted)}
