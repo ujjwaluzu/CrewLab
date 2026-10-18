@@ -88,6 +88,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "/",
+    languages: {
+      "en-IN": SITE_URL,
+      "hi-IN": `${SITE_URL}/hi`,
+      "x-default": SITE_URL,
+    },
   },
   openGraph: {
     type: "website",

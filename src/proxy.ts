@@ -43,5 +43,6 @@ export const config = {
     "/student-projects",
     "/waitlist",
     "/resources/:path*",
+    "/hi/:path*",
   ],
 };

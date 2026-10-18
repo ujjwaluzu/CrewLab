@@ -36,6 +36,30 @@ export default function NavDropdowns() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname() ?? "";
+  const isHindi = pathname === "/hi" || pathname.startsWith("/hi/");
+  const localePath = (path: string) => isHindi ? "/hi" + (path === "/" ? "" : path) : path;
+  const hiLabels: Record<string, string> = {
+    "Find a cofounder": "सह-संस्थापक खोजें",
+    "Find developers": "डेवलपर खोजें",
+    "Startup teams": "स्टार्टअप टीम",
+    "Side projects": "साइड प्रोजेक्ट",
+    "Student projects": "विद्यार्थी प्रोजेक्ट",
+    "Explore projects": "प्रोजेक्ट देखें",
+    "How it works": "काम करने का तरीका",
+    "Features": "विशेषताएँ",
+    "Guides & resources": "गाइड और संसाधन",
+    "About": "परिचय",
+    "Contact": "संपर्क",
+  };
+  const translatedGroups = groups.map((group) => ({
+    ...group,
+    label: isHindi ? ({ crew: "साथी", product: "उत्पाद", company: "कंपनी" }[group.id] ?? group.label) : group.label,
+    links: group.links.map((item) => ({
+      ...item,
+      href: localePath(item.href),
+      label: isHindi ? hiLabels[item.label] ?? item.label : item.label,
+    })),
+  }));
 
   function isCurrentPage(href: string) {
     return href.startsWith("/") && (pathname === href || (href !== "/" && pathname.startsWith(`${href}/`)));
@@ -76,7 +100,9 @@ export default function NavDropdowns() {
       <button
         className="nav-mobile-toggle"
         type="button"
-        aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
+        aria-label={isHindi
+          ? (mobileOpen ? "मेन्यू बंद करें" : "मेन्यू खोलें")
+          : (mobileOpen ? "Close navigation" : "Open navigation")}
         aria-expanded={mobileOpen}
         aria-controls="primary-nav"
         onClick={() => {
@@ -86,8 +112,8 @@ export default function NavDropdowns() {
       >
         <span /><span /><span />
       </button>
-      <nav className="nav-links" id="primary-nav" aria-label="Primary">
-        {groups.map((group) => {
+      <nav className="nav-links" id="primary-nav" aria-label={isHindi ? "मुख्य नेविगेशन" : "Primary"}>
+        {translatedGroups.map((group) => {
           const isOpen = openGroup === group.id;
           const groupIsActive = group.links.some((item) => isCurrentPage(item.href));
           const menuId = `nav-menu-${group.id}`;

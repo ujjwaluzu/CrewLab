@@ -69,6 +69,11 @@ export function pageMetadata(options: {
     description: options.description,
     alternates: {
       canonical: options.canonical,
+      languages: {
+        "en-IN": `${SITE_URL}${options.canonical}`,
+        "hi-IN": `${SITE_URL}/hi${options.canonical}`,
+        "x-default": `${SITE_URL}${options.canonical}`,
+      },
     },
     openGraph: {
       title: `${options.title} | ${SITE_NAME}`,

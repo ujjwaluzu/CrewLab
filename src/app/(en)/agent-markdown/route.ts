@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { RESOURCES } from "@/lib/resources";
 import { pageFaqs } from "@/lib/faqs";
+import { HINDI_LINK_LABELS, HINDI_PAGES, hindiPath } from "@/lib/hindi-site";
 import {
   HOMEPAGE_DESCRIPTION,
   HOMEPAGE_TITLE,
@@ -62,6 +63,32 @@ function renderResource(slug: string): string | null {
 }
 
 function renderPage(path: string): string | null {
+  if (path === "/hi" || path.startsWith("/hi/")) {
+    const localizedPath = path === "/hi" ? "/" : path.slice(3);
+    const localizedPage = HINDI_PAGES[localizedPath];
+    if (!localizedPage) return null;
+    const sections = localizedPage.sections.flatMap((section) => [
+      `## ${section.heading}`,
+      ...(section.intro ? [section.intro] : []),
+      ...(section.cards ?? []).map((card) => card.href
+        ? `- [${card.title}](${SITE_URL}${hindiPath(card.href)}): ${card.text}`
+        : `- **${card.title}:** ${card.text}`),
+    ]);
+    const faqs = localizedPage.faqs.flatMap((faq) => [`### ${faq.question}`, faq.answer]);
+    const related = (localizedPage.related ?? []).map((route) =>
+      `- [${HINDI_LINK_LABELS[route] ?? route}](${SITE_URL}${hindiPath(route)})`,
+    );
+    return [
+      `# ${localizedPage.title}`,
+      localizedPage.lede,
+      ...sections,
+      "## अक्सर पूछे जाने वाले सवाल",
+      ...faqs,
+      "## आगे पढ़ें",
+      ...related,
+    ].join("\n\n");
+  }
+
   if (path.startsWith("/resources/")) {
     return renderResource(path.slice("/resources/".length));
   }
