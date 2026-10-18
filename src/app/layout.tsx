@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Newsreader, Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
+import { Geist, JetBrains_Mono, Newsreader, Plus_Jakarta_Sans, Space_Grotesk, Space_Mono } from "next/font/google";
 import "./globals.css";
 import SvgDefs from "@/components/SvgDefs";
 import SchemaOrg from "@/components/SchemaOrg";
@@ -28,6 +28,24 @@ const displayFont = Newsreader({
 });
 const monoFont = Space_Mono({
   variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+});
+const crewBodyFont = Geist({
+  variable: "--font-cl-body",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+});
+const crewDisplayFont = Space_Grotesk({
+  variable: "--font-cl-display",
+  subsets: ["latin"],
+  weight: ["500", "700"],
+  display: "swap",
+});
+const crewMonoFont = JetBrains_Mono({
+  variable: "--font-cl-mono",
   subsets: ["latin"],
   weight: ["400", "700"],
   display: "swap",
@@ -110,7 +128,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-IN" className={`${bodyFont.variable} ${displayFont.variable} ${monoFont.variable}`}>
+    <html lang="en-IN" className={`${bodyFont.variable} ${displayFont.variable} ${monoFont.variable} ${crewBodyFont.variable} ${crewDisplayFont.variable} ${crewMonoFont.variable}`}>
       <body>
         <SvgDefs />
         <SchemaOrg />
