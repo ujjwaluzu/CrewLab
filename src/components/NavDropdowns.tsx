@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { LANDING_PAGES, SOCIAL } from "@/lib/site";
 
 const groups = [
@@ -34,6 +35,11 @@ export default function NavDropdowns() {
   const [openGroup, setOpenGroup] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname() ?? "";
+
+  function isCurrentPage(href: string) {
+    return href.startsWith("/") && (pathname === href || (href !== "/" && pathname.startsWith(`${href}/`)));
+  }
 
   useEffect(() => {
     if (!openGroup && !mobileOpen) return;
@@ -83,10 +89,11 @@ export default function NavDropdowns() {
       <nav className="nav-links" id="primary-nav" aria-label="Primary">
         {groups.map((group) => {
           const isOpen = openGroup === group.id;
+          const groupIsActive = group.links.some((item) => isCurrentPage(item.href));
           const menuId = `nav-menu-${group.id}`;
 
           return (
-            <div className={`nav-dropdown${isOpen ? " is-open" : ""}`} key={group.id}>
+            <div className={`nav-dropdown${isOpen ? " is-open" : ""}${groupIsActive ? " is-active" : ""}`} key={group.id}>
               <button
                 className="nav-trigger"
                 type="button"
@@ -101,6 +108,8 @@ export default function NavDropdowns() {
                     <Link
                       href={item.href}
                       key={item.href}
+                      className={isCurrentPage(item.href) ? "is-current-page" : undefined}
+                      aria-current={isCurrentPage(item.href) ? "page" : undefined}
                       target={"external" in item ? "_blank" : undefined}
                       rel={"external" in item ? "noopener noreferrer" : undefined}
                       onClick={() => {

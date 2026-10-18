@@ -17,7 +17,7 @@ const steps = [
 const crewItems = LANDING_PAGES.map((page) => ({ title: page.label, description: page.description, href: page.path }));
 
 function Logo() {
-  return <Link className="cl-logo" href="/" aria-label="CrewLab home"><BrandMark /><span>CREWLAB</span></Link>;
+  return <Link className="cl-logo" href="/" aria-label="CrewLab home" aria-current="page"><BrandMark /><span>CREWLAB</span></Link>;
 }
 
 function SectionHead({ id, title, intro, count }: { id: string; title: string; intro: string; count?: string }) {
