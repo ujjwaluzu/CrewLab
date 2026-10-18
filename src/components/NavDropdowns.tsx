@@ -152,8 +152,8 @@ export default function NavDropdowns() {
             </div>
           );
         })}
+        <LocaleSwitcher />
       </nav>
-      <LocaleSwitcher />
     </div>
   );
 }
