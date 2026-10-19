@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { LANDING_PAGES } from "@/lib/site";
-
+import LocaleSwitcher from "@/components/LocaleSwitcher";
 
 const groups = [
   {
@@ -152,6 +152,7 @@ export default function NavDropdowns() {
             </div>
           );
         })}
+        <LocaleSwitcher />
       </nav>
     </div>
   );
