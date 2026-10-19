@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LANDING_PAGES } from "@/lib/site";
 import BrandMark from "@/components/BrandMark";
-import LocaleSwitcher from "@/components/LocaleSwitcher";
 
 export default function SiteFooter() {
   const pathname = usePathname() ?? "";
@@ -26,7 +25,6 @@ export default function SiteFooter() {
         <div className="cl-cell cl-foot-brand">
           <Link className="cl-logo" href={homeHref} aria-label="CrewLab home" aria-current={pathname === homeHref ? "page" : undefined}><BrandMark /><span>CREWLAB</span></Link>
           <p>{isHindi ? "बिल्डरों के साथ, बेहतर विचारों को हकीकत बनाएँ।" : "Ideas to impact. Made for builders, by builders."}</p>
-          <LocaleSwitcher />
         </div>
         <div className="cl-cell cl-foot-links">
           <h3>{isHindi ? "अपने साथी खोजें" : "Find your crew"}</h3>

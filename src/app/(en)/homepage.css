@@ -36,9 +36,7 @@
 .crewlab-page .nav-mobile-toggle{display:none}
 .cl-nav-cta{text-align:right}
 .cl-nav-actions{display:flex;align-items:center;justify-content:flex-end;gap:14px}
-.cl-language-control{position:absolute;right:0;display:inline-flex;flex:none;align-items:center}
-.cl-language-select{min-width:54px;min-height:38px;padding:0 18px 0 9px;border:1px solid var(--cl-line);border-radius:0;background:var(--cl-bg);color:var(--cl-text);font:500 11px/1 var(--cl-mono);letter-spacing:.04em;cursor:pointer}
-.cl-language-select:hover,.cl-language-select:focus-visible{border-color:var(--cl-red);color:var(--cl-red-hover)}
+
 .cl-nav-waitlist-short{display:none}
 .cl-button{display:inline-flex;min-height:46px;align-items:center;justify-content:center;gap:8px;padding:13px 22px;background:var(--cl-red);color:var(--cl-ink)!important;border:1px solid var(--cl-red);font:700 13px/1.2 var(--cl-mono);letter-spacing:.04em;text-transform:uppercase;transition:color 150ms ease,background-color 150ms ease,border-color 150ms ease}
 .cl-button:hover{background:var(--cl-red-hover);border-color:var(--cl-red-hover)}
@@ -191,7 +189,7 @@ body:has(.crewlab-page){margin:0;background:var(--cl-bg)}
   .cl-row.cl-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;grid-template-columns:minmax(0,1fr) 112px auto!important;align-items:center}.cl-nav-brand{grid-column:1;grid-row:1}.cl-nav-links{grid-column:2;grid-row:1;display:flex;min-width:0;overflow:visible}.cl-nav-cta{grid-column:3;grid-row:1;text-align:right}
   .cl-nav .cl-cell{padding:14px 20px;border:0}.cl-cell{border-right:0;border-bottom:1px solid var(--cl-line);padding:26px 22px}.cl-cell:last-child{border-bottom:0}
   .crewlab-page .nav-shell{position:static;justify-content:flex-end}
-  .crewlab-page .nav-shell .cl-language-control{position:static;align-self:flex-end;margin:8px 0 4px;padding-top:10px;border-top:1px solid var(--cl-line)}
+
   .crewlab-page .nav-mobile-toggle{display:flex;width:40px;height:40px;min-height:40px;flex:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;border:1px solid var(--cl-line);border-radius:0;background:var(--cl-panel-2);cursor:pointer}
   .crewlab-page .nav-mobile-toggle span{display:block;width:17px;height:1px;border-radius:0;background:var(--cl-text);transition:transform 150ms ease,opacity 150ms ease}
   .crewlab-page .nav-shell.is-mobile-open .nav-mobile-toggle span:first-child{transform:translateY(6px) rotate(45deg)}
@@ -213,7 +211,7 @@ body:has(.crewlab-page){margin:0;background:var(--cl-bg)}
   .cl-foot-brand{grid-column:auto}.cl-wordmark{grid-template-columns:repeat(7,minmax(0,1fr))!important}.cl-wordmark span{font-size:clamp(38px,11vw,90px)}
 }
 @media(max-width:500px){
-  .cl-language-select{min-width:48px;min-height:36px;padding-left:6px;padding-right:15px;font-size:10px}
+
   .crewlab-hi .cl-page-hero h1{font-size:clamp(34px,9vw,48px)!important}
   .cl-wrap{border-inline:1px solid var(--cl-line)}.cl-nav .cl-cell{padding-inline:8px}.cl-nav-cta .cl-button{padding:11px 8px;font-size:10px;min-height:40px}
   .cl-cell{padding:23px 18px}.cl-hero-copy{padding:38px 18px 42px}.cl-droid-cell{padding:22px}.cl-droid-art{width:min(76vw,270px)}.cl-kicker{font-size:10px;margin-bottom:24px}.cl-hero h1{font-size:clamp(44px,10.2vw,54px)}
