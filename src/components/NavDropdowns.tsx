@@ -19,6 +19,7 @@ const groups = [
       { href: "/explore", label: "Explore projects" },
       { href: "/how-it-works", label: "How it works" },
       { href: "/features", label: "Features" },
+      { href: "https://tools.ujjwaluzu.in", label: "Tools", external: true },
       { href: "/resources", label: "Guides & resources" },
     ],
   },
@@ -57,7 +58,7 @@ export default function NavDropdowns() {
     label: isHindi ? ({ crew: "साथी", product: "उत्पाद", company: "कंपनी" }[group.id] ?? group.label) : group.label,
     links: group.links.map((item) => ({
       ...item,
-      href: localePath(item.href),
+      href: "external" in item ? item.href : localePath(item.href),
       label: isHindi ? hiLabels[item.label] ?? item.label : item.label,
     })),
   }));
