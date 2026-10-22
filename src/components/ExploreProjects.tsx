@@ -5,10 +5,7 @@ type Project = {
   skills: string[];
   filled: number;
   need: number;
-  builders: string[];
 };
-
-const PALETTE = ["var(--red)", "var(--tan)", "var(--paper)"];
 
 const projects: Project[] = [
   {
@@ -18,7 +15,6 @@ const projects: Project[] = [
     skills: ["Frontend", "Backend", "UI/UX"],
     filled: 3,
     need: 5,
-    builders: ["KS", "NM", "AJ"],
   },
   {
     name: "HabitHub",
@@ -27,7 +23,6 @@ const projects: Project[] = [
     skills: ["Mobile", "Design", "Marketing"],
     filled: 2,
     need: 4,
-    builders: ["PP", "SR"],
   },
   {
     name: "DevConnect",
@@ -36,7 +31,6 @@ const projects: Project[] = [
     skills: ["React", "Node", "Community"],
     filled: 4,
     need: 6,
-    builders: ["DK", "VK", "RA", "TM"],
   },
   {
     name: "EcoTrack",
@@ -45,7 +39,6 @@ const projects: Project[] = [
     skills: ["Mobile", "Data", "Design"],
     filled: 2,
     need: 5,
-    builders: ["IJ", "WA"],
   },
   {
     name: "CampusHub",
@@ -54,7 +47,6 @@ const projects: Project[] = [
     skills: ["Product", "Design", "Community"],
     filled: 1,
     need: 4,
-    builders: ["SB"],
   },
   {
     name: "NightOwl",
@@ -63,7 +55,6 @@ const projects: Project[] = [
     skills: ["Web", "AI", "Community"],
     filled: 2,
     need: 5,
-    builders: ["MR", "ZT"],
   },
 ];
 
@@ -86,11 +77,6 @@ export default function ExploreProjects() {
               ))}
             </div>
             <div className="x-build">
-              <span className="x-avs" aria-hidden="true">
-                {project.builders.slice(0, project.filled).map((builder, i) => (
-                  <i key={builder} style={{ background: PALETTE[i % PALETTE.length] }}>{builder}</i>
-                ))}
-              </span>
               <span className="x-seek">
                 <b>{project.filled}</b> / {project.need} builders · {project.need - project.filled} open
               </span>
