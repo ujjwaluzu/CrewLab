@@ -5,6 +5,7 @@ import { FeatureDroid } from "@/components/visuals/FeatureDroid";
 import WaitlistForm from "@/components/WaitlistForm";
 import { LANDING_PAGES } from "@/lib/site";
 import { faqs } from "@/lib/faqs";
+import HomeLightsaber from "@/components/visuals/HomeLightsaber";
 import "./homepage.css";
 
 const homeFaqs = [faqs[0], faqs[1], faqs[2], faqs[3], faqs[5], faqs[9]];
@@ -52,6 +53,10 @@ export default function Home() {
       <section className="cl-section">
         <SectionHead id="how" title="How it works" intro="A simple way to go from a solo idea to a working project with the right cofounders and teammates." count="04" />
         <div className="cl-row cl-steps">{steps.map(([number, title, description]) => <article className="cl-cell cl-step" key={number}><span className="cl-mono cl-step-num">{number}</span><h3>{title}</h3><p>{description}</p></article>)}</div>
+      </section>
+
+      <section className="cl-section cl-how-flow" aria-label="CrewLab crew signal">
+        <HomeLightsaber />
       </section>
 
       <section className="cl-section">

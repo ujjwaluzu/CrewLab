@@ -178,7 +178,7 @@ export function FeatureDroid({ className, variant = "home" }: { className?: stri
             features travel out of sight round the dome's edge instead of
             floating off into the hero. */}
         <clipPath id="droid-dome-clip">
-          <path d="M88 146 A72 72 0 0 1 232 146 Z" />
+          <path d={variant === "crew" ? "M90 146 L95 108 Q98 87 119 78 Q160 61 201 78 Q222 87 225 108 L230 146 Z" : "M88 146 A72 72 0 0 1 232 146 Z"} />
         </clipPath>
       </defs>
 
@@ -281,7 +281,7 @@ export function FeatureDroid({ className, variant = "home" }: { className?: stri
                 y="156"
                 width="44"
                 height="180"
-                rx="9"
+                rx={variant === "crew" ? "16" : "9"}
                 fill="url(#droid-paint)"
               />
               {/* Accent strip uses ember rather than graphite. At leg scale a dark
@@ -350,12 +350,12 @@ export function FeatureDroid({ className, variant = "home" }: { className?: stri
 
               {/* Wide triangular foot. */}
               <path
-                d="M30 396 h68 l-8 30 H38 Z"
+                d={variant === "crew" ? "M30 400 q0-4 5-4 h58 q6 0 5 6 l-4 18 q-1 6-7 6 H41 q-6 0-7-6 Z" : "M30 396 h68 l-8 30 H38 Z"}
                 fill="url(#droid-paint)"
                 stroke="#78716c"
                 strokeWidth="0.75"
               />
-              <path d="M38 420 h52 l-1 6 H39 Z" fill="#3f3a37" />
+              {variant === "crew" ? <path d="M37 420 h54 l-2 6 H39 Z" fill="url(#droid-ember)" /> : <path d="M38 420 h52 l-1 6 H39 Z" fill="#3f3a37" />}
             </g>
           ))}
 
@@ -384,26 +384,26 @@ export function FeatureDroid({ className, variant = "home" }: { className?: stri
           />
 
           <g className="aiptx-droid-deploy">
-            <circle cx="160" cy="414" r="19" fill="#1c1917" />
-            <circle
-              cx="160"
-              cy="414"
-              r="19"
-              fill="none"
-              stroke="#3f3a37"
-              strokeWidth="2"
-            />
-            <circle cx="160" cy="414" r="11" fill="url(#droid-steel)" />
-            {/* Wheel spin: only the spokes turn, so the tyre stays put. */}
-            <g className="aiptx-droid-wheel">
-              <path
-                d="M160 404 v20 M150 414 h20 M153 407 l14 14 M167 407 l-14 14"
-                stroke="#1c1917"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </g>
-            <circle cx="160" cy="414" r="3.5" fill="#57534e" />
+            {variant === "crew" ? <g>
+              <path d="M145 404h30q8 0 8 8v7q0 8-8 8h-30q-8 0-8-8v-7q0-8 8-8z" fill="#1c1917" stroke="#3f3a37" strokeWidth="2" />
+              <path d="M143 420h34" stroke="url(#droid-ember)" strokeWidth="3" strokeLinecap="round" />
+              <circle cx="160" cy="414" r="7" fill="url(#droid-steel)" />
+              <circle cx="160" cy="414" r="2.5" fill="#f04a2e" />
+            </g> : <g>
+              <circle cx="160" cy="414" r="19" fill="#1c1917" />
+              <circle cx="160" cy="414" r="19" fill="none" stroke="#3f3a37" strokeWidth="2" />
+              <circle cx="160" cy="414" r="11" fill="url(#droid-steel)" />
+              {/* Wheel spin: only the spokes turn, so the tyre stays put. */}
+              <g className="aiptx-droid-wheel">
+                <path
+                  d="M160 404 v20 M150 414 h20 M153 407 l14 14 M167 407 l-14 14"
+                  stroke="#1c1917"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </g>
+              <circle cx="160" cy="414" r="3.5" fill="#57534e" />
+            </g>}
           </g>
 
           {/* --------------------------------------------------- torso */}
@@ -521,7 +521,7 @@ export function FeatureDroid({ className, variant = "home" }: { className?: stri
               swings sideways with the body. Only the tilt is cancelled, which
               is exactly what a levelled head does. */}
           <g className="aiptx-droid-level">
-            <path d="M88 146 A72 72 0 0 1 232 146 Z" fill="url(#droid-dome)" />
+            <path d={variant === "crew" ? "M90 146 L95 108 Q98 87 119 78 Q160 61 201 78 Q222 87 225 108 L230 146 Z" : "M88 146 A72 72 0 0 1 232 146 Z"} fill="url(#droid-dome)" />
 
             <g clipPath="url(#droid-dome-clip)">
               {/* Head rig, two stacked transforms so they compose: pitch on the
@@ -529,6 +529,7 @@ export function FeatureDroid({ className, variant = "home" }: { className?: stri
               <g className="aiptx-droid-tilt">
                 <g className="aiptx-droid-scan">
                   {/* Segmented panel markings. */}
+                  {variant === "crew" && <path d="M123 82 Q160 69 197 82 L193 90 Q160 78 127 90 Z" fill="url(#droid-ember)" opacity=".9" />}
                   <path d="M108 146 L124 92 h13 l-9 54 Z" fill="url(#droid-accent)" opacity="0.92" />
                   <path d="M212 146 L196 92 h-13 l9 54 Z" fill="url(#droid-accent)" opacity="0.92" />
                   <rect x="84" y="126" width="152" height="12" fill="url(#droid-accent)" opacity="0.92" />
@@ -621,7 +622,7 @@ export function FeatureDroid({ className, variant = "home" }: { className?: stri
 
             {/* Dome rim, on top of the clip so the edge stays crisp. */}
             <path
-              d="M88 146 A72 72 0 0 1 232 146"
+              d={variant === "crew" ? "M90 146 L95 108 Q98 87 119 78 Q160 61 201 78 Q222 87 225 108 L230 146" : "M88 146 A72 72 0 0 1 232 146"}
               fill="none"
               stroke="#a8a29e"
               strokeWidth="1.5"

@@ -5,7 +5,7 @@ import SiteFooter from "@/components/SiteFooter";
 import Icon from "@/components/Icon";
 import ExploreControls from "@/components/ExploreControls";
 import ExploreProjects from "@/components/ExploreProjects";
-import { FeatureDroid } from "@/components/visuals/FeatureDroid";
+import { ProductScene } from "@/components/visuals/ProductScene";
 import { pageFaqs } from "@/lib/faqs";
 import PageFaqSection from "@/components/PageFaqSection";
 
@@ -25,7 +25,7 @@ export default function ExplorePage() {
     <main id="top">
       <section className="cl-row cl-hero cl-page-hero" aria-labelledby="page-title">
         <div className="cl-cell cl-hero-copy"><p className="cl-mono cl-kicker"><i />Sample project examples | requested skills | join requests</p><h1 id="page-title"><span>Projects looking</span><span>for people who</span><span className="cl-page-highlight">want to build</span></h1><p className="cl-page-lede">Explore sample project listings, see what skills each one needs, and learn how builders can request to join when CrewLab opens.</p><div className="cl-actions"><Link className="cl-button" href="#browse">Explore project examples <Icon name="arrow" /></Link><Link className="cl-button cl-ghost" href="/waitlist">Join the waitlist <Icon name="arrow" /></Link></div></div>
-        <div className="cl-cell cl-droid-cell aiptx-droid-stage"><FeatureDroid className="cl-droid-art" variant="product" /></div>
+        <div className="cl-cell cl-droid-cell"><ProductScene initial="discovery" /></div>
       </section>
 
       <section className="cl-section" aria-label="How CrewLab brings projects and builders together">

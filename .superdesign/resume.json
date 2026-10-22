@@ -1,0 +1,93 @@
+{
+    "targets":  {
+                    "homepage-lightsaber":  {
+                                                "targetKind":  "existing-ui",
+                                                "brandAssets":  {
+                                                                    "logo":  {
+                                                                                 "url":  "https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/projects/20d39c39-08eb-4bab-8a78-ff0c5e7f03fa/brand-assets/public-crewlab-mark.svg/crewlab-mark.svg",
+                                                                                 "assetKey":  "public-crewlab-mark.svg",
+                                                                                 "sourcePath":  "src/components/BrandMark.tsx"
+                                                                             }
+                                                                },
+                                                "baselineDraftId":  "c39d52f8-407a-49e0-abf6-51b9de6c5dbb",
+                                                "drafts":  {
+                                                               "c39d52f8-407a-49e0-abf6-51b9de6c5dbb":  {
+                                                                                                            "title":  "CrewLab Workflow Figure Repro",
+                                                                                                            "currentVersion":  1,
+                                                                                                            "parentDraftId":  null,
+                                                                                                            "visualDirection":  "Faithful reproduction baseline"
+                                                                                                        },
+                                                               "e0f77d14-7df4-462c-9214-cb13b1f58920":  {
+                                                                                                            "title":  "CrewLab Workflow - Orbital Ecosystem",
+                                                                                                            "currentVersion":  1,
+                                                                                                            "parentDraftId":  "c39d52f8-407a-49e0-abf6-51b9de6c5dbb",
+                                                                                                            "visualDirection":  "Orbital ecosystem; superseded by user lightsaber direction"
+                                                                                                        },
+                                                               "7b49219d-36e7-4653-97e6-56b3be81bb7f":  {
+                                                                                                            "title":  "CrewLab Living Network Reef",
+                                                                                                            "currentVersion":  1,
+                                                                                                            "parentDraftId":  "c39d52f8-407a-49e0-abf6-51b9de6c5dbb",
+                                                                                                            "visualDirection":  "Network reef; superseded by user lightsaber direction"
+                                                                                                        },
+                                                               "37b79a09-3ac7-4aa5-a410-f547816909e5":  {
+                                                                                                            "title":  "CrewLab Lightsaber Feature Concept",
+                                                                                                            "currentVersion":  2,
+                                                                                                            "parentDraftId":  "c39d52f8-407a-49e0-abf6-51b9de6c5dbb",
+                                                                                                            "visualDirection":  "Vertical graphite and silver hilt with a coral red blade and accessible toggle"
+                                                                                                        }
+                                                           },
+                                                "contextFiles":  [
+                                                                     ".superdesign/design-system.md",
+                                                                     "src/components/anatomy/CrewFlowFigure.tsx",
+                                                                     "src/components/anatomy/crew-flow-live.tsx",
+                                                                     "src/components/anatomy/crew-flow-art.tsx",
+                                                                     "src/components/anatomy/crew-flow-model.ts",
+                                                                     "src/components/anatomy/crew-flow-geometry.ts",
+                                                                     "src/components/anatomy/crew-flow-view.ts",
+                                                                     "src/components/anatomy/crew-flow.css",
+                                                                     "src/components/anatomy/kit/iso.css",
+                                                                     "src/app/(en)/homepage.css",
+                                                                     "src/app/(en)/how-it-works/page.tsx",
+                                                                     "src/components/Landing.tsx"
+                                                                 ],
+                                                "projectId":  "20d39c39-08eb-4bab-8a78-ff0c5e7f03fa",
+                                                "designSystemPath":  ".superdesign/design-system.md",
+                                                "fingerprints":  {
+                                                                     ".superdesign/design-system.md":  "2f55e47e7888f148704411bc33a30c9b767cb588f8ecfb129d4719f1bfb5e4db",
+                                                                     "src/components/anatomy/CrewFlowFigure.tsx":  "ffce322de6db23cabe80991ff7e76bd280aeac18c939bb8e1495e8fb5e074c54",
+                                                                     "src/components/anatomy/crew-flow-live.tsx":  "5cb4f94a7a94a00510eb0e5343337e360cb384ece13e8c30407154d580ee7060",
+                                                                     "src/components/anatomy/crew-flow-art.tsx":  "032e74229f59cd48f856c2b58b0b567393f8c96d2cc544578e5f8bb20ef8e400",
+                                                                     "src/components/anatomy/crew-flow-model.ts":  "5dc5bead24cbae96e62c4ed82162dd510cf6e728544b5ce2c6fbc9b8a8b27d54",
+                                                                     "src/components/anatomy/crew-flow-geometry.ts":  "8b702c28d8cf70152e335779cf538cc6d383d0569aa597e554cf756882b4d67c",
+                                                                     "src/components/anatomy/crew-flow-view.ts":  "dc8a6b3589b6cb1e58b0fedd63f25e8a5e037bf58115be13c625cee97ec54a99",
+                                                                     "src/components/anatomy/crew-flow.css":  "4ea4db6dc3f2fea0cff074f5f3147428e3bf5c71e7e2226f6b746a96c5c7ba53",
+                                                                     "src/components/anatomy/kit/iso.css":  "ef19bac5a42ba9be42b56b2c1cf7fc7e21d332a8060765e9ca1d987b8ab23924",
+                                                                     "src/app/(en)/homepage.css":  "ce4e4cd2bb6d03cf84fb1e5564db84b9cf97fddf7448d5f6506ec386fa1727d8",
+                                                                     "src/app/(en)/how-it-works/page.tsx":  "c1d355fe7a9e8e6d1a19b8763ba2c4af28f3feac6a457f477681d8194c9e610d",
+                                                                     "src/components/Landing.tsx":  "ffa770ccf7946ed9394e8cd14b2efad1104d7c7bd089cadfa5e4722cf60c5960"
+                                                                 },
+                                                "activeDraftId":  "37b79a09-3ac7-4aa5-a410-f547816909e5",
+                                                "components":  [
+                                                                   {
+                                                                       "logoAssetKey":  "public-crewlab-mark.svg",
+                                                                       "name":  "SiteHeader",
+                                                                       "id":  "a4704cc5-327b-4aef-82d0-60cb73141653",
+                                                                       "sourcePath":  "src/components/SiteHeader.tsx"
+                                                                   },
+                                                                   {
+                                                                       "logoAssetKey":  "public-crewlab-mark.svg",
+                                                                       "name":  "SiteFooter",
+                                                                       "id":  "2f63a833-7a3a-4ac7-9323-280d170a7850",
+                                                                       "sourcePath":  "src/components/SiteFooter.tsx"
+                                                                   }
+                                                               ],
+                                                "updatedAt":  "2026-10-22T06:55:15.4949672Z",
+                                                "referenceIds":  [
+                                                                     "6e95b93a-8dee-424f-bad7-95baaf30cba4",
+                                                                     "321c7444-cbff-4cca-8ad4-f5fe3c4b60a5",
+                                                                     "public-crewlab-mark.svg"
+                                                                 ]
+                                            }
+                },
+    "schemaVersion":  1
+}

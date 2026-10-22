@@ -5,7 +5,12 @@ import Icon from "@/components/Icon";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import PageFaqSection from "@/components/PageFaqSection";
+import { CrewAssembly } from "@/components/visuals/CrewAssembly";
 import { FeatureDroid } from "@/components/visuals/FeatureDroid";
+import { isCrewFocusedPage } from "@/lib/site";
+import { ProductScene } from "@/components/visuals/ProductScene";
+import { productLayerForPath } from "@/lib/product-scene";
+import { CrewFlowFigure } from "@/components/anatomy/CrewFlowFigure";
 
 export type LandingCard = {
   icon: "doc" | "users" | "code" | "bars" | "bulb" | "branch" | "check" | "chat" | "pulse" | "grid" | "search";
@@ -71,6 +76,8 @@ export default function Landing({ config }: { config: LandingConfig }) {
   const related = LANDING_PAGES.filter((page) => page.path !== config.path);
   const title = [...config.titleLines, config.highlight];
   const droidVariant = config.path === "/features" || config.path === "/how-it-works" ? "product" : "crew";
+  const explainsFlow = config.path === "/how-it-works";
+  const productLayer = explainsFlow ? undefined : productLayerForPath(config.path);
 
   return <div className="crewlab-page"><div className="cl-wrap">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(config)) }} />
@@ -83,8 +90,12 @@ export default function Landing({ config }: { config: LandingConfig }) {
           <p className="cl-page-lede">{config.lede}</p>
           <div className="cl-actions"><Link className="cl-button" href={config.primaryHref}>{config.primaryLabel}<span aria-hidden="true">→</span></Link><Link className="cl-button cl-ghost" href={config.secondaryHref}>{config.secondaryLabel}</Link></div>
         </div>
-        <div className="cl-cell cl-droid-cell aiptx-droid-stage"><FeatureDroid className="cl-droid-art" variant={droidVariant} /></div>
+        <div className="cl-cell cl-droid-cell">
+          {isCrewFocusedPage(config.path) ? <CrewAssembly className="cl-droid-art" /> : productLayer ? <ProductScene initial={productLayer} /> : <div className="aiptx-droid-stage"><FeatureDroid className="cl-droid-art" variant={droidVariant} /></div>}
+        </div>
       </section>
+
+      {explainsFlow && <section className="cl-section cl-how-flow"><CrewFlowFigure /></section>}
 
       {config.sections.map((section, index) => <section className="cl-section" id={section.id} key={section.id} aria-label={section.label}>
         <SectionHead label={section.label} title={`${section.heading}${section.emphasis ? ` ${section.emphasis}` : ""}`} intro={section.intro} count={index + 1} />

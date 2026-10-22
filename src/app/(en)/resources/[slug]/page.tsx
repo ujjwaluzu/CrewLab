@@ -5,6 +5,8 @@ import { pageMetadata, SITE_NAME, SITE_URL } from "@/lib/site";
 import { getResource, RESOURCES } from "@/lib/resources";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { ProductScene } from "@/components/visuals/ProductScene";
+import { productLayerForPath } from "@/lib/product-scene";
 
 type ResourcePageProps = { params: Promise<{ slug: string }> };
 
@@ -55,6 +57,7 @@ export default async function ResourceArticlePage({ params }: ResourcePageProps)
               <h1>{resource.title}</h1>
               <p className="cl-resource-intro">{resource.introduction}</p>
             </header>
+            <div className="cl-resource-scene"><ProductScene initial={productLayerForPath(`/resources/${resource.slug}`) ?? "brief"} /></div>
             <div className="cl-resource-body">
               {resource.sections.map((section) => (
                 <section key={section.heading}>

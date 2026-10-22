@@ -53,6 +53,12 @@ export const LANDING_PAGES = [
   },
 ] as const;
 
+export const CREW_ASSEMBLY_PATHS = LANDING_PAGES.map(({ path }) => path);
+
+export function isCrewFocusedPage(path: string) {
+  return (CREW_ASSEMBLY_PATHS as readonly string[]).includes(path);
+}
+
 export const SOCIAL = {
   discord: "https://discord.gg/m97vTraKq",
   instagram: "https://instagram.com/crewlab.in",

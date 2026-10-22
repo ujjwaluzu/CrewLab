@@ -1,0 +1,50 @@
+# Key page dependency trees
+
+## `/` Home
+Entry: `src/app/(en)/page.tsx`
+- `src/components/BrandMark.tsx`
+- `src/components/NavDropdowns.tsx`
+  - `src/components/LocaleSwitcher.tsx`
+  - `src/lib/site.ts`
+- `src/components/visuals/FeatureDroid.tsx`
+- `src/components/WaitlistForm.tsx`
+- `src/components/anatomy/CrewFlowFigure.tsx`
+  - `src/components/anatomy/kit/react/draw.tsx`
+  - `src/components/anatomy/crew-flow-art.tsx`
+    - `src/components/anatomy/crew-flow-geometry.ts`
+    - `src/components/anatomy/crew-flow-view.ts`
+  - `src/components/anatomy/crew-flow-live.tsx`
+    - `src/components/anatomy/kit/react/live.tsx`
+    - `src/components/anatomy/crew-flow-model.ts`
+- `src/components/ProjectCard.tsx`
+- `src/components/SectionHeader.tsx`
+- `src/lib/site.ts`
+- `src/lib/faqs.ts`
+- `src/app/(en)/homepage.css`
+
+## `/how-it-works`
+Entry: `src/app/(en)/how-it-works/page.tsx`
+- `src/components/Landing.tsx`
+  - `src/components/SiteHeader.tsx`
+    - `src/components/BrandMark.tsx`
+    - `src/components/NavDropdowns.tsx`
+      - `src/components/LocaleSwitcher.tsx`
+  - `src/components/SiteFooter.tsx`
+  - `src/components/visuals/CrewAssembly.tsx`
+  - `src/components/visuals/ProductScene.tsx`
+  - `src/components/visuals/FeatureDroid.tsx`
+  - `src/components/anatomy/CrewFlowFigure.tsx`
+    - `src/components/anatomy/kit/react/draw.tsx`
+    - `src/components/anatomy/crew-flow-art.tsx`
+      - `src/components/anatomy/crew-flow-geometry.ts`
+      - `src/components/anatomy/crew-flow-view.ts`
+    - `src/components/anatomy/crew-flow-live.tsx`
+      - `src/components/anatomy/kit/react/live.tsx`
+      - `src/components/anatomy/crew-flow-model.ts`
+  - `src/components/Icon.tsx`
+  - `src/components/PageFaqSection.tsx`
+  - `src/lib/site.ts`
+  - `src/lib/faqs.ts`
+  - `src/app/(en)/homepage.css`
+- `src/app/(en)/layout.tsx`
+- `src/app/(en)/globals.css`
