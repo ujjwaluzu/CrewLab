@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import BrandMark from "@/components/BrandMark";
 import "./global-not-found.css";
+import "./(en)/homepage.css";
 
 export const metadata: Metadata = {
   title: "Page not found | CrewLab",
@@ -11,11 +13,11 @@ export default function GlobalNotFound() {
   return (
     <html lang="en-IN">
       <body>
-        <main className="global-404">
+        <main className="global-404 crewlab-page">
           <header className="global-404-header">
             <Link className="global-404-brand" href="/" aria-label="CrewLab home">
-              <span className="global-404-mark" aria-hidden="true">C</span>
-              CrewLab
+              <BrandMark />
+              <span>CREWLAB</span>
             </Link>
             <span className="global-404-status">Page not found <span aria-hidden="true">/</span> 404</span>
           </header>
@@ -27,9 +29,9 @@ export default function GlobalNotFound() {
               <p className="global-404-description">
                 The link may be outdated, or this page may have moved. Let&apos;s get you back to finding your people and building something real.
               </p>
-              <div className="global-404-actions">
-                <Link className="global-404-button global-404-button-primary" href="/">Back to CrewLab <span aria-hidden="true">↗</span></Link>
-                <Link className="global-404-button" href="/explore">Explore projects</Link>
+              <div className="cl-actions global-404-actions">
+                <Link className="cl-button" href="/">Back to CrewLab <span aria-hidden="true">&#8594;</span></Link>
+                <Link className="cl-button cl-ghost" href="/explore">Explore projects</Link>
               </div>
             </div>
 
@@ -47,7 +49,7 @@ export default function GlobalNotFound() {
 
           <footer className="global-404-footer">
             <span>Good things happen when you build together.</span>
-            <Link href="/hi">हिन्दी में देखें <span aria-hidden="true">↗</span></Link>
+            <Link href="/hi">Hindi site <span aria-hidden="true">&#8599;</span></Link>
           </footer>
         </main>
       </body>
