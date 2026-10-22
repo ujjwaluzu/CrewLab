@@ -427,3 +427,99 @@ body:has(.crewlab-page){margin:0;background:var(--cl-bg)}
 @media(prefers-reduced-motion:reduce){
   .home-saber *{scroll-behavior:auto!important;transition-duration:0.01ms!important;animation-duration:0.01ms!important;animation-iteration-count:1!important}
 }
+
+/* Shared spacing and text alignment across the English and Hindi page grids. */
+.crewlab-page{
+  --cl-cell-space:clamp(20px,2.2vw,28px);
+  --cl-section-space:clamp(20px,2.4vw,30px);
+}
+.cl-cell{padding:var(--cl-cell-space)}
+.cl-hero-copy{padding:clamp(32px,4vw,48px) var(--cl-cell-space) clamp(36px,4.6vw,56px)}
+.cl-section-head .cl-cell,
+.cl-page-card-grid .cl-cell,
+.cl-page-bullet .cl-cell,
+.cl-page-related-grid .cl-cell,
+.cl-faq-summary .cl-cell{padding:var(--cl-cell-space)}
+.cl-section-head .cl-head-title,
+.cl-section-head .cl-head-copy,
+.cl-page-card,
+.cl-page-bullet-copy,
+.cl-page-related-card,
+.cl-faq-question,
+.cl-join-title,
+.cl-join-form{text-align:start}
+.cl-section-head .cl-head-title{align-items:flex-start;justify-content:center;gap:8px}
+.cl-section-head .cl-head-copy{justify-content:flex-start}
+.cl-section-head .cl-head-count{align-items:flex-end;text-align:end}
+.cl-page-hero .cl-hero-copy{min-height:390px}
+.cl-page-lede{max-width:54ch;margin-top:18px}
+.cl-page-hero .cl-actions{margin-top:22px}
+.cl-page-card{min-height:208px}
+.cl-page-related-card{min-height:168px}
+.cl-page-fine{padding:16px var(--cl-cell-space)}
+.cl-step{min-height:252px}
+.cl-step h3{margin-top:48px}
+.cl-join-title{padding-block:clamp(40px,5vw,56px)}
+.cl-join-form{padding-block:clamp(32px,4vw,44px)}
+.cl-waitlist-copy,.cl-not-found-copy{padding-block:clamp(32px,4.5vw,56px)}
+.cl-waitlist-form{padding:clamp(24px,3vw,36px)}
+.cl-waitlist-point .cl-cell{padding:12px 16px}
+.cl-crew-item .cl-cell{padding:18px var(--cl-cell-space)}
+.cl-faq-answer{padding:0 clamp(72px,10vw,128px) var(--cl-section-space)}
+.cl-copyright .cl-cell{padding-block:14px}
+.cl-resource-index,.cl-resource-article{padding:clamp(24px,4vw,56px) clamp(18px,5vw,64px)}
+.cl-resource-hero{margin-bottom:36px}
+.cl-resource-scene{margin-bottom:36px}
+.cl-resource-body{padding-top:22px}
+.cl-resource-body section{margin-bottom:var(--cl-section-space)}
+.cl-resource-cta{margin-top:32px;padding:20px}
+.cl-resource-card{min-height:228px;padding:24px}
+.cl-resource-card h2{margin-top:18px}
+.cl-resource-card>p{margin-bottom:18px}
+.cl-explore-tools{padding:20px 24px}
+.cl-explore-browse .x-card-body{padding:18px}
+.home-saber{padding:clamp(26px,4vw,52px) clamp(18px,5vw,64px)}
+
+@media(max-width:820px){
+  .crewlab-page{--cl-cell-space:20px;--cl-section-space:24px}
+  .cl-cell{padding:var(--cl-cell-space)}
+  .cl-hero-copy{padding:32px var(--cl-cell-space) 38px}
+  .cl-section-head .cl-cell,
+  .cl-page-card-grid .cl-cell,
+  .cl-page-bullet .cl-cell,
+  .cl-page-related-grid .cl-cell,
+  .cl-faq-summary .cl-cell{padding:var(--cl-cell-space)}
+  .cl-page-hero .cl-hero-copy{min-height:0}
+  .cl-page-card,.cl-page-related-card{min-height:0}
+  .cl-page-fine{padding-inline:var(--cl-cell-space)}
+  .cl-step{min-height:0}
+  .cl-step h3{margin-top:32px}
+  .cl-join-title{min-height:0;padding-block:36px}
+  .cl-join-form{padding-block:28px}
+  .cl-waitlist-copy,.cl-not-found-copy{padding-block:32px}
+  .cl-waitlist-form{padding:24px var(--cl-cell-space)}
+  .cl-waitlist-point .cl-cell{padding:12px var(--cl-cell-space)}
+  .cl-faq-answer{padding:0 64px 18px}
+}
+@media(max-width:500px){
+  .crewlab-page{--cl-cell-space:17px;--cl-section-space:20px}
+  .cl-cell{padding:var(--cl-cell-space)}
+  .cl-hero-copy{padding:30px var(--cl-cell-space) 34px}
+  .cl-section-head .cl-cell,
+  .cl-page-card-grid .cl-cell,
+  .cl-page-bullet .cl-cell,
+  .cl-page-related-grid .cl-cell,
+  .cl-faq-summary .cl-cell{padding:var(--cl-cell-space)}
+  .cl-crew-item .cl-cell{padding:16px var(--cl-cell-space)}
+  .cl-section-head .cl-head-count{align-items:flex-start;text-align:start}
+  .cl-join-title{padding-block:28px}
+  .cl-join-form{padding:24px var(--cl-cell-space)}
+  .cl-faq-answer{padding:0 52px 16px}
+  .cl-resource-index,.cl-resource-article{padding:22px var(--cl-cell-space)}
+  .cl-resource-hero,.cl-resource-scene{margin-bottom:28px}
+  .cl-resource-card{min-height:0;padding:20px}
+  .cl-resource-cta{margin-top:26px;padding:18px}
+  .cl-explore-tools{padding:18px var(--cl-cell-space)}
+  .cl-explore-browse .x-card-body{padding:16px}
+  .home-saber{padding:26px var(--cl-cell-space)}
+}
