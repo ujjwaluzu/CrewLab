@@ -5,12 +5,13 @@ import Icon from "@/components/Icon";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import PageFaqSection from "@/components/PageFaqSection";
-import { CrewAssembly } from "@/components/visuals/CrewAssembly";
-import { FeatureDroid } from "@/components/visuals/FeatureDroid";
-import { isCrewFocusedPage } from "@/lib/site";
+import { CrewGridAnimation } from "@/components/visuals/CrewGridAnimation";
 import { ProductScene } from "@/components/visuals/ProductScene";
-import { productLayerForPath } from "@/lib/product-scene";
 import { CrewFlowFigure } from "@/components/anatomy/CrewFlowFigure";
+import { isCrewFocusedPage } from "@/lib/site";
+import { productLayerForPath } from "@/lib/product-scene";
+import HeroCube, { type HeroCubeFace } from "@/components/visuals/HeroCube";
+import AboutKeyboard from "@/components/visuals/AboutKeyboard";
 
 export type LandingCard = {
   icon: "doc" | "users" | "code" | "bars" | "bulb" | "branch" | "check" | "chat" | "pulse" | "grid" | "search";
@@ -38,6 +39,7 @@ export type LandingConfig = {
   highlight: string;
   lede: string;
   note?: string;
+  heroFaces?: readonly HeroCubeFace[];
   primaryLabel: string;
   primaryHref: string;
   secondaryLabel: string;
@@ -75,23 +77,29 @@ function SectionHead({ label, title, intro, count }: { label: string; title: str
 export default function Landing({ config }: { config: LandingConfig }) {
   const related = LANDING_PAGES.filter((page) => page.path !== config.path);
   const title = [...config.titleLines, config.highlight];
-  const droidVariant = config.path === "/features" || config.path === "/how-it-works" ? "product" : "crew";
   const explainsFlow = config.path === "/how-it-works";
-  const productLayer = explainsFlow ? undefined : productLayerForPath(config.path);
+  const isAboutPage = config.path === "/about";
+  const useHeroCube = (config.path === "/features" || explainsFlow) && config.heroFaces;
 
   return <div className="crewlab-page"><div className="cl-wrap">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(config)) }} />
     <SiteHeader />
     <main id="top">
-      <section className="cl-row cl-hero cl-page-hero" aria-labelledby="page-title">
+      <section className={`cl-row cl-hero cl-page-hero${isAboutPage ? " cl-about-page-hero" : ""}`} aria-labelledby="page-title">
         <div className="cl-cell cl-hero-copy">
           {config.note && <p className="cl-mono cl-kicker"><i />{config.note}</p>}
           <h1 id="page-title">{title.map((line, index) => <span key={`${line}-${index}`} className={index === title.length - 1 ? "cl-page-highlight" : undefined}>{line}</span>)}</h1>
           <p className="cl-page-lede">{config.lede}</p>
           <div className="cl-actions"><Link className="cl-button" href={config.primaryHref}>{config.primaryLabel}<span aria-hidden="true">→</span></Link><Link className="cl-button cl-ghost" href={config.secondaryHref}>{config.secondaryLabel}</Link></div>
         </div>
-        <div className="cl-cell cl-droid-cell">
-          {isCrewFocusedPage(config.path) ? <CrewAssembly className="cl-droid-art" /> : productLayer ? <ProductScene initial={productLayer} /> : <div className="aiptx-droid-stage"><FeatureDroid className="cl-droid-art" variant={droidVariant} /></div>}
+        <div className={`cl-cell cl-droid-cell${isAboutPage ? " cl-about-keyboard-cell" : ""}`}>
+          {isAboutPage
+            ? <AboutKeyboard />
+            : useHeroCube
+            ? <HeroCube faces={config.heroFaces!} label={`${config.crumb} interactive overview`} />
+            : isCrewFocusedPage(config.path)
+            ? <CrewGridAnimation />
+            : <ProductScene initial={productLayerForPath(config.path) ?? "discovery"} />}
         </div>
       </section>
 

@@ -3,6 +3,7 @@ import { pageMetadata } from "@/lib/site";
 import { RESOURCES } from "@/lib/resources";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { ProductScene } from "@/components/visuals/ProductScene";
 
 export const metadata = pageMetadata({
   title: "Startup and Builder Guides",
@@ -18,6 +19,7 @@ export default function ResourcesPage() {
         <SiteHeader />
         <main className="cl-resource-index">
           <header className="cl-resource-hero">
+            <ProductScene initial="discovery" />
             <p className="cl-mono">CrewLab resources</p>
             <h1>Guides for people who <span>build together.</span></h1>
             <p>Practical advice for founders forming a team and builders choosing projects to join.</p>

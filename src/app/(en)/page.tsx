@@ -34,12 +34,12 @@ export default function Home() {
     <header className="cl-row cl-nav">
       <div className="cl-cell cl-nav-brand"><Logo /></div>
       <div className="cl-cell cl-nav-links"><NavDropdowns /></div>
-      <div className="cl-cell cl-nav-cta"><div className="cl-nav-actions"><a className="cl-button" href="/waitlist"><span className="cl-nav-waitlist-full">Join the waitlist</span><span className="cl-nav-waitlist-short">Waitlist</span><span aria-hidden="true">&#8594;</span></a></div></div>
+      <div className="cl-cell cl-nav-cta"><div className="cl-nav-actions"><Link className="cl-button" href="/waitlist"><span className="cl-nav-waitlist-full">Join the waitlist</span><span className="cl-nav-waitlist-short">Waitlist</span><span aria-hidden="true">&#8594;</span></Link></div></div>
     </header>
 
     <main id="top">
       <section className="cl-row cl-hero" aria-labelledby="hero-title">
-        <div className="cl-cell cl-hero-copy"><p className="cl-mono cl-kicker"><i /> CrewLab&nbsp; · &nbsp;India-first builder community&nbsp; · &nbsp;Cofounders&nbsp; · &nbsp;Side projects</p><h1 id="hero-title">CREWLAB:<br />BUILD PRODUCTS<br /><span>WITH REAL PEOPLE.</span></h1><div className="cl-actions"><a className="cl-button" href="/waitlist">Join the waitlist <span aria-hidden="true">→</span></a><a className="cl-button cl-ghost" href="#crew">Find project teammates</a></div></div>
+        <div className="cl-cell cl-hero-copy"><p className="cl-mono cl-kicker"><i /> CrewLab&nbsp; · &nbsp;India-first builder community&nbsp; · &nbsp;Cofounders&nbsp; · &nbsp;Side projects</p><h1 id="hero-title">CREWLAB:<br />BUILD PRODUCTS<br /><span>WITH REAL PEOPLE.</span></h1><div className="cl-actions"><Link className="cl-button" href="/waitlist">Join the waitlist <span aria-hidden="true">→</span></Link><a className="cl-button cl-ghost" href="#crew">Find project teammates</a></div></div>
         <div className="cl-cell cl-droid-cell aiptx-droid-stage"><FeatureDroid className="cl-droid-art" /></div>
       </section>
 

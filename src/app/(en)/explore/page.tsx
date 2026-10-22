@@ -5,7 +5,7 @@ import SiteFooter from "@/components/SiteFooter";
 import Icon from "@/components/Icon";
 import ExploreControls from "@/components/ExploreControls";
 import ExploreProjects from "@/components/ExploreProjects";
-import { ProductScene } from "@/components/visuals/ProductScene";
+import HeroCube, { type HeroCubeFace } from "@/components/visuals/HeroCube";
 import { pageFaqs } from "@/lib/faqs";
 import PageFaqSection from "@/components/PageFaqSection";
 
@@ -19,13 +19,22 @@ function SectionHead({ title, text, count }: { title: string; text: string; coun
   return <div className="cl-row cl-section-head"><div className="cl-cell cl-head-title"><h2>{title}</h2></div><div className="cl-cell cl-head-copy"><p>{text}</p></div><div className="cl-cell cl-head-count"><span className="cl-mono">SECTION</span><strong>{count}</strong></div></div>;
 }
 
+const exploreFaces: HeroCubeFace[] = [
+  { label: "Browse", eyebrow: "01 / PROJECT EXAMPLES", title: "Ideas need a crew", body: "Explore sample projects and see the kinds of work builders can join.", points: ["Product and community ideas", "Early stage projects", "Open builder spots"] },
+  { label: "Stages", eyebrow: "02 / PROJECT STAGE", title: "See where it stands", body: "Project stages show how far an idea has moved and what could happen next.", points: ["From first idea to prototype", "Understand current progress", "Look for the next useful work"] },
+  { label: "Skills", eyebrow: "03 / REQUESTED SKILLS", title: "Find where you fit", body: "Each listing names skills that could help move the project forward.", points: ["Frontend and backend", "Product design and mobile", "Data, AI, and community"] },
+  { label: "Context", eyebrow: "04 / PROJECT DETAILS", title: "Get the full picture", body: "Read the brief and owner details before deciding to spend time on an idea.", points: ["Understand the problem", "Compare the skills needed", "Review project owner context"] },
+  { label: "Request", eyebrow: "05 / JOIN REQUESTS", title: "Offer what you can", body: "Builders can send the owner a clear request to join a project.", points: ["Say why it interests you", "Describe your contribution", "Share your availability"] },
+  { label: "Build", eyebrow: "06 / BUILD TOGETHER", title: "Turn interest into work", body: "Owners review requests and accepted members get project discussion space.", points: ["Owners choose their crew", "Coordinate around the project", "Optional read-only GitHub context"] },
+];
+
 export default function ExplorePage() {
   return <div className="crewlab-page"><div className="cl-wrap">
     <SiteHeader />
     <main id="top">
       <section className="cl-row cl-hero cl-page-hero" aria-labelledby="page-title">
         <div className="cl-cell cl-hero-copy"><p className="cl-mono cl-kicker"><i />Sample project examples | requested skills | join requests</p><h1 id="page-title"><span>Projects looking</span><span>for people who</span><span className="cl-page-highlight">want to build</span></h1><p className="cl-page-lede">Explore sample project listings, see what skills each one needs, and learn how builders can request to join when CrewLab opens.</p><div className="cl-actions"><Link className="cl-button" href="#browse">Explore project examples <Icon name="arrow" /></Link><Link className="cl-button cl-ghost" href="/waitlist">Join the waitlist <Icon name="arrow" /></Link></div></div>
-        <div className="cl-cell cl-droid-cell"><ProductScene initial="discovery" /></div>
+        <div className="cl-cell cl-droid-cell"><HeroCube faces={exploreFaces} label="Explore projects interactive overview" /></div>
       </section>
 
       <section className="cl-section" aria-label="How CrewLab brings projects and builders together">

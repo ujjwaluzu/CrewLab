@@ -1,0 +1,29 @@
+.cl-cube-art{
+  position:relative;display:grid;width:min(100%,420px);aspect-ratio:1;place-items:center;overflow:hidden;isolation:isolate;container-type:inline-size;
+  background:radial-gradient(ellipse at 50% 50%,color-mix(in srgb,var(--cl-red) 12%,transparent),transparent 63%),
+    linear-gradient(color-mix(in srgb,var(--cl-line) 48%,transparent) 1px,transparent 1px),
+    linear-gradient(90deg,color-mix(in srgb,var(--cl-line) 48%,transparent) 1px,transparent 1px),var(--cl-panel-2);
+  background-size:auto,32px 32px,32px 32px,auto;
+  color:var(--cl-red);
+}
+.cl-cube-scene{position:relative;display:grid;width:100%;height:100%;place-items:center;perspective:900px;perspective-origin:50% 48%;font-size:min(9.4cqi,40px)}
+.cl-cube-orbit{position:relative;transform-style:preserve-3d;transform:scale(.94) rotateX(-24deg) rotateY(-34deg);animation:cl-cube-orbit 48s linear infinite;will-change:transform}
+.cl-cube-column{position:absolute;top:0;left:0;transform:rotateY(var(--column-angle)) translateX(2.8em);transform-style:preserve-3d;animation:cl-cube-column-turn 18s var(--column-delay) linear infinite}
+.cl-cube-box{position:absolute;top:var(--cube-y);left:0;width:1em;height:1em;transform-style:preserve-3d}
+.cl-cube-box i{position:absolute;inset:.045em;border:1.25px solid color-mix(in srgb,var(--cl-red) 82%,var(--cl-text));background:color-mix(in srgb,var(--cl-bg) 82%,transparent);backface-visibility:visible}
+.cl-cube-box i:nth-child(1){transform:translateZ(.5em)}
+.cl-cube-box i:nth-child(2){transform:rotateY(90deg) translateZ(.5em)}
+.cl-cube-box i:nth-child(3){transform:rotateY(180deg) translateZ(.5em)}
+.cl-cube-box i:nth-child(4){transform:rotateY(270deg) translateZ(.5em)}
+.cl-cube-box i:nth-child(5){transform:rotateX(90deg) translateZ(.5em)}
+.cl-cube-box i:nth-child(6){transform:rotateX(-90deg) translateZ(.5em)}
+.cl-cube-caption{position:absolute;right:18px;bottom:16px;display:flex;align-items:center;gap:8px;color:var(--cl-muted);font:400 9px/1.3 var(--cl-mono);letter-spacing:.1em;text-transform:uppercase}
+.cl-cube-caption i{width:6px;height:6px;background:var(--cl-red);box-shadow:0 0 10px var(--cl-red)}
+.cl-cube-art.cl-waitlist-droid{width:min(100%,148px);margin:16px auto 0}
+.cl-cube-art.cl-resource-droid{width:min(100%,220px);margin:0 auto 24px}
+.cl-resource-scene .cl-cube-art.cl-resource-droid{width:min(100%,220px)}
+.cl-cube-art.cl-not-found-droid{width:min(100%,230px)}
+@keyframes cl-cube-orbit{from{transform:scale(.94) rotateX(-24deg) rotateY(-34deg)}to{transform:scale(.94) rotateX(-24deg) rotateY(326deg)}}
+@keyframes cl-cube-column-turn{from{transform:rotateY(var(--column-angle)) translateX(2.8em) rotateZ(0deg)}to{transform:rotateY(var(--column-angle)) translateX(2.8em) rotateZ(360deg)}}
+@media(max-width:820px){.cl-cube-art{width:min(100%,390px);margin-inline:auto}}
+@media(prefers-reduced-motion:reduce){.cl-cube-orbit,.cl-cube-column{animation:none}}

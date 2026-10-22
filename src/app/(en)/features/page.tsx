@@ -1,5 +1,6 @@
 import { pageMetadata } from "@/lib/site";
 import Landing, { type LandingConfig } from "@/components/Landing";
+import type { HeroCubeFace } from "@/components/visuals/HeroCube";
 
 export const metadata = pageMetadata({
   title: "Features for Builders and Project Teams",
@@ -7,6 +8,15 @@ export const metadata = pageMetadata({
     "Explore CrewLab features for builder profiles, project discovery, skill filters, join requests, crew discussions, and optional read-only GitHub context.",
   canonical: "/features",
 });
+
+const heroFaces: HeroCubeFace[] = [
+  { label: "Profiles", eyebrow: "01 / BUILDER PROFILES", title: "Put your skills to work", body: "Help project owners and builders see what you bring to a crew.", points: ["Introduction and interests", "Skills and strengths", "Work you want to do"] },
+  { label: "Projects", eyebrow: "02 / PROJECT PAGES", title: "Give ideas a home", body: "A project page keeps the brief, stage, and team needs together.", points: ["Describe the idea", "Update its stage", "List useful contributions"] },
+  { label: "Discovery", eyebrow: "03 / PROJECT DISCOVERY", title: "Find your next build", body: "Search and filter project listings before deciding where to apply.", points: ["Browse sample projects", "Filter by skill", "Review project owners"] },
+  { label: "Applications", eyebrow: "04 / JOIN REQUESTS", title: "Make the fit clear", body: "Builders can explain their interest and availability to the owner.", points: ["Describe your offer", "Share your availability", "Owners choose members"] },
+  { label: "Discussion", eyebrow: "05 / CREW DISCUSSION", title: "Keep the crew close", body: "Accepted members can coordinate in a conversation tied to their project.", points: ["Realtime project chat", "Shared project context", "Membership stays owner-led"] },
+  { label: "GitHub", eyebrow: "06 / OPTIONAL CONTEXT", title: "See work in progress", body: "Project owners can connect a repo to give crew members read-only context.", points: ["Commits and branches", "Issues and pull requests", "No access to owner credentials"] },
+];
 
 const config: LandingConfig = {
   path: "/features",
@@ -16,6 +26,7 @@ const config: LandingConfig = {
   lede:
     "CrewLab brings builder profiles, project discovery, owner-reviewed applications, and crew coordination together around each project.",
   note: "Profiles | projects | applications | crew discussions",
+  heroFaces,
   primaryLabel: "Join the waitlist",
   primaryHref: "/waitlist",
   secondaryLabel: "See how it works",

@@ -54,6 +54,10 @@
 .cl-hero h1 span,.cl-join h2 span{color:var(--cl-red)}
 .cl-droid-cell{display:grid;place-items:center;overflow:hidden;background:var(--cl-panel-2);padding:24px}
 .cl-droid-art{display:block;width:min(100%,320px);height:auto;overflow:visible}
+.cl-waitlist-droid{display:block;width:min(100%,148px);height:auto;margin:16px auto 0}
+.cl-resource-droid{display:block;width:min(100%,178px);height:auto;margin:0 auto 24px}
+.cl-resource-scene .cl-resource-droid{width:min(100%,220px)}
+.cl-not-found-droid{display:block;width:min(100%,230px);height:auto;overflow:visible}
 .cl-intro{grid-template-columns:1.6fr 1fr 1fr 1fr}
 .cl-intro-main p{max-width:510px;margin:0 0 24px;color:var(--cl-muted)}
 .cl-actions{display:flex;flex-wrap:wrap;gap:8px}

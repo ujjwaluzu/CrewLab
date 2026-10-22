@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Noto_Sans_Devanagari } from "next/font/google";
 import "../(en)/globals.css";
 import "../(en)/homepage.css";
+import "@/components/visuals/crew-grid-animation.css";
 import SvgDefs from "@/components/SvgDefs";
 import HindiSchemaOrg from "@/components/HindiSchemaOrg";
 import SiteAnimations from "@/components/SiteAnimations";

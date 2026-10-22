@@ -6,6 +6,7 @@ import Link from "next/link";
 import Icon from "@/components/Icon";
 import { pageFaqs } from "@/lib/faqs";
 import PageFaqSection from "@/components/PageFaqSection";
+import { CrewGridAnimation } from "@/components/visuals/CrewGridAnimation";
 
 export const metadata = pageMetadata({
   title: "Join the Waitlist",
@@ -36,6 +37,7 @@ export default function WaitlistPage() {
             "Form a crew through owner-reviewed requests",
             "Keep project discussion in one place",
           ].map((point, index) => <div className="cl-row cl-waitlist-point" key={point}><span className="cl-cell cl-mono">0{index + 1}</span><span className="cl-cell">{point}</span></div>)}</div>
+          <CrewGridAnimation className="cl-waitlist-droid" />
         </div>
         <div className="cl-cell cl-join-form cl-waitlist-form">
           <span className="cl-mono">Get CrewLab updates</span>

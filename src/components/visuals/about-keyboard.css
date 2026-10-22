@@ -1,0 +1,38 @@
+.cl-about-page-hero{grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr)}
+.cl-about-page-hero .cl-about-keyboard-cell{display:grid;min-width:0;min-height:540px;place-items:center;overflow:hidden;padding:clamp(22px,3vw,42px);background:#10100f}
+.cl-about-keyboard-shell{--ak-panel:#11110f;--ak-surface:#1b1b18;--ak-surface-hi:#302e29;--ak-line:#3a3832;--ak-text:#ece9e0;--ak-red:#f04a2e;display:grid;width:100%;min-height:500px;place-items:center;overflow:hidden;padding:clamp(12px,2vw,24px);background:radial-gradient(ellipse at 50% 54%,#3d1912 0%,#1b1310 42%,#10100f 78%)}
+.cl-about-keyboard-stage{display:grid;width:100%;min-height:420px;place-items:center;perspective:1300px;perspective-origin:50% 52%}
+.cl-about-keyboard{--ak-depth:6px;--ak-key-height:clamp(27px,3.2vw,42px);position:relative;display:flex;width:min(100%,730px);align-items:flex-start;gap:clamp(7px,1.1vw,14px);padding:clamp(12px,1.6vw,20px);border:1px solid #654035;border-radius:7px;background:linear-gradient(145deg,#211f1b,#131210 76%);box-shadow:0 30px 44px #000b,0 0 42px #ef482528,inset 0 1px #ffffff18,inset 0 -3px #000a;transform:rotateX(24deg) rotateZ(-5deg);transform-style:preserve-3d;animation:cl-about-board-rock 16s ease-in-out infinite;transition:box-shadow .3s ease}
+.cl-about-keyboard:hover{box-shadow:0 34px 48px #000c,0 0 52px #ef48253d,inset 0 1px #ffffff18,inset 0 -3px #000a}
+.cl-about-keyboard::before,.cl-about-keyboard::after{position:absolute;z-index:-1;content:"";background:#171512;border:1px solid #493027}
+.cl-about-keyboard::before{inset:100% 0 auto;height:17px;transform:rotateX(-90deg);transform-origin:top center;border-top:0;background:linear-gradient(90deg,#3a1c15,#201713 48%,#3a1c15)}
+.cl-about-keyboard::after{inset:0 auto 0 100%;width:17px;transform:rotateY(90deg);transform-origin:center left;border-left:0;background:linear-gradient(#37241b,#191613)}
+.cl-about-keyboard-left{display:grid;min-width:0;flex:1;gap:clamp(7px,.9vw,11px)}
+.cl-about-function-row{display:flex;align-items:center;gap:clamp(8px,1.3vw,16px)}
+.cl-about-function-keys{display:grid;min-width:0;flex:1;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(3px,.38vw,5px)}
+.cl-about-key-grid{display:grid;gap:clamp(5px,.55vw,7px)}
+.cl-about-key-row{display:grid;grid-template-columns:repeat(15,minmax(0,1fr));gap:clamp(3px,.38vw,5px)}
+.cl-about-key{position:relative;display:grid;min-width:0;height:var(--ak-key-height);place-items:center;overflow:hidden;padding:2px;border:1px solid #4a463e;border-radius:4px;background:linear-gradient(150deg,#302d27 0%,#211f1b 75%);box-shadow:0 var(--ak-depth) 0 #353129,0 calc(var(--ak-depth) + 2px) 0 #0a0a09,0 calc(var(--ak-depth) + 4px) 5px #0008,inset 0 1px #ffffff20;color:#e9e4d9;font:600 clamp(7px,.78vw,10px)/1 var(--cl-mono);text-shadow:0 0 8px #f04a2e42;transform:translateZ(0);transition:transform .14s ease,border-color .2s ease,color .2s ease,box-shadow .2s ease;user-select:none}
+.cl-about-key:hover{border-color:#f04a2e;box-shadow:0 var(--ak-depth) 0 #493128,0 calc(var(--ak-depth) + 2px) 0 #0a0a09,0 calc(var(--ak-depth) + 4px) 5px #0008,0 0 13px #f04a2e45,inset 0 1px #ffffff20;color:#fff1e8;transform:translateY(var(--ak-depth)) translateZ(-2px)}
+.cl-about-key.is-pressed{border-color:#f04a2e;background:linear-gradient(150deg,#4a2119,#2b1813 75%);box-shadow:0 1px 0 #30251f,0 3px 3px #0009,0 0 17px #f04a2e88,inset 0 1px #ffffff20;color:#fff1e8;text-shadow:0 0 12px #f04a2e;transform:translateY(var(--ak-depth)) translateZ(-2px)}
+.cl-about-key[data-code="Escape"],.cl-about-key[data-code="Enter"],.cl-about-key[data-code="NumpadEnter"]{border-color:#814032;background:linear-gradient(150deg,#3b211b,#251a16 75%);color:#ff9a7e}
+.cl-about-key.has-brand-mark{--red:#f04a2e;--cream:#ece9e0;box-shadow:0 var(--ak-depth) 0 #493128,0 calc(var(--ak-depth) + 2px) 0 #0a0a09,0 calc(var(--ak-depth) + 4px) 5px #0008,inset 0 1px #ffffff20}
+.cl-about-key.has-brand-mark svg{width:clamp(16px,2vw,24px);height:clamp(16px,2vw,24px)}
+.cl-about-function-row>.cl-about-key{width:clamp(30px,4vw,42px);flex:none}
+.cl-about-function-keys .cl-about-key{height:calc(var(--ak-key-height) * .7);font-size:clamp(6px,.64vw,8px)}
+.cl-about-key-row:first-child .cl-about-key:nth-child(1),.cl-about-key-row:nth-child(2) .cl-about-key:nth-child(1),.cl-about-key-row:nth-child(3) .cl-about-key:nth-child(1),.cl-about-key-row:nth-child(4) .cl-about-key:nth-child(1){color:#f18160}
+.cl-about-key-grid .cl-about-key-row:last-child .cl-about-key{height:calc(var(--ak-key-height) * .86)}
+.cl-about-keyboard-right{display:flex;width:clamp(68px,9.5vw,112px);flex:none;flex-direction:column;justify-content:space-between;gap:clamp(28px,4vw,48px);padding-top:calc(var(--ak-key-height) * .7 + clamp(7px,.9vw,11px))}
+.cl-about-nav-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(3px,.38vw,5px)}
+.cl-about-nav-grid .cl-about-key{height:calc(var(--ak-key-height) * .72);font-size:clamp(5px,.62vw,8px)}
+.cl-about-arrows{display:grid;justify-items:center;gap:clamp(3px,.38vw,5px)}
+.cl-about-arrows>div{display:grid;width:100%;grid-template-columns:repeat(3,1fr);gap:clamp(3px,.38vw,5px)}
+.cl-about-arrows .cl-about-key{height:calc(var(--ak-key-height) * .72);font-size:clamp(9px,1vw,13px)}
+.cl-about-arrows .cl-about-arrow-up{width:33%}
+.cl-about-numpad{display:grid;width:clamp(82px,11vw,126px);flex:none;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(5,var(--ak-key-height));gap:clamp(3px,.38vw,5px);padding-top:calc(var(--ak-key-height) * .7 + clamp(7px,.9vw,11px))}
+.cl-about-numpad .cl-about-key{height:auto;font-size:clamp(7px,.75vw,10px)}
+@keyframes cl-about-board-rock{0%,100%{transform:rotateX(24deg) rotateZ(-5deg) translateY(0)}50%{transform:rotateX(28deg) rotateZ(-2deg) translateY(-4px)}}
+@media(max-width:1000px){.cl-about-page-hero{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)}.cl-about-page-hero .cl-about-keyboard-cell{padding:20px}.cl-about-keyboard{gap:7px}.cl-about-keyboard-right{width:66px}.cl-about-numpad{width:78px}}
+@media(max-width:820px){.cl-about-page-hero{grid-template-columns:minmax(0,1fr)}.cl-about-page-hero .cl-about-keyboard-cell{min-height:0;padding:24px}.cl-about-keyboard-shell{min-height:0;padding:14px}.cl-about-keyboard-stage{min-height:390px}.cl-about-keyboard{width:min(100%,730px)}}
+@media(max-width:500px){.cl-about-page-hero .cl-about-keyboard-cell{padding:15px}.cl-about-keyboard-shell{padding:8px}.cl-about-keyboard-stage{min-height:300px}.cl-about-keyboard{--ak-key-height:clamp(20px,6vw,29px);width:calc(100% - 6px);gap:5px;padding:9px;transform:rotateX(20deg) rotateZ(-4deg)}.cl-about-keyboard-left{gap:6px}.cl-about-function-row{gap:5px}.cl-about-function-row>.cl-about-key{width:24px}.cl-about-keyboard-right{width:48px;gap:22px}.cl-about-numpad{width:58px;gap:2px}.cl-about-key{border-radius:3px;font-size:6px}.cl-about-nav-grid .cl-about-key{font-size:5px}.cl-about-numpad .cl-about-key{font-size:6px}}
+@media(prefers-reduced-motion:reduce){.cl-about-keyboard{animation:none;transform:rotateX(24deg) rotateZ(-5deg)}}

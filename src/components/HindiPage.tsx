@@ -3,17 +3,14 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import PageFaqSection from "@/components/PageFaqSection";
 import WaitlistForm from "@/components/WaitlistForm";
-import { CrewAssembly } from "@/components/visuals/CrewAssembly";
-import { FeatureDroid } from "@/components/visuals/FeatureDroid";
+import { CrewGridAnimation } from "@/components/visuals/CrewGridAnimation";
+import { ProductScene } from "@/components/visuals/ProductScene";
 import type { HindiPageContent } from "@/lib/hindi-site";
 import { HINDI_LINK_LABELS, hindiPath } from "@/lib/hindi-site";
 import { SITE_URL, SITE_NAME, isCrewFocusedPage } from "@/lib/site";
-import { ProductScene } from "@/components/visuals/ProductScene";
 import { productLayerForPath } from "@/lib/product-scene";
 
 export default function HindiPage({ page }: { page: HindiPageContent }) {
-  const droidVariant = page.path === "/" ? "home" : ["/features", "/how-it-works", "/explore"].includes(page.path) || page.path.startsWith("/resources") ? "product" : "crew";
-  const productLayer = productLayerForPath(page.path);
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -42,7 +39,9 @@ export default function HindiPage({ page }: { page: HindiPageContent }) {
               </div>
             </div>
             <div className="cl-cell cl-droid-cell">
-              {isCrewFocusedPage(page.path) ? <CrewAssembly className="cl-droid-art" locale="hi" /> : productLayer ? <ProductScene initial={productLayer} locale="hi" /> : <div className="aiptx-droid-stage"><FeatureDroid className="cl-droid-art" variant={droidVariant} /></div>}
+              {isCrewFocusedPage(page.path)
+                ? <CrewGridAnimation />
+                : <ProductScene initial={productLayerForPath(page.path) ?? "discovery"} locale="hi" />}
             </div>
           </section>
 
