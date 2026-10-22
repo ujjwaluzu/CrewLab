@@ -19,7 +19,6 @@
 .cl-cube-box i:nth-child(6){transform:rotateX(-90deg) translateZ(.5em)}
 .cl-cube-caption{position:absolute;right:18px;bottom:16px;display:flex;align-items:center;gap:8px;color:var(--cl-muted);font:400 9px/1.3 var(--cl-mono);letter-spacing:.1em;text-transform:uppercase}
 .cl-cube-caption i{width:6px;height:6px;background:var(--cl-red);box-shadow:0 0 10px var(--cl-red)}
-.cl-cube-art.cl-waitlist-droid{width:min(100%,148px);margin:16px auto 0}
 .cl-cube-art.cl-resource-droid{width:min(100%,220px);margin:0 auto 24px}
 .cl-resource-scene .cl-cube-art.cl-resource-droid{width:min(100%,220px)}
 .cl-cube-art.cl-not-found-droid{width:min(100%,230px)}
