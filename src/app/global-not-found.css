@@ -1,0 +1,84 @@
+.global-404 {
+  --error-bg: #0d0d0c;
+  --error-panel: #141413;
+  --error-line: #302f2c;
+  --error-text: #ece9e0;
+  --error-muted: #a9a69b;
+  --error-accent: #f04a2e;
+  min-height: 100svh;
+  padding: 0 clamp(20px, 5vw, 72px);
+  overflow: hidden;
+  background: var(--error-bg);
+  color: var(--error-text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.global-404 * { box-sizing: border-box; }
+.global-404 a { color: inherit; text-decoration: none; }
+.global-404-header,
+.global-404-footer {
+  display: flex;
+  min-height: 78px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid var(--error-line);
+}
+.global-404-brand { display: inline-flex; align-items: center; gap: 10px; font-size: 21px; font-weight: 700; letter-spacing: -.04em; }
+.global-404-mark { display: grid; width: 28px; height: 28px; place-items: center; background: var(--error-accent); color: var(--error-bg); font-size: 17px; }
+.global-404-status,
+.global-404-kicker,
+.global-404-coordinate,
+.global-404-signal,
+.global-404-art-footer,
+.global-404-footer { font-family: "Courier New", monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.global-404-status { color: var(--error-muted); }
+.global-404-status span { padding-inline: 8px; color: var(--error-accent); }
+.global-404-main { display: grid; min-height: min(690px, calc(100svh - 156px)); grid-template-columns: 1.05fr .95fr; border-bottom: 1px solid var(--error-line); }
+.global-404-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: clamp(54px, 9vw, 120px) clamp(24px, 6vw, 88px) clamp(54px, 9vw, 120px) 0; }
+.global-404-kicker { display: flex; align-items: center; gap: 10px; margin: 0 0 27px; color: var(--error-accent); }
+.global-404-kicker span { width: 8px; height: 8px; background: var(--error-accent); }
+.global-404-copy h1 { margin: 0; font-size: clamp(48px, 7.4vw, 100px); font-weight: 700; line-height: .94; letter-spacing: -.075em; text-transform: uppercase; }
+.global-404-description { max-width: 44ch; margin: 26px 0 0; color: var(--error-muted); font-size: 16px; line-height: 1.7; }
+.global-404-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+.global-404-button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 14px; padding: 0 19px; border: 1px solid #45443f; font-family: "Courier New", monospace; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; transition: border-color 150ms ease, background-color 150ms ease, color 150ms ease; }
+.global-404-button:hover { border-color: var(--error-accent); color: var(--error-accent); }
+.global-404-button:focus-visible,
+.global-404-brand:focus-visible,
+.global-404-footer a:focus-visible { outline: 2px solid var(--error-accent); outline-offset: 4px; }
+.global-404-button-primary { border-color: var(--error-accent); background: var(--error-accent); color: var(--error-bg) !important; }
+.global-404-button-primary:hover { background: #ff6549; color: var(--error-bg); }
+.global-404-art { display: flex; flex-direction: column; justify-content: space-between; min-width: 0; margin: 34px 0; padding: 16px; border: 1px solid var(--error-line); background: var(--error-panel); }
+.global-404-coordinate,
+.global-404-art-footer { display: flex; justify-content: space-between; color: var(--error-muted); }
+.global-404-grid { position: relative; display: grid; min-height: 280px; flex: 1; place-items: center; overflow: hidden; margin-block: 18px; background-image: linear-gradient(var(--error-line) 1px, transparent 1px), linear-gradient(90deg, var(--error-line) 1px, transparent 1px); background-size: 36px 36px; }
+.global-404-number { color: var(--error-accent); font-size: clamp(102px, 17vw, 220px); font-weight: 700; line-height: .8; letter-spacing: -.11em; }
+.global-404-orbit { position: absolute; width: 74%; aspect-ratio: 1; border: 1px solid rgb(240 74 46 / 42%); border-radius: 50%; }
+.global-404-orbit-one { transform: scaleY(.34) rotate(-28deg); }
+.global-404-orbit-two { transform: scaleY(.34) rotate(28deg); }
+.global-404-signal { position: absolute; right: 12px; bottom: 13px; padding: 7px 9px; background: var(--error-bg); color: var(--error-muted); line-height: 1.7; text-align: right; }
+.global-404-footer { min-height: 62px; border: 0; color: var(--error-muted); }
+.global-404-footer a { color: var(--error-text); }
+.global-404-footer a:hover { color: var(--error-accent); }
+
+@media (max-width: 760px) {
+  .global-404-main { grid-template-columns: 1fr; }
+  .global-404-copy { padding: 58px 0 42px; }
+  .global-404-art { min-height: 330px; margin: 0 0 24px; }
+  .global-404-number { font-size: clamp(120px, 36vw, 210px); }
+}
+
+@media (max-width: 480px) {
+  .global-404 { padding-inline: 18px; }
+  .global-404-header { min-height: 68px; }
+  .global-404-status { font-size: 9px; }
+  .global-404-copy h1 { font-size: clamp(48px, 13vw, 64px); }
+  .global-404-description { font-size: 15px; }
+  .global-404-actions { display: grid; width: 100%; }
+  .global-404-button { width: 100%; }
+  .global-404-footer { align-items: flex-start; flex-direction: column; justify-content: center; gap: 8px; padding-block: 15px; font-size: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .global-404-button { transition: none; }
+}
