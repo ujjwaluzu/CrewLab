@@ -1,1 +1,29 @@
-{"name":"CrewLab","short_name":"CrewLab","description":"India-first startup collaboration community for founders and builders.","icons":[{"src":"/favicon_io/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/favicon_io/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#ffffff","background_color":"#ffffff","display":"standalone"}
+{
+  "name": "CrewLab",
+  "short_name": "CrewLab",
+  "description": "India-first startup collaboration community for founders and builders.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#121110",
+  "background_color": "#121110",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon_io/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon_io/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
 Allow: /favicon.ico
+Allow: /favicon.svg
+Allow: /favicon_io/
 Disallow: /api/
 Content-Signal: ai-train=no, search=yes, ai-input=no
 
