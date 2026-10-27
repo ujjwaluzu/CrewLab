@@ -15,11 +15,16 @@ export type HindiPageContent = {
   sections: HindiSection[];
   faqs: LocalizedFaq[];
   related?: string[];
+  legalKey?: import("@/lib/legal-content").LegalPageKey;
 };
 
 export const HINDI_PATHS = [
   "/",
   "/about",
+  "/privacy-policy",
+  "/terms-of-use",
+  "/community-guidelines",
+  "/grievance-redressal",
   "/explore",
   "/features",
   "/find-cofounder",
@@ -37,6 +42,10 @@ export const HINDI_PATHS = [
 ] as const;
 
 export const HINDI_LINK_LABELS: Record<string, string> = {
+  "/privacy-policy": "गोपनीयता नीति",
+  "/terms-of-use": "उपयोग की शर्तें",
+  "/community-guidelines": "समुदाय दिशानिर्देश",
+  "/grievance-redressal": "शिकायत निवारण",
   "/about": "CrewLab का परिचय",
   "/explore": "प्रोजेक्ट देखें",
   "/features": "CrewLab की विशेषताएँ",
@@ -55,6 +64,10 @@ export const HINDI_LINK_LABELS: Record<string, string> = {
 };
 
 export const HINDI_PAGES: Record<string, HindiPageContent> = {
+  "/privacy-policy": { path: "/privacy-policy", title: "गोपनीयता नीति | CrewLab", description: "CrewLab खाते, प्रोफ़ाइल, प्रोजेक्ट, चर्चा और वैकल्पिक GitHub जानकारी को कैसे संभालता है।", kicker: "कानूनी जानकारी", headline: ["गोपनीयता नीति"], lede: "CrewLab पर आपकी जानकारी कैसे संभाली जाती है, जानें।", primaryLabel: "", primaryHref: "/", secondaryLabel: "", secondaryHref: "/", sections: [], faqs: [], legalKey: "privacy" },
+  "/terms-of-use": { path: "/terms-of-use", title: "उपयोग की शर्तें | CrewLab", description: "CrewLab की प्रोजेक्ट सहयोग सेवा और बिल्डर समुदाय के उपयोग की शर्तें।", kicker: "कानूनी जानकारी", headline: ["उपयोग की शर्तें"], lede: "CrewLab वेबसाइट और ऐप इस्तेमाल करने के नियम।", primaryLabel: "", primaryHref: "/", secondaryLabel: "", secondaryHref: "/", sections: [], faqs: [], legalKey: "terms" },
+  "/community-guidelines": { path: "/community-guidelines", title: "समुदाय दिशानिर्देश | CrewLab", description: "CrewLab पर सुरक्षित और सम्मानजनक प्रोजेक्ट सहयोग के लिए व्यावहारिक नियम।", kicker: "कानूनी जानकारी", headline: ["समुदाय दिशानिर्देश"], lede: "सुरक्षित और सम्मानजनक सहयोग के लिए नियम।", primaryLabel: "", primaryHref: "/", secondaryLabel: "", secondaryHref: "/", sections: [], faqs: [], legalKey: "community" },
+  "/grievance-redressal": { path: "/grievance-redressal", title: "शिकायत निवारण | CrewLab", description: "CrewLab से गोपनीयता, उपयोगकर्ता सामग्री, खाते या सेवा संबंधी शिकायत कैसे करें।", kicker: "कानूनी जानकारी", headline: ["शिकायत निवारण"], lede: "CrewLab से शिकायत या गोपनीयता अनुरोध कैसे करें।", primaryLabel: "", primaryHref: "/", secondaryLabel: "", secondaryHref: "/", sections: [], faqs: [], legalKey: "grievance" },
   "/": {
     path: "/",
     title: "CrewLab | स्टार्टअप सह-संस्थापक और टीम",

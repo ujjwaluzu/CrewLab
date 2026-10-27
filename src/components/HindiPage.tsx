@@ -8,6 +8,7 @@ import HeroCube, { type HeroCubeFace } from "@/components/visuals/HeroCube";
 import AboutKeyboard from "@/components/visuals/AboutKeyboard";
 import { CrewFlowFigure } from "@/components/anatomy/CrewFlowFigure";
 import HindiHomePage from "@/components/HindiHomePage";
+import LegalPage from "@/components/LegalPage";
 import type { HindiPageContent } from "@/lib/hindi-site";
 import { HINDI_LINK_LABELS, hindiPath } from "@/lib/hindi-site";
 import { APP_URL, SITE_URL, SITE_NAME, isCrewFocusedPage } from "@/lib/site";
@@ -42,6 +43,7 @@ const HINDI_HERO_FACES: Record<string, readonly HeroCubeFace[]> = {
 
 export default function HindiPage({ page }: { page: HindiPageContent }) {
   if (page.path === "/") return <HindiHomePage />;
+  if (page.legalKey) return <LegalPage locale="hi" page={page.legalKey} />;
 
   const isAboutPage = page.path === "/about";
   const explainsFlow = page.path === "/how-it-works";

@@ -6,6 +6,7 @@ import { LANDING_PAGES } from "@/lib/site";
 import { faqs } from "@/lib/faqs";
 import HomeLightsaber from "@/components/visuals/HomeLightsaber";
 import { APP_URL } from "@/lib/site";
+import { LEGAL_PAGE_KEYS, LEGAL_PAGE_LABELS, LEGAL_PAGE_PATHS } from "@/lib/legal-content";
 import "./homepage.css";
 
 const homeFaqs = [faqs[0], faqs[1], faqs[2], faqs[3], faqs[5], faqs[9]];
@@ -78,6 +79,7 @@ export default function Home() {
         <div className="cl-cell cl-foot-links"><h3>Find your crew</h3>{crewItems.map((item) => <Link href={item.href} key={item.title}>{item.title}</Link>)}</div>
         <div className="cl-cell cl-foot-links"><h3>Product</h3><Link href="/explore">Explore projects</Link><Link href="/how-it-works">How it works</Link><Link href="/features">Features</Link><Link href="/resources">Guides & resources</Link></div>
         <div className="cl-cell cl-foot-links"><h3>Company</h3><Link href="/about">About</Link><a href={APP_URL}>Sign up</a><Link href="https://discord.gg/m97vTraKq" target="_blank" rel="noopener noreferrer">Discord</Link><Link href="https://instagram.com/crewlab.in" target="_blank" rel="noopener noreferrer">Instagram</Link><Link href="https://x.com/crewlabin" target="_blank" rel="noopener noreferrer">X</Link></div>
+        <div className="cl-cell cl-foot-links"><h3>Legal</h3>{LEGAL_PAGE_KEYS.map((key) => <Link href={LEGAL_PAGE_PATHS[key]} key={key}>{LEGAL_PAGE_LABELS[key].en}</Link>)}</div>
       </div>
       <div className="cl-row cl-copyright"><span className="cl-cell cl-mono">© 2026 CrewLab. All rights reserved.</span><span className="cl-cell cl-mono">Made for builders, by builders</span></div>
       <div className="cl-row cl-wordmark" aria-label="CrewLab"><span>C</span><span>R</span><span>E</span><span>W</span><span>L</span><span>A</span><span>B</span></div>

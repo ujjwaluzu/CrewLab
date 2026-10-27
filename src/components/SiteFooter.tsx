@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { LANDING_PAGES } from "@/lib/site";
 import BrandMark from "@/components/BrandMark";
 import { APP_URL } from "@/lib/site";
+import { LEGAL_PAGE_KEYS, LEGAL_PAGE_LABELS, LEGAL_PAGE_PATHS } from "@/lib/legal-content";
 
 export default function SiteFooter() {
   const pathname = usePathname() ?? "";
@@ -45,6 +46,13 @@ export default function SiteFooter() {
           <Link href="https://discord.gg/m97vTraKq" target="_blank" rel="noopener noreferrer">Discord</Link>
           <Link href="https://instagram.com/crewlab.in" target="_blank" rel="noopener noreferrer">Instagram</Link>
           <Link href="https://x.com/crewlabin" target="_blank" rel="noopener noreferrer">X</Link>
+        </div>
+        <div className="cl-cell cl-foot-links">
+          <h3>{isHindi ? "कानूनी" : "Legal"}</h3>
+          {LEGAL_PAGE_KEYS.map((key) => {
+            const href = LEGAL_PAGE_PATHS[key];
+            return <Link href={path(href)} key={key} className={active(href) ? "is-current-page" : undefined} aria-current={active(href) ? "page" : undefined}>{LEGAL_PAGE_LABELS[key][isHindi ? "hi" : "en"]}</Link>;
+          })}
         </div>
       </div>
       <div className="cl-row cl-copyright">
