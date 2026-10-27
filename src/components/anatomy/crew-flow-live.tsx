@@ -3,11 +3,12 @@
 import * as React from "react";
 import { useInView, useReadout, useStillness } from "./kit/react/live";
 import { FLOW_HEIGHT, FLOW_WIDTH, STATION_X, projectShift } from "./crew-flow-view";
-import { CREW_FLOW_STEPS, FLOW_ART_LABEL, RESTING_STEP } from "./crew-flow-model";
+import { crewFlowContent, RESTING_STEP } from "./crew-flow-model";
 
 const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
 
-export function CrewFlowLive({ art }: { art: React.ReactNode }) {
+export function CrewFlowLive({ art, locale = "en" }: { art: React.ReactNode; locale?: "en" | "hi" }) {
+  const { steps, artLabel } = crewFlowContent(locale);
   const { anchor, say } = useReadout<HTMLDivElement>();
   const buttonRefs = React.useRef<Array<HTMLButtonElement | null>>([]);
   const carriageAt = React.useRef<[number, number]>([0, 0]);
@@ -37,7 +38,7 @@ export function CrewFlowLive({ art }: { art: React.ReactNode }) {
       if (index === selected) station.setAttribute("data-active", "");
       else station.removeAttribute("data-active");
     });
-    say(CREW_FLOW_STEPS[selected]!.readout);
+    say(steps[selected]!.readout);
     if (still || !inView) {
       carriageAt.current = target;
       carriage.setAttribute("transform", `translate(${target[0]} ${target[1]})`);
@@ -59,18 +60,18 @@ export function CrewFlowLive({ art }: { art: React.ReactNode }) {
     };
     frame = window.requestAnimationFrame(step);
     return () => window.cancelAnimationFrame(frame);
-  }, [anchor, inView, say, selected, still]);
+  }, [anchor, inView, say, selected, steps, still]);
 
   React.useEffect(() => {
     stopTour();
     if (!tourAllowed || !inView || still) return stopTour;
     tourTimer.current = window.setTimeout(() => {
       tourInterval.current = window.setInterval(() => {
-        setSelected((index) => (index + 1) % CREW_FLOW_STEPS.length);
+        setSelected((index) => (index + 1) % steps.length);
       }, 2800);
     }, 1400);
     return stopTour;
-  }, [inView, still, stopTour, tourAllowed]);
+  }, [inView, still, stopTour, steps.length, tourAllowed]);
 
   React.useEffect(() => () => stopTour(), [stopTour]);
 
@@ -96,12 +97,12 @@ export function CrewFlowLive({ art }: { art: React.ReactNode }) {
       if (!event.currentTarget.contains(event.relatedTarget as Node | null)) resumeTourLater();
     }}>
       <div className="crew-flow-art-stage" ref={anchor}>
-        <svg className="iso-svg" viewBox={`0 0 ${FLOW_WIDTH} ${FLOW_HEIGHT}`} role="img" aria-label={FLOW_ART_LABEL} focusable="false">
+        <svg className="iso-svg" viewBox={`0 0 ${FLOW_WIDTH} ${FLOW_HEIGHT}`} role="img" aria-label={artLabel} focusable="false">
           {art}
         </svg>
       </div>
-      <div className="crew-flow-steps" role="group" aria-label="Choose a CrewLab workflow step">
-        {CREW_FLOW_STEPS.map((step, index) => (
+      <div className="crew-flow-steps" role="group" aria-label={locale === "hi" ? "CrewLab का चरण चुनें" : "Choose a CrewLab workflow step"}>
+        {steps.map((step, index) => (
           <button
             key={step.short}
             ref={(node) => { buttonRefs.current[index] = node; }}
@@ -114,7 +115,7 @@ export function CrewFlowLive({ art }: { art: React.ReactNode }) {
               if (event.key !== "ArrowRight" && event.key !== "ArrowDown" && event.key !== "ArrowLeft" && event.key !== "ArrowUp") return;
               event.preventDefault();
               const direction = event.key === "ArrowRight" || event.key === "ArrowDown" ? 1 : -1;
-              const next = (index + direction + CREW_FLOW_STEPS.length) % CREW_FLOW_STEPS.length;
+              const next = (index + direction + steps.length) % steps.length;
               choose(next);
               buttonRefs.current[next]?.focus();
             }}
@@ -127,9 +128,9 @@ export function CrewFlowLive({ art }: { art: React.ReactNode }) {
       </div>
       <div className="crew-flow-description" aria-live={announce ? "polite" : "off"} aria-atomic="true">
         <span>0{selected + 1}</span>
-        <p><strong>{CREW_FLOW_STEPS[selected]!.title}</strong>{CREW_FLOW_STEPS[selected]!.description}</p>
+        <p><strong>{steps[selected]!.title}</strong>{steps[selected]!.description}</p>
       </div>
-      <p className="crew-flow-interaction-hint">Select a station · use ← → keys</p>
+      <p className="crew-flow-interaction-hint">{locale === "hi" ? "चरण चुनें · तीर कुंजियों का इस्तेमाल करें" : "Select a station · use ← → keys"}</p>
     </div>
   );
 }

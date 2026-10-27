@@ -12,7 +12,7 @@ export type HeroCubeFace = {
 
 const faceNames = ["front", "right", "back", "left", "top", "bottom"] as const;
 
-export default function HeroCube({ faces, label }: { faces: readonly HeroCubeFace[]; label: string }) {
+export default function HeroCube({ faces, label, locale = "en" }: { faces: readonly HeroCubeFace[]; label: string; locale?: "en" | "hi" }) {
   const [active, setActive] = useState(0);
 
   return (
@@ -35,7 +35,7 @@ export default function HeroCube({ faces, label }: { faces: readonly HeroCubeFac
           ))}
         </div>
       </div>
-      <div className="cl-hero-cube-controls" role="group" aria-label="Choose a cube panel">
+      <div className="cl-hero-cube-controls" role="group" aria-label={locale === "hi" ? "क्यूब का पैनल चुनें" : "Choose a cube panel"}>
         {faces.map((face, index) => (
           <button
             type="button"
@@ -48,7 +48,7 @@ export default function HeroCube({ faces, label }: { faces: readonly HeroCubeFac
           </button>
         ))}
       </div>
-      <span className="cl-hero-cube-hint cl-mono">Select a panel to turn the cube</span>
+      <span className="cl-hero-cube-hint cl-mono">{locale === "hi" ? "क्यूब घुमाने के लिए पैनल चुनें" : "Select a panel to turn the cube"}</span>
     </div>
   );
 }

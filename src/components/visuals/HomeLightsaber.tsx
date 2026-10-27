@@ -4,17 +4,24 @@ import { useEffect, useRef, useState } from "react";
 import type * as ThreeTypes from "three";
 
 const CORAL = 0xf04a2e;
-const SABER_ON = "Power down the crew saber";
-const SABER_OFF = "Ignite the crew saber";
-const FLOW_CARDS = [
+const FLOW_CARDS = {
+  en: [
   { title: "Builder profiles", copy: "Show the skills and passions you bring to the galaxy." },
   { title: "Project discovery", copy: "Scan the horizon for a mission that calls to you." },
   { title: "Join requests", copy: "Transmit your request. Project leaders choose who joins the crew." },
   { title: "Crew workspace", copy: "Once aboard, coordinate plans and build the next big thing together." },
   { title: "GitHub context", copy: "Link a repository for optional, read-only mission intel." },
-];
+  ],
+  hi: [
+    { title: "बिल्डर प्रोफ़ाइल", copy: "अपने कौशल, रुचियाँ और अनुभव साझा करें।" },
+    { title: "प्रोजेक्ट खोजें", copy: "ऐसा प्रोजेक्ट खोजें जो आपकी रुचि और कौशल से मेल खाए।" },
+    { title: "जुड़ने का अनुरोध", copy: "अपनी रुचि बताएँ; प्रोजेक्ट का मालिक टीम चुनता है।" },
+    { title: "टीम के साथ काम", copy: "योजना बनाएँ, बातचीत करें और मिलकर प्रोजेक्ट आगे बढ़ाएँ।" },
+    { title: "GitHub जानकारी", copy: "ज़रूरत होने पर रिपॉज़िटरी को केवल देखने के लिए जोड़ें।" },
+  ],
+};
 
-export default function HomeLightsaber() {
+export default function HomeLightsaber({ locale = "en" }: { locale?: "en" | "hi" }) {
   const stageRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const switchRef = useRef<HTMLButtonElement>(null);
@@ -472,10 +479,12 @@ export default function HomeLightsaber() {
     <div className="home-saber">
       <div className="home-saber-heading">
         <div>
-          <h2>One project brings the <em>right crew</em> together.</h2>
+          <h2>{locale === "hi" ? <>एक प्रोजेक्ट सही <em>साथियों</em> को जोड़ता है।</> : <>One project brings the <em>right crew</em> together.</>}</h2>
         </div>
         <p className="home-saber-intro">
-          The project brief is your mission beacon: builders discover the work, signal their interest, and join forces to bring it to life. May the crew be with you.
+          {locale === "hi"
+            ? "प्रोजेक्ट का विवरण रास्ता दिखाता है: बिल्डर काम को समझते हैं, अपनी रुचि बताते हैं और उसे साकार करने के लिए साथ आते हैं।"
+            : "The project brief is your mission beacon: builders discover the work, signal their interest, and join forces to bring it to life. May the crew be with you."}
         </p>
       </div>
 
@@ -496,18 +505,20 @@ export default function HomeLightsaber() {
               ref={switchRef}
               className="home-saber-switch"
               type="button"
-              aria-label={isOn ? SABER_ON : SABER_OFF}
+              aria-label={locale === "hi"
+                ? (isOn ? "क्रू सेबर बंद करें" : "क्रू सेबर चालू करें")
+                : (isOn ? "Power down the crew saber" : "Ignite the crew saber")}
               aria-pressed={isOn}
               onClick={togglePower}
               style={webglReady ? undefined : { left: "calc(50% + clamp(6px, 1.6vw, 10px))", top: "80%" }}
             />
-            <span className="home-saber-sr-status" aria-live="polite">Crew saber {isOn ? "online" : "offline"}</span>
+            <span className="home-saber-sr-status" aria-live="polite">{locale === "hi" ? `क्रू सेबर ${isOn ? "चालू" : "बंद"}` : `Crew saber ${isOn ? "online" : "offline"}`}</span>
           </div>
         </div>
       </div>
 
-      <ol className="home-saber-cards" aria-label="How your crew comes together on CrewLab">
-        {FLOW_CARDS.map((card, index) => (
+      <ol className="home-saber-cards" aria-label={locale === "hi" ? "CrewLab पर टीम कैसे बनती है" : "How your crew comes together on CrewLab"}>
+        {FLOW_CARDS[locale].map((card, index) => (
           <li className="home-saber-card" key={card.title}>
             <span className="home-saber-card-number">0{index + 1}</span>
             <h3>{card.title}</h3>

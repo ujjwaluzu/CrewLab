@@ -85,7 +85,7 @@ const PING_DELAYS = ["0s", "-3.4s", "-6.8s"];
 
 type DroidVariant = "home" | "crew" | "product";
 
-export function FeatureDroid({ className, variant = "home" }: { className?: string; variant?: DroidVariant }) {
+export function FeatureDroid({ className, variant = "home", locale = "en" }: { className?: string; variant?: DroidVariant; locale?: "en" | "hi" }) {
   const variantLabel = variant === "crew" ? "Crew-connected" : variant === "product" ? "Product-system" : "CrewLab build assistant";
   const variantClass = variant === "home" ? "" : ` aiptx-droid-variant-${variant}`;
 
@@ -93,7 +93,7 @@ export function FeatureDroid({ className, variant = "home" }: { className?: stri
     <svg
       viewBox="0 0 320 470"
       role="img"
-      aria-label={`Illustration of the ${variantLabel} droid`}
+      aria-label={locale === "hi" ? "क्रूलैब बिल्ड सहायक का चित्र" : `Illustration of the ${variantLabel} droid`}
       className={`aiptx-droid-boot h-auto w-full ${className ?? ""}${variantClass}`}
     >
       <defs>

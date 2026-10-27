@@ -6,7 +6,7 @@ export default function HindiNotFound() {
     <main className="crewlab-page crewlab-hi" lang="hi-IN">
       <div className="cl-wrap">
         <section className="cl-section">
-          <CrewGridAnimation className="cl-not-found-droid" />
+          <CrewGridAnimation className="cl-not-found-droid" locale="hi" />
           <div className="cl-cell">
             <p className="cl-mono">CrewLab | 404</p>
             <h1>यह पेज नहीं मिला।</h1>

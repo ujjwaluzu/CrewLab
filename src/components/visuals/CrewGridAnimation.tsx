@@ -4,7 +4,7 @@ const columns = Array.from({ length: 12 }, (_, index) => index);
 const levels = Array.from({ length: 6 }, (_, index) => index);
 const faces = Array.from({ length: 6 }, (_, index) => index);
 
-export function CrewGridAnimation({ className }: { className?: string }) {
+export function CrewGridAnimation({ className, locale = "en" }: { className?: string; locale?: "en" | "hi" }) {
   return (
     <div className={`cl-cube-art${className ? ` ${className}` : ""}`} aria-hidden="true">
       <div className="cl-cube-scene">
@@ -33,7 +33,7 @@ export function CrewGridAnimation({ className }: { className?: string }) {
           ))}
         </div>
       </div>
-      <span className="cl-cube-caption">A crew in motion <i /></span>
+      <span className="cl-cube-caption">{locale === "hi" ? "साथ बनाती टीम" : "A crew in motion"} <i /></span>
     </div>
   );
 }
