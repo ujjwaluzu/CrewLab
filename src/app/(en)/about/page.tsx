@@ -16,8 +16,8 @@ const config: LandingConfig = {
   lede:
     "CrewLab brings project owners and builders together around work they want to make. Share the idea, show the skills it needs, and give interested people a clear way to ask to join.",
   note: "Ideas | skills | crews | shared project context",
-  primaryLabel: "Join the waitlist",
-  primaryHref: "/waitlist",
+  primaryLabel: "Sign up",
+  primaryHref: "https://app.crewlab.ujjwaluzu.in",
   secondaryLabel: "Explore projects",
   secondaryHref: "/explore",
   sections: [
@@ -106,7 +106,7 @@ const config: LandingConfig = {
   closeTitle: "Find your people",
   closeBrush: "and build together.",
   closeLead:
-    "Bring an idea or a useful skill to CrewLab. Explore the project workflow and join the waitlist for updates.",
+    "Bring an idea or a useful skill to CrewLab. Explore the project workflow, then sign up to start building with your crew.",
 };
 
 export default function AboutPage() {

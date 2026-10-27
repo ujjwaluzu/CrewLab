@@ -16,7 +16,7 @@ const config: LandingConfig = {
   lede: "Bring your skills to a project you care about. Explore project ideas, understand what each team needs, and request to join with a clear description of what you can contribute.",
   note: "Project discovery | skills | applications | team discussion",
   primaryLabel: "Find a student team",
-  primaryHref: "/waitlist",
+  primaryHref: "https://app.crewlab.ujjwaluzu.in",
   secondaryLabel: "Explore projects",
   secondaryHref: "/explore",
   sections: [

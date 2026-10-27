@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import { LANDING_PAGES } from "@/lib/site";
+import { APP_URL, LANDING_PAGES } from "@/lib/site";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
 
 const groups = [
@@ -28,7 +28,7 @@ const groups = [
     label: "Company",
     links: [
       { href: "/about", label: "About" },
-      { href: "/waitlist", label: "Contact" },
+      { href: APP_URL, label: "Sign up", external: true },
     ],
   },
 ];
@@ -51,7 +51,7 @@ export default function NavDropdowns() {
     "Features": "विशेषताएँ",
     "Guides & resources": "गाइड और संसाधन",
     "About": "परिचय",
-    "Contact": "संपर्क",
+    "Sign up": "साइन अप करें",
   };
   const translatedGroups = groups.map((group) => ({
     ...group,
@@ -138,8 +138,8 @@ export default function NavDropdowns() {
                       key={item.href}
                       className={isCurrentPage(item.href) ? "is-current-page" : undefined}
                       aria-current={isCurrentPage(item.href) ? "page" : undefined}
-                      target={"external" in item ? "_blank" : undefined}
-                      rel={"external" in item ? "noopener noreferrer" : undefined}
+                      target={"external" in item && item.href !== APP_URL ? "_blank" : undefined}
+                      rel={"external" in item && item.href !== APP_URL ? "noopener noreferrer" : undefined}
                       onClick={() => {
                         setOpenGroup(null);
                         setMobileOpen(false);

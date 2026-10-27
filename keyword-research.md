@@ -87,7 +87,7 @@ These observations come from a live search results review, not a measured keywor
 2. After indexing and enough impressions, export Search Console Performance data by **query, page, and country**. Use India as the primary segment, while retaining a global view if CrewLab accepts international users.
 3. Compare impressions, clicks, CTR, and average position for the clusters above. Add actual query variants surfaced by GSC; prioritize pages with impressions and positions near page one, and rewrite titles where impressions are strong but CTR is weak.
 4. Use Google Ads Keyword Planner or another paid keyword database if monthly volume and difficulty estimates are needed. Record geography, language, match type, date, and source with every number.
-5. Track waitlist or signup conversions by landing page so rankings are evaluated against relevant users, not traffic alone.
+5. Track signup conversions by landing page so rankings are evaluated against relevant users, not traffic alone.
 
 Google Search Console provides actual queries, impressions, clicks, CTR, and position for the property; its query table may omit anonymized searches. [Search Console Performance report](https://support.google.com/webmasters/answer/7576553?hl=en). Google says the meta-keywords tag has no effect on Google Search; page titles, visible copy, helpful content, and internal linking matter more than expanding the metadata keyword list. [Google supported meta tags](https://developers.google.com/search/docs/crawling-indexing/special-tags), [SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide).
 

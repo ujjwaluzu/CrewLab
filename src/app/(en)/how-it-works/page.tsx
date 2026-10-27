@@ -27,8 +27,8 @@ const config: LandingConfig = {
     "Set up a builder profile, share a project or find one that fits, then bring the right people together around the work.",
   note: "Profiles | projects | applications | crew discussions",
   heroFaces,
-  primaryLabel: "Join the waitlist",
-  primaryHref: "/waitlist",
+  primaryLabel: "Sign up",
+  primaryHref: "https://app.crewlab.ujjwaluzu.in",
   secondaryLabel: "Explore projects",
   secondaryHref: "/explore",
   sections: [
@@ -113,7 +113,7 @@ const config: LandingConfig = {
   closeTitle: "Find the people",
   closeBrush: "to build with.",
   closeLead:
-    "Join the waitlist for early access and be ready to bring your idea or skills to the crew.",
+    "Sign up to bring your idea or skills to the crew.",
 };
 
 export default function HowItWorksPage() {

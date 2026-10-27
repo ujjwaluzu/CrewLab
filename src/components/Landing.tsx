@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SITE_URL, LANDING_PAGES } from "@/lib/site";
+import { APP_URL, SITE_URL, LANDING_PAGES } from "@/lib/site";
 import { pageFaqs } from "@/lib/faqs";
 import Icon from "@/components/Icon";
 import SiteHeader from "@/components/SiteHeader";
@@ -119,7 +119,7 @@ export default function Landing({ config }: { config: LandingConfig }) {
         <div className="cl-row cl-page-related-grid">{related.map((page) => <Link className="cl-cell cl-page-related-card" href={page.path} key={page.path}><span className="cl-mono">{page.label}</span><p>{page.description}</p><strong>Explore <Icon name="arrow" /></strong></Link>)}</div>
       </section>
 
-      <section className="cl-row cl-join cl-page-join" id="join"><div className="cl-cell cl-join-title"><p className="cl-mono">{config.closeKicker}</p><h2>{config.closeTitle} <span>{config.closeBrush}</span>{config.closeEmphasis && <small>{config.closeEmphasis}</small>}</h2></div><div className="cl-cell cl-join-form"><p>{config.closeLead}</p><Link className="cl-button" href="/waitlist">Join the waitlist <span aria-hidden="true">→</span></Link><span className="cl-mono">Early access is limited · the crew is forming now</span></div></section>
+      <section className="cl-row cl-join cl-page-join" id="join"><div className="cl-cell cl-join-title"><p className="cl-mono">{config.closeKicker}</p><h2>{config.closeTitle} <span>{config.closeBrush}</span>{config.closeEmphasis && <small>{config.closeEmphasis}</small>}</h2></div><div className="cl-cell cl-join-form"><p>{config.closeLead}</p><a className="cl-button" href={APP_URL}>Sign up <span aria-hidden="true">→</span></a><span className="cl-mono">Create your CrewLab account</span></div></section>
     </main>
     <SiteFooter />
   </div></div>;

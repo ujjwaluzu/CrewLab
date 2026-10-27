@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import { APP_URL } from "@/lib/site";
 
 export default function Hero() {
   return <>
@@ -8,12 +9,12 @@ export default function Hero() {
       <h1 id="home-title">build real<br />products with<br /><span className="headline-pill ink-pill">real</span> <span className="headline-pill red-pill">people.</span></h1>
       <p className="lede">CrewLab is the builder community where founders, developers, designers, marketers, students and creators connect. Have an idea but no team? Find a cofounder. Have skills but no idea? Join a startup or side project.</p>
       <div className="cta-row">
-        <Button href="/waitlist">Join the waitlist</Button>
+        <Button href={APP_URL}>Sign up</Button>
         <Button href="/explore" variant="secondary">Find project teammates</Button>
       </div>
       <div className="proof">
         <span className="avs" aria-hidden="true"><i>AK</i><i>RJ</i><i>PS</i></span>
-        <span>Be among the first builders on CrewLab</span>
+        <span>Start building with CrewLab</span>
       </div>
     </div>
   </section>

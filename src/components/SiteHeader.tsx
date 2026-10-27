@@ -4,12 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import BrandMark from "@/components/BrandMark";
 import NavDropdowns from "@/components/NavDropdowns";
+import { APP_URL } from "@/lib/site";
 
 export default function SiteHeader({ home = false }: { home?: boolean }) {
   const pathname = usePathname() ?? "";
   const isHindi = pathname === "/hi" || pathname.startsWith("/hi/");
   const homeHref = isHindi ? "/hi" : "/";
-  const waitlistHref = isHindi ? "/hi/waitlist" : "/waitlist";
 
   return (
     <header className={`cl-row cl-nav${home ? " site-head-home" : ""}`}>
@@ -19,11 +19,11 @@ export default function SiteHeader({ home = false }: { home?: boolean }) {
       <div className="cl-cell cl-nav-links"><NavDropdowns /></div>
       <div className="cl-cell cl-nav-cta">
         <div className="cl-nav-actions">
-          <Link className="cl-button" href={waitlistHref} aria-current={pathname === waitlistHref ? "page" : undefined}>
-            <span className="cl-nav-waitlist-full">{isHindi ? "प्रतीक्षा सूची" : "Join the waitlist"}</span>
-            <span className="cl-nav-waitlist-short">{isHindi ? "सूची" : "Waitlist"}</span>
+          <a className="cl-button" href={APP_URL}>
+            <span className="cl-nav-signup-full">{isHindi ? "साइन अप करें" : "Sign up"}</span>
+            <span className="cl-nav-signup-short">{isHindi ? "साइन अप" : "Sign up"}</span>
             <span aria-hidden="true">&#8594;</span>
-          </Link>
+          </a>
         </div>
       </div>
     </header>

@@ -2,12 +2,11 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import PageFaqSection from "@/components/PageFaqSection";
-import WaitlistForm from "@/components/WaitlistForm";
 import { CrewGridAnimation } from "@/components/visuals/CrewGridAnimation";
 import { ProductScene } from "@/components/visuals/ProductScene";
 import type { HindiPageContent } from "@/lib/hindi-site";
 import { HINDI_LINK_LABELS, hindiPath } from "@/lib/hindi-site";
-import { SITE_URL, SITE_NAME, isCrewFocusedPage } from "@/lib/site";
+import { APP_URL, SITE_URL, SITE_NAME, isCrewFocusedPage } from "@/lib/site";
 import { productLayerForPath } from "@/lib/product-scene";
 
 export default function HindiPage({ page }: { page: HindiPageContent }) {
@@ -34,8 +33,10 @@ export default function HindiPage({ page }: { page: HindiPageContent }) {
               <h1 id="page-title">{page.headline.map((line, index) => <span key={line} className={index === page.headline.length - 1 ? "cl-page-highlight" : undefined}>{line}</span>)}</h1>
               <p className="cl-page-lede">{page.lede}</p>
               <div className="cl-actions">
-                <Link className="cl-button" href={hindiPath(page.primaryHref)}>{page.primaryLabel}<span aria-hidden="true">&#8594;</span></Link>
-                <Link className="cl-button cl-ghost" href={hindiPath(page.secondaryHref)}>{page.secondaryLabel}</Link>
+                <a className="cl-button" href={page.primaryHref.startsWith("https://") ? page.primaryHref : hindiPath(page.primaryHref)}>{page.primaryLabel}<span aria-hidden="true">&#8594;</span></a>
+                {page.secondaryHref.startsWith("https://")
+                  ? <a className="cl-button cl-ghost" href={page.secondaryHref}>{page.secondaryLabel}</a>
+                  : <Link className="cl-button cl-ghost" href={hindiPath(page.secondaryHref)}>{page.secondaryLabel}</Link>}
               </div>
             </div>
             <div className="cl-cell cl-droid-cell">
@@ -66,9 +67,9 @@ export default function HindiPage({ page }: { page: HindiPageContent }) {
           </section>}
 
           <section className="cl-row cl-join cl-page-join" id="join">
-            <div className="cl-cell cl-join-title"><p className="cl-mono">CrewLab के साथ बनाएँ</p><h2>{page.waitlist ? "अपडेट पाएँ" : "अपना अगला कदम"} <span>आज चुनें।</span></h2></div>
+            <div className="cl-cell cl-join-title"><p className="cl-mono">CrewLab के साथ बनाएँ</p><h2>अपना अगला कदम <span>आज चुनें।</span></h2></div>
             <div className="cl-cell cl-join-form">
-              {page.waitlist ? <><p>शुरुआती पहुँच और प्रोडक्ट अपडेट पाने के लिए ईमेल से जुड़ें।</p><WaitlistForm locale="hi" /></> : <><p>प्रोजेक्ट की जानकारी पाएँ और शुरुआती पहुँच के अपडेट के लिए प्रतीक्षा सूची में जुड़ें।</p><Link className="cl-button" href="/hi/waitlist">प्रतीक्षा सूची में शामिल हों <span aria-hidden="true">&#8594;</span></Link></>}
+              <p>अपना CrewLab अकाउंट बनाएँ और अपने अगले प्रोजेक्ट पर काम शुरू करें।</p><a className="cl-button" href={APP_URL}>साइन अप करें <span aria-hidden="true">&#8594;</span></a>
               <span className="cl-mono">CrewLab | भारत</span>
             </div>
           </section>

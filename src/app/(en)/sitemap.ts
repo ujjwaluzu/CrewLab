@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${SITE_URL}/resources/${slug}`,
   }));
   const hindiEntries: MetadataRoute.Sitemap = HINDI_PATHS
-    .filter((path) => path !== "/" && path !== "/waitlist")
+    .filter((path) => path !== "/")
     .map((path) => ({ url: `${SITE_URL}${hindiPath(path)}` }));
 
   return [

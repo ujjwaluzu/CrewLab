@@ -27,8 +27,8 @@ const config: LandingConfig = {
     "CrewLab brings builder profiles, project discovery, owner-reviewed applications, and crew coordination together around each project.",
   note: "Profiles | projects | applications | crew discussions",
   heroFaces,
-  primaryLabel: "Join the waitlist",
-  primaryHref: "/waitlist",
+  primaryLabel: "Sign up",
+  primaryHref: "https://app.crewlab.ujjwaluzu.in",
   secondaryLabel: "See how it works",
   secondaryHref: "/how-it-works",
   sections: [
@@ -113,7 +113,7 @@ const config: LandingConfig = {
   closeTitle: "Bring your skills",
   closeBrush: "to a project.",
   closeLead:
-    "Join the waitlist for early access to a place where project ideas and the people who can build them meet.",
+    "Sign up to bring project ideas and the people who can build them together.",
 };
 
 export default function FeaturesPage() {

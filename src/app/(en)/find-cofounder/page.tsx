@@ -16,7 +16,7 @@ const config: LandingConfig = {
   lede: "Building a startup in India without a team? Share your idea and the skills you need, then explore builders and projects to find people who want to work on the same thing.",
   note: "India-first founder community | projects before profiles",
   primaryLabel: "Find a cofounder",
-  primaryHref: "/waitlist",
+  primaryHref: "https://app.crewlab.ujjwaluzu.in",
   secondaryLabel: "Explore projects",
   secondaryHref: "/explore",
   sections: [
@@ -80,7 +80,7 @@ const config: LandingConfig = {
         { title: "Send or review a request", text: "Builders request to join, and project owners review incoming applications." },
         { title: "Start with your crew", text: "Accepted members share a project space for discussion and coordination." },
       ],
-      fine: "CrewLab is in early access - join the waitlist to be first in line for cofounder matching.",
+      fine: "Create your CrewLab account to find project collaborators.",
     },
     {
       id: "project-fit",

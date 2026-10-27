@@ -554,8 +554,7 @@ footer ul{gap:0}footer ul a{color:var(--cream)}footer .socials{display:none}
 
 /* Homepage collage, shared cards and responsive shared section patterns */
 .hero-intro{text-align:center;padding:40px 20px 0;max-width:1200px;margin:auto}
-.waitlist-sticker,.sticker{display:inline-block;background:var(--paper);border:2px solid var(--ink);padding:6px 14px;border-radius:999px;font:700 12px/1.35 var(--font-mono);letter-spacing:.08em;text-transform:uppercase}
-.waitlist-sticker{transform:rotate(-3deg)}
+.sticker{display:inline-block;background:var(--paper);border:2px solid var(--ink);padding:6px 14px;border-radius:999px;font:700 12px/1.35 var(--font-mono);letter-spacing:.08em;text-transform:uppercase}
 .headline-pill{display:inline-block;padding:0 24px 8px;border-radius:26px;line-height:.94;transform:rotate(-2deg)}
 .ink-pill{background:var(--ink);color:var(--cream)}
 .red-pill{background:var(--red);color:var(--ink);transform:rotate(2deg);font-style:italic;font-weight:500}

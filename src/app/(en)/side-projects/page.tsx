@@ -16,7 +16,7 @@ const config: LandingConfig = {
   lede: "Explore projects by the skills they need, learn what the team is making, and send a request explaining how you would like to contribute. CrewLab helps project owners and builders form a crew around a shared idea.",
   note: "Project details | skills | join requests | crew coordination",
   primaryLabel: "Join a side project",
-  primaryHref: "/waitlist",
+  primaryHref: "https://app.crewlab.ujjwaluzu.in",
   secondaryLabel: "Explore projects",
   secondaryHref: "/explore",
   sections: [

@@ -16,7 +16,7 @@ const config: LandingConfig = {
   lede: "Describe your startup project and the skills it needs. Builders can discover the work and request to join, while project owners review applications and form the crew.",
   note: "Projects | skills | applications | crew coordination",
   primaryLabel: "Build your startup team",
-  primaryHref: "/waitlist",
+  primaryHref: "https://app.crewlab.ujjwaluzu.in",
   secondaryLabel: "Explore projects",
   secondaryHref: "/explore",
   sections: [

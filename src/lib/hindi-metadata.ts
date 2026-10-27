@@ -31,6 +31,5 @@ export function hindiMetadata(page: HindiPageContent): Metadata {
       title: page.title,
       description: page.description,
     },
-    ...(page.waitlist ? { robots: { index: false, follow: true } } : {}),
   };
 }

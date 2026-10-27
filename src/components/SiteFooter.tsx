@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LANDING_PAGES } from "@/lib/site";
 import BrandMark from "@/components/BrandMark";
+import { APP_URL } from "@/lib/site";
 
 export default function SiteFooter() {
   const pathname = usePathname() ?? "";
@@ -40,7 +41,7 @@ export default function SiteFooter() {
         <div className="cl-cell cl-foot-links">
           <h3>{isHindi ? "कंपनी" : "Company"}</h3>
           <Link href={path("/about")} className={active("/about") ? "is-current-page" : undefined}>{isHindi ? "परिचय" : "About"}</Link>
-          <Link href={path("/waitlist")} className={active("/waitlist") ? "is-current-page" : undefined}>{isHindi ? "संपर्क" : "Contact"}</Link>
+          <a href={APP_URL}>{isHindi ? "साइन अप करें" : "Sign up"}</a>
           <Link href="https://discord.gg/m97vTraKq" target="_blank" rel="noopener noreferrer">Discord</Link>
           <Link href="https://instagram.com/crewlab.in" target="_blank" rel="noopener noreferrer">Instagram</Link>
           <Link href="https://x.com/crewlabin" target="_blank" rel="noopener noreferrer">X</Link>

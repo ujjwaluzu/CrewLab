@@ -16,7 +16,7 @@ const config: LandingConfig = {
   lede: "Describe the skills your startup or side project needs, then make the project discoverable to developers looking for a team and project to contribute to.",
   note: "Builders looking for projects | not just browsing",
   primaryLabel: "Find developers",
-  primaryHref: "/waitlist",
+  primaryHref: "https://app.crewlab.ujjwaluzu.in",
   secondaryLabel: "Explore projects",
   secondaryHref: "/explore",
   sections: [
@@ -68,7 +68,7 @@ const config: LandingConfig = {
         { title: "Help developers find it", text: "Builders can search projects and filter the list by skill." },
         { title: "Review join requests", text: "Developers can apply to join, and the project owner decides who joins the crew." },
       ],
-      fine: "Early access is open - join the waitlist to find developers for your project first.",
+      fine: "Create your CrewLab account to find developers for your project.",
     },
     {
       id: "developer-fit",

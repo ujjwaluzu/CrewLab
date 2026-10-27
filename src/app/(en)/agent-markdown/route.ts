@@ -6,6 +6,7 @@ import {
   HOMEPAGE_DESCRIPTION,
   HOMEPAGE_TITLE,
   LANDING_PAGES,
+  APP_URL,
   SITE_DESCRIPTION,
   SITE_NAME,
   SITE_URL,
@@ -28,10 +29,6 @@ const pages: Record<string, { title: string; description: string }> = {
   "/how-it-works": {
     title: "How CrewLab Works",
     description: "Share or explore a project, find your crew, build together, and track progress.",
-  },
-  "/waitlist": {
-    title: "Join the CrewLab Waitlist",
-    description: "Join the waitlist for CrewLab, an India-first startup collaboration community.",
   },
   "/resources": {
     title: "Startup and Builder Guides",
@@ -81,6 +78,7 @@ function renderPage(path: string): string | null {
     return [
       `# ${localizedPage.title}`,
       localizedPage.lede,
+      `- [Sign up](${APP_URL})`,
       ...sections,
       "## अक्सर पूछे जाने वाले सवाल",
       ...faqs,
@@ -101,7 +99,7 @@ function renderPage(path: string): string | null {
     `- [Explore projects](${SITE_URL}/explore)`,
     `- [How it works](${SITE_URL}/how-it-works)`,
     `- [Guides and resources](${SITE_URL}/resources)`,
-    `- [Join the waitlist](${SITE_URL}/waitlist)`,
+    `- [Sign up](${APP_URL})`,
   ];
   const faqContent = pageFaqs[path];
   const faqMarkdown = faqContent

@@ -3,6 +3,7 @@ import { pageMetadata } from "@/lib/site";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Icon from "@/components/Icon";
+import { APP_URL } from "@/lib/site";
 import ExploreControls from "@/components/ExploreControls";
 import ExploreProjects from "@/components/ExploreProjects";
 import HeroCube, { type HeroCubeFace } from "@/components/visuals/HeroCube";
@@ -33,7 +34,7 @@ export default function ExplorePage() {
     <SiteHeader />
     <main id="top">
       <section className="cl-row cl-hero cl-page-hero" aria-labelledby="page-title">
-        <div className="cl-cell cl-hero-copy"><p className="cl-mono cl-kicker"><i />Sample project examples | requested skills | join requests</p><h1 id="page-title"><span>Projects looking</span><span>for people who</span><span className="cl-page-highlight">want to build</span></h1><p className="cl-page-lede">Explore sample project listings, see what skills each one needs, and learn how builders can request to join when CrewLab opens.</p><div className="cl-actions"><Link className="cl-button" href="#browse">Explore project examples <Icon name="arrow" /></Link><Link className="cl-button cl-ghost" href="/waitlist">Join the waitlist <Icon name="arrow" /></Link></div></div>
+        <div className="cl-cell cl-hero-copy"><p className="cl-mono cl-kicker"><i />Sample project examples | requested skills | join requests</p><h1 id="page-title"><span>Projects looking</span><span>for people who</span><span className="cl-page-highlight">want to build</span></h1><p className="cl-page-lede">Explore sample project listings, see what skills each one needs, and find your next project to join in CrewLab.</p><div className="cl-actions"><Link className="cl-button" href="#browse">Explore project examples <Icon name="arrow" /></Link><a className="cl-button cl-ghost" href={APP_URL}>Sign up <Icon name="arrow" /></a></div></div>
         <div className="cl-cell cl-droid-cell"><HeroCube faces={exploreFaces} label="Explore projects interactive overview" /></div>
       </section>
 
@@ -64,7 +65,7 @@ export default function ExplorePage() {
 
       <PageFaqSection id="explore-faq" {...pageFaqs["/explore"]} />
 
-      <section className="cl-row cl-join cl-page-join" id="join"><div className="cl-cell cl-join-title"><p className="cl-mono">Have a project idea?</p><h2>Don&apos;t see something <span>you want to build?</span><small>Share it with the crew.</small></h2></div><div className="cl-cell cl-join-form"><p>Describe your idea, the skills it needs, and where it stands. Project owners can review join requests and build a crew around the work.</p><Link className="cl-button" href="/waitlist">Join the waitlist <Icon name="arrow" /></Link><span className="cl-mono">Projects | skills | applications | collaboration</span></div></section>
+      <section className="cl-row cl-join cl-page-join" id="join"><div className="cl-cell cl-join-title"><p className="cl-mono">Have a project idea?</p><h2>Don&apos;t see something <span>you want to build?</span><small>Share it with the crew.</small></h2></div><div className="cl-cell cl-join-form"><p>Describe your idea, the skills it needs, and where it stands. Project owners can review join requests and build a crew around the work.</p><a className="cl-button" href={APP_URL}>Sign up <Icon name="arrow" /></a><span className="cl-mono">Projects | skills | applications | collaboration</span></div></section>
     </main>
     <SiteFooter />
   </div></div>;

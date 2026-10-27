@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const SITE_URL = "https://crewlab.ujjwaluzu.in";
+export const APP_URL = "https://app.crewlab.ujjwaluzu.in";
 
 export const SITE_NAME = "CrewLab";
 

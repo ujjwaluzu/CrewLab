@@ -20,6 +20,10 @@ function acceptsMarkdown(accept: string | null): boolean {
 }
 
 export function proxy(request: NextRequest) {
+  if (request.nextUrl.pathname === "/waitlist" || request.nextUrl.pathname === "/hi/waitlist") {
+    return NextResponse.redirect(new URL("https://app.crewlab.ujjwaluzu.in"));
+  }
+
   if (request.method !== "GET" || !acceptsMarkdown(request.headers.get("accept"))) {
     return NextResponse.next();
   }
@@ -41,7 +45,7 @@ export const config = {
     "/side-projects",
     "/startup-teams",
     "/student-projects",
-    "/waitlist",
+    "/hi/waitlist",
     "/resources/:path*",
     "/hi/:path*",
   ],
